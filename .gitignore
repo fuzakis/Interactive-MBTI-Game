@@ -1,6 +1,7 @@
 # ===== RAHASIA — JANGAN PERNAH DI-COMMIT =====
 game/.env
 .env
+game/proxy.env
 *.keystore
 
 # ===== FILE COMPILED / CACHE REN'PY =====

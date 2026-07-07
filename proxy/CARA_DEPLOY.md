@@ -43,16 +43,29 @@ PROXY_APP_TOKEN=mbti-game-x7k2p
 - Kalau `PROXY_URL` ada → game memakai proxy, **API key tidak dibutuhkan sama sekali**.
 - Kalau `PROXY_URL` kosong → game memakai `OPENAI_API_KEY` langsung (mode lama, tetap jalan).
 
-**Untuk build publik** (karena `game/.env` di-exclude dari build), game membaca
-konstanta di `game/definitions.rpy`:
+**Untuk build publik**, konfigurasi proxy hidup di file **`game/proxy.env`**
+(bukan `.env`) dengan isi:
 
-- `DEFAULT_PROXY_URL` — sudah terisi URL worker (bukan rahasia, aman di-commit).
-- `DEFAULT_PROXY_APP_TOKEN` — sengaja kosong di repo. **Isi sesaat sebelum
-  build** dengan nilai `APP_TOKEN`-mu, build, lalu kosongkan lagi — jangan
-  commit dalam keadaan terisi (repo publik dipindai bot pencari token).
+```
+PROXY_URL=https://mbti-proxy.<akunmu>.workers.dev
+PROXY_APP_TOKEN=mbti-game-x7k2p
+```
 
-Urutan prioritas di game: nilai di `game/.env` menang; kalau tidak ada file
-`.env` (kondisi build), konstanta `DEFAULT_*` yang dipakai.
+Pembagian tugas kedua file ini:
+
+| File | Isi | Git | Build |
+|---|---|---|---|
+| `game/.env` | API key (mode direct/dev) | di-ignore | **di-exclude** |
+| `game/proxy.env` | URL proxy + app token | di-ignore | **ikut ter-build** |
+
+Jadi sekali `proxy.env` dibuat, **build otomatis bisa konek proxy tanpa langkah
+manual apa pun**, token tidak pernah ter-commit ke repo, dan API key tidak
+pernah ikut build. (Catatan jujur: token di dalam build tetap bisa diekstrak
+pemain yang berniat — fungsinya memang hanya menyaring bot iseng, bukan benteng.
+Pertahanan utamamu adalah validasi worker + spending limit OpenAI.)
+
+Urutan prioritas di game: `game/.env` → `game/proxy.env` → konstanta
+`DEFAULT_PROXY_URL` di `definitions.rpy`.
 
 ## Langkah 5 — Pasang Rem Darurat (WAJIB)
 

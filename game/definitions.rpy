@@ -268,9 +268,9 @@ init python:
     # dan tidak ikut ter-build, lihat build.classify di options.rpy).
     # Format isi file .env :  OPENAI_API_KEY=sk-xxxx
     # Fallback: environment variable OPENAI_API_KEY_2 / OPENAI_API_KEY.
-    def _load_env_file():
+    def _load_env_file(filename=".env"):
         env_vars = {}
-        env_path = os.path.join(renpy.config.gamedir, ".env")
+        env_path = os.path.join(renpy.config.gamedir, filename)
         if os.path.exists(env_path):
             with open(env_path, "r", encoding="utf-8") as f:
                 for line in f:
@@ -292,17 +292,20 @@ init python:
     # --- MODE PROXY (opsional, untuk build publik) ---
     # Jika PROXY_URL terisi, game memanggil proxy Cloudflare Worker
     # (lihat folder proxy/ di root repo) dan TIDAK butuh API key sama sekali.
-    # DEFAULT_PROXY_URL boleh diisi langsung di sini untuk build publik,
-    # karena URL proxy bukan rahasia (game/.env tidak ikut ter-build).
-    DEFAULT_PROXY_URL = "https://mbti-proxy.fuzakiduty.workers.dev"
-    # DEFAULT_PROXY_APP_TOKEN sengaja DIKOSONGKAN di repo (repo ini publik;
-    # token yang di-commit bisa ditemukan bot pemindai GitHub).
-    # ISI SESAAT SEBELUM BUILD dengan nilai APP_TOKEN di Cloudflare,
-    # build, lalu kembalikan jadi "" — JANGAN di-commit dalam keadaan terisi.
-    DEFAULT_PROXY_APP_TOKEN = ""
+    #
+    # Konfigurasi proxy dibaca dari game/proxy.env — file ini:
+    #   - di-IGNORE git (token tidak pernah ter-commit ke repo publik)
+    #   - IKUT ter-build (tidak di-exclude options.rpy), jadi build pemain
+    #     otomatis bisa konek proxy tanpa langkah manual apa pun.
+    # Isinya HANYA PROXY_URL + PROXY_APP_TOKEN. JANGAN taruh API key di sini!
+    # (API key tetap di game/.env yang di-exclude dari build.)
+    _proxy_file = _load_env_file("proxy.env")
 
-    PROXY_URL = _env_file.get("PROXY_URL") or DEFAULT_PROXY_URL
-    PROXY_APP_TOKEN = _env_file.get("PROXY_APP_TOKEN") or DEFAULT_PROXY_APP_TOKEN
+    # Fallback terakhir. URL bukan rahasia, aman di-commit.
+    DEFAULT_PROXY_URL = "https://mbti-proxy.fuzakiduty.workers.dev"
+
+    PROXY_URL = _env_file.get("PROXY_URL") or _proxy_file.get("PROXY_URL") or DEFAULT_PROXY_URL
+    PROXY_APP_TOKEN = _env_file.get("PROXY_APP_TOKEN") or _proxy_file.get("PROXY_APP_TOKEN") or ""
 
     if PROXY_URL:
         print(f"[ENV] Mode PROXY aktif: {PROXY_URL}")
