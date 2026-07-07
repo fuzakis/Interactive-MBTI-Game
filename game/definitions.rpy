@@ -643,6 +643,10 @@ init python:
             else:
                 url = 'https://api.openai.com/v1/chat/completions'
                 headers = {'Authorization': f'Bearer {clean_key}', 'Content-Type': 'application/json'}
+
+            # User-Agent WAJIB di-set: UA default Python (Python-urllib/3.x)
+            # diblokir Browser Integrity Check Cloudflare (error 1010 / HTTP 403).
+            headers['User-Agent'] = "MBTIGame/1.0 (Ren'Py)"
             req = urllib.request.Request(url, data=json.dumps(data).encode('utf-8'), headers=headers, method='POST')
             
             with urllib.request.urlopen(req, context=ctx) as response:

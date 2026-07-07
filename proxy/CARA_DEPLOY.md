@@ -66,7 +66,11 @@ Kalau AI tidak merespons, urutan pengecekan:
 1. `log.txt` di folder game — cari `[DEBUG: AI ERROR]`.
 2. HTTP 401 → `PROXY_APP_TOKEN` di game tidak sama dengan `APP_TOKEN` di Cloudflare.
 3. HTTP 400 → model/body tidak lolos validasi worker (cek whitelist model di `worker.js`).
-4. Dashboard Cloudflare → worker → **Logs** (Live) untuk melihat error dari sisi server.
+4. HTTP 403 "error code: 1010" → request diblokir Browser Integrity Check
+   Cloudflare karena User-Agent dianggap bot. Game sudah mengirim User-Agent
+   kustom (`MBTIGame/1.0 (Ren'Py)` — di-set di `get_ai_feedback()`,
+   `definitions.rpy`), jadi error ini hanya muncul kalau header itu dihapus.
+5. Dashboard Cloudflare → worker → **Logs** (Live) untuk melihat error dari sisi server.
 
 ## Batas Gratis
 
