@@ -294,8 +294,12 @@ init python:
     # (lihat folder proxy/ di root repo) dan TIDAK butuh API key sama sekali.
     # DEFAULT_PROXY_URL boleh diisi langsung di sini untuk build publik,
     # karena URL proxy bukan rahasia (game/.env tidak ikut ter-build).
-    DEFAULT_PROXY_URL = ""        # contoh: "https://mbti-proxy.akunmu.workers.dev"
-    DEFAULT_PROXY_APP_TOKEN = ""  # samakan dengan secret APP_TOKEN di Cloudflare
+    DEFAULT_PROXY_URL = "https://mbti-proxy.fuzakiduty.workers.dev"
+    # DEFAULT_PROXY_APP_TOKEN sengaja DIKOSONGKAN di repo (repo ini publik;
+    # token yang di-commit bisa ditemukan bot pemindai GitHub).
+    # ISI SESAAT SEBELUM BUILD dengan nilai APP_TOKEN di Cloudflare,
+    # build, lalu kembalikan jadi "" — JANGAN di-commit dalam keadaan terisi.
+    DEFAULT_PROXY_APP_TOKEN = ""
 
     PROXY_URL = _env_file.get("PROXY_URL") or DEFAULT_PROXY_URL
     PROXY_APP_TOKEN = _env_file.get("PROXY_APP_TOKEN") or DEFAULT_PROXY_APP_TOKEN

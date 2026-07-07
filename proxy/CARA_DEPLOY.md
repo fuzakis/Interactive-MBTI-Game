@@ -43,10 +43,16 @@ PROXY_APP_TOKEN=mbti-game-x7k2p
 - Kalau `PROXY_URL` ada → game memakai proxy, **API key tidak dibutuhkan sama sekali**.
 - Kalau `PROXY_URL` kosong → game memakai `OPENAI_API_KEY` langsung (mode lama, tetap jalan).
 
-**Untuk build publik** (karena `game/.env` di-exclude dari build): isi konstanta
-`DEFAULT_PROXY_URL` (dan `DEFAULT_PROXY_APP_TOKEN` jika pakai) di bagian atas
-`init python` pada `game/definitions.rpy`, lalu build seperti biasa. URL proxy
-bukan rahasia, jadi aman ikut ter-build & ter-commit.
+**Untuk build publik** (karena `game/.env` di-exclude dari build), game membaca
+konstanta di `game/definitions.rpy`:
+
+- `DEFAULT_PROXY_URL` — sudah terisi URL worker (bukan rahasia, aman di-commit).
+- `DEFAULT_PROXY_APP_TOKEN` — sengaja kosong di repo. **Isi sesaat sebelum
+  build** dengan nilai `APP_TOKEN`-mu, build, lalu kosongkan lagi — jangan
+  commit dalam keadaan terisi (repo publik dipindai bot pencari token).
+
+Urutan prioritas di game: nilai di `game/.env` menang; kalau tidak ada file
+`.env` (kondisi build), konstanta `DEFAULT_*` yang dipakai.
 
 ## Langkah 5 — Pasang Rem Darurat (WAJIB)
 
