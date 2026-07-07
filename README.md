@@ -1,5 +1,7 @@
 # Interactive MBTI Test Game 🐾
 
+🌐 [English](README_EN.md) | **Bahasa Indonesia**
+
 Visual novel tes kepribadian MBTI berbasis **Ren'Py** dengan **AI Companion** bertenaga OpenAI (GPT-4o). Pemain menjawab 20 soal cerita interaktif ditemani satu dari lima hewan companion — masing-masing merepresentasikan satu trait **Big Five (OCEAN)** — yang bereaksi secara real-time terhadap setiap pilihan pemain, lengkap dengan ekspresi emosi yang berubah-ubah.
 
 > ⚠️ **Disclaimer:** Ini adalah tes kepribadian sederhana yang terinspirasi Myers-Briggs Type Indicator (MBTI). Hasilnya adalah cerminan awal / bahan refleksi, bukan diagnosis profesional.
@@ -170,7 +172,7 @@ File-file ini berisi data partisipan → **tidak di-commit** (lihat `.gitignore`
 
 - **PC:** Ren'Py Launcher → Build Distributions. `options.rpy` sudah meng-exclude package python besar (~3GB) dan `game/.env` dari build.
 - **Android:** konfigurasi di `android.json` (landscape, permission `INTERNET` + `VIBRATE`). Keystore **tidak** disertakan di repo — generate milikmu sendiri via RAPT.
-- Distribusi publik sebaiknya **tanpa API key** — pemain/penguji mengisi `game/.env` sendiri, atau gunakan proxy server.
+- **API key di dalam build:** secara default `game/.env` di-exclude dari build. Untuk distribusi privat/testing, salin file `.env`-mu ke folder `game/` di hasil build (atau hapus baris `build.classify('game/.env', None)` sebelum build). ⚠️ Key yang ikut di dalam build tetap bisa diekstrak pemain — risikonya sama dengan hardcode. Untuk launch publik, solusi yang benar adalah proxy server kecil yang menyimpan key; jangan sebar key mentah ke publik.
 
 ## Catatan Pengembangan
 
