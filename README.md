@@ -172,7 +172,8 @@ File-file ini berisi data partisipan → **tidak di-commit** (lihat `.gitignore`
 
 - **PC:** Ren'Py Launcher → Build Distributions. `options.rpy` sudah meng-exclude package python besar (~3GB) dan `game/.env` dari build.
 - **Android:** konfigurasi di `android.json` (landscape, permission `INTERNET` + `VIBRATE`). Keystore **tidak** disertakan di repo — generate milikmu sendiri via RAPT.
-- **API key di dalam build:** secara default `game/.env` di-exclude dari build. Untuk distribusi privat/testing, salin file `.env`-mu ke folder `game/` di hasil build (atau hapus baris `build.classify('game/.env', None)` sebelum build). ⚠️ Key yang ikut di dalam build tetap bisa diekstrak pemain — risikonya sama dengan hardcode. Untuk launch publik, solusi yang benar adalah proxy server kecil yang menyimpan key; jangan sebar key mentah ke publik.
+- **API key di dalam build:** secara default `game/.env` di-exclude dari build. Untuk distribusi privat/testing, salin file `.env`-mu ke folder `game/` di hasil build. ⚠️ Key yang ikut di dalam build tetap bisa diekstrak pemain — risikonya sama dengan hardcode.
+- **Launch publik (tanpa key di build): pakai proxy serverless.** Repo ini menyertakan proxy siap-deploy di folder [`proxy/`](proxy/) (Cloudflare Worker, gratis) — key tersimpan sebagai secret di server, game cukup diarahkan lewat `PROXY_URL` di `game/.env` atau konstanta `DEFAULT_PROXY_URL` di `definitions.rpy`. Panduan lengkap: [`proxy/CARA_DEPLOY.md`](proxy/CARA_DEPLOY.md). Jangan lupa set spending limit di dashboard OpenAI.
 
 ## Catatan Pengembangan
 

@@ -172,7 +172,8 @@ These files contain participant data → **never committed** (see `.gitignore`).
 
 - **PC:** Ren'Py Launcher → Build Distributions. `options.rpy` already excludes large Python packages (~3GB) and `game/.env` from the build.
 - **Android:** configured in `android.json` (landscape, `INTERNET` + `VIBRATE` permissions). Keystores are **not** included in the repo — generate your own via RAPT.
-- **API key in builds:** `game/.env` is excluded from builds by default. For private/testing distribution, copy your `.env` into the built game's `game/` folder (or remove the `build.classify('game/.env', None)` line before building). ⚠️ Any key shipped inside a build can be extracted by players — the same risk as hardcoding. For a public launch, the proper solution is a small proxy server that holds the key; do not ship a raw key publicly.
+- **API key in builds:** `game/.env` is excluded from builds by default. For private/testing distribution, copy your `.env` into the built game's `game/` folder. ⚠️ Any key shipped inside a build can be extracted by players — the same risk as hardcoding.
+- **Public launch (no key in the build): use the serverless proxy.** This repo ships a ready-to-deploy proxy in the [`proxy/`](proxy/) folder (Cloudflare Worker, free tier) — the key lives as a server-side secret, and the game is pointed at it via `PROXY_URL` in `game/.env` or the `DEFAULT_PROXY_URL` constant in `definitions.rpy`. Full guide: [`proxy/CARA_DEPLOY.md`](proxy/CARA_DEPLOY.md) (English summary included). Remember to set a spending limit in your OpenAI dashboard.
 
 ## Development Notes
 

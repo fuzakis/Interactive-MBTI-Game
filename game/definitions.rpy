@@ -289,7 +289,20 @@ init python:
         or ""
     )
 
-    if not API_KEY:
+    # --- MODE PROXY (opsional, untuk build publik) ---
+    # Jika PROXY_URL terisi, game memanggil proxy Cloudflare Worker
+    # (lihat folder proxy/ di root repo) dan TIDAK butuh API key sama sekali.
+    # DEFAULT_PROXY_URL boleh diisi langsung di sini untuk build publik,
+    # karena URL proxy bukan rahasia (game/.env tidak ikut ter-build).
+    DEFAULT_PROXY_URL = ""        # contoh: "https://mbti-proxy.akunmu.workers.dev"
+    DEFAULT_PROXY_APP_TOKEN = ""  # samakan dengan secret APP_TOKEN di Cloudflare
+
+    PROXY_URL = _env_file.get("PROXY_URL") or DEFAULT_PROXY_URL
+    PROXY_APP_TOKEN = _env_file.get("PROXY_APP_TOKEN") or DEFAULT_PROXY_APP_TOKEN
+
+    if PROXY_URL:
+        print(f"[ENV] Mode PROXY aktif: {PROXY_URL}")
+    elif not API_KEY:
         print("[ENV] WARNING: OPENAI_API_KEY tidak ditemukan di game/.env maupun environment variable!")
 
     # --- FUNGSI UNTUK MEMBANGUN SYSTEM PROMPT DENGAN ADAPTASI ---     
@@ -619,8 +632,17 @@ init python:
             ctx.check_hostname = False
             ctx.verify_mode = ssl.CERT_NONE
             
-            headers = {'Authorization': f'Bearer {clean_key}', 'Content-Type': 'application/json'}
-            url = 'https://api.openai.com/v1/chat/completions'
+            # Saklar PROXY vs DIRECT:
+            # - PROXY_URL terisi -> lewat Cloudflare Worker, key ada di server.
+            # - PROXY_URL kosong -> langsung ke OpenAI pakai API_KEY (mode lama).
+            if PROXY_URL:
+                url = PROXY_URL
+                headers = {'Content-Type': 'application/json'}
+                if PROXY_APP_TOKEN:
+                    headers['X-App-Token'] = PROXY_APP_TOKEN
+            else:
+                url = 'https://api.openai.com/v1/chat/completions'
+                headers = {'Authorization': f'Bearer {clean_key}', 'Content-Type': 'application/json'}
             req = urllib.request.Request(url, data=json.dumps(data).encode('utf-8'), headers=headers, method='POST')
             
             with urllib.request.urlopen(req, context=ctx) as response:

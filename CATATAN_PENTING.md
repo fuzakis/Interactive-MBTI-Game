@@ -39,11 +39,12 @@ Prompt (script.rpy / questions_logic.rpy)
 - Folder `game/python-packages/` berisi `certifi` — jangan dihapus.
 - Nama file diawali `01_` agar urutan load benar; `init -999` menjamin jalan sebelum init python lain.
 
-## 3. API Key
+## 3. API Key & Mode Proxy
 
 - Key dibaca dari **`game/.env`** (format `OPENAI_API_KEY=sk-...`), fallback ke environment variable `OPENAI_API_KEY_2` / `OPENAI_API_KEY`. Loader ada di `definitions.rpy`.
 - `game/.env` **di-ignore git** (`.gitignore`) dan **di-exclude dari build** (`build.classify('game/.env', None)` di `options.rpy`). Jangan hapus dua proteksi ini.
 - ⚠️ Key lama sempat tertulis hardcode di komentar `definitions.rpy` (sudah dihapus). Karena pernah ada di file, **disarankan rotate/regenerate key** di dashboard OpenAI sebelum repo dipublikasikan.
+- **Mode PROXY (untuk build publik):** jika `PROXY_URL` terisi (via `game/.env` atau konstanta `DEFAULT_PROXY_URL` di `definitions.rpy`), `get_ai_feedback()` mengirim request ke Cloudflare Worker (folder `proxy/`) **tanpa** header `Authorization` — key tersimpan sebagai secret di server. Jika `PROXY_URL` kosong, jalur lama (direct + key) tetap dipakai. Kalau mengubah format request/response API, **worker harus tetap transparan** (meneruskan body & respons apa adanya) — parser game (`choices[0].message.content` + `usage`) mengandalkan format OpenAI asli. Whitelist model & cap `max_tokens` di `worker.js` juga harus disesuaikan kalau ganti model / menaikkan `token_limit`.
 
 ## 4. Sistem Soal & Skoring MBTI
 
