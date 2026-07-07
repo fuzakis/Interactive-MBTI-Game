@@ -1,0 +1,33 @@
+# ===== RAHASIA — JANGAN PERNAH DI-COMMIT =====
+game/.env
+.env
+*.keystore
+
+# ===== FILE COMPILED / CACHE REN'PY =====
+*.rpyc
+*.rpyb
+*.rpymc
+*.bak
+game/cache/
+game/saves/
+game/tl/None/
+**/__pycache__/
+**/#*
+**/thumbs.db
+
+# ===== LOG RUNTIME =====
+log.txt
+errors.txt
+traceback.txt
+
+# ===== DATA PARTISIPAN / RISET (privasi) =====
+PA_*.csv
+game/PA_*.csv
+Test Run/
+
+# ===== DOKUMEN BELUM DIPUBLIKASI =====
+game/python-packages/*.docx
+
+# ===== OS =====
+.DS_Store
+desktop.ini
