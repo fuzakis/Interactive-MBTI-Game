@@ -270,15 +270,32 @@ init python:
     # Fallback: environment variable OPENAI_API_KEY_2 / OPENAI_API_KEY.
     def _load_env_file(filename=".env"):
         env_vars = {}
-        env_path = os.path.join(renpy.config.gamedir, filename)
-        if os.path.exists(env_path):
-            with open(env_path, "r", encoding="utf-8") as f:
-                for line in f:
-                    line = line.strip()
-                    if not line or line.startswith("#") or "=" not in line:
-                        continue
-                    k, _, v = line.partition("=")
-                    env_vars[k.strip()] = v.strip().strip('"').strip("'")
+        raw = None
+
+        # 1. Coba loader Ren'Py dulu — WAJIB untuk Android/iOS, karena di sana
+        #    file game hidup di dalam paket APK/AAB dan TIDAK terlihat oleh
+        #    os.path. renpy.loadable/renpy.open_file bekerja di semua platform.
+        try:
+            if renpy.loadable(filename):
+                with renpy.open_file(filename) as f:
+                    raw = f.read().decode("utf-8")
+        except Exception:
+            raw = None
+
+        # 2. Fallback os.path (file lepas di folder game/ saat development)
+        if raw is None:
+            env_path = os.path.join(renpy.config.gamedir, filename)
+            if os.path.exists(env_path):
+                with open(env_path, "r", encoding="utf-8") as f:
+                    raw = f.read()
+
+        if raw:
+            for line in raw.splitlines():
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, _, v = line.partition("=")
+                env_vars[k.strip()] = v.strip().strip('"').strip("'")
         return env_vars
 
     _env_file = _load_env_file()
