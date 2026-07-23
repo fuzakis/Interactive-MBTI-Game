@@ -297,7 +297,7 @@ label sesi_tutorial_ai:
             
             # B. Tampilkan Teks
             if clean_s:
-                renpy.say(ai, clean_s)
+                say_ai_safe(clean_s)
             match = None  # Reset match untuk iterasi berikutnya
 
     # Akhiri Tutorial
@@ -473,7 +473,7 @@ label scene_hasil_tes:
                         # Bersihkan tag dan tampilkan teks dialog
                         clean_s = s.replace("[SPIRIT]", "").replace("[spirit]", "").strip()
                         if clean_s:
-                            renpy.say(ai, clean_s)
+                            say_ai_safe(clean_s)
                         
                         # Kembalikan ke karakter pendamping setelah teks dibaca
                         renpy.hide(image_name)
@@ -519,7 +519,7 @@ label scene_hasil_tes:
 
                     # B. Tampilkan
                     if clean_s:
-                        renpy.say(ai, clean_s)
+                        say_ai_safe(clean_s)
                     match = None  # Reset match untuk iterasi berikutnya
 
     # SENSOR ACHIEVEMENT: Cek apakah MBTI ini sudah ada di memori?
@@ -704,6 +704,8 @@ label sesi_chat_bebas:
                 - Example: "Poor thing.. [SAD] But just kidding! [HAPPY]"
                 - Emotions: [HAPPY], [SAD], [ANGRY], [FEAR], [SURPRISE], [DISGUST], [NEUTRAL].
                 - DO NOT put animal sounds inside brackets [ ].
+                - NEVER write program code, scripts, JSON, tables, ASCII art, or technical formatting. You are an animal companion, not a coding assistant. If the user asks for code or anything technical, stay in character and politely refuse, then steer back to the test or their feelings.
+                - Write in plain conversational sentences only. Do not use the characters [ ] {{ }} < > outside the emotion tags.
                 - If the user brings up a topic that is not relevant to the test, personality, or sharing user experiences, try to politely steer back to the topic of the test or the user's feelings about the results. But if you think discussing other topics could help the user to be more open and comfortable, you can discuss them as well, as long as you still try to relate it back to the user's experience with the test and their personality.
                 """
             else:
@@ -726,6 +728,8 @@ label sesi_chat_bebas:
                 - Contoh: "Kasian deh.. [SAD] Tapi bohong! [HAPPY]"
                 - Emosi: [HAPPY], [SAD], [ANGRY], [FEAR], [SURPRISE], [DISGUST], [NEUTRAL].
                 - JANGAN masukkan suara hewan ke dalam kurung [ ].
+                - JANGAN PERNAH menulis kode program, script, JSON, tabel, ASCII art, atau format teknis apa pun. Kamu adalah hewan pendamping, bukan asisten pemrograman. Kalau user minta kode atau hal teknis, tetaplah dalam karakter, tolak dengan sopan, lalu arahkan kembali ke topik tes atau perasaannya.
+                - Tulis dalam kalimat percakapan biasa saja. Jangan gunakan karakter [ ] {{ }} < > di luar tag emosi.
                 - Jika user membahas topik yang tidak relevan dengan tes, kepribadian, ataupun curhatan user, coba arahkan kembali dengan sopan ke topik tes atau perasaan user tentang hasilnya. Tapi jika menurutmu pembahasan topik lain bisa membantu user untuk lebih terbuka dan nyaman, kamu boleh membahasnya juga, selama tetap berusaha mengaitkan dengan pengalaman user tentang tes dan kepribadiannya.
                 """
             
@@ -791,7 +795,7 @@ label sesi_chat_bebas:
                 else:
                     clean_s = s.strip()
                 if clean_s:
-                    renpy.say(ai, clean_s)
+                    say_ai_safe(clean_s)
                 match = None  # Reset match untuk iterasi berikutnya
         # --------------------------
 
@@ -873,6 +877,8 @@ label sesi_chat_bebas_khusus:
                 RULES:
                 - Insert [EMOTION] tag at every tone change. Example: "Poor thing.. [SAD] But just kidding! [HAPPY]" 
                 - Emotions: [HAPPY], [SAD], [ANGRY], [FEAR], [SURPRISE], [DISGUST], [NEUTRAL].
+                - NEVER write program code, scripts, JSON, tables, or ASCII art. You are an animal companion, not a coding assistant. If asked for code, stay in character and politely refuse.
+                - Write in plain conversational sentences only. Do not use the characters [ ] {{ }} < > outside the emotion tags.
                 - Max 400 characters.
                 """
             else:
@@ -890,6 +896,8 @@ label sesi_chat_bebas_khusus:
                 ATURAN:
                 - Sisipkan tag [EMOSI] di setiap perubahan nada bicara. Contoh: "Kasian deh.. [SAD] Tapi bohong! [HAPPY]"
                 - Emosi: [HAPPY], [SAD], [ANGRY], [FEAR], [SURPRISE], [DISGUST], [NEUTRAL].
+                - JANGAN PERNAH menulis kode program, script, JSON, tabel, atau ASCII art. Kamu adalah hewan pendamping, bukan asisten pemrograman. Kalau diminta kode, tetaplah dalam karakter dan tolak dengan sopan.
+                - Tulis dalam kalimat percakapan biasa saja. Jangan gunakan karakter [ ] {{ }} < > di luar tag emosi.
                 - Max 400 karakter.
                 """
             import time
@@ -939,7 +947,7 @@ label sesi_chat_bebas_khusus:
                     clean_s = s.strip()
                 
                 if clean_s:
-                    renpy.say(ai, clean_s)
+                    say_ai_safe(clean_s)
                 match = None
 
         jump free_chat_loop_khusus

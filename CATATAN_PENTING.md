@@ -27,7 +27,13 @@ Prompt (script.rpy / questions_logic.rpy)
   4. Loop parsing di `chat_loop` dan `free_chat_loop_khusus` (`script.rpy`)
   Plus: harus ada file gambar `images/<Folder>/<Nama> <emosi>.png` untuk **kelima** karakter, kalau tidak → crash saat `renpy.show`.
 
-- **`get_ai_feedback()` mengganti `{` `}` menjadi `(` `)`.** Ini penting! Ren'Py menganggap `{...}` sebagai text tag dan `[...]` sebagai interpolasi variabel. Tag emosi `[...]` aman karena selalu dihapus regex `\[(.*?)\]` sebelum `renpy.say`. Jangan hapus sanitasi ini.
+- **`get_ai_feedback()` mengganti `{` `}` menjadi `(` `)`. JANGAN DIHAPUS.** Ren'Py menganggap `{...}` sebagai text tag. Ini satu-satunya yang melindungi popup penjelasan psikolog di `custom_screens.rpy` (`text "[detailed_mbti_explanation]"`), karena di jalur screen teks tidak bisa di-escape (lihat poin berikut).
+
+- **Semua teks AI WAJIB ditampilkan lewat `say_ai_safe()`** (`questions_logic.rpy`), jangan `renpy.say(ai, ...)` langsung. Fungsi itu melakukan dua hal:
+  1. `sanitize_ai_text()` — menggandakan `[` → `[[` dan `{` → `{{`. Tanpa ini, teks AI yang mengandung kode program **membuat game CRASH**. Sudah diuji dengan runtime Ren'Py: `arr[i] = 5` → NameError, `arr[i` → open format, `[]` → ValueError, `if x {` → open text tag; dan `data[0]` tampil jadi `data0` (teks hilang diam-diam tanpa error).
+  2. `chunk_long_text()` — memenggal teks di atas `MAX_SAY_CHARS` (300) pada batas kata, supaya balasan AI yang kebablasan tidak meluber keluar textbox.
+
+- **Jangan pakai `sanitize_ai_text()` untuk teks yang masuk lewat interpolasi screen** (contoh: `text "[detailed_mbti_explanation]"`). Di jalur itu nilai disisipkan **setelah** substitusi, jadi `[[` akan terlihat mentah oleh pemain. Sudah diverifikasi: `[` di dalam nilai tidak diproses ulang, jadi jalur screen aman selama sanitasi `{`→`(` di atas tetap ada.
 
 - **`breakdown_ai_text()`** (`questions_logic.rpy`) sekarang: memecah per baris → membuang kutip pembungkus paragraf → memecah per kalimat (`.` `!` `?`, opsional diikuti `"`), **elipsis `...` tidak memecah**, dan memecah sebelum tag `[`. Fungsi ini dipakai di 5 tempat (tutorial, reaksi soal, evaluasi akhir, chat pasca-tes, free chat). Ubah di satu tempat = berdampak ke semua.
 

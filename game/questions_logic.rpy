@@ -2,7 +2,61 @@
 init python:
     import time
     import re
-    
+
+    # Batas aman panjang satu balon teks (karakter).
+    # Respons normal AI dibatasi 270-540 karakter lewat prompt, tapi kalau AI
+    # "kebablasan" (misal user minta kode program), teks tanpa tanda baca bisa
+    # jadi satu blok raksasa yang meluber keluar textbox.
+    MAX_SAY_CHARS = 300
+
+    def sanitize_ai_text(text):
+        """
+        Benteng terakhir sebelum teks AI masuk ke renpy.say().
+
+        Ren'Py memperlakukan '[' sebagai interpolasi variabel dan '{' sebagai
+        text tag. Kalau teks AI mengandung kode program, keduanya membuat game
+        CRASH atau teks termakan diam-diam. Contoh nyata (sudah diuji):
+            "arr[i] = 5"  -> NameError: name 'i' is not defined  (CRASH)
+            "arr[i"       -> Exception: ends with an open format (CRASH)
+            "[]"          -> ValueError: expected expression      (CRASH)
+            "data[0]"     -> tampil jadi "data0"   (teks hilang diam-diam)
+            "if x {"      -> Exception: open text tag             (CRASH)
+        Menggandakan jadi '[[' dan '{{' membuat Ren'Py menampilkannya sebagai
+        karakter biasa.
+
+        CATATAN: JANGAN pakai fungsi ini untuk teks yang ditampilkan lewat
+        interpolasi screen (contoh: text "[detailed_mbti_explanation]"),
+        karena di sana nilainya disisipkan SETELAH proses substitusi sehingga
+        '[[' akan terlihat mentah oleh pemain.
+        """
+        if not text:
+            return ""
+        return text.replace("[", "[[").replace("{", "{{")
+
+    def chunk_long_text(text, limit=MAX_SAY_CHARS):
+        """Pecah teks kepanjangan di batas kata agar tidak meluber dari textbox."""
+        text = text.strip()
+        if len(text) <= limit:
+            return [text] if text else []
+
+        chunks = []
+        sisa = text
+        while len(sisa) > limit:
+            potong = sisa.rfind(" ", 0, limit)
+            if potong <= 0:  # satu kata super panjang (misal baris kode)
+                potong = limit
+            chunks.append(sisa[:potong].strip())
+            sisa = sisa[potong:].strip()
+        if sisa:
+            chunks.append(sisa)
+        return [c for c in chunks if c]
+
+    def say_ai_safe(text):
+        """Satu-satunya pintu menampilkan teks AI: disanitasi + dipenggal aman."""
+        for potongan in chunk_long_text(sanitize_ai_text(text)):
+            renpy.say(store.ai, potongan)
+
+
     # Fungsi memecah teks AI menjadi list kalimat
     def breakdown_ai_text(text):
         if not text: return []
@@ -261,7 +315,7 @@ label ai_react_logic:
 
             # D. Tampilkan Teks Bersih
             if clean_sentence: # Cek biar gak nampilin balon kosong
-                renpy.say(ai, clean_sentence)
+                say_ai_safe(clean_sentence)
             match = None  # Reset match untuk iterasi berikutnya
     
     return
