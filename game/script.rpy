@@ -805,7 +805,7 @@ label sesi_chat_bebas_khusus:
     play music "audio/stupid.mp3" # Ganti dengan musik santai pilihanmu
     # 1. PERSIAPAN NAMA DAN MEMORI
     if not hasattr(persistent, 'player_name') or not persistent.player_name:
-        $ persistent.player_name = renpy.input("Siapa namamu?" if persistent.cur_lang == "id" else "What is your name?").strip()
+        $ persistent.player_name = renpy.input("Siapa namamu?" if persistent.cur_lang == "id" else "What is your name?", exclude=INVALID_NAME_CHARS, length=15).strip()
         if not persistent.player_name:
             $ persistent.player_name = "Player"
     

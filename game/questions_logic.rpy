@@ -9,6 +9,34 @@ init python:
     # jadi satu blok raksasa yang meluber keluar textbox.
     MAX_SAY_CHARS = 300
 
+    # Karakter yang TIDAK BOLEH ada di nama profil.
+    # Alasannya dua, keduanya bikin game crash:
+    #   1. '[' dan '{' -> Ren'Py memproses nama sebagai interpolasi/text tag
+    #      saat ditampilkan di layar profil.
+    #   2. \ / : * ? " < > | -> nama profil dipakai sebagai NAMA FILE memori AI
+    #      (<nama>_<companion>.json), dan karakter ini ilegal di Windows.
+    # Catatan: ini hanya mencegah nama BARU. Nama lama yang terlanjur nakal
+    # tetap aman ditampilkan berkat safe_display_text().
+    INVALID_NAME_CHARS = "{}[]\\/:*?\"<>|"
+
+    def safe_display_text(value):
+        """
+        Escape teks BUATAN PEMAIN (nama profil, data dari file JSON save)
+        sebelum ditampilkan lewat displayable Text di screen.
+
+        Ren'Py menjalankan interpolasi pada string yang diberikan ke `text`,
+        jadi nama profil "[test]" bikin layar profil CRASH
+        (NameError: name 'test' is not defined), dan "Ani[" juga crash.
+
+        PAKAI: text safe_display_text(p["name"])
+        JANGAN: text "[nama_variabel]"  <- itu interpolasi literal, nilainya
+        disisipkan SETELAH substitusi sehingga sudah aman dan tidak boleh
+        di-escape (nanti '[[' malah terlihat mentah oleh pemain).
+        """
+        if not value:
+            return ""
+        return str(value).replace("[", "[[").replace("{", "{{")
+
     def sanitize_ai_text(text):
         """
         Benteng terakhir sebelum teks AI masuk ke renpy.say().

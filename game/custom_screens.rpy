@@ -817,13 +817,13 @@ screen profile_manager_screen(is_start=False):
                                             vbox:
                                                 yalign 0.5
                                                 spacing 5
-                                                text p["name"] size 40 color "#484270" bold True
+                                                text safe_display_text(p["name"]) size 40 color "#484270" bold True
                                                 text ("Last played: " + p["date"] if persistent.cur_lang == "en" else "Terakhir main: " + p["date"]) size 20 color "#666"
                                             
                                             vbox:
                                                 xalign 1.0 yalign 0.5
                                                 text "MBTI Result" size 18 color "#888" xalign 1.0
-                                                text p["mbti"] size 40 color "#a4ff9c" bold True xalign 1.0 outlines [(1, "#484270", 0, 0)]
+                                                text safe_display_text(p["mbti"]) size 40 color "#a4ff9c" bold True xalign 1.0 outlines [(1, "#484270", 0, 0)]
                                     
                                     # DESAIN TOMBOL TONG SAMPAH (Hanya muncul saat Delete Mode ON)
                                     # Cari kode desain tombol tong sampah yang lama, ganti action-nya:
@@ -873,6 +873,7 @@ screen profile_manager_screen(is_start=False):
                     
                     input:
                         value FieldInputValue(persistent, "player_name")
+                        exclude INVALID_NAME_CHARS
                         color "#484270" size 40 xalign 0.5 yalign 0.5 length 15 bold True
                         
                 hbox:
