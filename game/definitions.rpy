@@ -621,8 +621,114 @@ init python:
         
         Jawab sekarang sesuai karaktermu:
         """
-        
+
         return prompt_final
+
+    # --- KONTEKS DUNIA (agar AI sadar ada di dalam game & kenal 5 companion) ---
+    # Disuntikkan ke prompt sesi CHAT (bukan reaksi soal) supaya companion tidak
+    # berhalusinasi (mis. mengarang teman bernama "Haruka") dan tidak menjawab di
+    # luar konteks game/tes. Data companion diambil dari sumber tunggal yang sama
+    # dengan prefix_map, jadi kalau menambah/mengganti companion cukup di sini.
+    def get_world_context(lang="id"):
+        # (key personality, Nama, Hewan EN, Hewan ID, sifat singkat EN, sifat singkat ID)
+        roster = [
+            ("openness",          "Kitsuko", "Fox",    "Rubah",   "visionary & imaginative (Openness)",      "visioner & imajinatif (Openness)"),
+            ("conscientiousness", "Onyen",   "Cat",    "Kucing",  "tidy & disciplined (Conscientiousness)",  "rapi & disiplin (Conscientiousness)"),
+            ("extraversion",      "Iwank",   "Dog",    "Anjing",  "energetic & loyal (Extraversion)",        "energik & setia (Extraversion)"),
+            ("agreeableness",     "Susagi",  "Rabbit", "Kelinci", "gentle & caring (Agreeableness)",         "lembut & penyayang (Agreeableness)"),
+            ("neuroticism",       "Jakouko", "Civet",  "Luwak",   "cautious & anxious (Neuroticism)",        "waspada & cemas (Neuroticism)"),
+        ]
+
+        if lang == "en":
+            lines = [f"- {n} the {an} — {tr}" for (_k, n, an, _ai, tr, _ti) in roster]
+            return (
+                "WORLD / SETTING (this is the truth, never contradict or invent beyond it):\n"
+                "- You live inside an interactive Visual Novel MBTI personality test. The player just took (or is taking) the test and you are their animal companion.\n"
+                "- There are EXACTLY 5 companions, one per Big Five trait. This is the COMPLETE list — never add, rename, or forget any of them:\n"
+                + "\n".join("  " + l for l in lines) + "\n"
+                "- You are one of these five (stay as your own character). The others are your fellow companions; you know them but each player only travels with one.\n"
+                "- Only discuss: the test, the player's result & personality, these companions, the game's features, and the player's feelings. If asked about unrelated topics (coding, politics, homework, general trivia), gently decline in-character and steer back. Brief pleasantries are fine.\n"
+                "- If unsure about a fact, admit it in-character instead of making something up."
+            )
+        else:
+            lines = [f"- {n} Si {ai} — {ti}" for (_k, n, _an, ai, _tr, ti) in roster]
+            return (
+                "DUNIA / LATAR (ini kebenaran, jangan pernah dibantah atau dikarang melebihi ini):\n"
+                "- Kamu hidup di dalam sebuah Visual Novel tes kepribadian MBTI interaktif. Pemain baru saja mengerjakan (atau sedang mengerjakan) tes, dan kamu adalah hewan pendampingnya.\n"
+                "- Ada TEPAT 5 companion, satu untuk tiap sifat Big Five. Ini daftar LENGKAP — jangan pernah menambah, mengganti nama, atau melupakan satu pun:\n"
+                + "\n".join("  " + l for l in lines) + "\n"
+                "- Kamu adalah salah satu dari kelima ini (tetaplah jadi karaktermu sendiri). Yang lain adalah teman-teman sesama companion; kamu mengenal mereka, tapi tiap pemain hanya ditemani satu.\n"
+                "- Hanya bahas: tes, hasil & kepribadian pemain, para companion ini, fitur game, dan perasaan pemain. Jika ditanya hal di luar itu (coding, politik, PR, trivia umum), tolak dengan sopan sambil tetap in-character lalu arahkan kembali. Basa-basi singkat boleh.\n"
+                "- Kalau tidak yakin akan suatu fakta, akui saja secara in-character daripada mengarang."
+            )
+
+    # --- MEMORI PERMANEN (ringkasan fakta penting -> known_facts di JSON) ---
+    # Menjaga companion "ingat" hal lama meski di luar jendela 10 chat terakhir,
+    # tanpa halusinasi. Dipanggil berkala; hasil disimpan permanen ke JSON.
+    def format_known_facts(mem, lang="id"):
+        """Rakit blok known_facts untuk disisipkan ke prompt. Kosong -> string kosong."""
+        facts = (mem or {}).get("known_facts", []) if isinstance(mem, dict) else []
+        facts = [str(f).strip() for f in facts if str(f).strip()]
+        if not facts:
+            return ""
+        head = ("LONG-TERM MEMORY (things you remember about this person from before — treat as true, but you may need a gentle reminder):"
+                if lang == "en" else
+                "MEMORI JANGKA PANJANG (hal yang kamu ingat tentang orang ini dari dulu — anggap benar, tapi kamu mungkin perlu sedikit diingatkan):")
+        return head + "\n" + "\n".join("- " + f for f in facts)
+
+    def update_memory_summary(companion_personality, lang="id", max_facts=12):
+        """
+        Suling chat_history menjadi daftar fakta ringkas yang disimpan permanen
+        di current_ai_memory['known_facts']. Dipanggil berkala (tiap N giliran).
+        Memakai 1 panggilan AI ringan; aman kalau gagal (memori lama dipertahankan).
+        """
+        global current_ai_memory
+        if not current_ai_memory:
+            return
+        history = current_ai_memory.get("chat_history", [])
+        if len(history) < 4:
+            return  # belum cukup bahan untuk diringkas
+
+        recent = "\n".join(str(h) for h in history[-30:])
+        existing = "\n".join("- " + str(f) for f in current_ai_memory.get("known_facts", [])) or "(kosong)"
+
+        if lang == "en":
+            summ_prompt = f"""You maintain a companion's long-term memory of one player. Update the durable fact list.
+
+EXISTING FACTS:
+{existing}
+
+RECENT CONVERSATION:
+{recent}
+
+Rewrite the COMPLETE updated fact list: short bullet points of things worth remembering long-term about this player and your relationship (their name, preferences, feelings, promises, recurring topics, important life details they shared). Merge duplicates, drop trivia. Keep at most {max_facts} bullets. Output ONLY the bullet lines starting with "- ", nothing else. No emotion tags, no roleplay."""
+        else:
+            summ_prompt = f"""Kamu menjaga memori jangka panjang seorang companion tentang satu pemain. Perbarui daftar fakta permanennya.
+
+FAKTA YANG SUDAH ADA:
+{existing}
+
+PERCAKAPAN TERBARU:
+{recent}
+
+Tulis ulang DAFTAR FAKTA LENGKAP yang sudah diperbarui: poin-poin singkat hal yang layak diingat jangka panjang tentang pemain ini dan hubungan kalian (nama, preferensi, perasaan, janji, topik yang berulang, detail hidup penting yang dia bagikan). Gabungkan yang duplikat, buang yang remeh. Maksimal {max_facts} poin. Keluarkan HANYA baris poin diawali "- ", tidak ada yang lain. Tanpa tag emosi, tanpa roleplay."""
+
+        try:
+            # Pakai persona "psychologist" (netral, tanpa tag emosi) untuk peringkasan.
+            raw = get_ai_feedback(summ_prompt, "psychologist", lang=lang, token_limit=400)
+            new_facts = []
+            for line in raw.splitlines():
+                line = line.strip().lstrip("-•*").strip()
+                # Buang sisa tag emosi kalau model nakal
+                line = re.sub(r"\[.*?\]", "", line).strip()
+                if line:
+                    new_facts.append(line[:200])
+            if new_facts:
+                current_ai_memory["known_facts"] = new_facts[:max_facts]
+                save_ai_memory()
+                debug_log("MEMORY SUMMARY UPDATED", f"{len(new_facts)} fakta disimpan")
+        except Exception as e:
+            debug_log("MEMORY SUMMARY ERROR", str(e))  # gagal = memori lama tetap aman
 
     # --- FUNGSI GET RESPONSE ADAPTASI ---
     def get_ai_feedback(user_text, personality_key, lang="id", token_limit=300):

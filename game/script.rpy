@@ -684,11 +684,19 @@ label sesi_chat_bebas:
             # --- DEBUG: Cek apa yang diketik user ---
             debug_log("CHAT INPUT", user_input)
 
+            # Konteks dunia (kenal 5 companion & sadar di dalam game) + memori permanen
+            world_ctx = get_world_context(persistent.cur_lang)
+            mem_facts = format_known_facts(current_ai_memory, persistent.cur_lang)
+
             if persistent.cur_lang == "en":
                 # --- PROMPT INGGRIS ---
                 chat_ctx = f"""
+                {world_ctx}
+
+                {mem_facts}
+
                 CONTEXT:
-                - You: {companion_personality} (Close friend).
+                - You: {ai_name} ({companion_personality}), the player's close companion.
                 - User: {my_mbti_type}.
                 - Last Chat: {recent_history}
                 - Data additional: User's spirit animal is {my_spirit}.
@@ -711,8 +719,12 @@ label sesi_chat_bebas:
             else:
                 # --- PROMPT INDONESIA ---
                 chat_ctx = f"""
+                {world_ctx}
+
+                {mem_facts}
+
                 KONTEKS:
-                - Kamu: {companion_personality} (Teman akrab).
+                - Kamu: {ai_name} ({companion_personality}), companion akrab pemain.
                 - User: {my_mbti_type}.
                 - Chat Terakhir: {recent_history}
                 - Data tambahan: Spirit animal user adalah {my_spirit}.
@@ -756,8 +768,13 @@ label sesi_chat_bebas:
             # Pastikan obrolan ini terbawa ke Free Chat Menu nanti
             current_ai_memory["chat_history"].append(f"User ({persistent.player_name}): {user_input}")
             current_ai_memory["chat_history"].append(f"{ai_name}: {clean_history_txt}")
-            save_ai_memory() 
+            save_ai_memory()
             # ------------------------------------------
+
+            # --- 3. RINGKAS MEMORI PERMANEN tiap 4 giliran (ke known_facts) ---
+            # Agar companion ingat hal lama walau di luar jendela chat terakhir.
+            if chat_count > 0 and chat_count % 4 == 0:
+                update_memory_summary(companion_personality, persistent.cur_lang)
 
         hide screen ai_loading with dissolve
         window show
@@ -861,14 +878,22 @@ label sesi_chat_bebas_khusus:
             last_10_chats = current_ai_memory["chat_history"][-10:]
             recent_memories = "\n".join(last_10_chats)
 
+            # Konteks dunia (kenal 5 companion & sadar di dalam game) + memori permanen
+            world_ctx = get_world_context(persistent.cur_lang)
+            mem_facts = format_known_facts(current_ai_memory, persistent.cur_lang)
+
             # B. Rakit Prompt dengan Konteks JSON
             if persistent.cur_lang == "en":
                 memory_ctx = f"""
+                {world_ctx}
+
+                {mem_facts}
+
                 CONTEXT:
-                - You: {companion_personality} (Close friend).
+                - You: {ai_name} ({companion_personality}), the player's close companion.
                 - User Name: {persistent.player_name}
                 - User MBTI: {current_ai_memory['last_mbti']}
-                - Past Chat History (Remember this!):
+                - Recent Chat (short-term, last 10 lines):
                 {recent_memories}
 
                 USER QUESTION: "{user_input}"
@@ -883,11 +908,15 @@ label sesi_chat_bebas_khusus:
                 """
             else:
                 memory_ctx = f"""
+                {world_ctx}
+
+                {mem_facts}
+
                 KONTEKS:
-                - Kamu: {companion_personality} (Teman akrab).
+                - Kamu: {ai_name} ({companion_personality}), companion akrab pemain.
                 - Nama User: {persistent.player_name}
                 - MBTI User Terakhir: {current_ai_memory['last_mbti']}
-                - Riwayat Obrolan Masa Lalu (Ingat ini!):
+                - Obrolan Terkini (jangka pendek, 10 baris terakhir):
                 {recent_memories}
 
                 PERTANYAAN USER: "{user_input}"
@@ -918,6 +947,10 @@ label sesi_chat_bebas_khusus:
             ai_speaker_name = companion_personality.capitalize()
             current_ai_memory["chat_history"].append(f"{ai_name}: {clean_reply_for_memory}")
             save_ai_memory() # <--- INI YANG MEMBUAT INGATANNYA TERSIMPAN PERMANEN!
+
+            # Ringkas ke known_facts tiap 4 giliran (chat_history +2 per giliran).
+            if len(current_ai_memory["chat_history"]) % 8 == 0:
+                update_memory_summary(companion_personality, persistent.cur_lang)
 
         hide screen ai_loading with dissolve
         window show

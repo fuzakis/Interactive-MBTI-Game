@@ -68,6 +68,7 @@ Prompt (script.rpy / questions_logic.rpy)
 
 - Achievement/award tersimpan di `persistent.unlocked_mbti` dan `persistent.unlocked_awards` — ID award (`"dog"`, `"cat"`, `"civet"`, `"rabbit"`, `"fox"`, `"chat"`, `"music"`, `"speed"`, `"all_mbti"`) dipakai lintas file (unlock di `script.rpy`, ditampilkan di `custom_screens.rpy`, syarat lagu di `music_tracks`). Ganti ID = achievement lama pemain hilang.
 - Memori AI per pemain disimpan sebagai JSON di `renpy.config.savedir` dengan nama `<nama>_<companion>.json`. Struktur: `player_name`, `companion_id`, `last_mbti`, `known_facts`, `chat_history`. `get_all_profiles_data()` memindai folder save berdasarkan struktur ini.
+- **`chat_history` = memori jangka pendek** (jendela 10 baris terakhir dikirim ke prompt). **`known_facts` = memori jangka panjang permanen** — diisi oleh `update_memory_summary()` (`definitions.rpy`) yang meringkas obrolan jadi maksimal 12 poin, dipanggil tiap 4 giliran chat. Tujuannya companion ingat hal lama tanpa halusinasi. Kalau menambah field baru ke JSON, pastikan `load_ai_memory` tetap membuat struktur default lengkap (file lama tanpa field itu harus tetap terbaca via `.get()`).
 - `config.save_directory = "MBTIGame-1763449699"` — jangan diubah, atau semua save/persistent pemain lama "hilang".
 
 ## 6. Logging Penelitian (CSV)
@@ -92,6 +93,8 @@ Prompt (script.rpy / questions_logic.rpy)
 
 - Framing hasil tes: jangan pakai "hanya untuk senang-senang", "tidak ilmiah", "tidak akurat" (tanpa kualifikasi), "tidak mendefinisikan". Gunakan framing "cerminan awal / bahan refleksi / tidak akurat 100%".
 - Output companion memakai kata "kamu", bukan "pemain".
+- **Konteks dunia (`get_world_context()` di `definitions.rpy`)** disuntikkan ke prompt SESI CHAT (chat pasca-tes & free chat hub), BUKAN ke reaksi soal (biar hemat token). Isinya: sadar ada di dalam game tes MBTI + daftar LENGKAP 5 companion. **Kalau menambah/mengganti companion, update roster di sini** — kalau tidak, AI akan berhalusinasi (dulu Onyen mengarang companion "Haruka" & lupa Jakouko karena roster tidak pernah diberikan). Sumber roster harus konsisten dengan `prefix_map`/`folder_map`.
+- `known_facts` disuntikkan ke prompt chat lewat `format_known_facts()`. `update_memory_summary()` memakai persona `"psychologist"` (netral, tanpa tag emosi) untuk meringkas — jangan ganti ke persona hewan, nanti hasilnya berisi tag emosi & roleplay yang mengotori memori.
 - Batas panjang respons dijaga lewat prompt (`Max 270/400/540 karakter`) **dan** `token_limit` per konteks: reaksi soal 300, tutorial 500, chat 800–1000, evaluasi 1500, penjelasan psikolog 2000. Menaikkan limit = biaya token naik & teks bisa kepanjangan di textbox.
 - Mode `"psychologist"` adalah jalur khusus di `get_system_prompt()` **tanpa** tag emosi — dipakai untuk penjelasan detail MBTI. Jangan kirim output ini ke parser emosi.
 
