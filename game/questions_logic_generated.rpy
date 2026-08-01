@@ -11,29 +11,29 @@ label show_question_q_a_01_id:
     menu:
         "(Krucuk...) Aduh, lelah sekali setelah jalan-jalan hari ini! Energimu habis dan perutmu lapar. Apa yang tubuhmu butuhkan?"
 
-        "Pulang ke rumah sendiri dan makan makanan bergizi untuk memulihkan fisik.":
+        "Pulang ke rumah sendiri (I) dan makan makanan bergizi untuk memulihkan fisik (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Pulang ke rumah sendiri dan makan makanan bergizi untuk memulihkan fisik."
+            $ user_choice_text = "Pulang ke rumah sendiri (I) dan makan makanan bergizi untuk memulihkan fisik (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_a_01_id_A
 
-        "Kumpul bareng teman dan bercerita tentang ide perjalanan selanjutnya.":
+        "Kumpul bareng teman dan bercerita (E) tentang ide perjalanan selanjutnya (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Kumpul bareng teman dan bercerita tentang ide perjalanan selanjutnya."
+            $ user_choice_text = "Kumpul bareng teman dan bercerita (E) tentang ide perjalanan selanjutnya (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_a_01_id_B
 
 
 label show_question_q_a_01_id_A:
-    $ user_journey_summary.append("Di situasi (Krucuk...) Aduh, lelah sekali setelah jalan-jalan hari ini! Energimu habis dan perutmu lapar. Apa yang tubuhmu butuhkan?, user memilih: Pulang ke rumah sendiri dan makan makanan bergizi untuk memulihkan fisik., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic
+    $ user_journey_summary.append("Di situasi (Krucuk...) Aduh, lelah sekali setelah jalan-jalan hari ini! Energimu habis dan perutmu lapar. Apa yang tubuhmu butuhkan?, user memilih: Pulang ke rumah sendiri (I) dan makan makanan bergizi untuk memulihkan fisik (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_a_01_id_B:
-    $ user_journey_summary.append("Di situasi (Krucuk...) Aduh, lelah sekali setelah jalan-jalan hari ini! Energimu habis dan perutmu lapar. Apa yang tubuhmu butuhkan?, user memilih: Kumpul bareng teman dan bercerita tentang ide perjalanan selanjutnya., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_1
+    $ user_journey_summary.append("Di situasi (Krucuk...) Aduh, lelah sekali setelah jalan-jalan hari ini! Energimu habis dan perutmu lapar. Apa yang tubuhmu butuhkan?, user memilih: Kumpul bareng teman dan bercerita (E) tentang ide perjalanan selanjutnya (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_a_02_id:
@@ -46,29 +46,29 @@ label show_question_q_a_02_id:
     menu:
         "(Kring!) Pintu kafe terbuka! Ada sosok misterius yang gayanya keren sekali masuk. Apa yang pertama kali menarik perhatianmu?"
 
-        "Perhatikan dia dari kursimu, sambil mengamati pergerakannya.":
+        "Perhatikan dia dari kursimu (I), sambil mengamati pergerakannya (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Perhatikan dia dari kursimu, sambil mengamati pergerakannya."
+            $ user_choice_text = "Perhatikan dia dari kursimu (I), sambil mengamati pergerakannya (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_a_02_id_A
 
-        "Langsung sapa, dan tanya dia hendak pergi kemana dengan pakaian seperti itu.":
+        "Langsung sapa (E), dan tanya dia hendak pergi kemana dengan pakaian seperti itu (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Langsung sapa, dan tanya dia hendak pergi kemana dengan pakaian seperti itu."
+            $ user_choice_text = "Langsung sapa (E), dan tanya dia hendak pergi kemana dengan pakaian seperti itu (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_a_02_id_B
 
 
 label show_question_q_a_02_id_A:
-    $ user_journey_summary.append("Di situasi (Kring!) Pintu kafe terbuka! Ada sosok misterius yang gayanya keren sekali masuk. Apa yang pertama kali menarik perhatianmu? user memilih: Perhatikan dia dari kursimu, sambil mengamati pergerakannya., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_2
+    $ user_journey_summary.append("Di situasi (Kring!) Pintu kafe terbuka! Ada sosok misterius yang gayanya keren sekali masuk. Apa yang pertama kali menarik perhatianmu?, user memilih: Perhatikan dia dari kursimu (I), sambil mengamati pergerakannya (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_a_02_id_B:
-    $ user_journey_summary.append("Di situasi (Kring!) Pintu kafe terbuka! Ada sosok misterius yang gayanya keren sekali masuk. Apa yang pertama kali menarik perhatianmu? user memilih: Langsung sapa, dan tanya dia hendak pergi kemana dengan pakaian seperti itu., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_3
+    $ user_journey_summary.append("Di situasi (Kring!) Pintu kafe terbuka! Ada sosok misterius yang gayanya keren sekali masuk. Apa yang pertama kali menarik perhatianmu?, user memilih: Langsung sapa (E), dan tanya dia hendak pergi kemana dengan pakaian seperti itu (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_a_03_id:
@@ -80,29 +80,29 @@ label show_question_q_a_03_id:
     menu:
         "(Gubrak!) Bos memberi tumpukan job setinggi gunung! Mustahil selesai sendirian hari ini."
 
-        "Panggil seluruh tim untuk bagi tugas fisik sekarang juga.":
+        "Panggil seluruh tim (E) untuk bagi tugas fisik (S) sekarang juga.":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Panggil seluruh tim untuk bagi tugas fisik sekarang juga."
+            $ user_choice_text = "Panggil seluruh tim (E) untuk bagi tugas fisik (S) sekarang juga."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_a_03_id_A
 
-        "Panggil rekan kerja dekat untuk coba program bantuan yang baru kamu kembangkan":
+        "Panggil rekan kerja dekat (I) untuk coba program bantuan yang baru kamu kembangkan (N)":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Panggil rekan kerja dekat untuk coba program bantuan yang baru kamu kembangkan"
+            $ user_choice_text = "Panggil rekan kerja dekat (I) untuk coba program bantuan yang baru kamu kembangkan (N)"
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_a_03_id_B
 
 
 label show_question_q_a_03_id_A:
-    $ user_journey_summary.append("Di situasi (Gubrak!) Bos memberi tumpukan job setinggi gunung! Mustahil selesai sendirian hari ini., user memilih: Panggil seluruh tim untuk bagi tugas fisik sekarang juga., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_4
+    $ user_journey_summary.append("Di situasi (Gubrak!) Bos memberi tumpukan job setinggi gunung! Mustahil selesai sendirian hari ini., user memilih: Panggil seluruh tim (E) untuk bagi tugas fisik (S) sekarang juga., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_a_03_id_B:
-    $ user_journey_summary.append("Di situasi (Gubrak!) Bos memberi tumpukan job setinggi gunung! Mustahil selesai sendirian hari ini., user memilih: Panggil rekan kerja dekat untuk coba program bantuan yang baru kamu kembangkan, dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_5
+    $ user_journey_summary.append("Di situasi (Gubrak!) Bos memberi tumpukan job setinggi gunung! Mustahil selesai sendirian hari ini., user memilih: Panggil rekan kerja dekat (I) untuk coba program bantuan yang baru kamu kembangkan (N), dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_a_04_id:
@@ -113,29 +113,29 @@ label show_question_q_a_04_id:
     menu:
         "(Waduh!) Kamu mau masak makanan spesial, tapi satu bahan utamanya habis, kamu lupa membelinya kemarin."
 
-        "Hubungi dan tanya teman untuk meminta bahan mentah yang kurang.":
+        "Hubungi dan tanya teman (E) untuk meminta bahan mentah yang kurang (S).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Hubungi dan tanya teman untuk meminta bahan mentah yang kurang."
+            $ user_choice_text = "Hubungi dan tanya teman (E) untuk meminta bahan mentah yang kurang (S)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_a_04_id_A
 
-        "Tetap di dapur dan coba eksperimen menggantinya dengan bahan lain.":
+        "Tetap di dapur (I) dan coba eksperimen (N) menggantinya dengan bahan lain.":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Tetap di dapur dan coba eksperimen menggantinya dengan bahan lain."
+            $ user_choice_text = "Tetap di dapur (I) dan coba eksperimen (N) menggantinya dengan bahan lain."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_a_04_id_B
 
 
 label show_question_q_a_04_id_A:
-    $ user_journey_summary.append("Di situasi (Waduh!) Kamu mau masak makanan spesial, tapi satu bahan utamanya habis, kamu lupa membelinya kemarin., user memilih: Hubungi dan tanya teman untuk meminta bahan mentah yang kurang., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_6
+    $ user_journey_summary.append("Di situasi (Waduh!) Kamu mau masak makanan spesial, tapi satu bahan utamanya habis, kamu lupa membelinya kemarin., user memilih: Hubungi dan tanya teman (E) untuk meminta bahan mentah yang kurang (S)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_a_04_id_B:
-    $ user_journey_summary.append("Di situasi (Waduh!) Kamu mau masak makanan spesial, tapi satu bahan utamanya habis, kamu lupa membelinya kemarin., user memilih: Tetap di dapur dan coba eksperimen menggantinya dengan bahan lain., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_7
+    $ user_journey_summary.append("Di situasi (Waduh!) Kamu mau masak makanan spesial, tapi satu bahan utamanya habis, kamu lupa membelinya kemarin., user memilih: Tetap di dapur (I) dan coba eksperimen (N) menggantinya dengan bahan lain., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_a_05_id:
@@ -147,63 +147,63 @@ label show_question_q_a_05_id:
     menu:
         "Ada poster 'Berita Hangat!' yang bikin heboh satu desa! Semua orang membicarakannya."
 
-        "Ikut komentar dengan warga lainnya dan cari bukti kejadiannya.":
+        "Ikut komentar dengan warga lainnya (E) dan cari bukti (S) kejadiannya.":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Ikut komentar dengan warga lainnya dan cari bukti kejadiannya."
+            $ user_choice_text = "Ikut komentar dengan warga lainnya (E) dan cari bukti (S) kejadiannya."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_a_05_id_A
 
-        "Baca dan amati, coba bayangkan apa yang sebenarnya terjadi.":
+        "Baca dan amati (I), coba bayangkan apa yang sebenarnya terjadi (N).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Baca dan amati, coba bayangkan apa yang sebenarnya terjadi."
+            $ user_choice_text = "Baca dan amati (I), coba bayangkan apa yang sebenarnya terjadi (N)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_a_05_id_B
 
 
 label show_question_q_a_05_id_A:
-    $ user_journey_summary.append("Di situasi Ada poster 'Berita Hangat!' yang bikin heboh satu desa! Semua orang membicarakannya., user memilih: Ikut komentar dengan warga lainnya dan cari bukti kejadiannya., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_8
+    $ user_journey_summary.append("Di situasi Ada poster 'Berita Hangat!' yang bikin heboh satu desa! Semua orang membicarakannya., user memilih: Ikut komentar dengan warga lainnya (E) dan cari bukti (S) kejadiannya., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_a_05_id_B:
-    $ user_journey_summary.append("Di situasi Ada poster 'Berita Hangat!' yang bikin heboh satu desa! Semua orang membicarakannya., user memilih: Baca dan amati, coba bayangkan apa yang sebenarnya terjadi., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_9
+    $ user_journey_summary.append("Di situasi Ada poster 'Berita Hangat!' yang bikin heboh satu desa! Semua orang membicarakannya., user memilih: Baca dan amati (I), coba bayangkan apa yang sebenarnya terjadi (N)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_a_06_id:
     scene bg kantor with dissolve
-    $ narasi_asli = "(Gawat!) Teman satu timmu tidak sengaja menghilangkan barang berharga milik perusahaan! Dia terlihat mau menangis."
-    n "(Gawat!) Teman satu timmu tidak sengaja menghilangkan barang berharga milik perusahaan!"
-    n "Dia terlihat mau menangis."
+    $ narasi_asli = "Teman satu timmu tak sengaja menghilangkan barang penting perusahaan. Dia panik."
+    n "Teman satu timmu tak sengaja menghilangkan barang penting perusahaan."
+    n "Dia panik."
 
     menu:
-        "(Gawat!) Teman satu timmu tidak sengaja menghilangkan barang berharga milik perusahaan! Dia terlihat mau menangis."
+        "Teman satu timmu tak sengaja menghilangkan barang penting perusahaan. Dia panik."
 
-        "Tegur dia langsung agar dia tanggung jawab.":
+        "Ajak bicara di depan tim (E) untuk susun langkah perbaikan yang jelas (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Tegur dia langsung agar dia tanggung jawab."
+            $ user_choice_text = "Ajak bicara di depan tim (E) untuk susun langkah perbaikan yang jelas (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_a_06_id_A
 
-        "Tarik dia menjauh dan bilang 'gapapa, kita cari sama-sama jalan keluarnya'":
+        "Tarik dia menepi berdua (I) dan tenangkan dulu perasaannya (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Tarik dia menjauh dan bilang 'gapapa, kita cari sama-sama jalan keluarnya'"
+            $ user_choice_text = "Tarik dia menepi berdua (I) dan tenangkan dulu perasaannya (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_a_06_id_B
 
 
 label show_question_q_a_06_id_A:
-    $ user_journey_summary.append("Di situasi (Gawat!) Teman satu timmu tidak sengaja menghilangkan barang berharga milik perusahaan! Dia terlihat mau menangis., user memilih: Tegur dia langsung agar dia tanggung jawab., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_10
+    $ user_journey_summary.append("Di situasi Teman satu timmu tak sengaja menghilangkan barang penting perusahaan. Dia panik., user memilih: Ajak bicara di depan tim (E) untuk susun langkah perbaikan yang jelas (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_a_06_id_B:
-    $ user_journey_summary.append("Di situasi (Gawat!) Teman satu timmu tidak sengaja menghilangkan barang berharga milik perusahaan! Dia terlihat mau menangis., user memilih: Tarik dia menjauh dan bilang 'gapapa, kita cari sama-sama jalan keluarnya', dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_11
+    $ user_journey_summary.append("Di situasi Teman satu timmu tak sengaja menghilangkan barang penting perusahaan. Dia panik., user memilih: Tarik dia menepi berdua (I) dan tenangkan dulu perasaannya (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_a_07_id:
@@ -214,29 +214,29 @@ label show_question_q_a_07_id:
     menu:
         "Ada peraturan baru di taman: 'Dilarang Tertawa Keras'."
 
-        "Protes ke petugas karena aturannya tidak masuk akal.":
+        "Protes ke petugas (E) karena aturannya tidak masuk akal (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Protes ke petugas karena aturannya tidak masuk akal."
+            $ user_choice_text = "Protes ke petugas (E) karena aturannya tidak masuk akal (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_a_07_id_A
 
-        "Diam saja, karena mungkin benar, hal tersebut bisa merusak suasana yang damai.":
+        "Diam saja (I), karena mungkin benar, hal tersebut bisa merusak suasana yang damai (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Diam saja, karena mungkin benar, hal tersebut bisa merusak suasana yang damai."
+            $ user_choice_text = "Diam saja (I), karena mungkin benar, hal tersebut bisa merusak suasana yang damai (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_a_07_id_B
 
 
 label show_question_q_a_07_id_A:
-    $ user_journey_summary.append("Di situasi Ada peraturan baru di taman: 'Dilarang Tertawa Keras'., user memilih: Protes ke petugas karena aturannya tidak masuk akal., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_12
+    $ user_journey_summary.append("Di situasi Ada peraturan baru di taman: 'Dilarang Tertawa Keras'., user memilih: Protes ke petugas (E) karena aturannya tidak masuk akal (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_a_07_id_B:
-    $ user_journey_summary.append("Di situasi Ada peraturan baru di taman: 'Dilarang Tertawa Keras'., user memilih: Diam saja, karena mungkin benar, hal tersebut bisa merusak suasana yang damai., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_13
+    $ user_journey_summary.append("Di situasi Ada peraturan baru di taman: 'Dilarang Tertawa Keras'., user memilih: Diam saja (I), karena mungkin benar, hal tersebut bisa merusak suasana yang damai (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_a_08_id:
@@ -247,29 +247,29 @@ label show_question_q_a_08_id:
     menu:
         "Pengunjung di meja sebelah terlihat sangat galau dan menghela napas panjang..."
 
-        "Coba dekati dan tanya langsung, analisis masalahnya agar ditemukan jalan keluarnya.":
+        "Coba dekati dan tanya langsung (E), analisis masalahnya (T) agar ditemukan jalan keluarnya.":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Coba dekati dan tanya langsung, analisis masalahnya agar ditemukan jalan keluarnya."
+            $ user_choice_text = "Coba dekati dan tanya langsung (E), analisis masalahnya (T) agar ditemukan jalan keluarnya."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_a_08_id_A
 
-        "Kasih tisu diam-diam karena kasihan melihatnya.":
+        "Kasih tisu diam-diam (I) karena kasihan melihatnya (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Kasih tisu diam-diam karena kasihan melihatnya."
+            $ user_choice_text = "Kasih tisu diam-diam (I) karena kasihan melihatnya (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_a_08_id_B
 
 
 label show_question_q_a_08_id_A:
-    $ user_journey_summary.append("Di situasi Pengunjung di meja sebelah terlihat sangat galau dan menghela napas panjang..., user memilih: Coba dekati dan tanya langsung, analisis masalahnya agar ditemukan jalan keluarnya., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_14
+    $ user_journey_summary.append("Di situasi Pengunjung di meja sebelah terlihat sangat galau dan menghela napas panjang..., user memilih: Coba dekati dan tanya langsung (E), analisis masalahnya (T) agar ditemukan jalan keluarnya., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_a_08_id_B:
-    $ user_journey_summary.append("Di situasi Pengunjung di meja sebelah terlihat sangat galau dan menghela napas panjang..., user memilih: Kasih tisu diam-diam karena kasihan melihatnya., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_15
+    $ user_journey_summary.append("Di situasi Pengunjung di meja sebelah terlihat sangat galau dan menghela napas panjang..., user memilih: Kasih tisu diam-diam (I) karena kasihan melihatnya (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_a_09_id:
@@ -281,29 +281,29 @@ label show_question_q_a_09_id:
     menu:
         "Kapten kapal membagikan harta karun, tapi bagianmu paling sedikit! Tidak adil!"
 
-        "Debat dengan Kapten karena hitungannya salah.":
+        "Debat dengan Kapten (E) karena hitungannya salah (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Debat dengan Kapten karena hitungannya salah."
+            $ user_choice_text = "Debat dengan Kapten (E) karena hitungannya salah (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_a_09_id_A
 
-        "Terima saja karena mungkin kapten sedang memerlukannya.":
+        "Terima saja (I) karena mungkin kapten sedang memerlukannya (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Terima saja karena mungkin kapten sedang memerlukannya."
+            $ user_choice_text = "Terima saja (I) karena mungkin kapten sedang memerlukannya (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_a_09_id_B
 
 
 label show_question_q_a_09_id_A:
-    $ user_journey_summary.append("Di situasi Kapten kapal membagikan harta karun, tapi bagianmu paling sedikit! Tidak adil!, user memilih: Debat dengan Kapten karena hitungannya salah., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_16
+    $ user_journey_summary.append("Di situasi Kapten kapal membagikan harta karun, tapi bagianmu paling sedikit! Tidak adil!, user memilih: Debat dengan Kapten (E) karena hitungannya salah (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_a_09_id_B:
-    $ user_journey_summary.append("Di situasi Kapten kapal membagikan harta karun, tapi bagianmu paling sedikit! Tidak adil!, user memilih: Terima saja karena mungkin kapten sedang memerlukannya., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_17
+    $ user_journey_summary.append("Di situasi Kapten kapal membagikan harta karun, tapi bagianmu paling sedikit! Tidak adil!, user memilih: Terima saja (I) karena mungkin kapten sedang memerlukannya (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_a_10_id:
@@ -315,29 +315,29 @@ label show_question_q_a_10_id:
     menu:
         "(Suara Misterius) 'Pilihlah takdirmu... Pintu Kiri atau Pintu Kanan?' Tanpa adanya petunjuk sama sekali!"
 
-        "Tanya kembali suara itu 'kira-kira, mana pintu yang paling aman?'":
+        "Tanya kembali suara itu (E) 'kira-kira, mana pintu yang paling aman (T)?'":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Tanya kembali suara itu 'kira-kira, mana pintu yang paling aman?'"
+            $ user_choice_text = "Tanya kembali suara itu (E) 'kira-kira, mana pintu yang paling aman (T)?'"
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_a_10_id_A
 
-        "Pejamkan mata dan ikuti kata hati.":
+        "Pejamkan mata (I) dan ikuti kata hati (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Pejamkan mata dan ikuti kata hati."
+            $ user_choice_text = "Pejamkan mata (I) dan ikuti kata hati (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_a_10_id_B
 
 
 label show_question_q_a_10_id_A:
-    $ user_journey_summary.append("Di situasi (Suara Misterius) 'Pilihlah takdirmu... Pintu Kiri atau Pintu Kanan?' Tanpa adanya petunjuk sama sekali!, user memilih: Tanya kembali suara itu 'kira-kira, mana pintu yang paling aman?', dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_18
+    $ user_journey_summary.append("Di situasi (Suara Misterius) 'Pilihlah takdirmu... Pintu Kiri atau Pintu Kanan?' Tanpa adanya petunjuk sama sekali!, user memilih: Tanya kembali suara itu (E) 'kira-kira, mana pintu yang paling aman (T)?', dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_a_10_id_B:
-    $ user_journey_summary.append("Di situasi (Suara Misterius) 'Pilihlah takdirmu... Pintu Kiri atau Pintu Kanan?' Tanpa adanya petunjuk sama sekali!, user memilih: Pejamkan mata dan ikuti kata hati., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_19
+    $ user_journey_summary.append("Di situasi (Suara Misterius) 'Pilihlah takdirmu... Pintu Kiri atau Pintu Kanan?' Tanpa adanya petunjuk sama sekali!, user memilih: Pejamkan mata (I) dan ikuti kata hati (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_a_11_id:
@@ -349,64 +349,64 @@ label show_question_q_a_11_id:
     menu:
         "Tiba-tiba temanmu menarik tanganmu. 'Ayo kita jalan-jalan ke pantai SEKARANG JUGA!'"
 
-        "Gas! urusan nanti dipikir belakangan.":
+        "Gas! (E) urusan nanti dipikir belakangan (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Gas! urusan nanti dipikir belakangan."
+            $ user_choice_text = "Gas! (E) urusan nanti dipikir belakangan (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_a_11_id_A
 
-        "Tolak karena harus cek jadwal dulu.":
+        "Tolak (I) karena harus cek jadwal (J) dulu.":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Tolak karena harus cek jadwal dulu."
+            $ user_choice_text = "Tolak (I) karena harus cek jadwal (J) dulu."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_a_11_id_B
 
 
 label show_question_q_a_11_id_A:
-    $ user_journey_summary.append("Di situasi Tiba-tiba temanmu menarik tanganmu. 'Ayo kita jalan-jalan ke pantai SEKARANG JUGA!', user memilih: Gas! urusan nanti dipikir belakangan., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_20
+    $ user_journey_summary.append("Di situasi Tiba-tiba temanmu menarik tanganmu. 'Ayo kita jalan-jalan ke pantai SEKARANG JUGA!', user memilih: Gas! (E) urusan nanti dipikir belakangan (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_11_id_B:
-    $ user_journey_summary.append("Di situasi Tiba-tiba temanmu menarik tanganmu. 'Ayo kita jalan-jalan ke pantai SEKARANG JUGA!', user memilih: Tolak karena harus cek jadwal dulu., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_21
+    $ user_journey_summary.append("Di situasi Tiba-tiba temanmu menarik tanganmu. 'Ayo kita jalan-jalan ke pantai SEKARANG JUGA!', user memilih: Tolak (I) karena harus cek jadwal (J) dulu., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_12_id:
     scene bg stasiun with dissolve
     $ narasi_asli = "(Tuutt! Tuut!) Kereta terakhir sudah berangkat meninggalkanmu! Kamu ketinggalan kereta yang harusnya kamu naiki untuk pulang!"
-    n "(Tuutt! Tuut!)"
-    n "Kereta terakhir sudah berangkat meninggalkanmu!"
+    n "(Tuutt!"
+    n "Tuut!) Kereta terakhir sudah berangkat meninggalkanmu!"
     n "Kamu ketinggalan kereta yang harusnya kamu naiki untuk pulang!"
 
     menu:
         "(Tuutt! Tuut!) Kereta terakhir sudah berangkat meninggalkanmu! Kamu ketinggalan kereta yang harusnya kamu naiki untuk pulang!"
 
-        "Asik! kita bisa bebas menjelajahi kota!.":
+        "Asik! (E) kita bisa bebas menjelajahi kota! (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Asik! kita bisa bebas menjelajahi kota!."
+            $ user_choice_text = "Asik! (E) kita bisa bebas menjelajahi kota! (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_a_12_id_A
 
-        "Waduh! seharusnya aku datang lebih awal.":
+        "Waduh! (I) seharusnya aku datang lebih awal (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Waduh! seharusnya aku datang lebih awal."
+            $ user_choice_text = "Waduh! (I) seharusnya aku datang lebih awal (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_a_12_id_B
 
 
 label show_question_q_a_12_id_A:
-    $ user_journey_summary.append("Di situasi (Tuutt! Tuut!) Kereta terakhir sudah berangkat meninggalkanmu! Kamu ketinggalan kereta yang harusnya kamu naiki untuk pulang!, user memilih: Asik! kita bisa bebas menjelajahi kota!., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_22
+    $ user_journey_summary.append("Di situasi (Tuutt! Tuut!) Kereta terakhir sudah berangkat meninggalkanmu! Kamu ketinggalan kereta yang harusnya kamu naiki untuk pulang!, user memilih: Asik! (E) kita bisa bebas menjelajahi kota! (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_12_id_B:
-    $ user_journey_summary.append("Di situasi (Tuutt! Tuut!) Kereta terakhir sudah berangkat meninggalkanmu! Kamu ketinggalan kereta yang harusnya kamu naiki untuk pulang!, user memilih: Waduh! seharusnya aku datang lebih awal., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_23
+    $ user_journey_summary.append("Di situasi (Tuutt! Tuut!) Kereta terakhir sudah berangkat meninggalkanmu! Kamu ketinggalan kereta yang harusnya kamu naiki untuk pulang!, user memilih: Waduh! (I) seharusnya aku datang lebih awal (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_13_id:
@@ -418,29 +418,29 @@ label show_question_q_a_13_id:
     menu:
         "Kamu ditunjuk jadi pemimpin piknik besok. Apa rencanamu?"
 
-        "Ajak semua teman! bebas mau bawa apa saja.":
+        "Ajak semua teman! (E) bebas mau bawa apa saja (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Ajak semua teman! bebas mau bawa apa saja."
+            $ user_choice_text = "Ajak semua teman! (E) bebas mau bawa apa saja (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_a_13_id_A
 
-        "Coba pilih menu terbaik menurutmu dan tentukan waktu pasti.":
+        "Coba pilih menu terbaik menurutmu (I) dan tentukan waktu pasti (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Coba pilih menu terbaik menurutmu dan tentukan waktu pasti."
+            $ user_choice_text = "Coba pilih menu terbaik menurutmu (I) dan tentukan waktu pasti (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_a_13_id_B
 
 
 label show_question_q_a_13_id_A:
-    $ user_journey_summary.append("Di situasi Kamu ditunjuk jadi pemimpin piknik besok. Apa rencanamu?, user memilih: Ajak semua teman! bebas mau bawa apa saja., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_24
+    $ user_journey_summary.append("Di situasi Kamu ditunjuk jadi pemimpin piknik besok. Apa rencanamu?, user memilih: Ajak semua teman! (E) bebas mau bawa apa saja (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_13_id_B:
-    $ user_journey_summary.append("Di situasi Kamu ditunjuk jadi pemimpin piknik besok. Apa rencanamu?, user memilih: Coba pilih menu terbaik menurutmu dan tentukan waktu pasti., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_25
+    $ user_journey_summary.append("Di situasi Kamu ditunjuk jadi pemimpin piknik besok. Apa rencanamu?, user memilih: Coba pilih menu terbaik menurutmu (I) dan tentukan waktu pasti (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_14_id:
@@ -452,29 +452,29 @@ label show_question_q_a_14_id:
     menu:
         "Kamu melihat kamarmu. Rasanya auranya sudah basi dan membosankan."
 
-        "Ganti cat dan ubah barang-barang di kamar sekarang.":
+        "Ganti cat (E) dan ubah barang-barang di kamar sekarang (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Ganti cat dan ubah barang-barang di kamar sekarang."
+            $ user_choice_text = "Ganti cat (E) dan ubah barang-barang di kamar sekarang (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_a_14_id_A
 
-        "Biarkan saja karena posisi ini sudah efisien.":
+        "Biarkan saja (I) karena posisi ini sudah efisien (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Biarkan saja karena posisi ini sudah efisien."
+            $ user_choice_text = "Biarkan saja (I) karena posisi ini sudah efisien (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_a_14_id_B
 
 
 label show_question_q_a_14_id_A:
-    $ user_journey_summary.append("Di situasi Kamu melihat kamarmu. Rasanya auranya sudah basi dan membosankan., user memilih: Ganti cat dan ubah barang-barang di kamar sekarang., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_26
+    $ user_journey_summary.append("Di situasi Kamu melihat kamarmu. Rasanya auranya sudah basi dan membosankan., user memilih: Ganti cat (E) dan ubah barang-barang di kamar sekarang (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_14_id_B:
-    $ user_journey_summary.append("Di situasi Kamu melihat kamarmu. Rasanya auranya sudah basi dan membosankan., user memilih: Biarkan saja karena posisi ini sudah efisien., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_27
+    $ user_journey_summary.append("Di situasi Kamu melihat kamarmu. Rasanya auranya sudah basi dan membosankan., user memilih: Biarkan saja (I) karena posisi ini sudah efisien (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_15_id:
@@ -486,29 +486,29 @@ label show_question_q_a_15_id:
     menu:
         "Kamu mampir di toko oleh-oleh stasiun. Banyak barang lucu dan menarik!"
 
-        "Minta saran penjual dan beli barang yang pertama kali terlihat.":
+        "Minta saran penjual (E) dan beli barang yang pertama kali terlihat (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Minta saran penjual dan beli barang yang pertama kali terlihat."
+            $ user_choice_text = "Minta saran penjual (E) dan beli barang yang pertama kali terlihat (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_a_15_id_A
 
-        "Coba berkeliling dan beli sesuai kebutuhan.":
+        "Coba berkeliling (I) dan beli sesuai kebutuhan (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Coba berkeliling dan beli sesuai kebutuhan."
+            $ user_choice_text = "Coba berkeliling (I) dan beli sesuai kebutuhan (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_a_15_id_B
 
 
 label show_question_q_a_15_id_A:
-    $ user_journey_summary.append("Di situasi Kamu mampir di toko oleh-oleh stasiun. Banyak barang lucu dan menarik!, user memilih: Minta saran penjual dan beli barang yang pertama kali terlihat., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_28
+    $ user_journey_summary.append("Di situasi Kamu mampir di toko oleh-oleh stasiun. Banyak barang lucu dan menarik!, user memilih: Minta saran penjual (E) dan beli barang yang pertama kali terlihat (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_15_id_B:
-    $ user_journey_summary.append("Di situasi Kamu mampir di toko oleh-oleh stasiun. Banyak barang lucu dan menarik!, user memilih: Coba berkeliling dan beli sesuai kebutuhan., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_29
+    $ user_journey_summary.append("Di situasi Kamu mampir di toko oleh-oleh stasiun. Banyak barang lucu dan menarik!, user memilih: Coba berkeliling (I) dan beli sesuai kebutuhan (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_16_id:
@@ -520,62 +520,62 @@ label show_question_q_a_16_id:
     menu:
         "Temanmu marah-marah padamu tanpa alasan yang jelas! Mukanya merah padam!"
 
-        "Redam amarahnya dan jelaskan buktinya dulu.":
+        "Redam amarahnya (T) dan jelaskan buktinya dulu (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Redam amarahnya dan jelaskan buktinya dulu."
+            $ user_choice_text = "Redam amarahnya (T) dan jelaskan buktinya dulu (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_a_16_id_A
 
-        "'Kok aku dimarahin? Apa mungkin aku ada salah?'.":
+        "'Kok aku dimarahin? (F) Apa mungkin aku ada salah? (P)'.":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "'Kok aku dimarahin? Apa mungkin aku ada salah?'."
+            $ user_choice_text = "'Kok aku dimarahin? (F) Apa mungkin aku ada salah? (P)'."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_a_16_id_B
 
 
 label show_question_q_a_16_id_A:
-    $ user_journey_summary.append("Di situasi Temanmu marah-marah padamu tanpa alasan yang jelas! Mukanya merah padam!, user memilih: Redam amarahnya dan jelaskan buktinya dulu., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_30
+    $ user_journey_summary.append("Di situasi Temanmu marah-marah padamu tanpa alasan yang jelas! Mukanya merah padam!, user memilih: Redam amarahnya (T) dan jelaskan buktinya dulu (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_16_id_B:
-    $ user_journey_summary.append("Di situasi Temanmu marah-marah padamu tanpa alasan yang jelas! Mukanya merah padam!, user memilih: 'Kok aku dimarahin? Apa mungkin aku ada salah?'., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_31
+    $ user_journey_summary.append("Di situasi Temanmu marah-marah padamu tanpa alasan yang jelas! Mukanya merah padam!, user memilih: 'Kok aku dimarahin? (F) Apa mungkin aku ada salah? (P)'., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_17_id:
     scene bg dapur with dissolve
-    $ narasi_asli = "Kalian sedang membuat kue ulang tahun, tapi hasilnya gosong dan kurang bagus."
-    n "Kalian sedang membuat kue ulang tahun, tapi hasilnya gosong dan kurang bagus."
+    $ narasi_asli = "Kue ulang tahun buatan kalian hasilnya gosong dan kurang rapi."
+    n "Kue ulang tahun buatan kalian hasilnya gosong dan kurang rapi."
 
     menu:
-        "Kalian sedang membuat kue ulang tahun, tapi hasilnya gosong dan kurang bagus."
+        "Kue ulang tahun buatan kalian hasilnya gosong dan kurang rapi."
 
-        "Buang! dan coba bikin ulang lagi sesuai resep.":
+        "Ulangi dari awal sesuai resep (J) supaya hasilnya pas (T).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Buang! dan coba bikin ulang lagi sesuai resep."
+            $ user_choice_text = "Ulangi dari awal sesuai resep (J) supaya hasilnya pas (T)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_a_17_id_A
 
-        "Gapapa tampilannya kurang bagus, tapi dibuat dengan penuh perasaan.":
+        "Pakai yang sudah ada saja (P), yang penting dibuat dengan tulus (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Gapapa tampilannya kurang bagus, tapi dibuat dengan penuh perasaan."
+            $ user_choice_text = "Pakai yang sudah ada saja (P), yang penting dibuat dengan tulus (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_a_17_id_B
 
 
 label show_question_q_a_17_id_A:
-    $ user_journey_summary.append("Di situasi Kalian sedang membuat kue ulang tahun, tapi hasilnya gosong dan kurang bagus., user memilih: Buang! dan coba bikin ulang lagi sesuai resep., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_32
+    $ user_journey_summary.append("Di situasi Kue ulang tahun buatan kalian hasilnya gosong dan kurang rapi., user memilih: Ulangi dari awal sesuai resep (J) supaya hasilnya pas (T)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_17_id_B:
-    $ user_journey_summary.append("Di situasi Kalian sedang membuat kue ulang tahun, tapi hasilnya gosong dan kurang bagus., user memilih: Gapapa tampilannya kurang bagus, tapi dibuat dengan penuh perasaan., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_33
+    $ user_journey_summary.append("Di situasi Kue ulang tahun buatan kalian hasilnya gosong dan kurang rapi., user memilih: Pakai yang sudah ada saja (P), yang penting dibuat dengan tulus (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_18_id:
@@ -587,97 +587,96 @@ label show_question_q_a_18_id:
     menu:
         "Kamu menemukan sebuah Lukisan Pemandangan Misterius. Kira-kira apa yang membuatnya bagus?"
 
-        "Komposisi warnanya, tekniknya, semua sempurna dan rapi!.":
+        "Komposisi warnanya (T), tekniknya, semua sempurna dan rapi! (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Komposisi warnanya, tekniknya, semua sempurna dan rapi!."
+            $ user_choice_text = "Komposisi warnanya (T), tekniknya, semua sempurna dan rapi! (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_a_18_id_A
 
-        "Lukisan ini memiliki emosi yang dalam dan juga indah.":
+        "Lukisan ini (F) memiliki emosi yang dalam dan juga indah (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Lukisan ini memiliki emosi yang dalam dan juga indah."
+            $ user_choice_text = "Lukisan ini (F) memiliki emosi yang dalam dan juga indah (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_a_18_id_B
 
 
 label show_question_q_a_18_id_A:
-    $ user_journey_summary.append("Di situasi Kamu menemukan sebuah Lukisan Pemandangan Misterius. Kira-kira apa yang membuatnya bagus?, user memilih: Komposisi warnanya, tekniknya, semua sempurna dan rapi!., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_34
+    $ user_journey_summary.append("Di situasi Kamu menemukan sebuah Lukisan Pemandangan Misterius. Kira-kira apa yang membuatnya bagus?, user memilih: Komposisi warnanya (T), tekniknya, semua sempurna dan rapi! (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_18_id_B:
-    $ user_journey_summary.append("Di situasi Kamu menemukan sebuah Lukisan Pemandangan Misterius. Kira-kira apa yang membuatnya bagus?, user memilih: Lukisan ini memiliki emosi yang dalam dan juga indah., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_35
+    $ user_journey_summary.append("Di situasi Kamu menemukan sebuah Lukisan Pemandangan Misterius. Kira-kira apa yang membuatnya bagus?, user memilih: Lukisan ini (F) memiliki emosi yang dalam dan juga indah (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_19_id:
     scene bg abstrak with dissolve
-    $ narasi_asli = "Ada satu tombol merah. Kalau ditekan, kamu dapat uang tapi satu orang asing akan sedih."
-    n "Ada satu tombol merah."
-    n "Kalau ditekan, kamu dapat uang tapi satu orang asing akan sedih."
+    $ narasi_asli = "Kamu jadi wasit. Di menit akhir, temanmu melanggar aturan tipis yang mungkin tak sengaja."
+    n "Kamu jadi wasit."
+    n "Di menit akhir, temanmu melanggar aturan tipis yang mungkin tak sengaja."
 
     menu:
-        "Ada satu tombol merah. Kalau ditekan, kamu dapat uang tapi satu orang asing akan sedih."
+        "Kamu jadi wasit. Di menit akhir, temanmu melanggar aturan tipis yang mungkin tak sengaja."
 
-        "Tekan tombolnya, karena lumayan uangnya berguna.":
+        "Tetap tiup peluit (T), adil bagi semua yang bermain jujur (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Tekan tombolnya, karena lumayan uangnya berguna."
+            $ user_choice_text = "Tetap tiup peluit (T), adil bagi semua yang bermain jujur (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_a_19_id_A
 
-        "Jangan tekan karena gak tega sama orang asing itu.":
+        "Beri kelonggaran sekali ini (F), dia jelas tak sengaja (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Jangan tekan karena gak tega sama orang asing itu."
+            $ user_choice_text = "Beri kelonggaran sekali ini (F), dia jelas tak sengaja (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_a_19_id_B
 
 
 label show_question_q_a_19_id_A:
-    $ user_journey_summary.append("Di situasi Ada satu tombol merah. Kalau ditekan, kamu dapat uang tapi satu orang asing akan sedih., user memilih: Tekan tombolnya, karena lumayan uangnya berguna., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_36
+    $ user_journey_summary.append("Di situasi Kamu jadi wasit. Di menit akhir, temanmu melanggar aturan tipis yang mungkin tak sengaja., user memilih: Tetap tiup peluit (T), adil bagi semua yang bermain jujur (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_19_id_B:
-    $ user_journey_summary.append("Di situasi Ada satu tombol merah. Kalau ditekan, kamu dapat uang tapi satu orang asing akan sedih., user memilih: Jangan tekan karena gak tega sama orang asing itu., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_37
+    $ user_journey_summary.append("Di situasi Kamu jadi wasit. Di menit akhir, temanmu melanggar aturan tipis yang mungkin tak sengaja., user memilih: Beri kelonggaran sekali ini (F), dia jelas tak sengaja (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_20_id:
     scene bg kantor with dissolve
-    $ narasi_asli = "Tim kamu malas-malasan hari ini. Mereka tidak memiliki semangat sama sekali."
-    n "Tim kamu malas-malasan hari ini."
-    n "Mereka tidak memiliki semangat sama sekali."
+    $ narasi_asli = "Timmu lesu hari ini, semangatnya hilang entah ke mana."
+    n "Timmu lesu hari ini, semangatnya hilang entah ke mana."
 
     menu:
-        "Tim kamu malas-malasan hari ini. Mereka tidak memiliki semangat sama sekali."
+        "Timmu lesu hari ini, semangatnya hilang entah ke mana."
 
-        "Beri target dan janjikan pemberian bonus.":
+        "Beri target jelas (T) dan tetapkan tolok ukur yang terukur (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Beri target dan janjikan pemberian bonus."
+            $ user_choice_text = "Beri target jelas (T) dan tetapkan tolok ukur yang terukur (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_a_20_id_A
 
-        "Ayolah teman! kita lakukan demi kebaikan.":
+        "Bangkitkan semangat (F), ajak mereka bergerak bareng demi tim (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Ayolah teman! kita lakukan demi kebaikan."
+            $ user_choice_text = "Bangkitkan semangat (F), ajak mereka bergerak bareng demi tim (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_a_20_id_B
 
 
 label show_question_q_a_20_id_A:
-    $ user_journey_summary.append("Di situasi Tim kamu malas-malasan hari ini. Mereka tidak memiliki semangat sama sekali., user memilih: Beri target dan janjikan pemberian bonus., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_38
+    $ user_journey_summary.append("Di situasi Timmu lesu hari ini, semangatnya hilang entah ke mana., user memilih: Beri target jelas (T) dan tetapkan tolok ukur yang terukur (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_20_id_B:
-    $ user_journey_summary.append("Di situasi Tim kamu malas-malasan hari ini. Mereka tidak memiliki semangat sama sekali., user memilih: Ayolah teman! kita lakukan demi kebaikan., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_39
+    $ user_journey_summary.append("Di situasi Timmu lesu hari ini, semangatnya hilang entah ke mana., user memilih: Bangkitkan semangat (F), ajak mereka bergerak bareng demi tim (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_21_id:
@@ -690,29 +689,29 @@ label show_question_q_b_21_id:
     menu:
         "(Bingung!) Kamu menemukan Buku resep kuno yang bentuknya aneh. Saat itu kamu lapar sekali. Kira-kira bagaimana cara masaknya?"
 
-        "Baca sendiri dengan tenang dan ikuti instruksi takarannya secara presisi.":
+        "Baca sendiri dengan tenang (I) dan ikuti instruksi takarannya secara presisi (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Baca sendiri dengan tenang dan ikuti instruksi takarannya secara presisi."
+            $ user_choice_text = "Baca sendiri dengan tenang (I) dan ikuti instruksi takarannya secara presisi (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_b_21_id_A
 
-        "Panggil teman-teman untuk menebak dan meracik rasa baru.":
+        "Panggil teman-teman (E) untuk menebak dan meracik rasa baru (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Panggil teman-teman untuk menebak dan meracik rasa baru."
+            $ user_choice_text = "Panggil teman-teman (E) untuk menebak dan meracik rasa baru (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_b_21_id_B
 
 
 label show_question_q_b_21_id_A:
-    $ user_journey_summary.append("Di situasi (Bingung!) Kamu menemukan Buku resep kuno yang bentuknya aneh. Saat itu kamu lapar sekali. Kira-kira bagaimana cara masaknya?, user memilih: Baca sendiri dengan tenang dan ikuti instruksi takarannya secara presisi., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_40
+    $ user_journey_summary.append("Di situasi (Bingung!) Kamu menemukan Buku resep kuno yang bentuknya aneh. Saat itu kamu lapar sekali. Kira-kira bagaimana cara masaknya?, user memilih: Baca sendiri dengan tenang (I) dan ikuti instruksi takarannya secara presisi (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_b_21_id_B:
-    $ user_journey_summary.append("Di situasi (Bingung!) Kamu menemukan Buku resep kuno yang bentuknya aneh. Saat itu kamu lapar sekali. Kira-kira bagaimana cara masaknya?, user memilih: Panggil teman-teman untuk menebak dan meracik rasa baru., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_41
+    $ user_journey_summary.append("Di situasi (Bingung!) Kamu menemukan Buku resep kuno yang bentuknya aneh. Saat itu kamu lapar sekali. Kira-kira bagaimana cara masaknya?, user memilih: Panggil teman-teman (E) untuk menebak dan meracik rasa baru (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_b_22_id:
@@ -724,29 +723,29 @@ label show_question_q_b_22_id:
     menu:
         "(Mendadak!) Klien datang minta ide yang fresh sekarang juga! sedangkan Kamu belum menyiapkan materi apapun."
 
-        "Minta waktu menyendiri untuk menyusun fakta dan data yang ada.":
+        "Minta waktu menyendiri (I) untuk menyusun fakta dan data yang ada (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Minta waktu menyendiri untuk menyusun fakta dan data yang ada."
+            $ user_choice_text = "Minta waktu menyendiri (I) untuk menyusun fakta dan data yang ada (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_b_22_id_A
 
-        "Ajak diskusi santai dan sampaikan idemu tentang visi masa depan.":
+        "Ajak diskusi santai (E) dan sampaikan idemu tentang visi masa depan (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Ajak diskusi santai dan sampaikan idemu tentang visi masa depan."
+            $ user_choice_text = "Ajak diskusi santai (E) dan sampaikan idemu tentang visi masa depan (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_b_22_id_B
 
 
 label show_question_q_b_22_id_A:
-    $ user_journey_summary.append("Di situasi (Mendadak!) Klien datang minta ide yang fresh sekarang juga! sedangkan Kamu belum menyiapkan materi apapun., user memilih: Minta waktu menyendiri untuk menyusun fakta dan data yang ada., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_42
+    $ user_journey_summary.append("Di situasi (Mendadak!) Klien datang minta ide yang fresh sekarang juga! sedangkan Kamu belum menyiapkan materi apapun., user memilih: Minta waktu menyendiri (I) untuk menyusun fakta dan data yang ada (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_b_22_id_B:
-    $ user_journey_summary.append("Di situasi (Mendadak!) Klien datang minta ide yang fresh sekarang juga! sedangkan Kamu belum menyiapkan materi apapun., user memilih: Ajak diskusi santai dan sampaikan idemu tentang visi masa depan., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_43
+    $ user_journey_summary.append("Di situasi (Mendadak!) Klien datang minta ide yang fresh sekarang juga! sedangkan Kamu belum menyiapkan materi apapun., user memilih: Ajak diskusi santai (E) dan sampaikan idemu tentang visi masa depan (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_b_23_id:
@@ -758,29 +757,29 @@ label show_question_q_b_23_id:
     menu:
         "Kamu masuk ke perpustakaan Internasional. Buku mana yang kamu ambil duluan?"
 
-        "'Ensiklopedia bergambar'  yang bisa dibaca bareng teman.":
+        "'Ensiklopedia bergambar' (S)  yang bisa dibaca bareng teman (E).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "'Ensiklopedia bergambar'  yang bisa dibaca bareng teman."
+            $ user_choice_text = "'Ensiklopedia bergambar' (S)  yang bisa dibaca bareng teman (E)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_b_23_id_A
 
-        "'Filosofi tebal'  yang menarik untuk dibaca di tempat sepi.":
+        "'Filosofi tebal' (N)  yang menarik untuk dibaca di tempat sepi (I).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "'Filosofi tebal'  yang menarik untuk dibaca di tempat sepi."
+            $ user_choice_text = "'Filosofi tebal' (N)  yang menarik untuk dibaca di tempat sepi (I)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_b_23_id_B
 
 
 label show_question_q_b_23_id_A:
-    $ user_journey_summary.append("Di situasi Kamu masuk ke perpustakaan Internasional. Buku mana yang kamu ambil duluan?, user memilih: 'Ensiklopedia bergambar'  yang bisa dibaca bareng teman., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_44
+    $ user_journey_summary.append("Di situasi Kamu masuk ke perpustakaan Internasional. Buku mana yang kamu ambil duluan?, user memilih: 'Ensiklopedia bergambar' (S)  yang bisa dibaca bareng teman (E)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_b_23_id_B:
-    $ user_journey_summary.append("Di situasi Kamu masuk ke perpustakaan Internasional. Buku mana yang kamu ambil duluan?, user memilih: 'Filosofi tebal'  yang menarik untuk dibaca di tempat sepi., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_45
+    $ user_journey_summary.append("Di situasi Kamu masuk ke perpustakaan Internasional. Buku mana yang kamu ambil duluan?, user memilih: 'Filosofi tebal' (N)  yang menarik untuk dibaca di tempat sepi (I)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_b_24_id:
@@ -792,29 +791,29 @@ label show_question_q_b_24_id:
     menu:
         "Perutmu lapar, tapi dompetmu tipis. Sementara itu teman-temanmu mengajakmu makan diluar."
 
-        "Ikut mereka tapi cari warung langganan yang sudah pasti murah dan enak.":
+        "Ikut mereka (E) tapi cari warung langganan yang sudah pasti murah dan enak (S).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Ikut mereka tapi cari warung langganan yang sudah pasti murah dan enak."
+            $ user_choice_text = "Ikut mereka (E) tapi cari warung langganan yang sudah pasti murah dan enak (S)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_b_24_id_A
 
-        "Tolak dahulu, mau coba cari makanan murah dan unik yang mungkin ada disekitar tempatmu.":
+        "Tolak dahulu (I), mau coba cari makanan murah dan unik yang mungkin ada disekitar tempatmu (N).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Tolak dahulu, mau coba cari makanan murah dan unik yang mungkin ada disekitar tempatmu."
+            $ user_choice_text = "Tolak dahulu (I), mau coba cari makanan murah dan unik yang mungkin ada disekitar tempatmu (N)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_b_24_id_B
 
 
 label show_question_q_b_24_id_A:
-    $ user_journey_summary.append("Di situasi Perutmu lapar, tapi dompetmu tipis. Sementara itu teman-temanmu mengajakmu makan diluar., user memilih: Ikut mereka tapi cari warung langganan yang sudah pasti murah dan enak., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_46
+    $ user_journey_summary.append("Di situasi Perutmu lapar, tapi dompetmu tipis. Sementara itu teman-temanmu mengajakmu makan diluar., user memilih: Ikut mereka (E) tapi cari warung langganan yang sudah pasti murah dan enak (S)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_b_24_id_B:
-    $ user_journey_summary.append("Di situasi Perutmu lapar, tapi dompetmu tipis. Sementara itu teman-temanmu mengajakmu makan diluar., user memilih: Tolak dahulu, mau coba cari makanan murah dan unik yang mungkin ada disekitar tempatmu., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_47
+    $ user_journey_summary.append("Di situasi Perutmu lapar, tapi dompetmu tipis. Sementara itu teman-temanmu mengajakmu makan diluar., user memilih: Tolak dahulu (I), mau coba cari makanan murah dan unik yang mungkin ada disekitar tempatmu (N)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_b_25_id:
@@ -825,29 +824,29 @@ label show_question_q_b_25_id:
     menu:
         "Ada koper mencurigakan tertinggal di stasiun sepi."
 
-        "Panggil petugas untuk mengecek isinya secara aman.":
+        "Panggil petugas (E) untuk mengecek isinya secara aman (S).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Panggil petugas untuk mengecek isinya secara aman."
+            $ user_choice_text = "Panggil petugas (E) untuk mengecek isinya secara aman (S)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_b_25_id_A
 
-        "Perhatikan dari jauh sambil membayangkan apa isi sebenarnya dari koper tersebut.":
+        "Perhatikan dari jauh (I) sambil membayangkan apa isi sebenarnya dari koper tersebut (N).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Perhatikan dari jauh sambil membayangkan apa isi sebenarnya dari koper tersebut."
+            $ user_choice_text = "Perhatikan dari jauh (I) sambil membayangkan apa isi sebenarnya dari koper tersebut (N)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_b_25_id_B
 
 
 label show_question_q_b_25_id_A:
-    $ user_journey_summary.append("Di situasi Ada koper mencurigakan tertinggal di stasiun sepi., user memilih: Panggil petugas untuk mengecek isinya secara aman., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_48
+    $ user_journey_summary.append("Di situasi Ada koper mencurigakan tertinggal di stasiun sepi., user memilih: Panggil petugas (E) untuk mengecek isinya secara aman (S)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_b_25_id_B:
-    $ user_journey_summary.append("Di situasi Ada koper mencurigakan tertinggal di stasiun sepi., user memilih: Perhatikan dari jauh sambil membayangkan apa isi sebenarnya dari koper tersebut., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_49
+    $ user_journey_summary.append("Di situasi Ada koper mencurigakan tertinggal di stasiun sepi., user memilih: Perhatikan dari jauh (I) sambil membayangkan apa isi sebenarnya dari koper tersebut (N)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_b_26_id:
@@ -858,29 +857,29 @@ label show_question_q_b_26_id:
     menu:
         "Rekan timmu melakukan kesalahan fatal yang merugikan semua orang."
 
-        "Hadapi langsung! dan minta dia jelaskan ada apa sebenarnya.":
+        "Hadapi langsung! (E) dan minta dia jelaskan ada apa sebenarnya(T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Hadapi langsung! dan minta dia jelaskan ada apa sebenarnya."
+            $ user_choice_text = "Hadapi langsung! (E) dan minta dia jelaskan ada apa sebenarnya(T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_b_26_id_A
 
-        "Kirim dia pesan pribadi, lalu tanya apakah dia baik-baik saja.":
+        "Kirim dia pesan pribadi (I), lalu tanya apakah dia baik-baik saja (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Kirim dia pesan pribadi, lalu tanya apakah dia baik-baik saja."
+            $ user_choice_text = "Kirim dia pesan pribadi (I), lalu tanya apakah dia baik-baik saja (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_b_26_id_B
 
 
 label show_question_q_b_26_id_A:
-    $ user_journey_summary.append("Di situasi Rekan timmu melakukan kesalahan fatal yang merugikan semua orang., user memilih: Hadapi langsung! dan minta dia jelaskan ada apa sebenarnya., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_50
+    $ user_journey_summary.append("Di situasi Rekan timmu melakukan kesalahan fatal yang merugikan semua orang., user memilih: Hadapi langsung! (E) dan minta dia jelaskan ada apa sebenarnya(T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_b_26_id_B:
-    $ user_journey_summary.append("Di situasi Rekan timmu melakukan kesalahan fatal yang merugikan semua orang., user memilih: Kirim dia pesan pribadi, lalu tanya apakah dia baik-baik saja., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_51
+    $ user_journey_summary.append("Di situasi Rekan timmu melakukan kesalahan fatal yang merugikan semua orang., user memilih: Kirim dia pesan pribadi (I), lalu tanya apakah dia baik-baik saja (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_b_27_id:
@@ -892,29 +891,29 @@ label show_question_q_b_27_id:
     menu:
         "Temanmu minta pendapat jujur soal karyanya yang... bisa dibilang...hancur lebur menurutmu."
 
-        "Bilang terus terang bagian mana yang salah agar bisa diperbaiki.":
+        "Bilang terus terang (E) bagian mana yang salah agar bisa diperbaiki (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Bilang terus terang bagian mana yang salah agar bisa diperbaiki."
+            $ user_choice_text = "Bilang terus terang (E) bagian mana yang salah agar bisa diperbaiki (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_b_27_id_A
 
-        "Diam atau senyum saja, nggak tega menyakiti perasaannya.":
+        "Diam atau senyum saja (I), nggak tega menyakiti perasaannya (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Diam atau senyum saja, nggak tega menyakiti perasaannya."
+            $ user_choice_text = "Diam atau senyum saja (I), nggak tega menyakiti perasaannya (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_b_27_id_B
 
 
 label show_question_q_b_27_id_A:
-    $ user_journey_summary.append("Di situasi Temanmu minta pendapat jujur soal karyanya yang... bisa dibilang...hancur lebur menurutmu., user memilih: Bilang terus terang bagian mana yang salah agar bisa diperbaiki., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_52
+    $ user_journey_summary.append("Di situasi Temanmu minta pendapat jujur soal karyanya yang... bisa dibilang...hancur lebur menurutmu., user memilih: Bilang terus terang (E) bagian mana yang salah agar bisa diperbaiki (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_b_27_id_B:
-    $ user_journey_summary.append("Di situasi Temanmu minta pendapat jujur soal karyanya yang... bisa dibilang...hancur lebur menurutmu., user memilih: Diam atau senyum saja, nggak tega menyakiti perasaannya., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_53
+    $ user_journey_summary.append("Di situasi Temanmu minta pendapat jujur soal karyanya yang... bisa dibilang...hancur lebur menurutmu., user memilih: Diam atau senyum saja (I), nggak tega menyakiti perasaannya (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_b_28_id:
@@ -926,29 +925,29 @@ label show_question_q_b_28_id:
     menu:
         "Dua orang asing berdebat keras di meja sebelah. Mengganggu banget!"
 
-        "Tegur mereka, 'Tolong tenang, argumen kalian nggak logis!'.":
+        "Tegur mereka (E), 'Tolong tenang, argumen kalian nggak logis!' (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Tegur mereka, 'Tolong tenang, argumen kalian nggak logis!'."
+            $ user_choice_text = "Tegur mereka (E), 'Tolong tenang, argumen kalian nggak logis!' (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_b_28_id_A
 
-        "Pindah meja, menjauh karena energinya negatif banget.":
+        "Pindah meja (I), menjauh karena energinya negatif banget (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Pindah meja, menjauh karena energinya negatif banget."
+            $ user_choice_text = "Pindah meja (I), menjauh karena energinya negatif banget (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_b_28_id_B
 
 
 label show_question_q_b_28_id_A:
-    $ user_journey_summary.append("Di situasi Dua orang asing berdebat keras di meja sebelah. Mengganggu banget!, user memilih: Tegur mereka, 'Tolong tenang, argumen kalian nggak logis!'., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_54
+    $ user_journey_summary.append("Di situasi Dua orang asing berdebat keras di meja sebelah. Mengganggu banget!, user memilih: Tegur mereka (E), 'Tolong tenang, argumen kalian nggak logis!' (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_b_28_id_B:
-    $ user_journey_summary.append("Di situasi Dua orang asing berdebat keras di meja sebelah. Mengganggu banget!, user memilih: Pindah meja, menjauh karena energinya negatif banget., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_55
+    $ user_journey_summary.append("Di situasi Dua orang asing berdebat keras di meja sebelah. Mengganggu banget!, user memilih: Pindah meja (I), menjauh karena energinya negatif banget (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_b_29_id:
@@ -959,29 +958,29 @@ label show_question_q_b_29_id:
     menu:
         "Kamu harus memilih pemimpin untuk misi berbahaya."
 
-        "Debat terbuka, pilih yang statistiknya paling kuat.":
+        "Debat terbuka (E), pilih yang statistiknya paling kuat (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Debat terbuka, pilih yang statistiknya paling kuat."
+            $ user_choice_text = "Debat terbuka (E), pilih yang statistiknya paling kuat (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_b_29_id_A
 
-        "Renungkan dengan beberapa teman dekat, lalu pilih yang hatinya paling tulus.":
+        "Renungkan dengan beberapa teman dekat (I), lalu pilih yang hatinya paling tulus (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Renungkan dengan beberapa teman dekat, lalu pilih yang hatinya paling tulus."
+            $ user_choice_text = "Renungkan dengan beberapa teman dekat (I), lalu pilih yang hatinya paling tulus (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_b_29_id_B
 
 
 label show_question_q_b_29_id_A:
-    $ user_journey_summary.append("Di situasi Kamu harus memilih pemimpin untuk misi berbahaya., user memilih: Debat terbuka, pilih yang statistiknya paling kuat., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_56
+    $ user_journey_summary.append("Di situasi Kamu harus memilih pemimpin untuk misi berbahaya., user memilih: Debat terbuka (E), pilih yang statistiknya paling kuat (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_b_29_id_B:
-    $ user_journey_summary.append("Di situasi Kamu harus memilih pemimpin untuk misi berbahaya., user memilih: Renungkan dengan beberapa teman dekat, lalu pilih yang hatinya paling tulus., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_57
+    $ user_journey_summary.append("Di situasi Kamu harus memilih pemimpin untuk misi berbahaya., user memilih: Renungkan dengan beberapa teman dekat (I), lalu pilih yang hatinya paling tulus (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_b_30_id:
@@ -992,29 +991,29 @@ label show_question_q_b_30_id:
     menu:
         "Ada kerumunan orang sedang sedih karena pohon tua ditebang oleh pemerintah sekitar."
 
-        "Kumpulkan mereka untuk buat petisi protes ke pemerintah.":
+        "Kumpulkan mereka (E) untuk buat petisi protes ke pemerintah (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Kumpulkan mereka untuk buat petisi protes ke pemerintah."
+            $ user_choice_text = "Kumpulkan mereka (E) untuk buat petisi protes ke pemerintah (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_b_30_id_A
 
-        "Duduk diam di sana sebagai tanda solidaritas.":
+        "Duduk diam (I) di sana sebagai tanda solidaritas (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Duduk diam di sana sebagai tanda solidaritas."
+            $ user_choice_text = "Duduk diam (I) di sana sebagai tanda solidaritas (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_b_30_id_B
 
 
 label show_question_q_b_30_id_A:
-    $ user_journey_summary.append("Di situasi Ada kerumunan orang sedang sedih karena pohon tua ditebang oleh pemerintah sekitar., user memilih: Kumpulkan mereka untuk buat petisi protes ke pemerintah., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_58
+    $ user_journey_summary.append("Di situasi Ada kerumunan orang sedang sedih karena pohon tua ditebang oleh pemerintah sekitar., user memilih: Kumpulkan mereka (E) untuk buat petisi protes ke pemerintah (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_b_30_id_B:
-    $ user_journey_summary.append("Di situasi Ada kerumunan orang sedang sedih karena pohon tua ditebang oleh pemerintah sekitar., user memilih: Duduk diam di sana sebagai tanda solidaritas., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_59
+    $ user_journey_summary.append("Di situasi Ada kerumunan orang sedang sedih karena pohon tua ditebang oleh pemerintah sekitar., user memilih: Duduk diam (I) di sana sebagai tanda solidaritas (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_b_31_id:
@@ -1026,29 +1025,29 @@ label show_question_q_b_31_id:
     menu:
         "(Telat!) Kereta terakhir berangkat 1 menit lagi! Kamu masih di lobi!"
 
-        "Teriak 'Tunggu!' dan lari menerobos gerbang tanpa pikir panjang.":
+        "Teriak 'Tunggu!' (E) dan lari menerobos gerbang tanpa pikir panjang (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Teriak 'Tunggu!' dan lari menerobos gerbang tanpa pikir panjang."
+            $ user_choice_text = "Teriak 'Tunggu!' (E) dan lari menerobos gerbang tanpa pikir panjang (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_b_31_id_A
 
-        "Pasrah. Ini salahku karena tidak cek jadwal tadi pagi.":
+        "Pasrah (I). Ini salahku karena tidak cek jadwal tadi pagi (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Pasrah. Ini salahku karena tidak cek jadwal tadi pagi."
+            $ user_choice_text = "Pasrah (I). Ini salahku karena tidak cek jadwal tadi pagi (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_b_31_id_B
 
 
 label show_question_q_b_31_id_A:
-    $ user_journey_summary.append("Di situasi (Telat!) Kereta terakhir berangkat 1 menit lagi! Kamu masih di lobi!, user memilih: Teriak 'Tunggu!' dan lari menerobos gerbang tanpa pikir panjang., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_60
+    $ user_journey_summary.append("Di situasi (Telat!) Kereta terakhir berangkat 1 menit lagi! Kamu masih di lobi!, user memilih: Teriak 'Tunggu!' (E) dan lari menerobos gerbang tanpa pikir panjang (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_31_id_B:
-    $ user_journey_summary.append("Di situasi (Telat!) Kereta terakhir berangkat 1 menit lagi! Kamu masih di lobi!, user memilih: Pasrah. Ini salahku karena tidak cek jadwal tadi pagi., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_61
+    $ user_journey_summary.append("Di situasi (Telat!) Kereta terakhir berangkat 1 menit lagi! Kamu masih di lobi!, user memilih: Pasrah (I). Ini salahku karena tidak cek jadwal tadi pagi (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_32_id:
@@ -1060,29 +1059,29 @@ label show_question_q_b_32_id:
     menu:
         "Kamu dan rombongan besar bingung mau pesan apa di Restoran. Pelayan yang menunggu mulai kesal."
 
-        "Tanya ke yang lain!, 'Mau makanan apa? Bebas deh!'.":
+        "Tanya ke yang lain! (E), 'Mau makanan apa? Bebas deh!' (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Tanya ke yang lain!, 'Mau makanan apa? Bebas deh!'."
+            $ user_choice_text = "Tanya ke yang lain! (E), 'Mau makanan apa? Bebas deh!' (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_b_32_id_A
 
-        "Ambil alih, 'Oke, aku pesankan menu paket buat semua agar lebih cepat ya'.":
+        "Ambil alih (J), 'Oke, aku pesankan menu paket buat semua agar lebih cepat ya' (I).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Ambil alih, 'Oke, aku pesankan menu paket buat semua agar lebih cepat ya'."
+            $ user_choice_text = "Ambil alih (J), 'Oke, aku pesankan menu paket buat semua agar lebih cepat ya' (I)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_b_32_id_B
 
 
 label show_question_q_b_32_id_A:
-    $ user_journey_summary.append("Di situasi Kamu dan rombongan besar bingung mau pesan apa di Restoran. Pelayan yang menunggu mulai kesal., user memilih: Tanya ke yang lain!, 'Mau makanan apa? Bebas deh!'., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_62
+    $ user_journey_summary.append("Di situasi Kamu dan rombongan besar bingung mau pesan apa di Restoran. Pelayan yang menunggu mulai kesal., user memilih: Tanya ke yang lain! (E), 'Mau makanan apa? Bebas deh!' (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_32_id_B:
-    $ user_journey_summary.append("Di situasi Kamu dan rombongan besar bingung mau pesan apa di Restoran. Pelayan yang menunggu mulai kesal., user memilih: Ambil alih, 'Oke, aku pesankan menu paket buat semua agar lebih cepat ya'., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_63
+    $ user_journey_summary.append("Di situasi Kamu dan rombongan besar bingung mau pesan apa di Restoran. Pelayan yang menunggu mulai kesal., user memilih: Ambil alih (J), 'Oke, aku pesankan menu paket buat semua agar lebih cepat ya' (I)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_33_id:
@@ -1093,29 +1092,29 @@ label show_question_q_b_33_id:
     menu:
         "Kamu lihat jaket yang keren banget dipajang di toko, tapi harganya mahal."
 
-        "Tanya pendapat orang lain, kalau bagus langsung beli aja!.":
+        "Tanya pendapat orang lain (E), kalau bagus langsung beli aja! (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Tanya pendapat orang lain, kalau bagus langsung beli aja!."
+            $ user_choice_text = "Tanya pendapat orang lain (E), kalau bagus langsung beli aja! (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_b_33_id_A
 
-        "Tanyakan diri sendiri, 'lagi tidak ada di budget. jangan dulu deh'.":
+        "Tanyakan diri sendiri (I), 'lagi tidak ada di budget. jangan dulu deh' (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Tanyakan diri sendiri, 'lagi tidak ada di budget. jangan dulu deh'."
+            $ user_choice_text = "Tanyakan diri sendiri (I), 'lagi tidak ada di budget. jangan dulu deh' (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_b_33_id_B
 
 
 label show_question_q_b_33_id_A:
-    $ user_journey_summary.append("Di situasi Kamu lihat jaket yang keren banget dipajang di toko, tapi harganya mahal., user memilih: Tanya pendapat orang lain, kalau bagus langsung beli aja!., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_64
+    $ user_journey_summary.append("Di situasi Kamu lihat jaket yang keren banget dipajang di toko, tapi harganya mahal., user memilih: Tanya pendapat orang lain (E), kalau bagus langsung beli aja! (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_33_id_B:
-    $ user_journey_summary.append("Di situasi Kamu lihat jaket yang keren banget dipajang di toko, tapi harganya mahal., user memilih: Tanyakan diri sendiri, 'lagi tidak ada di budget. jangan dulu deh'., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_65
+    $ user_journey_summary.append("Di situasi Kamu lihat jaket yang keren banget dipajang di toko, tapi harganya mahal., user memilih: Tanyakan diri sendiri (I), 'lagi tidak ada di budget. jangan dulu deh' (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_34_id:
@@ -1127,29 +1126,29 @@ label show_question_q_b_34_id:
     menu:
         "Temanmu bilang kamarmu membosankan. Lalu apa reaksimu?"
 
-        "'Benar juga!' Mumpung ada teman, ajak dia geser-geser furnitur sekarang juga.":
+        "'Benar juga!' Mumpung ada teman, ajak dia (E) geser-geser furnitur sekarang juga (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "'Benar juga!' Mumpung ada teman, ajak dia geser-geser furnitur sekarang juga."
+            $ user_choice_text = "'Benar juga!' Mumpung ada teman, ajak dia (E) geser-geser furnitur sekarang juga (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_b_34_id_A
 
-        "Biarkan. 'Aku lebih suka, karena semuanya sudah ada di tempat yang seharusnya'.":
+        "Biarkan. (I) 'Aku lebih suka, karena semuanya sudah ada di tempat yang seharusnya'(J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Biarkan. 'Aku lebih suka, karena semuanya sudah ada di tempat yang seharusnya'."
+            $ user_choice_text = "Biarkan. (I) 'Aku lebih suka, karena semuanya sudah ada di tempat yang seharusnya'(J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_b_34_id_B
 
 
 label show_question_q_b_34_id_A:
-    $ user_journey_summary.append("Di situasi Temanmu bilang kamarmu membosankan. Lalu apa reaksimu?, user memilih: 'Benar juga!' Mumpung ada teman, ajak dia geser-geser furnitur sekarang juga., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_66
+    $ user_journey_summary.append("Di situasi Temanmu bilang kamarmu membosankan. Lalu apa reaksimu?, user memilih: 'Benar juga!' Mumpung ada teman, ajak dia (E) geser-geser furnitur sekarang juga (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_34_id_B:
-    $ user_journey_summary.append("Di situasi Temanmu bilang kamarmu membosankan. Lalu apa reaksimu?, user memilih: Biarkan. 'Aku lebih suka, karena semuanya sudah ada di tempat yang seharusnya'., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_67
+    $ user_journey_summary.append("Di situasi Temanmu bilang kamarmu membosankan. Lalu apa reaksimu?, user memilih: Biarkan. (I) 'Aku lebih suka, karena semuanya sudah ada di tempat yang seharusnya'(J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_35_id:
@@ -1161,203 +1160,198 @@ label show_question_q_b_35_id:
     menu:
         "Kamu harus pidato dadakan di depan umum! bagaimana ini?!"
 
-        "Maju dengan percaya diri, ngomong mengalir, dengan lihat situasi.":
+        "Maju dengan percaya diri (E), ngomong mengalir, dengan lihat situasi (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Maju dengan percaya diri, ngomong mengalir, dengan lihat situasi."
+            $ user_choice_text = "Maju dengan percaya diri (E), ngomong mengalir, dengan lihat situasi (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_b_35_id_A
 
-        "Mundur sebentar, minta waktu buat mencatat poin-poin penting dahulu.":
+        "Mundur sebentar (I), minta waktu buat mencatat poin-poin penting dahulu (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Mundur sebentar, minta waktu buat mencatat poin-poin penting dahulu."
+            $ user_choice_text = "Mundur sebentar (I), minta waktu buat mencatat poin-poin penting dahulu (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_b_35_id_B
 
 
 label show_question_q_b_35_id_A:
-    $ user_journey_summary.append("Di situasi Kamu harus pidato dadakan di depan umum! bagaimana ini?!, user memilih: Maju dengan percaya diri, ngomong mengalir, dengan lihat situasi., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_68
+    $ user_journey_summary.append("Di situasi Kamu harus pidato dadakan di depan umum! bagaimana ini?!, user memilih: Maju dengan percaya diri (E), ngomong mengalir, dengan lihat situasi (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_35_id_B:
-    $ user_journey_summary.append("Di situasi Kamu harus pidato dadakan di depan umum! bagaimana ini?!, user memilih: Mundur sebentar, minta waktu buat mencatat poin-poin penting dahulu., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_69
+    $ user_journey_summary.append("Di situasi Kamu harus pidato dadakan di depan umum! bagaimana ini?!, user memilih: Mundur sebentar (I), minta waktu buat mencatat poin-poin penting dahulu (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_36_id:
     scene bg abstrak with dissolve
-    $ narasi_asli = "(Bencana!) Desa kamu diserang! Kamu yang pegang kunci gerbang pertahanan. Masih ada warga yang berlari berusaha masuk ke dalam."
-    n "(Bencana!) Desa kamu diserang!"
-    n "Kamu yang pegang kunci gerbang pertahanan."
-    n "Masih ada warga yang berlari berusaha masuk ke dalam."
+    $ narasi_asli = "Gerbang benteng harus ditutup sebelum badai tiba. Beberapa orang masih mengumpulkan barang di luar."
+    n "Gerbang benteng harus ditutup sebelum badai tiba."
+    n "Beberapa orang masih mengumpulkan barang di luar."
 
     menu:
-        "(Bencana!) Desa kamu diserang! Kamu yang pegang kunci gerbang pertahanan. Masih ada warga yang berlari berusaha masuk ke dalam."
+        "Gerbang benteng harus ditutup sebelum badai tiba. Beberapa orang masih mengumpulkan barang di luar."
 
-        "Segera kunci gerbang demi keselamatan mayoritas, meski ada yang tertinggal.":
+        "Tutup tepat waktu (J), lindungi mayoritas yang sudah di dalam (T).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Segera kunci gerbang demi keselamatan mayoritas, meski ada yang tertinggal."
+            $ user_choice_text = "Tutup tepat waktu (J), lindungi mayoritas yang sudah di dalam (T)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_b_36_id_A
 
-        "Biarkan terbuka sedikit lagi, kasihan yang masih lari di luar.":
+        "Tahan sebentar lagi (P), beri mereka kesempatan masuk dulu (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Biarkan terbuka sedikit lagi, kasihan yang masih lari di luar."
+            $ user_choice_text = "Tahan sebentar lagi (P), beri mereka kesempatan masuk dulu (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_b_36_id_B
 
 
 label show_question_q_b_36_id_A:
-    $ user_journey_summary.append("Di situasi (Bencana!) Desa kamu diserang! Kamu yang pegang kunci gerbang pertahanan. Masih ada warga yang berlari berusaha masuk ke dalam., user memilih: Segera kunci gerbang demi keselamatan mayoritas, meski ada yang tertinggal., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_70
+    $ user_journey_summary.append("Di situasi Gerbang benteng harus ditutup sebelum badai tiba. Beberapa orang masih mengumpulkan barang di luar., user memilih: Tutup tepat waktu (J), lindungi mayoritas yang sudah di dalam (T)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_36_id_B:
-    $ user_journey_summary.append("Di situasi (Bencana!) Desa kamu diserang! Kamu yang pegang kunci gerbang pertahanan. Masih ada warga yang berlari berusaha masuk ke dalam., user memilih: Biarkan terbuka sedikit lagi, kasihan yang masih lari di luar., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_71
+    $ user_journey_summary.append("Di situasi Gerbang benteng harus ditutup sebelum badai tiba. Beberapa orang masih mengumpulkan barang di luar., user memilih: Tahan sebentar lagi (P), beri mereka kesempatan masuk dulu (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_37_id:
     scene bg kantor with dissolve
-    $ narasi_asli = "Anggota timmu curhat. Dia lagi patah hati dan nggak bisa kerja. Apa yang Kamu lakukan sebagai ketua tim?"
-    n "Anggota timmu curhat."
-    n "Dia lagi patah hati dan nggak bisa kerja."
-    n "Apa yang Kamu lakukan sebagai ketua tim?"
+    $ narasi_asli = "Anggota timmu sedang berat hati dan susah fokus, padahal tenggat sudah dekat."
+    n "Anggota timmu sedang berat hati dan susah fokus, padahal tenggat sudah dekat."
 
     menu:
-        "Anggota timmu curhat. Dia lagi patah hati dan nggak bisa kerja. Apa yang Kamu lakukan sebagai ketua tim?"
+        "Anggota timmu sedang berat hati dan susah fokus, padahal tenggat sudah dekat."
 
-        "'Kerja adalah kerja. Selesaikan tugasmu, baru urus perasaan.'":
+        "Bantu pecah tugasnya jadi langkah kecil (T) agar tetap jalan sesuai tenggat (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "'Kerja adalah kerja. Selesaikan tugasmu, baru urus perasaan.'"
+            $ user_choice_text = "Bantu pecah tugasnya jadi langkah kecil (T) agar tetap jalan sesuai tenggat (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_b_37_id_A
 
-        "'Pulanglah. Kerjaan bisa kita atur ulang nanti.'":
+        "Bebaskan dia rehat dulu (F), sisanya kita atur ulang nanti (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "'Pulanglah. Kerjaan bisa kita atur ulang nanti.'"
+            $ user_choice_text = "Bebaskan dia rehat dulu (F), sisanya kita atur ulang nanti (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_b_37_id_B
 
 
 label show_question_q_b_37_id_A:
-    $ user_journey_summary.append("Di situasi Anggota timmu curhat. Dia lagi patah hati dan nggak bisa kerja. Apa yang Kamu lakukan sebagai ketua tim?, user memilih: 'Kerja adalah kerja. Selesaikan tugasmu, baru urus perasaan.', dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_72
+    $ user_journey_summary.append("Di situasi Anggota timmu sedang berat hati dan susah fokus, padahal tenggat sudah dekat., user memilih: Bantu pecah tugasnya jadi langkah kecil (T) agar tetap jalan sesuai tenggat (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_37_id_B:
-    $ user_journey_summary.append("Di situasi Anggota timmu curhat. Dia lagi patah hati dan nggak bisa kerja. Apa yang Kamu lakukan sebagai ketua tim?, user memilih: 'Pulanglah. Kerjaan bisa kita atur ulang nanti.', dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_73
+    $ user_journey_summary.append("Di situasi Anggota timmu sedang berat hati dan susah fokus, padahal tenggat sudah dekat., user memilih: Bebaskan dia rehat dulu (F), sisanya kita atur ulang nanti (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_38_id:
     scene bg dapur with dissolve
-    $ narasi_asli = "Kamu menjadi juri lomba masak. Masakan temanmu gosong. Dia nangis, padahal dia sudah berusaha keras."
-    n "Kamu menjadi juri lomba masak."
-    n "Masakan temanmu gosong."
-    n "Dia nangis, padahal dia sudah berusaha keras."
+    $ narasi_asli = "Kamu jadi juri lomba masak. Masakan temanmu gosong, padahal usahanya besar sekali."
+    n "Kamu jadi juri lomba masak."
+    n "Masakan temanmu gosong, padahal usahanya besar sekali."
 
     menu:
-        "Kamu menjadi juri lomba masak. Masakan temanmu gosong. Dia nangis, padahal dia sudah berusaha keras."
+        "Kamu jadi juri lomba masak. Masakan temanmu gosong, padahal usahanya besar sekali."
 
-        "Beri nilai nol. Aturan penilaian harus objektif.":
+        "Nilai apa adanya dari rasa (T), adil bagi semua peserta lain (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Beri nilai nol. Aturan penilaian harus objektif."
+            $ user_choice_text = "Nilai apa adanya dari rasa (T), adil bagi semua peserta lain (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_b_38_id_A
 
-        "Beri nilai tambahan. Hargai proses dan usahanya.":
+        "Selipkan poin usaha (F), hargai proses kerasnya (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Beri nilai tambahan. Hargai proses dan usahanya."
+            $ user_choice_text = "Selipkan poin usaha (F), hargai proses kerasnya (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_b_38_id_B
 
 
 label show_question_q_b_38_id_A:
-    $ user_journey_summary.append("Di situasi Kamu menjadi juri lomba masak. Masakan temanmu gosong. Dia nangis, padahal dia sudah berusaha keras., user memilih: Beri nilai nol. Aturan penilaian harus objektif., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_74
+    $ user_journey_summary.append("Di situasi Kamu jadi juri lomba masak. Masakan temanmu gosong, padahal usahanya besar sekali., user memilih: Nilai apa adanya dari rasa (T), adil bagi semua peserta lain (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_38_id_B:
-    $ user_journey_summary.append("Di situasi Kamu menjadi juri lomba masak. Masakan temanmu gosong. Dia nangis, padahal dia sudah berusaha keras., user memilih: Beri nilai tambahan. Hargai proses dan usahanya., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_75
+    $ user_journey_summary.append("Di situasi Kamu jadi juri lomba masak. Masakan temanmu gosong, padahal usahanya besar sekali., user memilih: Selipkan poin usaha (F), hargai proses kerasnya (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_39_id:
     scene bg stasiun with dissolve
-    $ narasi_asli = "Ada turis kebingungan, salah masuk jalur di Stasiun. Lalu dia kena denda. Kamu sebagai petugas di sana"
-    n "Ada turis kebingungan, salah masuk jalur di Stasiun."
-    n "Lalu dia kena denda."
-    n "Kamu sebagai petugas di sana"
+    $ narasi_asli = "Kamu petugas stasiun. Seorang turis salah jalur karena bingung membaca papan. Aturannya, ada denda."
+    n "Kamu petugas stasiun."
+    n "Seorang turis salah jalur karena bingung membaca papan."
+    n "Aturannya, ada denda."
 
     menu:
-        "Ada turis kebingungan, salah masuk jalur di Stasiun. Lalu dia kena denda. Kamu sebagai petugas di sana"
+        "Kamu petugas stasiun. Seorang turis salah jalur karena bingung membaca papan. Aturannya, ada denda."
 
-        "Biarkan dia bayar denda. Peraturan tetap peraturan.":
+        "Jalankan aturan (T), sama untuk setiap penumpang (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Biarkan dia bayar denda. Peraturan tetap peraturan."
+            $ user_choice_text = "Jalankan aturan (T), sama untuk setiap penumpang (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_b_39_id_A
 
-        "Bantu dia nego. Maklumi karena dia orang asing.":
+        "Bantu keringankan (F), dia jelas tersesat, bukan sengaja melanggar (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Bantu dia nego. Maklumi karena dia orang asing."
+            $ user_choice_text = "Bantu keringankan (F), dia jelas tersesat, bukan sengaja melanggar (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_b_39_id_B
 
 
 label show_question_q_b_39_id_A:
-    $ user_journey_summary.append("Di situasi Ada turis kebingungan, salah masuk jalur di Stasiun. Lalu dia kena denda. Kamu sebagai petugas di sana, user memilih: Biarkan dia bayar denda. Peraturan tetap peraturan., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_76
+    $ user_journey_summary.append("Di situasi Kamu petugas stasiun. Seorang turis salah jalur karena bingung membaca papan. Aturannya, ada denda., user memilih: Jalankan aturan (T), sama untuk setiap penumpang (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_39_id_B:
-    $ user_journey_summary.append("Di situasi Ada turis kebingungan, salah masuk jalur di Stasiun. Lalu dia kena denda. Kamu sebagai petugas di sana, user memilih: Bantu dia nego. Maklumi karena dia orang asing., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_77
+    $ user_journey_summary.append("Di situasi Kamu petugas stasiun. Seorang turis salah jalur karena bingung membaca papan. Aturannya, ada denda., user memilih: Bantu keringankan (F), dia jelas tersesat, bukan sengaja melanggar (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_40_id:
     scene bg kantor with dissolve
-    $ narasi_asli = "Kamu bikin jadwal piket baru. Namun temanmu ada yang protes karena jadwalnya bentrok."
-    n "Kamu bikin jadwal piket baru."
-    n "Namun temanmu ada yang protes karena jadwalnya bentrok."
+    $ narasi_asli = "Kamu membuat jadwal piket baru, tapi ada teman yang protes karena jadwalnya bentrok."
+    n "Kamu membuat jadwal piket baru, tapi ada teman yang protes karena jadwalnya bentrok."
 
     menu:
-        "Kamu bikin jadwal piket baru. Namun temanmu ada yang protes karena jadwalnya bentrok."
+        "Kamu membuat jadwal piket baru, tapi ada teman yang protes karena jadwalnya bentrok."
 
-        "'Tidak bisa! Sistem sudah dibuat efisien. Harus ikuti jadwal yang ada.'":
+        "Pertahankan sistemnya (T), sudah dihitung paling adil beban kerjanya (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "'Tidak bisa! Sistem sudah dibuat efisien. Harus ikuti jadwal yang ada.'"
+            $ user_choice_text = "Pertahankan sistemnya (T), sudah dihitung paling adil beban kerjanya (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_b_40_id_A
 
-        "'Oke, kita bisa tukar-tukar aja. Yang penting semua senang.'":
+        "Longgarkan, atur tukar jadwal (P) biar semua tetap nyaman (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "'Oke, kita bisa tukar-tukar aja. Yang penting semua senang.'"
+            $ user_choice_text = "Longgarkan, atur tukar jadwal (P) biar semua tetap nyaman (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_b_40_id_B
 
 
 label show_question_q_b_40_id_A:
-    $ user_journey_summary.append("Di situasi Kamu bikin jadwal piket baru. Namun temanmu ada yang protes karena jadwalnya bentrok., user memilih: 'Tidak bisa! Sistem sudah dibuat efisien. Harus ikuti jadwal yang ada.', dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_78
+    $ user_journey_summary.append("Di situasi Kamu membuat jadwal piket baru, tapi ada teman yang protes karena jadwalnya bentrok., user memilih: Pertahankan sistemnya (T), sudah dihitung paling adil beban kerjanya (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_40_id_B:
-    $ user_journey_summary.append("Di situasi Kamu bikin jadwal piket baru. Namun temanmu ada yang protes karena jadwalnya bentrok., user memilih: 'Oke, kita bisa tukar-tukar aja. Yang penting semua senang.', dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_79
+    $ user_journey_summary.append("Di situasi Kamu membuat jadwal piket baru, tapi ada teman yang protes karena jadwalnya bentrok., user memilih: Longgarkan, atur tukar jadwal (P) biar semua tetap nyaman (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_41_id:
@@ -1369,29 +1363,29 @@ label show_question_q_c_41_id:
     menu:
         "Libur telah tiba. Teman-teman mengajakmu pergi jalan-jalan, tapi belum tahu pasti mau ke mana."
 
-        "Pergi sendiri mengunjungi museum sejarah untuk melihat artefak bersejarah.":
+        "Pergi sendiri (I) mengunjungi museum sejarah untuk melihat artefak bersejarah (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Pergi sendiri mengunjungi museum sejarah untuk melihat artefak bersejarah."
+            $ user_choice_text = "Pergi sendiri (I) mengunjungi museum sejarah untuk melihat artefak bersejarah (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_c_41_id_A
 
-        "Ikut rombongan menjelajahi hutan mitos yang penuh misteri.":
+        "Ikut rombongan (E) menjelajahi hutan mitos yang penuh misteri (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Ikut rombongan menjelajahi hutan mitos yang penuh misteri."
+            $ user_choice_text = "Ikut rombongan (E) menjelajahi hutan mitos yang penuh misteri (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_c_41_id_B
 
 
 label show_question_q_c_41_id_A:
-    $ user_journey_summary.append("Di situasi Libur telah tiba. Teman-teman mengajakmu pergi jalan-jalan, tapi belum tahu pasti mau ke mana., user memilih: Pergi sendiri mengunjungi museum sejarah untuk melihat artefak bersejarah., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_80
+    $ user_journey_summary.append("Di situasi Libur telah tiba. Teman-teman mengajakmu pergi jalan-jalan, tapi belum tahu pasti mau ke mana., user memilih: Pergi sendiri (I) mengunjungi museum sejarah untuk melihat artefak bersejarah (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_c_41_id_B:
-    $ user_journey_summary.append("Di situasi Libur telah tiba. Teman-teman mengajakmu pergi jalan-jalan, tapi belum tahu pasti mau ke mana., user memilih: Ikut rombongan menjelajahi hutan mitos yang penuh misteri., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_81
+    $ user_journey_summary.append("Di situasi Libur telah tiba. Teman-teman mengajakmu pergi jalan-jalan, tapi belum tahu pasti mau ke mana., user memilih: Ikut rombongan (E) menjelajahi hutan mitos yang penuh misteri (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_c_42_id:
@@ -1403,29 +1397,29 @@ label show_question_q_c_42_id:
     menu:
         "Kamu menang lotre besar! Memenangkan sekantong koin emas."
 
-        "Simpan sendiri di brankas sebagai aset fisik yang aman.":
+        "Simpan sendiri di brankas (I) sebagai aset fisik yang aman (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Simpan sendiri di brankas sebagai aset fisik yang aman."
+            $ user_choice_text = "Simpan sendiri di brankas (I) sebagai aset fisik yang aman (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_c_42_id_A
 
-        "Traktir semua orang sambil memikirkan kekayaanmu yang semakin bertambah.":
+        "Traktir semua orang (E) sambil memikirkan kekayaanmu yang semakin bertambah (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Traktir semua orang sambil memikirkan kekayaanmu yang semakin bertambah."
+            $ user_choice_text = "Traktir semua orang (E) sambil memikirkan kekayaanmu yang semakin bertambah (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_c_42_id_B
 
 
 label show_question_q_c_42_id_A:
-    $ user_journey_summary.append("Di situasi Kamu menang lotre besar! Memenangkan sekantong koin emas., user memilih: Simpan sendiri di brankas sebagai aset fisik yang aman., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_82
+    $ user_journey_summary.append("Di situasi Kamu menang lotre besar! Memenangkan sekantong koin emas., user memilih: Simpan sendiri di brankas (I) sebagai aset fisik yang aman (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_c_42_id_B:
-    $ user_journey_summary.append("Di situasi Kamu menang lotre besar! Memenangkan sekantong koin emas., user memilih: Traktir semua orang sambil memikirkan kekayaanmu yang semakin bertambah., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_83
+    $ user_journey_summary.append("Di situasi Kamu menang lotre besar! Memenangkan sekantong koin emas., user memilih: Traktir semua orang (E) sambil memikirkan kekayaanmu yang semakin bertambah (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_c_43_id:
@@ -1436,29 +1430,29 @@ label show_question_q_c_43_id:
     menu:
         "Kamu melihat lukisan abstrak yang 'cuma coretan beberapa garis'."
 
-        "Tanya orang lain, 'Ini gambar apa sih? Maksudnya apaan?'.":
+        "Tanya orang lain (E), 'Ini gambar apa sih? Maksudnya apaan?' (S).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Tanya orang lain, 'Ini gambar apa sih? Maksudnya apaan?'."
+            $ user_choice_text = "Tanya orang lain (E), 'Ini gambar apa sih? Maksudnya apaan?' (S)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_c_43_id_A
 
-        "Diam dan mencoba merasakan emosi pelukisnya.":
+        "Diam (I) dan mencoba merasakan emosi pelukisnya (N).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Diam dan mencoba merasakan emosi pelukisnya."
+            $ user_choice_text = "Diam (I) dan mencoba merasakan emosi pelukisnya (N)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_c_43_id_B
 
 
 label show_question_q_c_43_id_A:
-    $ user_journey_summary.append("Di situasi Kamu melihat lukisan abstrak yang 'cuma coretan beberapa garis'., user memilih: Tanya orang lain, 'Ini gambar apa sih? Maksudnya apaan?'., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_84
+    $ user_journey_summary.append("Di situasi Kamu melihat lukisan abstrak yang 'cuma coretan beberapa garis'., user memilih: Tanya orang lain (E), 'Ini gambar apa sih? Maksudnya apaan?' (S)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_c_43_id_B:
-    $ user_journey_summary.append("Di situasi Kamu melihat lukisan abstrak yang 'cuma coretan beberapa garis'., user memilih: Diam dan mencoba merasakan emosi pelukisnya., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_85
+    $ user_journey_summary.append("Di situasi Kamu melihat lukisan abstrak yang 'cuma coretan beberapa garis'., user memilih: Diam (I) dan mencoba merasakan emosi pelukisnya (N)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_c_44_id:
@@ -1469,29 +1463,29 @@ label show_question_q_c_44_id:
     menu:
         "Temanmu minta diajari main game, yang jago banget kamu mainkan."
 
-        "'Sini, tekan tombol maju, lalu lompat.' Pandu dia langsung.":
+        "'Sini, tekan tombol maju, lalu lompat.' (S) Pandu dia langsung (E).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "'Sini, tekan tombol maju, lalu lompat.' Pandu dia langsung."
+            $ user_choice_text = "'Sini, tekan tombol maju, lalu lompat.' (S) Pandu dia langsung (E)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_c_44_id_A
 
-        "'Kamu pahami dulu konsepnya.' Biarkan dia belajar sendiri.":
+        "'Kamu pahami dulu konsepnya.' (N) Biarkan dia belajar sendiri (I).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "'Kamu pahami dulu konsepnya.' Biarkan dia belajar sendiri."
+            $ user_choice_text = "'Kamu pahami dulu konsepnya.' (N) Biarkan dia belajar sendiri (I)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_c_44_id_B
 
 
 label show_question_q_c_44_id_A:
-    $ user_journey_summary.append("Di situasi Temanmu minta diajari main game, yang jago banget kamu mainkan., user memilih: 'Sini, tekan tombol maju, lalu lompat.' Pandu dia langsung., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_86
+    $ user_journey_summary.append("Di situasi Temanmu minta diajari main game, yang jago banget kamu mainkan., user memilih: 'Sini, tekan tombol maju, lalu lompat.' (S) Pandu dia langsung (E)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_c_44_id_B:
-    $ user_journey_summary.append("Di situasi Temanmu minta diajari main game, yang jago banget kamu mainkan., user memilih: 'Kamu pahami dulu konsepnya.' Biarkan dia belajar sendiri., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_87
+    $ user_journey_summary.append("Di situasi Temanmu minta diajari main game, yang jago banget kamu mainkan., user memilih: 'Kamu pahami dulu konsepnya.' (N) Biarkan dia belajar sendiri (I)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_c_45_id:
@@ -1503,62 +1497,62 @@ label show_question_q_c_45_id:
     menu:
         "Kamu punya waktu luang 1 jam hari ini. Kamu mau ngapain?"
 
-        "Olahraga atau beres-beres bareng di rumah.":
+        "Olahraga atau beres-beres (S) bareng di rumah (E).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Olahraga atau beres-beres bareng di rumah."
+            $ user_choice_text = "Olahraga atau beres-beres (S) bareng di rumah (E)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_c_45_id_A
 
-        "Melakukan hal yang kamu suka, sambil membayangkan apa yang bisa kamu lakukan di kemudian hari.":
+        "Melakukan hal yang kamu suka, (I) sambil membayangkan apa yang bisa kamu lakukan di kemudian hari (N).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Melakukan hal yang kamu suka, sambil membayangkan apa yang bisa kamu lakukan di kemudian hari."
+            $ user_choice_text = "Melakukan hal yang kamu suka, (I) sambil membayangkan apa yang bisa kamu lakukan di kemudian hari (N)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_c_45_id_B
 
 
 label show_question_q_c_45_id_A:
-    $ user_journey_summary.append("Di situasi Kamu punya waktu luang 1 jam hari ini. Kamu mau ngapain?, user memilih: Olahraga atau beres-beres bareng di rumah., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_88
+    $ user_journey_summary.append("Di situasi Kamu punya waktu luang 1 jam hari ini. Kamu mau ngapain?, user memilih: Olahraga atau beres-beres (S) bareng di rumah (E)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_c_45_id_B:
-    $ user_journey_summary.append("Di situasi Kamu punya waktu luang 1 jam hari ini. Kamu mau ngapain?, user memilih: Melakukan hal yang kamu suka, sambil membayangkan apa yang bisa kamu lakukan di kemudian hari., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_89
+    $ user_journey_summary.append("Di situasi Kamu punya waktu luang 1 jam hari ini. Kamu mau ngapain?, user memilih: Melakukan hal yang kamu suka, (I) sambil membayangkan apa yang bisa kamu lakukan di kemudian hari (N)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_c_46_id:
     scene bg room with dissolve
-    $ narasi_asli = "(Hiks!) Temanmu nangis karena diputusin pacarnya"
-    n "(Hiks!) Temanmu nangis karena diputusin pacarnya"
+    $ narasi_asli = "Temanmu menangis karena baru saja putus cinta."
+    n "Temanmu menangis karena baru saja putus cinta."
 
     menu:
-        "(Hiks!) Temanmu nangis karena diputusin pacarnya"
+        "Temanmu menangis karena baru saja putus cinta."
 
-        "'Sudah, jangan nangis. Nih tisu. Jika dipikir-pikir dia memang gak baik buatmu.'":
+        "Bantu lihat faktanya (T) dan tawarkan langkah konkret untuk melangkah maju (S).":
             $ SN -= 5
             $ TF -= 5
-            $ user_choice_text = "'Sudah, jangan nangis. Nih tisu. Jika dipikir-pikir dia memang gak baik buatmu.'"
+            $ user_choice_text = "Bantu lihat faktanya (T) dan tawarkan langkah konkret untuk melangkah maju (S)."
             $ last_answer = "Sensing & Thinking"
             jump show_question_q_c_46_id_A
 
-        "Temani dia. lalu dengarkan ceritanya.":
+        "Temani dulu (N) dan dengarkan perasaannya tanpa buru-buru menilai (F).":
             $ SN += 5
             $ TF += 5
-            $ user_choice_text = "Temani dia. lalu dengarkan ceritanya."
+            $ user_choice_text = "Temani dulu (N) dan dengarkan perasaannya tanpa buru-buru menilai (F)."
             $ last_answer = "Intuitive & Feeling"
             jump show_question_q_c_46_id_B
 
 
 label show_question_q_c_46_id_A:
-    $ user_journey_summary.append("Di situasi (Hiks!) Temanmu nangis karena diputusin pacarnya, user memilih: 'Sudah, jangan nangis. Nih tisu. Jika dipikir-pikir dia memang gak baik buatmu.', dengan poin MBTI: Sensing & Thinking")
-    call ai_react_logic from _call_ai_react_logic_90
+    $ user_journey_summary.append("Di situasi Temanmu menangis karena baru saja putus cinta., user memilih: Bantu lihat faktanya (T) dan tawarkan langkah konkret untuk melangkah maju (S)., dengan poin MBTI: Sensing & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_c_46_id_B:
-    $ user_journey_summary.append("Di situasi (Hiks!) Temanmu nangis karena diputusin pacarnya, user memilih: Temani dia. lalu dengarkan ceritanya., dengan poin MBTI: Intuitive & Feeling")
-    call ai_react_logic from _call_ai_react_logic_91
+    $ user_journey_summary.append("Di situasi Temanmu menangis karena baru saja putus cinta., user memilih: Temani dulu (N) dan dengarkan perasaannya tanpa buru-buru menilai (F)., dengan poin MBTI: Intuitive & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_c_47_id:
@@ -1569,29 +1563,29 @@ label show_question_q_c_47_id:
     menu:
         "Film yang kalian tonton ending-nya gantung dan nggak jelas!"
 
-        "'Ah..Jelek banget! Banyak adegan yang nggak dijelaskan kaitannya!.'":
+        "'Ah..Jelek banget! (T) Banyak adegan yang nggak dijelaskan kaitannya! (S).'":
             $ SN -= 5
             $ TF -= 5
-            $ user_choice_text = "'Ah..Jelek banget! Banyak adegan yang nggak dijelaskan kaitannya!.'"
+            $ user_choice_text = "'Ah..Jelek banget! (T) Banyak adegan yang nggak dijelaskan kaitannya! (S).'"
             $ last_answer = "Sensing & Thinking"
             jump show_question_q_c_47_id_A
 
-        "'Keren... Maknanya dalam banget, soal harapan yang sirna.'":
+        "'Keren... (F) Maknanya dalam banget, soal harapan yang sirna (N).'":
             $ SN += 5
             $ TF += 5
-            $ user_choice_text = "'Keren... Maknanya dalam banget, soal harapan yang sirna.'"
+            $ user_choice_text = "'Keren... (F) Maknanya dalam banget, soal harapan yang sirna (N).'"
             $ last_answer = "Intuitive & Feeling"
             jump show_question_q_c_47_id_B
 
 
 label show_question_q_c_47_id_A:
-    $ user_journey_summary.append("Di situasi Film yang kalian tonton ending-nya gantung dan nggak jelas!, user memilih: 'Ah..Jelek banget! Banyak adegan yang nggak dijelaskan kaitannya!.', dengan poin MBTI: Sensing & Thinking")
-    call ai_react_logic from _call_ai_react_logic_92
+    $ user_journey_summary.append("Di situasi Film yang kalian tonton ending-nya gantung dan nggak jelas!, user memilih: 'Ah..Jelek banget! (T) Banyak adegan yang nggak dijelaskan kaitannya! (S).', dengan poin MBTI: Sensing & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_c_47_id_B:
-    $ user_journey_summary.append("Di situasi Film yang kalian tonton ending-nya gantung dan nggak jelas!, user memilih: 'Keren... Maknanya dalam banget, soal harapan yang sirna.', dengan poin MBTI: Intuitive & Feeling")
-    call ai_react_logic from _call_ai_react_logic_93
+    $ user_journey_summary.append("Di situasi Film yang kalian tonton ending-nya gantung dan nggak jelas!, user memilih: 'Keren... (F) Maknanya dalam banget, soal harapan yang sirna (N).', dengan poin MBTI: Intuitive & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_c_48_id:
@@ -1603,29 +1597,29 @@ label show_question_q_c_48_id:
     menu:
         "Ada tawaran job dengan Gaji besar, tapi kamu belum tau apa kerjaannya. Orang tersebut juga cukup mencurigakan"
 
-        "Tolak. 'Tawarannya belum jelas' tidak yakin bakal dibawa kemana.":
+        "Tolak (F). 'Tawarannya belum jelas' (N) tidak yakin bakal dibawa kemana.":
             $ SN += 5
             $ TF += 5
-            $ user_choice_text = "Tolak. 'Tawarannya belum jelas' tidak yakin bakal dibawa kemana."
+            $ user_choice_text = "Tolak (F). 'Tawarannya belum jelas' (N) tidak yakin bakal dibawa kemana."
             $ last_answer = "Intuitive & Feeling"
             jump show_question_q_c_48_id_A
 
-        "Terima aja. Secara finansial kita lagi butuh uangnya.":
+        "Terima aja (T). Secara finansial (S) kita lagi butuh uangnya.":
             $ SN -= 5
             $ TF -= 5
-            $ user_choice_text = "Terima aja. Secara finansial kita lagi butuh uangnya."
+            $ user_choice_text = "Terima aja (T). Secara finansial (S) kita lagi butuh uangnya."
             $ last_answer = "Sensing & Thinking"
             jump show_question_q_c_48_id_B
 
 
 label show_question_q_c_48_id_A:
-    $ user_journey_summary.append("Di situasi Ada tawaran job dengan Gaji besar, tapi kamu belum tau apa kerjaannya. Orang tersebut juga cukup mencurigakan, user memilih: Tolak. 'Tawarannya belum jelas' tidak yakin bakal dibawa kemana., dengan poin MBTI: Intuitive & Feeling")
-    call ai_react_logic from _call_ai_react_logic_94
+    $ user_journey_summary.append("Di situasi Ada tawaran job dengan Gaji besar, tapi kamu belum tau apa kerjaannya. Orang tersebut juga cukup mencurigakan, user memilih: Tolak (F). 'Tawarannya belum jelas' (N) tidak yakin bakal dibawa kemana., dengan poin MBTI: Intuitive & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_c_48_id_B:
-    $ user_journey_summary.append("Di situasi Ada tawaran job dengan Gaji besar, tapi kamu belum tau apa kerjaannya. Orang tersebut juga cukup mencurigakan, user memilih: Terima aja. Secara finansial kita lagi butuh uangnya., dengan poin MBTI: Sensing & Thinking")
-    call ai_react_logic from _call_ai_react_logic_95
+    $ user_journey_summary.append("Di situasi Ada tawaran job dengan Gaji besar, tapi kamu belum tau apa kerjaannya. Orang tersebut juga cukup mencurigakan, user memilih: Terima aja (T). Secara finansial (S) kita lagi butuh uangnya., dengan poin MBTI: Sensing & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_c_49_id:
@@ -1636,29 +1630,29 @@ label show_question_q_c_49_id:
     menu:
         "Kamu harus memilih satu skill untuk dipelajari seumur hidup."
 
-        "Skill teknis yang berguna buat cari kerja.":
+        "Skill teknis (S) yang berguna buat cari kerja (T).":
             $ SN -= 5
             $ TF -= 5
-            $ user_choice_text = "Skill teknis yang berguna buat cari kerja."
+            $ user_choice_text = "Skill teknis (S) yang berguna buat cari kerja (T)."
             $ last_answer = "Sensing & Thinking"
             jump show_question_q_c_49_id_A
 
-        "Skill seni yang bisa menyentuh hati orang.":
+        "Skill seni (N) yang bisa menyentuh hati orang (F).":
             $ SN += 5
             $ TF += 5
-            $ user_choice_text = "Skill seni yang bisa menyentuh hati orang."
+            $ user_choice_text = "Skill seni (N) yang bisa menyentuh hati orang (F)."
             $ last_answer = "Intuitive & Feeling"
             jump show_question_q_c_49_id_B
 
 
 label show_question_q_c_49_id_A:
-    $ user_journey_summary.append("Di situasi Kamu harus memilih satu skill untuk dipelajari seumur hidup., user memilih: Skill teknis yang berguna buat cari kerja., dengan poin MBTI: Sensing & Thinking")
-    call ai_react_logic from _call_ai_react_logic_96
+    $ user_journey_summary.append("Di situasi Kamu harus memilih satu skill untuk dipelajari seumur hidup., user memilih: Skill teknis (S) yang berguna buat cari kerja (T)., dengan poin MBTI: Sensing & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_c_49_id_B:
-    $ user_journey_summary.append("Di situasi Kamu harus memilih satu skill untuk dipelajari seumur hidup., user memilih: Skill seni yang bisa menyentuh hati orang., dengan poin MBTI: Intuitive & Feeling")
-    call ai_react_logic from _call_ai_react_logic_97
+    $ user_journey_summary.append("Di situasi Kamu harus memilih satu skill untuk dipelajari seumur hidup., user memilih: Skill seni (N) yang bisa menyentuh hati orang (F)., dengan poin MBTI: Intuitive & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_c_50_id:
@@ -1669,29 +1663,29 @@ label show_question_q_c_50_id:
     menu:
         "Temanmu debat soal fakta sains tapi datanya salah semua."
 
-        "Koreksi dia. Tunjukkan data asli agar dia tidak membuat dirinya malu.":
+        "Koreksi dia (T). Tunjukkan data asli (S) agar dia tidak membuat dirinya malu.":
             $ SN -= 5
             $ TF -= 5
-            $ user_choice_text = "Koreksi dia. Tunjukkan data asli agar dia tidak membuat dirinya malu."
+            $ user_choice_text = "Koreksi dia (T). Tunjukkan data asli (S) agar dia tidak membuat dirinya malu."
             $ last_answer = "Sensing & Thinking"
             jump show_question_q_c_50_id_A
 
-        "Biarkan saja. Nanti dia sadar sendiri, daripada ribut di sini.":
+        "Biarkan saja (F). Nanti dia sadar sendiri (N), daripada ribut di sini.":
             $ SN += 5
             $ TF += 5
-            $ user_choice_text = "Biarkan saja. Nanti dia sadar sendiri, daripada ribut di sini."
+            $ user_choice_text = "Biarkan saja (F). Nanti dia sadar sendiri (N), daripada ribut di sini."
             $ last_answer = "Intuitive & Feeling"
             jump show_question_q_c_50_id_B
 
 
 label show_question_q_c_50_id_A:
-    $ user_journey_summary.append("Di situasi Temanmu debat soal fakta sains tapi datanya salah semua., user memilih: Koreksi dia. Tunjukkan data asli agar dia tidak membuat dirinya malu., dengan poin MBTI: Sensing & Thinking")
-    call ai_react_logic from _call_ai_react_logic_98
+    $ user_journey_summary.append("Di situasi Temanmu debat soal fakta sains tapi datanya salah semua., user memilih: Koreksi dia (T). Tunjukkan data asli (S) agar dia tidak membuat dirinya malu., dengan poin MBTI: Sensing & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_c_50_id_B:
-    $ user_journey_summary.append("Di situasi Temanmu debat soal fakta sains tapi datanya salah semua., user memilih: Biarkan saja. Nanti dia sadar sendiri, daripada ribut di sini., dengan poin MBTI: Intuitive & Feeling")
-    call ai_react_logic from _call_ai_react_logic_99
+    $ user_journey_summary.append("Di situasi Temanmu debat soal fakta sains tapi datanya salah semua., user memilih: Biarkan saja (F). Nanti dia sadar sendiri (N), daripada ribut di sini., dengan poin MBTI: Intuitive & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_c_51_id:
@@ -1703,29 +1697,29 @@ label show_question_q_c_51_id:
     menu:
         "(Hilang!) Tiket keretamu hilang! Kereta berangkat 5 menit lagi."
 
-        "Cek saku, tas, lantai secara urut. Jangan panik, coba ingat kembali.":
+        "Cek saku, tas, lantai secara urut (S). Jangan panik, coba ingat kembali (J).":
             $ SN -= 5
             $ JP -= 5
-            $ user_choice_text = "Cek saku, tas, lantai secara urut. Jangan panik, coba ingat kembali."
+            $ user_choice_text = "Cek saku, tas, lantai secara urut (S). Jangan panik, coba ingat kembali (J)."
             $ last_answer = "Sensing & Judging"
             jump show_question_q_c_51_id_A
 
-        "Cari tiket di tempat yang mungkin terselip. Bisa jadi jatuh di jalan.":
+        "Cari tiket di tempat yang mungkin terselip (P). Bisa jadi jatuh di jalan(N).":
             $ SN += 5
             $ JP += 5
-            $ user_choice_text = "Cari tiket di tempat yang mungkin terselip. Bisa jadi jatuh di jalan."
+            $ user_choice_text = "Cari tiket di tempat yang mungkin terselip (P). Bisa jadi jatuh di jalan(N)."
             $ last_answer = "Intuitive & Perceiving"
             jump show_question_q_c_51_id_B
 
 
 label show_question_q_c_51_id_A:
-    $ user_journey_summary.append("Di situasi (Hilang!) Tiket keretamu hilang! Kereta berangkat 5 menit lagi., user memilih: Cek saku, tas, lantai secara urut. Jangan panik, coba ingat kembali., dengan poin MBTI: Sensing & Judging")
-    call ai_react_logic from _call_ai_react_logic_100
+    $ user_journey_summary.append("Di situasi (Hilang!) Tiket keretamu hilang! Kereta berangkat 5 menit lagi., user memilih: Cek saku, tas, lantai secara urut (S). Jangan panik, coba ingat kembali (J)., dengan poin MBTI: Sensing & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_51_id_B:
-    $ user_journey_summary.append("Di situasi (Hilang!) Tiket keretamu hilang! Kereta berangkat 5 menit lagi., user memilih: Cari tiket di tempat yang mungkin terselip. Bisa jadi jatuh di jalan., dengan poin MBTI: Intuitive & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_101
+    $ user_journey_summary.append("Di situasi (Hilang!) Tiket keretamu hilang! Kereta berangkat 5 menit lagi., user memilih: Cari tiket di tempat yang mungkin terselip (P). Bisa jadi jatuh di jalan(N)., dengan poin MBTI: Intuitive & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_52_id:
@@ -1736,29 +1730,29 @@ label show_question_q_c_52_id:
     menu:
         "Kamu lapar, tapi di kulkas cuma ada telur, selai, dan daging."
 
-        "Masak telur dadar aja. Pasti enak dan sudah jelas rasanya.":
+        "Masak telur dadar aja (S). Pasti enak dan sudah jelas rasanya (J).":
             $ SN -= 5
             $ JP -= 5
-            $ user_choice_text = "Masak telur dadar aja. Pasti enak dan sudah jelas rasanya."
+            $ user_choice_text = "Masak telur dadar aja (S). Pasti enak dan sudah jelas rasanya (J)."
             $ last_answer = "Sensing & Judging"
             jump show_question_q_c_52_id_A
 
-        "Campur semuanya! Siapa tahu jadi masterpiece baru.":
+        "Campur semuanya! (N) Siapa tahu jadi masterpiece baru (P).":
             $ SN += 5
             $ JP += 5
-            $ user_choice_text = "Campur semuanya! Siapa tahu jadi masterpiece baru."
+            $ user_choice_text = "Campur semuanya! (N) Siapa tahu jadi masterpiece baru (P)."
             $ last_answer = "Intuitive & Perceiving"
             jump show_question_q_c_52_id_B
 
 
 label show_question_q_c_52_id_A:
-    $ user_journey_summary.append("Di situasi Kamu lapar, tapi di kulkas cuma ada telur, selai, dan daging., user memilih: Masak telur dadar aja. Pasti enak dan sudah jelas rasanya., dengan poin MBTI: Sensing & Judging")
-    call ai_react_logic from _call_ai_react_logic_102
+    $ user_journey_summary.append("Di situasi Kamu lapar, tapi di kulkas cuma ada telur, selai, dan daging., user memilih: Masak telur dadar aja (S). Pasti enak dan sudah jelas rasanya (J)., dengan poin MBTI: Sensing & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_52_id_B:
-    $ user_journey_summary.append("Di situasi Kamu lapar, tapi di kulkas cuma ada telur, selai, dan daging., user memilih: Campur semuanya! Siapa tahu jadi masterpiece baru., dengan poin MBTI: Intuitive & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_103
+    $ user_journey_summary.append("Di situasi Kamu lapar, tapi di kulkas cuma ada telur, selai, dan daging., user memilih: Campur semuanya! (N) Siapa tahu jadi masterpiece baru (P)., dengan poin MBTI: Intuitive & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_53_id:
@@ -1769,29 +1763,29 @@ label show_question_q_c_53_id:
     menu:
         "Kamu ada ujian besok, tapi kamu baru ingat 1 hari sebelum hari-H"
 
-        "Baca rangkuman bab sesuai apa yang mungkin keluar di ujian.":
+        "Baca rangkuman bab (S) sesuai apa yang mungkin keluar di ujian (J).":
             $ SN -= 5
             $ JP -= 5
-            $ user_choice_text = "Baca rangkuman bab sesuai apa yang mungkin keluar di ujian."
+            $ user_choice_text = "Baca rangkuman bab (S) sesuai apa yang mungkin keluar di ujian (J)."
             $ last_answer = "Sensing & Judging"
             jump show_question_q_c_53_id_A
 
-        "Baca bagian yang paling kamu pahami saja, sisanya bisa dipikir saat ujian.":
+        "Baca bagian yang paling kamu pahami saja (N), sisanya bisa dipikir saat ujian (P).":
             $ SN += 5
             $ JP += 5
-            $ user_choice_text = "Baca bagian yang paling kamu pahami saja, sisanya bisa dipikir saat ujian."
+            $ user_choice_text = "Baca bagian yang paling kamu pahami saja (N), sisanya bisa dipikir saat ujian (P)."
             $ last_answer = "Intuitive & Perceiving"
             jump show_question_q_c_53_id_B
 
 
 label show_question_q_c_53_id_A:
-    $ user_journey_summary.append("Di situasi Kamu ada ujian besok, tapi kamu baru ingat 1 hari sebelum hari-H, user memilih: Baca rangkuman bab sesuai apa yang mungkin keluar di ujian., dengan poin MBTI: Sensing & Judging")
-    call ai_react_logic from _call_ai_react_logic_104
+    $ user_journey_summary.append("Di situasi Kamu ada ujian besok, tapi kamu baru ingat 1 hari sebelum hari-H, user memilih: Baca rangkuman bab (S) sesuai apa yang mungkin keluar di ujian (J)., dengan poin MBTI: Sensing & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_53_id_B:
-    $ user_journey_summary.append("Di situasi Kamu ada ujian besok, tapi kamu baru ingat 1 hari sebelum hari-H, user memilih: Baca bagian yang paling kamu pahami saja, sisanya bisa dipikir saat ujian., dengan poin MBTI: Intuitive & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_105
+    $ user_journey_summary.append("Di situasi Kamu ada ujian besok, tapi kamu baru ingat 1 hari sebelum hari-H, user memilih: Baca bagian yang paling kamu pahami saja (N), sisanya bisa dipikir saat ujian (P)., dengan poin MBTI: Intuitive & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_54_id:
@@ -1802,29 +1796,29 @@ label show_question_q_c_54_id:
     menu:
         "Bos minta kamu kerjakan proyek 'Rahasia' tanpa petunjuk jelas."
 
-        "Tolak halus. 'Saya butuh detail dan deadline yang jelas.'":
+        "Tolak halus. 'Saya butuh detail (S) dan deadline yang jelas (J).'":
             $ SN -= 5
             $ JP -= 5
-            $ user_choice_text = "Tolak halus. 'Saya butuh detail dan deadline yang jelas.'"
+            $ user_choice_text = "Tolak halus. 'Saya butuh detail (S) dan deadline yang jelas (J).'"
             $ last_answer = "Sensing & Judging"
             jump show_question_q_c_54_id_A
 
-        "Terima! 'Siap, saya akan improvisasi sambil jalan.'":
+        "Terima! 'Siap, saya akan improvisasi (N) sambil jalan (P).'":
             $ SN += 5
             $ JP += 5
-            $ user_choice_text = "Terima! 'Siap, saya akan improvisasi sambil jalan.'"
+            $ user_choice_text = "Terima! 'Siap, saya akan improvisasi (N) sambil jalan (P).'"
             $ last_answer = "Intuitive & Perceiving"
             jump show_question_q_c_54_id_B
 
 
 label show_question_q_c_54_id_A:
-    $ user_journey_summary.append("Di situasi Bos minta kamu kerjakan proyek 'Rahasia' tanpa petunjuk jelas., user memilih: Tolak halus. 'Saya butuh detail dan deadline yang jelas.', dengan poin MBTI: Sensing & Judging")
-    call ai_react_logic from _call_ai_react_logic_106
+    $ user_journey_summary.append("Di situasi Bos minta kamu kerjakan proyek 'Rahasia' tanpa petunjuk jelas., user memilih: Tolak halus. 'Saya butuh detail (S) dan deadline yang jelas (J).', dengan poin MBTI: Sensing & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_54_id_B:
-    $ user_journey_summary.append("Di situasi Bos minta kamu kerjakan proyek 'Rahasia' tanpa petunjuk jelas., user memilih: Terima! 'Siap, saya akan improvisasi sambil jalan.', dengan poin MBTI: Intuitive & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_107
+    $ user_journey_summary.append("Di situasi Bos minta kamu kerjakan proyek 'Rahasia' tanpa petunjuk jelas., user memilih: Terima! 'Siap, saya akan improvisasi (N) sambil jalan (P).', dengan poin MBTI: Intuitive & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_55_id:
@@ -1835,62 +1829,63 @@ label show_question_q_c_55_id:
     menu:
         "Kamu mau pindah kota, tapi barangmu kebanyakan!"
 
-        "Sortir barang. Buang yang menurutmu kurang penting.":
+        "Sortir barang (S). Buang yang menurutmu kurang penting (J).":
             $ SN -= 5
             $ JP -= 5
-            $ user_choice_text = "Sortir barang. Buang yang menurutmu kurang penting."
+            $ user_choice_text = "Sortir barang (S). Buang yang menurutmu kurang penting (J)."
             $ last_answer = "Sensing & Judging"
             jump show_question_q_c_55_id_A
 
-        "'Kita gak tahu, mungkin butuh barang ini di kemudian hari, jadi bawa semua!'. Nanti semua bisa diatur lagi di sana.":
+        "'Kita gak tahu, mungkin butuh barang ini di kemudian hari, jadi bawa semua! (N)'. Nanti semua bisa diatur lagi di sana (P).":
             $ SN += 5
             $ JP += 5
-            $ user_choice_text = "'Kita gak tahu, mungkin butuh barang ini di kemudian hari, jadi bawa semua!'. Nanti semua bisa diatur lagi di sana."
+            $ user_choice_text = "'Kita gak tahu, mungkin butuh barang ini di kemudian hari, jadi bawa semua! (N)'. Nanti semua bisa diatur lagi di sana (P)."
             $ last_answer = "Intuitive & Perceiving"
             jump show_question_q_c_55_id_B
 
 
 label show_question_q_c_55_id_A:
-    $ user_journey_summary.append("Di situasi Kamu mau pindah kota, tapi barangmu kebanyakan!, user memilih: Sortir barang. Buang yang menurutmu kurang penting., dengan poin MBTI: Sensing & Judging")
-    call ai_react_logic from _call_ai_react_logic_108
+    $ user_journey_summary.append("Di situasi Kamu mau pindah kota, tapi barangmu kebanyakan!, user memilih: Sortir barang (S). Buang yang menurutmu kurang penting (J)., dengan poin MBTI: Sensing & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_55_id_B:
-    $ user_journey_summary.append("Di situasi Kamu mau pindah kota, tapi barangmu kebanyakan!, user memilih: 'Kita gak tahu, mungkin butuh barang ini di kemudian hari, jadi bawa semua!'. Nanti semua bisa diatur lagi di sana., dengan poin MBTI: Intuitive & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_109
+    $ user_journey_summary.append("Di situasi Kamu mau pindah kota, tapi barangmu kebanyakan!, user memilih: 'Kita gak tahu, mungkin butuh barang ini di kemudian hari, jadi bawa semua! (N)'. Nanti semua bisa diatur lagi di sana (P)., dengan poin MBTI: Intuitive & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_56_id:
     scene bg room with dissolve
-    $ narasi_asli = "Adikmu memecahkan vas bunga kesayangan ibu, dia takut banget, hampir mau nangis"
-    n "Adikmu memecahkan vas bunga kesayangan ibu, dia takut banget, hampir mau nangis"
+    $ narasi_asli = "Adikmu tak sengaja memecahkan vas kesayangan ibu. Dia ketakutan."
+    n "Adikmu tak sengaja memecahkan vas kesayangan ibu."
+    n "Dia ketakutan."
 
     menu:
-        "Adikmu memecahkan vas bunga kesayangan ibu, dia takut banget, hampir mau nangis"
+        "Adikmu tak sengaja memecahkan vas kesayangan ibu. Dia ketakutan."
 
-        "Suruh dia ngaku. Salah ya salah, harus tanggung jawab.":
+        "Dorong dia jujur bercerita ke ibu (J) dan hadapi dengan tenang (T).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Suruh dia ngaku. Salah ya salah, harus tanggung jawab."
+            $ user_choice_text = "Dorong dia jujur bercerita ke ibu (J) dan hadapi dengan tenang (T)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_c_56_id_A
 
-        "Bantu sembunyikan pecahannya. Kasihan kalau dia dimarahi.":
+        "Temani dia bicara ke ibu (P), tekankan bahwa itu murni kecelakaan (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Bantu sembunyikan pecahannya. Kasihan kalau dia dimarahi."
+            $ user_choice_text = "Temani dia bicara ke ibu (P), tekankan bahwa itu murni kecelakaan (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_c_56_id_B
 
 
 label show_question_q_c_56_id_A:
-    $ user_journey_summary.append("Di situasi Adikmu memecahkan vas bunga kesayangan ibu, dia takut banget, hampir mau nangis, user memilih: Suruh dia ngaku. Salah ya salah, harus tanggung jawab., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_110
+    $ user_journey_summary.append("Di situasi Adikmu tak sengaja memecahkan vas kesayangan ibu. Dia ketakutan., user memilih: Dorong dia jujur bercerita ke ibu (J) dan hadapi dengan tenang (T)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_56_id_B:
-    $ user_journey_summary.append("Di situasi Adikmu memecahkan vas bunga kesayangan ibu, dia takut banget, hampir mau nangis, user memilih: Bantu sembunyikan pecahannya. Kasihan kalau dia dimarahi., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_111
+    $ user_journey_summary.append("Di situasi Adikmu tak sengaja memecahkan vas kesayangan ibu. Dia ketakutan., user memilih: Temani dia bicara ke ibu (P), tekankan bahwa itu murni kecelakaan (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_57_id:
@@ -1902,29 +1897,29 @@ label show_question_q_c_57_id:
     menu:
         "Kamu punya ide bisnis aneh tapi inovatif. Kapan kamu mau mulai mewujudkannya?"
 
-        "Nanti, setelah analisis untung-rugi selesai 100%%.":
+        "Nanti, setelah analisis untung-rugi (T) selesai 100%% (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Nanti, setelah analisis untung-rugi selesai 100%%."
+            $ user_choice_text = "Nanti, setelah analisis untung-rugi (T) selesai 100%% (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_c_57_id_A
 
-        "Sekarang! Yang penting banyak orang suka idenya.":
+        "Sekarang! (P) Yang penting banyak orang suka idenya (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Sekarang! Yang penting banyak orang suka idenya."
+            $ user_choice_text = "Sekarang! (P) Yang penting banyak orang suka idenya (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_c_57_id_B
 
 
 label show_question_q_c_57_id_A:
-    $ user_journey_summary.append("Di situasi Kamu punya ide bisnis aneh tapi inovatif. Kapan kamu mau mulai mewujudkannya?, user memilih: Nanti, setelah analisis untung-rugi selesai 100%%., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_112
+    $ user_journey_summary.append("Di situasi Kamu punya ide bisnis aneh tapi inovatif. Kapan kamu mau mulai mewujudkannya?, user memilih: Nanti, setelah analisis untung-rugi (T) selesai 100%% (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_57_id_B:
-    $ user_journey_summary.append("Di situasi Kamu punya ide bisnis aneh tapi inovatif. Kapan kamu mau mulai mewujudkannya?, user memilih: Sekarang! Yang penting banyak orang suka idenya., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_113
+    $ user_journey_summary.append("Di situasi Kamu punya ide bisnis aneh tapi inovatif. Kapan kamu mau mulai mewujudkannya?, user memilih: Sekarang! (P) Yang penting banyak orang suka idenya (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_58_id:
@@ -1936,29 +1931,29 @@ label show_question_q_c_58_id:
     menu:
         "Tim olahragamu kalah terus. Sebagai kapten, apa yang kamu katakan?"
 
-        "'Latihan ditambah! Kita harus menang, skor adalah segalanya.'":
+        "Tambah latihan terjadwal (J), fokus perbaiki hal yang terukur (T).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "'Latihan ditambah! Kita harus menang, skor adalah segalanya.'"
+            $ user_choice_text = "Tambah latihan terjadwal (J), fokus perbaiki hal yang terukur (T)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_c_58_id_A
 
-        "'Santai guys. Yang penting kita enjoy aja main bareng.'":
+        "Santai dulu, guys (P), jaga semangat biar kita tetap solid bermain bareng (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "'Santai guys. Yang penting kita enjoy aja main bareng.'"
+            $ user_choice_text = "Santai dulu, guys (P), jaga semangat biar kita tetap solid bermain bareng (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_c_58_id_B
 
 
 label show_question_q_c_58_id_A:
-    $ user_journey_summary.append("Di situasi Tim olahragamu kalah terus. Sebagai kapten, apa yang kamu katakan?, user memilih: 'Latihan ditambah! Kita harus menang, skor adalah segalanya.', dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_114
+    $ user_journey_summary.append("Di situasi Tim olahragamu kalah terus. Sebagai kapten, apa yang kamu katakan?, user memilih: Tambah latihan terjadwal (J), fokus perbaiki hal yang terukur (T)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_58_id_B:
-    $ user_journey_summary.append("Di situasi Tim olahragamu kalah terus. Sebagai kapten, apa yang kamu katakan?, user memilih: 'Santai guys. Yang penting kita enjoy aja main bareng.', dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_115
+    $ user_journey_summary.append("Di situasi Tim olahragamu kalah terus. Sebagai kapten, apa yang kamu katakan?, user memilih: Santai dulu, guys (P), jaga semangat biar kita tetap solid bermain bareng (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_59_id:
@@ -1970,29 +1965,29 @@ label show_question_q_c_59_id:
     menu:
         "Kamu menemukan Senjata Kuno dalam eksplorasi. Apa yang jadi perhatianmu?"
 
-        "Kekuatannya dan kondisinya yang masih utuh.":
+        "Kekuatannya (T) dan kondisinya yang masih utuh (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Kekuatannya dan kondisinya yang masih utuh."
+            $ user_choice_text = "Kekuatannya (T) dan kondisinya yang masih utuh (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_c_59_id_A
 
-        "Cerita legendanya dan misteri siapa pemiliknya dulu.":
+        "Cerita legendanya (F) dan misteri siapa pemiliknya dulu (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Cerita legendanya dan misteri siapa pemiliknya dulu."
+            $ user_choice_text = "Cerita legendanya (F) dan misteri siapa pemiliknya dulu (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_c_59_id_B
 
 
 label show_question_q_c_59_id_A:
-    $ user_journey_summary.append("Di situasi Kamu menemukan Senjata Kuno dalam eksplorasi. Apa yang jadi perhatianmu?, user memilih: Kekuatannya dan kondisinya yang masih utuh., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_116
+    $ user_journey_summary.append("Di situasi Kamu menemukan Senjata Kuno dalam eksplorasi. Apa yang jadi perhatianmu?, user memilih: Kekuatannya (T) dan kondisinya yang masih utuh (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_59_id_B:
-    $ user_journey_summary.append("Di situasi Kamu menemukan Senjata Kuno dalam eksplorasi. Apa yang jadi perhatianmu?, user memilih: Cerita legendanya dan misteri siapa pemiliknya dulu., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_117
+    $ user_journey_summary.append("Di situasi Kamu menemukan Senjata Kuno dalam eksplorasi. Apa yang jadi perhatianmu?, user memilih: Cerita legendanya (F) dan misteri siapa pemiliknya dulu (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_60_id:
@@ -2003,29 +1998,29 @@ label show_question_q_c_60_id:
     menu:
         "Ada aturan kantor baru yang menyusahkan karyawan."
 
-        "Ajukan revisi resmi. Tunjukkan poin yang tidak efisien.":
+        "Ajukan revisi resmi (J). Tunjukkan poin yang tidak efisien (T).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Ajukan revisi resmi. Tunjukkan poin yang tidak efisien."
+            $ user_choice_text = "Ajukan revisi resmi (J). Tunjukkan poin yang tidak efisien (T)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_c_60_id_A
 
-        "Bikin petisi secara emosional. Minta kelonggaran aturan.":
+        "Bikin petisi secara emosional (F). Minta kelonggaran aturan (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Bikin petisi secara emosional. Minta kelonggaran aturan."
+            $ user_choice_text = "Bikin petisi secara emosional (F). Minta kelonggaran aturan (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_c_60_id_B
 
 
 label show_question_q_c_60_id_A:
-    $ user_journey_summary.append("Di situasi Ada aturan kantor baru yang menyusahkan karyawan., user memilih: Ajukan revisi resmi. Tunjukkan poin yang tidak efisien., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_118
+    $ user_journey_summary.append("Di situasi Ada aturan kantor baru yang menyusahkan karyawan., user memilih: Ajukan revisi resmi (J). Tunjukkan poin yang tidak efisien (T)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_60_id_B:
-    $ user_journey_summary.append("Di situasi Ada aturan kantor baru yang menyusahkan karyawan., user memilih: Bikin petisi secara emosional. Minta kelonggaran aturan., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_119
+    $ user_journey_summary.append("Di situasi Ada aturan kantor baru yang menyusahkan karyawan., user memilih: Bikin petisi secara emosional (F). Minta kelonggaran aturan (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 # ================= BAHASA: EN =================
@@ -2040,29 +2035,29 @@ label show_question_q_a_01_en:
     menu:
         "(Rumble...) Oh, so tired after walking around today! Your energy is depleted and you are hungry. What does your body need?"
 
-        "Go home alone and eat nutritious food to recover physically.":
+        "Go home alone (I) and eat nutritious food to recover physically (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Go home alone and eat nutritious food to recover physically."
+            $ user_choice_text = "Go home alone (I) and eat nutritious food to recover physically (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_a_01_en_A
 
-        "Gather with friends and talk about the idea for the next trip.":
+        "Gather with friends and talk (E) about the idea for the next trip (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Gather with friends and talk about the idea for the next trip."
+            $ user_choice_text = "Gather with friends and talk (E) about the idea for the next trip (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_a_01_en_B
 
 
 label show_question_q_a_01_en_A:
-    $ user_journey_summary.append("Di situasi (Rumble...) Oh, so tired after walking around today! Your energy is depleted and you are hungry. What does your body need?, user memilih: Go home alone and eat nutritious food to recover physically., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_120
+    $ user_journey_summary.append("Di situasi (Rumble...) Oh, so tired after walking around today! Your energy is depleted and you are hungry. What does your body need?, user memilih: Go home alone (I) and eat nutritious food to recover physically (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_a_01_en_B:
-    $ user_journey_summary.append("Di situasi (Rumble...) Oh, so tired after walking around today! Your energy is depleted and you are hungry. What does your body need?, user memilih: Gather with friends and talk about the idea for the next trip., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_121
+    $ user_journey_summary.append("Di situasi (Rumble...) Oh, so tired after walking around today! Your energy is depleted and you are hungry. What does your body need?, user memilih: Gather with friends and talk (E) about the idea for the next trip (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_a_02_en:
@@ -2075,29 +2070,29 @@ label show_question_q_a_02_en:
     menu:
         "(Ring!) The cafe door opens! A cool, mysterious figure enters. What is the first thing that catches your attention?"
 
-        "Observe them from your seat, while monitoring their movements.":
+        "Observe them from your seat (I), while monitoring their movements (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Observe them from your seat, while monitoring their movements."
+            $ user_choice_text = "Observe them from your seat (I), while monitoring their movements (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_a_02_en_A
 
-        "Immediately greet them, and ask where they are going with such an outfit.":
+        "Immediately greet them (E), and ask where they are going with such an outfit (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Immediately greet them, and ask where they are going with such an outfit."
+            $ user_choice_text = "Immediately greet them (E), and ask where they are going with such an outfit (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_a_02_en_B
 
 
 label show_question_q_a_02_en_A:
-    $ user_journey_summary.append("Di situasi (Ring!) The cafe door opens! A cool, mysterious figure enters. What is the first thing that catches your attention?, user memilih: Observe them from your seat, while monitoring their movements., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_122
+    $ user_journey_summary.append("Di situasi (Ring!) The cafe door opens! A cool, mysterious figure enters. What is the first thing that catches your attention?, user memilih: Observe them from your seat (I), while monitoring their movements (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_a_02_en_B:
-    $ user_journey_summary.append("Di situasi (Ring!) The cafe door opens! A cool, mysterious figure enters. What is the first thing that catches your attention?, user memilih: Immediately greet them, and ask where they are going with such an outfit., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_123
+    $ user_journey_summary.append("Di situasi (Ring!) The cafe door opens! A cool, mysterious figure enters. What is the first thing that catches your attention?, user memilih: Immediately greet them (E), and ask where they are going with such an outfit (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_a_03_en:
@@ -2109,29 +2104,29 @@ label show_question_q_a_03_en:
     menu:
         "(Thud!) The boss gives you a mountain-high stack of jobs! Impossible to finish alone today."
 
-        "Call the whole team to divide the physical tasks right now.":
+        "Call the whole team (E) to divide the physical tasks (S) right now.":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Call the whole team to divide the physical tasks right now."
+            $ user_choice_text = "Call the whole team (E) to divide the physical tasks (S) right now."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_a_03_en_A
 
-        "Call a close colleague to try out the assistance program you just developed.":
+        "Call a close colleague (I) to try out the assistance program you just developed (N).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Call a close colleague to try out the assistance program you just developed."
+            $ user_choice_text = "Call a close colleague (I) to try out the assistance program you just developed (N)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_a_03_en_B
 
 
 label show_question_q_a_03_en_A:
-    $ user_journey_summary.append("Di situasi (Thud!) The boss gives you a mountain-high stack of jobs! Impossible to finish alone today., user memilih: Call the whole team to divide the physical tasks right now., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_124
+    $ user_journey_summary.append("Di situasi (Thud!) The boss gives you a mountain-high stack of jobs! Impossible to finish alone today., user memilih: Call the whole team (E) to divide the physical tasks (S) right now., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_a_03_en_B:
-    $ user_journey_summary.append("Di situasi (Thud!) The boss gives you a mountain-high stack of jobs! Impossible to finish alone today., user memilih: Call a close colleague to try out the assistance program you just developed., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_125
+    $ user_journey_summary.append("Di situasi (Thud!) The boss gives you a mountain-high stack of jobs! Impossible to finish alone today., user memilih: Call a close colleague (I) to try out the assistance program you just developed (N)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_a_04_en:
@@ -2142,29 +2137,29 @@ label show_question_q_a_04_en:
     menu:
         "(Oh no!) You want to cook a special meal, but one main ingredient is gone—you forgot to buy it yesterday."
 
-        "Contact and ask a friend to ask for the missing raw ingredient.":
+        "Contact and ask a friend (E) to ask for the missing raw ingredient (S).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Contact and ask a friend to ask for the missing raw ingredient."
+            $ user_choice_text = "Contact and ask a friend (E) to ask for the missing raw ingredient (S)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_a_04_en_A
 
-        "Stay in the kitchen and try experimenting by replacing it with another ingredient.":
+        "Stay in the kitchen (I) and try experimenting (N) by replacing it with another ingredient.":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Stay in the kitchen and try experimenting by replacing it with another ingredient."
+            $ user_choice_text = "Stay in the kitchen (I) and try experimenting (N) by replacing it with another ingredient."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_a_04_en_B
 
 
 label show_question_q_a_04_en_A:
-    $ user_journey_summary.append("Di situasi (Oh no!) You want to cook a special meal, but one main ingredient is gone—you forgot to buy it yesterday., user memilih: Contact and ask a friend to ask for the missing raw ingredient., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_126
+    $ user_journey_summary.append("Di situasi (Oh no!) You want to cook a special meal, but one main ingredient is gone—you forgot to buy it yesterday., user memilih: Contact and ask a friend (E) to ask for the missing raw ingredient (S)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_a_04_en_B:
-    $ user_journey_summary.append("Di situasi (Oh no!) You want to cook a special meal, but one main ingredient is gone—you forgot to buy it yesterday., user memilih: Stay in the kitchen and try experimenting by replacing it with another ingredient., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_127
+    $ user_journey_summary.append("Di situasi (Oh no!) You want to cook a special meal, but one main ingredient is gone—you forgot to buy it yesterday., user memilih: Stay in the kitchen (I) and try experimenting (N) by replacing it with another ingredient., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_a_05_en:
@@ -2176,63 +2171,63 @@ label show_question_q_a_05_en:
     menu:
         "There is a 'Hot News!' poster that causes an uproar in the whole village! Everyone is talking about it."
 
-        "Join the comments with other residents and look for evidence of the incident.":
+        "Join the comments with other residents (E) and look for evidence (S) of the incident.":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Join the comments with other residents and look for evidence of the incident."
+            $ user_choice_text = "Join the comments with other residents (E) and look for evidence (S) of the incident."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_a_05_en_A
 
-        "Read and observe, try to imagine what really happened.":
+        "Read and observe (I), try to imagine what really happened (N).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Read and observe, try to imagine what really happened."
+            $ user_choice_text = "Read and observe (I), try to imagine what really happened (N)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_a_05_en_B
 
 
 label show_question_q_a_05_en_A:
-    $ user_journey_summary.append("Di situasi There is a 'Hot News!' poster that causes an uproar in the whole village! Everyone is talking about it., user memilih: Join the comments with other residents and look for evidence of the incident., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_128
+    $ user_journey_summary.append("Di situasi There is a 'Hot News!' poster that causes an uproar in the whole village! Everyone is talking about it., user memilih: Join the comments with other residents (E) and look for evidence (S) of the incident., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_a_05_en_B:
-    $ user_journey_summary.append("Di situasi There is a 'Hot News!' poster that causes an uproar in the whole village! Everyone is talking about it., user memilih: Read and observe, try to imagine what really happened., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_129
+    $ user_journey_summary.append("Di situasi There is a 'Hot News!' poster that causes an uproar in the whole village! Everyone is talking about it., user memilih: Read and observe (I), try to imagine what really happened (N)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_a_06_en:
     scene bg kantor with dissolve
-    $ narasi_asli = "(Danger!) Your teammate accidentally lost a valuable company item! They look like they are about to cry."
-    n "(Danger!) Your teammate accidentally lost a valuable company item!"
-    n "They look like they are about to cry."
+    $ narasi_asli = "A teammate accidentally lost an important company item. He is panicking."
+    n "A teammate accidentally lost an important company item."
+    n "He is panicking."
 
     menu:
-        "(Danger!) Your teammate accidentally lost a valuable company item! They look like they are about to cry."
+        "A teammate accidentally lost an important company item. He is panicking."
 
-        "Confront them immediately so they take responsibility.":
+        "Talk it out in front of the team (E) to map a clear fix (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Confront them immediately so they take responsibility."
+            $ user_choice_text = "Talk it out in front of the team (E) to map a clear fix (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_a_06_en_A
 
-        "Pull them away and say 'it's okay, we'll find a solution together'.":
+        "Pull him aside privately (I) and calm his nerves first (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Pull them away and say 'it's okay, we'll find a solution together'."
+            $ user_choice_text = "Pull him aside privately (I) and calm his nerves first (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_a_06_en_B
 
 
 label show_question_q_a_06_en_A:
-    $ user_journey_summary.append("Di situasi (Danger!) Your teammate accidentally lost a valuable company item! They look like they are about to cry., user memilih: Confront them immediately so they take responsibility., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_130
+    $ user_journey_summary.append("Di situasi A teammate accidentally lost an important company item. He is panicking., user memilih: Talk it out in front of the team (E) to map a clear fix (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_a_06_en_B:
-    $ user_journey_summary.append("Di situasi (Danger!) Your teammate accidentally lost a valuable company item! They look like they are about to cry., user memilih: Pull them away and say 'it's okay, we'll find a solution together'., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_131
+    $ user_journey_summary.append("Di situasi A teammate accidentally lost an important company item. He is panicking., user memilih: Pull him aside privately (I) and calm his nerves first (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_a_07_en:
@@ -2243,29 +2238,29 @@ label show_question_q_a_07_en:
     menu:
         "There is a new rule in the park: 'No Loud Laughter'."
 
-        "Protest to the officer because the rule is illogical.":
+        "Protest to the officer (E) because the rule is illogical (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Protest to the officer because the rule is illogical."
+            $ user_choice_text = "Protest to the officer (E) because the rule is illogical (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_a_07_en_A
 
-        "Remain silent, because maybe it's true, it could ruin the peaceful atmosphere.":
+        "Remain silent (I), because maybe it's true, it could ruin the peaceful atmosphere (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Remain silent, because maybe it's true, it could ruin the peaceful atmosphere."
+            $ user_choice_text = "Remain silent (I), because maybe it's true, it could ruin the peaceful atmosphere (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_a_07_en_B
 
 
 label show_question_q_a_07_en_A:
-    $ user_journey_summary.append("Di situasi There is a new rule in the park: 'No Loud Laughter'., user memilih: Protest to the officer because the rule is illogical., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_132
+    $ user_journey_summary.append("Di situasi There is a new rule in the park: 'No Loud Laughter'., user memilih: Protest to the officer (E) because the rule is illogical (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_a_07_en_B:
-    $ user_journey_summary.append("Di situasi There is a new rule in the park: 'No Loud Laughter'., user memilih: Remain silent, because maybe it's true, it could ruin the peaceful atmosphere., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_133
+    $ user_journey_summary.append("Di situasi There is a new rule in the park: 'No Loud Laughter'., user memilih: Remain silent (I), because maybe it's true, it could ruin the peaceful atmosphere (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_a_08_en:
@@ -2276,29 +2271,29 @@ label show_question_q_a_08_en:
     menu:
         "The visitor at the next table looks very worried and sighs deeply..."
 
-        "Try to approach and ask directly, analyze the problem to find a solution.":
+        "Try to approach and ask directly (E), analyze the problem (T) to find a solution.":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Try to approach and ask directly, analyze the problem to find a solution."
+            $ user_choice_text = "Try to approach and ask directly (E), analyze the problem (T) to find a solution."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_a_08_en_A
 
-        "Quietly give them a tissue because you feel sorry for them.":
+        "Quietly give them a tissue (I) because you feel sorry for them (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Quietly give them a tissue because you feel sorry for them."
+            $ user_choice_text = "Quietly give them a tissue (I) because you feel sorry for them (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_a_08_en_B
 
 
 label show_question_q_a_08_en_A:
-    $ user_journey_summary.append("Di situasi The visitor at the next table looks very worried and sighs deeply..., user memilih: Try to approach and ask directly, analyze the problem to find a solution., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_134
+    $ user_journey_summary.append("Di situasi The visitor at the next table looks very worried and sighs deeply..., user memilih: Try to approach and ask directly (E), analyze the problem (T) to find a solution., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_a_08_en_B:
-    $ user_journey_summary.append("Di situasi The visitor at the next table looks very worried and sighs deeply..., user memilih: Quietly give them a tissue because you feel sorry for them., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_135
+    $ user_journey_summary.append("Di situasi The visitor at the next table looks very worried and sighs deeply..., user memilih: Quietly give them a tissue (I) because you feel sorry for them (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_a_09_en:
@@ -2310,29 +2305,29 @@ label show_question_q_a_09_en:
     menu:
         "The ship captain distributes the treasure, but your share is the least! Unfair!"
 
-        "Debate with the Captain because the calculation is wrong.":
+        "Debate with the Captain (E) because the calculation is wrong (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Debate with the Captain because the calculation is wrong."
+            $ user_choice_text = "Debate with the Captain (E) because the calculation is wrong (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_a_09_en_A
 
-        "Just accept it because maybe the captain needs it more.":
+        "Just accept it (I) because maybe the captain needs it more (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Just accept it because maybe the captain needs it more."
+            $ user_choice_text = "Just accept it (I) because maybe the captain needs it more (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_a_09_en_B
 
 
 label show_question_q_a_09_en_A:
-    $ user_journey_summary.append("Di situasi The ship captain distributes the treasure, but your share is the least! Unfair!, user memilih: Debate with the Captain because the calculation is wrong., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_136
+    $ user_journey_summary.append("Di situasi The ship captain distributes the treasure, but your share is the least! Unfair!, user memilih: Debate with the Captain (E) because the calculation is wrong (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_a_09_en_B:
-    $ user_journey_summary.append("Di situasi The ship captain distributes the treasure, but your share is the least! Unfair!, user memilih: Just accept it because maybe the captain needs it more., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_137
+    $ user_journey_summary.append("Di situasi The ship captain distributes the treasure, but your share is the least! Unfair!, user memilih: Just accept it (I) because maybe the captain needs it more (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_a_10_en:
@@ -2344,29 +2339,29 @@ label show_question_q_a_10_en:
     menu:
         "(Mysterious Voice) 'Choose your destiny... Left Door or Right Door?' Without any clues at all!"
 
-        "Ask the voice back 'approximately, which door is the safest?'":
+        "Ask the voice back (E) 'approximately, which door is the safest (T)?'":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Ask the voice back 'approximately, which door is the safest?'"
+            $ user_choice_text = "Ask the voice back (E) 'approximately, which door is the safest (T)?'"
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_a_10_en_A
 
-        "Close your eyes and follow your heart.":
+        "Close your eyes (I) and follow your heart (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Close your eyes and follow your heart."
+            $ user_choice_text = "Close your eyes (I) and follow your heart (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_a_10_en_B
 
 
 label show_question_q_a_10_en_A:
-    $ user_journey_summary.append("Di situasi (Mysterious Voice) 'Choose your destiny... Left Door or Right Door?' Without any clues at all!, user memilih: Ask the voice back 'approximately, which door is the safest?', dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_138
+    $ user_journey_summary.append("Di situasi (Mysterious Voice) 'Choose your destiny... Left Door or Right Door?' Without any clues at all!, user memilih: Ask the voice back (E) 'approximately, which door is the safest (T)?', dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_a_10_en_B:
-    $ user_journey_summary.append("Di situasi (Mysterious Voice) 'Choose your destiny... Left Door or Right Door?' Without any clues at all!, user memilih: Close your eyes and follow your heart., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_139
+    $ user_journey_summary.append("Di situasi (Mysterious Voice) 'Choose your destiny... Left Door or Right Door?' Without any clues at all!, user memilih: Close your eyes (I) and follow your heart (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_a_11_en:
@@ -2378,64 +2373,64 @@ label show_question_q_a_11_en:
     menu:
         "Suddenly your friend pulls your hand. 'Let's go to the beach RIGHT NOW!'"
 
-        "Go! We’ll think about the consequences later.":
+        "Go! (E) We’ll think about the consequences later (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Go! We’ll think about the consequences later."
+            $ user_choice_text = "Go! (E) We’ll think about the consequences later (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_a_11_en_A
 
-        "Refuse because you have to check the schedule first.":
+        "Refuse (I) because you have to check the schedule (J) first.":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Refuse because you have to check the schedule first."
+            $ user_choice_text = "Refuse (I) because you have to check the schedule (J) first."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_a_11_en_B
 
 
 label show_question_q_a_11_en_A:
-    $ user_journey_summary.append("Di situasi Suddenly your friend pulls your hand. 'Let's go to the beach RIGHT NOW!', user memilih: Go! We’ll think about the consequences later., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_140
+    $ user_journey_summary.append("Di situasi Suddenly your friend pulls your hand. 'Let's go to the beach RIGHT NOW!', user memilih: Go! (E) We’ll think about the consequences later (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_11_en_B:
-    $ user_journey_summary.append("Di situasi Suddenly your friend pulls your hand. 'Let's go to the beach RIGHT NOW!', user memilih: Refuse because you have to check the schedule first., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_141
+    $ user_journey_summary.append("Di situasi Suddenly your friend pulls your hand. 'Let's go to the beach RIGHT NOW!', user memilih: Refuse (I) because you have to check the schedule (J) first., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_12_en:
     scene bg stasiun with dissolve
     $ narasi_asli = "(Toot! Toot!) The last train has left without you! You missed the train you were supposed to take home!"
-    n "(Toot!Toot!)"
-    n  "The last train has left without you!"
+    n "(Toot!"
+    n "Toot!) The last train has left without you!"
     n "You missed the train you were supposed to take home!"
 
     menu:
         "(Toot! Toot!) The last train has left without you! You missed the train you were supposed to take home!"
 
-        "Awesome! We are free to explore the city!.":
+        "Awesome! (E) We are free to explore the city! (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Awesome! We are free to explore the city!."
+            $ user_choice_text = "Awesome! (E) We are free to explore the city! (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_a_12_en_A
 
-        "Oh dear! I should have arrived earlier.":
+        "Oh dear! (I) I should have arrived earlier (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Oh dear! I should have arrived earlier."
+            $ user_choice_text = "Oh dear! (I) I should have arrived earlier (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_a_12_en_B
 
 
 label show_question_q_a_12_en_A:
-    $ user_journey_summary.append("Di situasi (Toot! Toot!) The last train has left without you! You missed the train you were supposed to take home!, user memilih: Awesome! We are free to explore the city!., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_142
+    $ user_journey_summary.append("Di situasi (Toot! Toot!) The last train has left without you! You missed the train you were supposed to take home!, user memilih: Awesome! (E) We are free to explore the city! (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_12_en_B:
-    $ user_journey_summary.append("Di situasi (Toot! Toot!) The last train has left without you! You missed the train you were supposed to take home!, user memilih: Oh dear! I should have arrived earlier., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_143
+    $ user_journey_summary.append("Di situasi (Toot! Toot!) The last train has left without you! You missed the train you were supposed to take home!, user memilih: Oh dear! (I) I should have arrived earlier (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_13_en:
@@ -2447,29 +2442,29 @@ label show_question_q_a_13_en:
     menu:
         "You are appointed as the picnic leader tomorrow. What is your plan?"
 
-        "Invite all friends! They are free to bring whatever they want.":
+        "Invite all friends! (E) They are free to bring whatever they want (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Invite all friends! They are free to bring whatever they want."
+            $ user_choice_text = "Invite all friends! (E) They are free to bring whatever they want (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_a_13_en_A
 
-        "Try to choose the best menu according to you and determine the exact time.":
+        "Try to choose the best menu according to you (I) and determine the exact time (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Try to choose the best menu according to you and determine the exact time."
+            $ user_choice_text = "Try to choose the best menu according to you (I) and determine the exact time (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_a_13_en_B
 
 
 label show_question_q_a_13_en_A:
-    $ user_journey_summary.append("Di situasi You are appointed as the picnic leader tomorrow. What is your plan?, user memilih: Invite all friends! They are free to bring whatever they want., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_144
+    $ user_journey_summary.append("Di situasi You are appointed as the picnic leader tomorrow. What is your plan?, user memilih: Invite all friends! (E) They are free to bring whatever they want (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_13_en_B:
-    $ user_journey_summary.append("Di situasi You are appointed as the picnic leader tomorrow. What is your plan?, user memilih: Try to choose the best menu according to you and determine the exact time., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_145
+    $ user_journey_summary.append("Di situasi You are appointed as the picnic leader tomorrow. What is your plan?, user memilih: Try to choose the best menu according to you (I) and determine the exact time (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_14_en:
@@ -2481,29 +2476,29 @@ label show_question_q_a_14_en:
     menu:
         "You look at your room. It feels dull and boring."
 
-        "Change the paint and reorganize the items in the room now.":
+        "Change the paint (E) and reorganize the items in the room now (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Change the paint and reorganize the items in the room now."
+            $ user_choice_text = "Change the paint (E) and reorganize the items in the room now (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_a_14_en_A
 
-        "Just let it be because this position is already efficient.":
+        "Just let it be (I) because this position is already efficient (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Just let it be because this position is already efficient."
+            $ user_choice_text = "Just let it be (I) because this position is already efficient (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_a_14_en_B
 
 
 label show_question_q_a_14_en_A:
-    $ user_journey_summary.append("Di situasi You look at your room. It feels dull and boring., user memilih: Change the paint and reorganize the items in the room now., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_146
+    $ user_journey_summary.append("Di situasi You look at your room. It feels dull and boring., user memilih: Change the paint (E) and reorganize the items in the room now (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_14_en_B:
-    $ user_journey_summary.append("Di situasi You look at your room. It feels dull and boring., user memilih: Just let it be because this position is already efficient., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_147
+    $ user_journey_summary.append("Di situasi You look at your room. It feels dull and boring., user memilih: Just let it be (I) because this position is already efficient (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_15_en:
@@ -2515,29 +2510,29 @@ label show_question_q_a_15_en:
     menu:
         "You stop by the station souvenir shop. Many cute and interesting items!"
 
-        "Ask the seller for advice and buy the first item you see.":
+        "Ask the seller for advice (E) and buy the first item you see (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Ask the seller for advice and buy the first item you see."
+            $ user_choice_text = "Ask the seller for advice (E) and buy the first item you see (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_a_15_en_A
 
-        "Try to look around and buy according to your needs.":
+        "Try to look around (I) and buy according to your needs (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Try to look around and buy according to your needs."
+            $ user_choice_text = "Try to look around (I) and buy according to your needs (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_a_15_en_B
 
 
 label show_question_q_a_15_en_A:
-    $ user_journey_summary.append("Di situasi You stop by the station souvenir shop. Many cute and interesting items!, user memilih: Ask the seller for advice and buy the first item you see., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_148
+    $ user_journey_summary.append("Di situasi You stop by the station souvenir shop. Many cute and interesting items!, user memilih: Ask the seller for advice (E) and buy the first item you see (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_15_en_B:
-    $ user_journey_summary.append("Di situasi You stop by the station souvenir shop. Many cute and interesting items!, user memilih: Try to look around and buy according to your needs., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_149
+    $ user_journey_summary.append("Di situasi You stop by the station souvenir shop. Many cute and interesting items!, user memilih: Try to look around (I) and buy according to your needs (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_16_en:
@@ -2549,62 +2544,62 @@ label show_question_q_a_16_en:
     menu:
         "Your friend is angry at you for no clear reason! Their face is red with rage!"
 
-        "Diffuse their anger and explain the evidence first.":
+        "Diffuse their anger (T) and explain the evidence first (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Diffuse their anger and explain the evidence first."
+            $ user_choice_text = "Diffuse their anger (T) and explain the evidence first (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_a_16_en_A
 
-        "'Why am I being yelled at? Did I do something wrong?'.":
+        "'Why am I being yelled at? (F) Did I do something wrong? (P)'.":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "'Why am I being yelled at? Did I do something wrong?'."
+            $ user_choice_text = "'Why am I being yelled at? (F) Did I do something wrong? (P)'."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_a_16_en_B
 
 
 label show_question_q_a_16_en_A:
-    $ user_journey_summary.append("Di situasi Your friend is angry at you for no clear reason! Their face is red with rage!, user memilih: Diffuse their anger and explain the evidence first., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_150
+    $ user_journey_summary.append("Di situasi Your friend is angry at you for no clear reason! Their face is red with rage!, user memilih: Diffuse their anger (T) and explain the evidence first (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_16_en_B:
-    $ user_journey_summary.append("Di situasi Your friend is angry at you for no clear reason! Their face is red with rage!, user memilih: 'Why am I being yelled at? Did I do something wrong?'., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_151
+    $ user_journey_summary.append("Di situasi Your friend is angry at you for no clear reason! Their face is red with rage!, user memilih: 'Why am I being yelled at? (F) Did I do something wrong? (P)'., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_17_en:
     scene bg dapur with dissolve
-    $ narasi_asli = "You are making a birthday cake, but the result is burnt and not good enough."
-    n "You are making a birthday cake, but the result is burnt and not good enough."
+    $ narasi_asli = "The birthday cake you made came out burnt and messy."
+    n "The birthday cake you made came out burnt and messy."
 
     menu:
-        "You are making a birthday cake, but the result is burnt and not good enough."
+        "The birthday cake you made came out burnt and messy."
 
-        "Throw it away! and try to make it again according to the recipe.":
+        "Start over by the recipe (J) so it turns out right (T).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Throw it away! and try to make it again according to the recipe."
+            $ user_choice_text = "Start over by the recipe (J) so it turns out right (T)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_a_17_en_A
 
-        "It's okay the appearance is not good, but it was made with full heart.":
+        "Use the one you have (P), what matters is it was made sincerely (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "It's okay the appearance is not good, but it was made with full heart."
+            $ user_choice_text = "Use the one you have (P), what matters is it was made sincerely (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_a_17_en_B
 
 
 label show_question_q_a_17_en_A:
-    $ user_journey_summary.append("Di situasi You are making a birthday cake, but the result is burnt and not good enough., user memilih: Throw it away! and try to make it again according to the recipe., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_152
+    $ user_journey_summary.append("Di situasi The birthday cake you made came out burnt and messy., user memilih: Start over by the recipe (J) so it turns out right (T)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_17_en_B:
-    $ user_journey_summary.append("Di situasi You are making a birthday cake, but the result is burnt and not good enough., user memilih: It's okay the appearance is not good, but it was made with full heart., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_153
+    $ user_journey_summary.append("Di situasi The birthday cake you made came out burnt and messy., user memilih: Use the one you have (P), what matters is it was made sincerely (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_18_en:
@@ -2616,97 +2611,96 @@ label show_question_q_a_18_en:
     menu:
         "You find a Mysterious Landscape Painting. What do you think makes it good?"
 
-        "The color composition, the technique, everything is perfect and neat!.":
+        "The color composition (T), the technique, everything is perfect and neat! (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "The color composition, the technique, everything is perfect and neat!."
+            $ user_choice_text = "The color composition (T), the technique, everything is perfect and neat! (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_a_18_en_A
 
-        "This painting has deep and beautiful emotion.":
+        "This painting (F) has deep and beautiful emotion (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "This painting has deep and beautiful emotion."
+            $ user_choice_text = "This painting (F) has deep and beautiful emotion (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_a_18_en_B
 
 
 label show_question_q_a_18_en_A:
-    $ user_journey_summary.append("Di situasi You find a Mysterious Landscape Painting. What do you think makes it good?, user memilih: The color composition, the technique, everything is perfect and neat!., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_154
+    $ user_journey_summary.append("Di situasi You find a Mysterious Landscape Painting. What do you think makes it good?, user memilih: The color composition (T), the technique, everything is perfect and neat! (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_18_en_B:
-    $ user_journey_summary.append("Di situasi You find a Mysterious Landscape Painting. What do you think makes it good?, user memilih: This painting has deep and beautiful emotion., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_155
+    $ user_journey_summary.append("Di situasi You find a Mysterious Landscape Painting. What do you think makes it good?, user memilih: This painting (F) has deep and beautiful emotion (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_19_en:
     scene bg abstrak with dissolve
-    $ narasi_asli = "There is one red button. If you press it, you get money but one stranger will be sad."
-    n "There is one red button."
-    n "If you press it, you get money but one stranger will be sad."
+    $ narasi_asli = "You are the referee. In the final minute, your friend commits a tiny, maybe-accidental foul."
+    n "You are the referee."
+    n "In the final minute, your friend commits a tiny, maybe-accidental foul."
 
     menu:
-        "There is one red button. If you press it, you get money but one stranger will be sad."
+        "You are the referee. In the final minute, your friend commits a tiny, maybe-accidental foul."
 
-        "Press the button, because the money is useful.":
+        "Blow the whistle anyway (T), fair to everyone who played clean (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Press the button, because the money is useful."
+            $ user_choice_text = "Blow the whistle anyway (T), fair to everyone who played clean (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_a_19_en_A
 
-        "Don't press it because you feel bad for the stranger.":
+        "Let it slide just this once (F), he clearly did not mean it (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Don't press it because you feel bad for the stranger."
+            $ user_choice_text = "Let it slide just this once (F), he clearly did not mean it (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_a_19_en_B
 
 
 label show_question_q_a_19_en_A:
-    $ user_journey_summary.append("Di situasi There is one red button. If you press it, you get money but one stranger will be sad., user memilih: Press the button, because the money is useful., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_156
+    $ user_journey_summary.append("Di situasi You are the referee. In the final minute, your friend commits a tiny, maybe-accidental foul., user memilih: Blow the whistle anyway (T), fair to everyone who played clean (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_19_en_B:
-    $ user_journey_summary.append("Di situasi There is one red button. If you press it, you get money but one stranger will be sad., user memilih: Don't press it because you feel bad for the stranger., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_157
+    $ user_journey_summary.append("Di situasi You are the referee. In the final minute, your friend commits a tiny, maybe-accidental foul., user memilih: Let it slide just this once (F), he clearly did not mean it (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_a_20_en:
     scene bg kantor with dissolve
-    $ narasi_asli = "Your team is lazy today. They have no spirit at all."
-    n "Your team is lazy today."
-    n "They have no spirit at all."
+    $ narasi_asli = "Your team is sluggish today, all the spirit gone somewhere."
+    n "Your team is sluggish today, all the spirit gone somewhere."
 
     menu:
-        "Your team is lazy today. They have no spirit at all."
+        "Your team is sluggish today, all the spirit gone somewhere."
 
-        "Set targets and promise a bonus.":
+        "Set a clear target (T) and lay out measurable milestones (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Set targets and promise a bonus."
+            $ user_choice_text = "Set a clear target (T) and lay out measurable milestones (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_a_20_en_A
 
-        "Come on friends! let's do it for the greater good.":
+        "Lift their spirits (F), rally them to move together for the team (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Come on friends! let's do it for the greater good."
+            $ user_choice_text = "Lift their spirits (F), rally them to move together for the team (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_a_20_en_B
 
 
 label show_question_q_a_20_en_A:
-    $ user_journey_summary.append("Di situasi Your team is lazy today. They have no spirit at all., user memilih: Set targets and promise a bonus., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_158
+    $ user_journey_summary.append("Di situasi Your team is sluggish today, all the spirit gone somewhere., user memilih: Set a clear target (T) and lay out measurable milestones (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_a_20_en_B:
-    $ user_journey_summary.append("Di situasi Your team is lazy today. They have no spirit at all., user memilih: Come on friends! let's do it for the greater good., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_159
+    $ user_journey_summary.append("Di situasi Your team is sluggish today, all the spirit gone somewhere., user memilih: Lift their spirits (F), rally them to move together for the team (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_21_en:
@@ -2719,29 +2713,29 @@ label show_question_q_b_21_en:
     menu:
         "(Confusion!) You found a strange-looking ancient recipe book. You are starving right now. How do you decide to cook?"
 
-        "Read it alone calmly and follow the measurements precisely.":
+        "Read it alone calmly (I) and follow the measurements precisely (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Read it alone calmly and follow the measurements precisely."
+            $ user_choice_text = "Read it alone calmly (I) and follow the measurements precisely (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_b_21_en_A
 
-        "Call friends to guess and create a new magical flavor.":
+        "Call friends (E) to guess and create a new magical flavor (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Call friends to guess and create a new magical flavor."
+            $ user_choice_text = "Call friends (E) to guess and create a new magical flavor (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_b_21_en_B
 
 
 label show_question_q_b_21_en_A:
-    $ user_journey_summary.append("Di situasi (Confusion!) You found a strange-looking ancient recipe book. You are starving right now. How do you decide to cook?, user memilih: Read it alone calmly and follow the measurements precisely., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_160
+    $ user_journey_summary.append("Di situasi (Confusion!) You found a strange-looking ancient recipe book. You are starving right now. How do you decide to cook?, user memilih: Read it alone calmly (I) and follow the measurements precisely (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_b_21_en_B:
-    $ user_journey_summary.append("Di situasi (Confusion!) You found a strange-looking ancient recipe book. You are starving right now. How do you decide to cook?, user memilih: Call friends to guess and create a new magical flavor., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_161
+    $ user_journey_summary.append("Di situasi (Confusion!) You found a strange-looking ancient recipe book. You are starving right now. How do you decide to cook?, user memilih: Call friends (E) to guess and create a new magical flavor (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_b_22_en:
@@ -2753,29 +2747,29 @@ label show_question_q_b_22_en:
     menu:
         "(Suddenly!) A client comes asking for fresh ideas right now! You haven't prepared any material yet."
 
-        "Ask for time alone to compile existing facts and data.":
+        "Ask for time alone (I) to compile existing facts and data (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Ask for time alone to compile existing facts and data."
+            $ user_choice_text = "Ask for time alone (I) to compile existing facts and data (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_b_22_en_A
 
-        "Have a casual discussion and convey your idea about the vision for the future.":
+        "Have a casual discussion (E) and convey your idea about the vision for the future (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Have a casual discussion and convey your idea about the vision for the future."
+            $ user_choice_text = "Have a casual discussion (E) and convey your idea about the vision for the future (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_b_22_en_B
 
 
 label show_question_q_b_22_en_A:
-    $ user_journey_summary.append("Di situasi (Suddenly!) A client comes asking for fresh ideas right now! You haven't prepared any material yet., user memilih: Ask for time alone to compile existing facts and data., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_162
+    $ user_journey_summary.append("Di situasi (Suddenly!) A client comes asking for fresh ideas right now! You haven't prepared any material yet., user memilih: Ask for time alone (I) to compile existing facts and data (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_b_22_en_B:
-    $ user_journey_summary.append("Di situasi (Suddenly!) A client comes asking for fresh ideas right now! You haven't prepared any material yet., user memilih: Have a casual discussion and convey your idea about the vision for the future., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_163
+    $ user_journey_summary.append("Di situasi (Suddenly!) A client comes asking for fresh ideas right now! You haven't prepared any material yet., user memilih: Have a casual discussion (E) and convey your idea about the vision for the future (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_b_23_en:
@@ -2787,29 +2781,29 @@ label show_question_q_b_23_en:
     menu:
         "You enter an International library. Which book do you pick up first?"
 
-        "'Illustrated Encyclopedia' which can be read with friends.":
+        "'Illustrated Encyclopedia' (S) which can be read with friends (E).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "'Illustrated Encyclopedia' which can be read with friends."
+            $ user_choice_text = "'Illustrated Encyclopedia' (S) which can be read with friends (E)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_b_23_en_A
 
-        "'Thick Philosophy' which is interesting to read in a quiet place.":
+        "'Thick Philosophy' (N) which is interesting to read in a quiet place (I).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "'Thick Philosophy' which is interesting to read in a quiet place."
+            $ user_choice_text = "'Thick Philosophy' (N) which is interesting to read in a quiet place (I)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_b_23_en_B
 
 
 label show_question_q_b_23_en_A:
-    $ user_journey_summary.append("Di situasi You enter an International library. Which book do you pick up first?, user memilih: 'Illustrated Encyclopedia' which can be read with friends., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_164
+    $ user_journey_summary.append("Di situasi You enter an International library. Which book do you pick up first?, user memilih: 'Illustrated Encyclopedia' (S) which can be read with friends (E)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_b_23_en_B:
-    $ user_journey_summary.append("Di situasi You enter an International library. Which book do you pick up first?, user memilih: 'Thick Philosophy' which is interesting to read in a quiet place., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_165
+    $ user_journey_summary.append("Di situasi You enter an International library. Which book do you pick up first?, user memilih: 'Thick Philosophy' (N) which is interesting to read in a quiet place (I)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_b_24_en:
@@ -2821,29 +2815,29 @@ label show_question_q_b_24_en:
     menu:
         "You are hungry, but your wallet is thin. Meanwhile, your friends invite you to eat out."
 
-        "Join them but look for a regular stall that is definitely cheap and delicious.":
+        "Join them (E) but look for a regular stall that is definitely cheap and delicious (S).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Join them but look for a regular stall that is definitely cheap and delicious."
+            $ user_choice_text = "Join them (E) but look for a regular stall that is definitely cheap and delicious (S)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_b_24_en_A
 
-        "Refuse first, you want to try looking for cheap and unique food that might be around your place.":
+        "Refuse first (I), you want to try looking for cheap and unique food that might be around your place (N).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Refuse first, you want to try looking for cheap and unique food that might be around your place."
+            $ user_choice_text = "Refuse first (I), you want to try looking for cheap and unique food that might be around your place (N)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_b_24_en_B
 
 
 label show_question_q_b_24_en_A:
-    $ user_journey_summary.append("Di situasi You are hungry, but your wallet is thin. Meanwhile, your friends invite you to eat out., user memilih: Join them but look for a regular stall that is definitely cheap and delicious., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_166
+    $ user_journey_summary.append("Di situasi You are hungry, but your wallet is thin. Meanwhile, your friends invite you to eat out., user memilih: Join them (E) but look for a regular stall that is definitely cheap and delicious (S)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_b_24_en_B:
-    $ user_journey_summary.append("Di situasi You are hungry, but your wallet is thin. Meanwhile, your friends invite you to eat out., user memilih: Refuse first, you want to try looking for cheap and unique food that might be around your place., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_167
+    $ user_journey_summary.append("Di situasi You are hungry, but your wallet is thin. Meanwhile, your friends invite you to eat out., user memilih: Refuse first (I), you want to try looking for cheap and unique food that might be around your place (N)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_b_25_en:
@@ -2854,29 +2848,29 @@ label show_question_q_b_25_en:
     menu:
         "There is a suspicious suitcase left behind at a quiet station."
 
-        "Call an officer to safely check its contents.":
+        "Call an officer (E) to safely check its contents (S).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Call an officer to safely check its contents."
+            $ user_choice_text = "Call an officer (E) to safely check its contents (S)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_b_25_en_A
 
-        "Observe from a distance while imagining what the contents of the suitcase really are.":
+        "Observe from a distance (I) while imagining what the contents of the suitcase really are (N).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Observe from a distance while imagining what the contents of the suitcase really are."
+            $ user_choice_text = "Observe from a distance (I) while imagining what the contents of the suitcase really are (N)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_b_25_en_B
 
 
 label show_question_q_b_25_en_A:
-    $ user_journey_summary.append("Di situasi There is a suspicious suitcase left behind at a quiet station., user memilih: Call an officer to safely check its contents., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_168
+    $ user_journey_summary.append("Di situasi There is a suspicious suitcase left behind at a quiet station., user memilih: Call an officer (E) to safely check its contents (S)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_b_25_en_B:
-    $ user_journey_summary.append("Di situasi There is a suspicious suitcase left behind at a quiet station., user memilih: Observe from a distance while imagining what the contents of the suitcase really are., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_169
+    $ user_journey_summary.append("Di situasi There is a suspicious suitcase left behind at a quiet station., user memilih: Observe from a distance (I) while imagining what the contents of the suitcase really are (N)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_b_26_en:
@@ -2887,29 +2881,29 @@ label show_question_q_b_26_en:
     menu:
         "Your teammate made a fatal mistake that cost everyone."
 
-        "Confront them directly! and ask them to logically explain what happened.":
+        "Confront them directly! (E) and ask them to logically explain what happened (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Confront them directly! and ask them to logically explain what happened."
+            $ user_choice_text = "Confront them directly! (E) and ask them to logically explain what happened (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_b_26_en_A
 
-        "Send them a private message, then ask if they are okay.":
+        "Send them a private message (I), then ask if they are okay (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Send them a private message, then ask if they are okay."
+            $ user_choice_text = "Send them a private message (I), then ask if they are okay (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_b_26_en_B
 
 
 label show_question_q_b_26_en_A:
-    $ user_journey_summary.append("Di situasi Your teammate made a fatal mistake that cost everyone., user memilih: Confront them directly! and ask them to logically explain what happened., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_170
+    $ user_journey_summary.append("Di situasi Your teammate made a fatal mistake that cost everyone., user memilih: Confront them directly! (E) and ask them to logically explain what happened (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_b_26_en_B:
-    $ user_journey_summary.append("Di situasi Your teammate made a fatal mistake that cost everyone., user memilih: Send them a private message, then ask if they are okay., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_171
+    $ user_journey_summary.append("Di situasi Your teammate made a fatal mistake that cost everyone., user memilih: Send them a private message (I), then ask if they are okay (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_b_27_en:
@@ -2921,29 +2915,29 @@ label show_question_q_b_27_en:
     menu:
         "Your friend asks for an honest opinion about their work, which you would say... is terrible."
 
-        "Tell them straight which part is wrong so they can fix it.":
+        "Tell them straight (E) which part is wrong so they can fix it (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Tell them straight which part is wrong so they can fix it."
+            $ user_choice_text = "Tell them straight (E) which part is wrong so they can fix it (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_b_27_en_A
 
-        "Just keep quiet or smile, you can't bear to hurt their feelings.":
+        "Just keep quiet or smile (I), you can't bear to hurt their feelings (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Just keep quiet or smile, you can't bear to hurt their feelings."
+            $ user_choice_text = "Just keep quiet or smile (I), you can't bear to hurt their feelings (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_b_27_en_B
 
 
 label show_question_q_b_27_en_A:
-    $ user_journey_summary.append("Di situasi Your friend asks for an honest opinion about their work, which you would say... is terrible., user memilih: Tell them straight which part is wrong so they can fix it., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_172
+    $ user_journey_summary.append("Di situasi Your friend asks for an honest opinion about their work, which you would say... is terrible., user memilih: Tell them straight (E) which part is wrong so they can fix it (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_b_27_en_B:
-    $ user_journey_summary.append("Di situasi Your friend asks for an honest opinion about their work, which you would say... is terrible., user memilih: Just keep quiet or smile, you can't bear to hurt their feelings., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_173
+    $ user_journey_summary.append("Di situasi Your friend asks for an honest opinion about their work, which you would say... is terrible., user memilih: Just keep quiet or smile (I), you can't bear to hurt their feelings (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_b_28_en:
@@ -2955,29 +2949,29 @@ label show_question_q_b_28_en:
     menu:
         "Two strangers are arguing loudly at the next table. It's very annoying!"
 
-        "Confront them, 'Please be quiet, your arguments are illogical!'.":
+        "Confront them (E), 'Please be quiet, your arguments are illogical!' (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Confront them, 'Please be quiet, your arguments are illogical!'."
+            $ user_choice_text = "Confront them (E), 'Please be quiet, your arguments are illogical!' (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_b_28_en_A
 
-        "Move tables, move away because the energy is too negative.":
+        "Move tables (I), move away because the energy is too negative (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Move tables, move away because the energy is too negative."
+            $ user_choice_text = "Move tables (I), move away because the energy is too negative (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_b_28_en_B
 
 
 label show_question_q_b_28_en_A:
-    $ user_journey_summary.append("Di situasi Two strangers are arguing loudly at the next table. It's very annoying!, user memilih: Confront them, 'Please be quiet, your arguments are illogical!'., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_174
+    $ user_journey_summary.append("Di situasi Two strangers are arguing loudly at the next table. It's very annoying!, user memilih: Confront them (E), 'Please be quiet, your arguments are illogical!' (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_b_28_en_B:
-    $ user_journey_summary.append("Di situasi Two strangers are arguing loudly at the next table. It's very annoying!, user memilih: Move tables, move away because the energy is too negative., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_175
+    $ user_journey_summary.append("Di situasi Two strangers are arguing loudly at the next table. It's very annoying!, user memilih: Move tables (I), move away because the energy is too negative (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_b_29_en:
@@ -2988,29 +2982,29 @@ label show_question_q_b_29_en:
     menu:
         "You must choose a leader for a dangerous mission."
 
-        "Open debate, choose the one with the strongest statistics.":
+        "Open debate (E), choose the one with the strongest statistics (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Open debate, choose the one with the strongest statistics."
+            $ user_choice_text = "Open debate (E), choose the one with the strongest statistics (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_b_29_en_A
 
-        "Reflect with a few close friends, then choose the one with the most sincere heart.":
+        "Reflect with a few close friends (I), then choose the one with the most sincere heart (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Reflect with a few close friends, then choose the one with the most sincere heart."
+            $ user_choice_text = "Reflect with a few close friends (I), then choose the one with the most sincere heart (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_b_29_en_B
 
 
 label show_question_q_b_29_en_A:
-    $ user_journey_summary.append("Di situasi You must choose a leader for a dangerous mission., user memilih: Open debate, choose the one with the strongest statistics., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_176
+    $ user_journey_summary.append("Di situasi You must choose a leader for a dangerous mission., user memilih: Open debate (E), choose the one with the strongest statistics (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_b_29_en_B:
-    $ user_journey_summary.append("Di situasi You must choose a leader for a dangerous mission., user memilih: Reflect with a few close friends, then choose the one with the most sincere heart., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_177
+    $ user_journey_summary.append("Di situasi You must choose a leader for a dangerous mission., user memilih: Reflect with a few close friends (I), then choose the one with the most sincere heart (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_b_30_en:
@@ -3021,29 +3015,29 @@ label show_question_q_b_30_en:
     menu:
         "There is a crowd of people grieving because an old tree was cut down by the local government."
 
-        "Gather them to create a protest petition to the government.":
+        "Gather them (E) to create a protest petition to the government (T).":
             $ IE += 5
             $ TF -= 5
-            $ user_choice_text = "Gather them to create a protest petition to the government."
+            $ user_choice_text = "Gather them (E) to create a protest petition to the government (T)."
             $ last_answer = "Extrovert & Thinking"
             jump show_question_q_b_30_en_A
 
-        "Sit quietly there as a sign of solidarity.":
+        "Sit quietly (I) there as a sign of solidarity (F).":
             $ IE -= 5
             $ TF += 5
-            $ user_choice_text = "Sit quietly there as a sign of solidarity."
+            $ user_choice_text = "Sit quietly (I) there as a sign of solidarity (F)."
             $ last_answer = "Introvert & Feeling"
             jump show_question_q_b_30_en_B
 
 
 label show_question_q_b_30_en_A:
-    $ user_journey_summary.append("Di situasi There is a crowd of people grieving because an old tree was cut down by the local government., user memilih: Gather them to create a protest petition to the government., dengan poin MBTI: Extrovert & Thinking")
-    call ai_react_logic from _call_ai_react_logic_178
+    $ user_journey_summary.append("Di situasi There is a crowd of people grieving because an old tree was cut down by the local government., user memilih: Gather them (E) to create a protest petition to the government (T)., dengan poin MBTI: Extrovert & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_b_30_en_B:
-    $ user_journey_summary.append("Di situasi There is a crowd of people grieving because an old tree was cut down by the local government., user memilih: Sit quietly there as a sign of solidarity., dengan poin MBTI: Introvert & Feeling")
-    call ai_react_logic from _call_ai_react_logic_179
+    $ user_journey_summary.append("Di situasi There is a crowd of people grieving because an old tree was cut down by the local government., user memilih: Sit quietly (I) there as a sign of solidarity (F)., dengan poin MBTI: Introvert & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_b_31_en:
@@ -3055,29 +3049,29 @@ label show_question_q_b_31_en:
     menu:
         "(Late!) The last train leaves in 1 minute! You are still in the lobby!"
 
-        "Shout 'Wait!' and run through the gate without thinking.":
+        "Shout 'Wait!' (E) and run through the gate without thinking (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Shout 'Wait!' and run through the gate without thinking."
+            $ user_choice_text = "Shout 'Wait!' (E) and run through the gate without thinking (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_b_31_en_A
 
-        "Resign. 'This is my fault for not checking the schedule this morning'.":
+        "Resign (I). 'This is my fault for not checking the schedule this morning' (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Resign. 'This is my fault for not checking the schedule this morning'."
+            $ user_choice_text = "Resign (I). 'This is my fault for not checking the schedule this morning' (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_b_31_en_B
 
 
 label show_question_q_b_31_en_A:
-    $ user_journey_summary.append("Di situasi (Late!) The last train leaves in 1 minute! You are still in the lobby!, user memilih: Shout 'Wait!' and run through the gate without thinking., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_180
+    $ user_journey_summary.append("Di situasi (Late!) The last train leaves in 1 minute! You are still in the lobby!, user memilih: Shout 'Wait!' (E) and run through the gate without thinking (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_31_en_B:
-    $ user_journey_summary.append("Di situasi (Late!) The last train leaves in 1 minute! You are still in the lobby!, user memilih: Resign. 'This is my fault for not checking the schedule this morning'., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_181
+    $ user_journey_summary.append("Di situasi (Late!) The last train leaves in 1 minute! You are still in the lobby!, user memilih: Resign (I). 'This is my fault for not checking the schedule this morning' (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_32_en:
@@ -3089,29 +3083,29 @@ label show_question_q_b_32_en:
     menu:
         "You and a large group are confused about what to order at the Restaurant. The waiter is getting annoyed."
 
-        "Ask everyone!, 'What food do you want? Anything goes!'.":
+        "Ask everyone! (E), 'What food do you want? Anything goes!' (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Ask everyone!, 'What food do you want? Anything goes!'."
+            $ user_choice_text = "Ask everyone! (E), 'What food do you want? Anything goes!' (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_b_32_en_A
 
-        "Take charge, 'Okay, I'll order the package menu for everyone to speed things up'.":
+        "Take charge (J), 'Okay, I'll order the package menu for everyone to speed things up' (I).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Take charge, 'Okay, I'll order the package menu for everyone to speed things up'."
+            $ user_choice_text = "Take charge (J), 'Okay, I'll order the package menu for everyone to speed things up' (I)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_b_32_en_B
 
 
 label show_question_q_b_32_en_A:
-    $ user_journey_summary.append("Di situasi You and a large group are confused about what to order at the Restaurant. The waiter is getting annoyed., user memilih: Ask everyone!, 'What food do you want? Anything goes!'., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_182
+    $ user_journey_summary.append("Di situasi You and a large group are confused about what to order at the Restaurant. The waiter is getting annoyed., user memilih: Ask everyone! (E), 'What food do you want? Anything goes!' (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_32_en_B:
-    $ user_journey_summary.append("Di situasi You and a large group are confused about what to order at the Restaurant. The waiter is getting annoyed., user memilih: Take charge, 'Okay, I'll order the package menu for everyone to speed things up'., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_183
+    $ user_journey_summary.append("Di situasi You and a large group are confused about what to order at the Restaurant. The waiter is getting annoyed., user memilih: Take charge (J), 'Okay, I'll order the package menu for everyone to speed things up' (I)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_33_en:
@@ -3122,29 +3116,29 @@ label show_question_q_b_33_en:
     menu:
         "You see a really cool jacket displayed in the store, but it's expensive."
 
-        "Ask others' opinions, if it's good, just buy it!.":
+        "Ask others' opinions (E), if it's good, just buy it! (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Ask others' opinions, if it's good, just buy it!."
+            $ user_choice_text = "Ask others' opinions (E), if it's good, just buy it! (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_b_33_en_A
 
-        "Ask yourself, 'It's not in the budget. Don't do it yet'.":
+        "Ask yourself (I), 'It's not in the budget. Don't do it yet' (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Ask yourself, 'It's not in the budget. Don't do it yet'."
+            $ user_choice_text = "Ask yourself (I), 'It's not in the budget. Don't do it yet' (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_b_33_en_B
 
 
 label show_question_q_b_33_en_A:
-    $ user_journey_summary.append("Di situasi You see a really cool jacket displayed in the store, but it's expensive., user memilih: Ask others' opinions, if it's good, just buy it!., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_184
+    $ user_journey_summary.append("Di situasi You see a really cool jacket displayed in the store, but it's expensive., user memilih: Ask others' opinions (E), if it's good, just buy it! (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_33_en_B:
-    $ user_journey_summary.append("Di situasi You see a really cool jacket displayed in the store, but it's expensive., user memilih: Ask yourself, 'It's not in the budget. Don't do it yet'., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_185
+    $ user_journey_summary.append("Di situasi You see a really cool jacket displayed in the store, but it's expensive., user memilih: Ask yourself (I), 'It's not in the budget. Don't do it yet' (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_34_en:
@@ -3156,29 +3150,29 @@ label show_question_q_b_34_en:
     menu:
         "Your friend says your room is boring. What is your reaction?"
 
-        "'That's right!' Since a friend is here, ask them to move the furniture around right now.":
+        "'That's right!' Since a friend is here, ask them (E) to move the furniture around right now (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "'That's right!' Since a friend is here, ask them to move the furniture around right now."
+            $ user_choice_text = "'That's right!' Since a friend is here, ask them (E) to move the furniture around right now (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_b_34_en_A
 
-        "Leave it. 'I prefer it, because everything is already in its proper place'.":
+        "Leave it. (I) 'I prefer it, because everything is already in its proper place' (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Leave it. 'I prefer it, because everything is already in its proper place'."
+            $ user_choice_text = "Leave it. (I) 'I prefer it, because everything is already in its proper place' (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_b_34_en_B
 
 
 label show_question_q_b_34_en_A:
-    $ user_journey_summary.append("Di situasi Your friend says your room is boring. What is your reaction?, user memilih: 'That's right!' Since a friend is here, ask them to move the furniture around right now., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_186
+    $ user_journey_summary.append("Di situasi Your friend says your room is boring. What is your reaction?, user memilih: 'That's right!' Since a friend is here, ask them (E) to move the furniture around right now (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_34_en_B:
-    $ user_journey_summary.append("Di situasi Your friend says your room is boring. What is your reaction?, user memilih: Leave it. 'I prefer it, because everything is already in its proper place'., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_187
+    $ user_journey_summary.append("Di situasi Your friend says your room is boring. What is your reaction?, user memilih: Leave it. (I) 'I prefer it, because everything is already in its proper place' (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_35_en:
@@ -3190,202 +3184,198 @@ label show_question_q_b_35_en:
     menu:
         "You have to give a spontaneous public speech! What now?!"
 
-        "Step forward confidently, speak freely, watching the situation.":
+        "Step forward confidently (E), speak freely, watching the situation (P).":
             $ IE += 5
             $ JP += 5
-            $ user_choice_text = "Step forward confidently, speak freely, watching the situation."
+            $ user_choice_text = "Step forward confidently (E), speak freely, watching the situation (P)."
             $ last_answer = "Extrovert & Perceiving"
             jump show_question_q_b_35_en_A
 
-        "Step back for a moment, ask for time to jot down key points first.":
+        "Step back for a moment (I), ask for time to jot down key points first (J).":
             $ IE -= 5
             $ JP -= 5
-            $ user_choice_text = "Step back for a moment, ask for time to jot down key points first."
+            $ user_choice_text = "Step back for a moment (I), ask for time to jot down key points first (J)."
             $ last_answer = "Introvert & Judging"
             jump show_question_q_b_35_en_B
 
 
 label show_question_q_b_35_en_A:
-    $ user_journey_summary.append("Di situasi You have to give a spontaneous public speech! What now?!, user memilih: Step forward confidently, speak freely, watching the situation., dengan poin MBTI: Extrovert & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_188
+    $ user_journey_summary.append("Di situasi You have to give a spontaneous public speech! What now?!, user memilih: Step forward confidently (E), speak freely, watching the situation (P)., dengan poin MBTI: Extrovert & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_35_en_B:
-    $ user_journey_summary.append("Di situasi You have to give a spontaneous public speech! What now?!, user memilih: Step back for a moment, ask for time to jot down key points first., dengan poin MBTI: Introvert & Judging")
-    call ai_react_logic from _call_ai_react_logic_189
+    $ user_journey_summary.append("Di situasi You have to give a spontaneous public speech! What now?!, user memilih: Step back for a moment (I), ask for time to jot down key points first (J)., dengan poin MBTI: Introvert & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_36_en:
     scene bg abstrak with dissolve
-    $ narasi_asli = "(Disaster!) Your village is attacked! You hold the key to the defense gate. There are still citizens running trying to get inside."
-    n "(Disaster!) Your village is attacked!"
-    n "You hold the key to the defense gate."
-    n "There are still citizens running trying to get inside."
+    $ narasi_asli = "The fort gate must close before the storm hits. A few are still gathering supplies outside."
+    n "The fort gate must close before the storm hits."
+    n "A few are still gathering supplies outside."
 
     menu:
-        "(Disaster!) Your village is attacked! You hold the key to the defense gate. There are still citizens running trying to get inside."
+        "The fort gate must close before the storm hits. A few are still gathering supplies outside."
 
-        "Immediately lock the gate for the safety of the majority, even if some are left behind.":
+        "Close it on time (J), protect the majority already inside (T).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Immediately lock the gate for the safety of the majority, even if some are left behind."
+            $ user_choice_text = "Close it on time (J), protect the majority already inside (T)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_b_36_en_A
 
-        "Leave it open a little longer, feel sorry for those still running outside.":
+        "Hold it a bit longer (P), give them a chance to get in first (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Leave it open a little longer, feel sorry for those still running outside."
+            $ user_choice_text = "Hold it a bit longer (P), give them a chance to get in first (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_b_36_en_B
 
 
 label show_question_q_b_36_en_A:
-    $ user_journey_summary.append("Di situasi (Disaster!) Your village is attacked! You hold the key to the defense gate. There are still citizens running trying to get inside., user memilih: Immediately lock the gate for the safety of the majority, even if some are left behind., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_190
+    $ user_journey_summary.append("Di situasi The fort gate must close before the storm hits. A few are still gathering supplies outside., user memilih: Close it on time (J), protect the majority already inside (T)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_36_en_B:
-    $ user_journey_summary.append("Di situasi (Disaster!) Your village is attacked! You hold the key to the defense gate. There are still citizens running trying to get inside., user memilih: Leave it open a little longer, feel sorry for those still running outside., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_191
+    $ user_journey_summary.append("Di situasi The fort gate must close before the storm hits. A few are still gathering supplies outside., user memilih: Hold it a bit longer (P), give them a chance to get in first (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_37_en:
     scene bg kantor with dissolve
-    $ narasi_asli = "Your teammate is heartbroken and can't work. What do you do as team leader?"
-    n "Your teammate is heartbroken and can't work."
-    n "What do you do as team leader?"
+    $ narasi_asli = "A teammate is heavy-hearted and can't focus, yet the deadline is close."
+    n "A teammate is heavy-hearted and can't focus, yet the deadline is close."
 
     menu:
-        "Your teammate is heartbroken and can't work. What do you do as team leader?"
+        "A teammate is heavy-hearted and can't focus, yet the deadline is close."
 
-        "'Work is work. Finish your tasks, then deal with feelings.'":
+        "Help break his task into small steps (T) to keep it on schedule (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "'Work is work. Finish your tasks, then deal with feelings.'"
+            $ user_choice_text = "Help break his task into small steps (T) to keep it on schedule (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_b_37_en_A
 
-        "'Go home. We can rearrange the work later.'":
+        "Let him rest first (F), we can rearrange the rest later (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "'Go home. We can rearrange the work later.'"
+            $ user_choice_text = "Let him rest first (F), we can rearrange the rest later (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_b_37_en_B
 
 
 label show_question_q_b_37_en_A:
-    $ user_journey_summary.append("Di situasi Your teammate is heartbroken and can't work. What do you do as team leader?, user memilih: 'Work is work. Finish your tasks, then deal with feelings.', dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_192
+    $ user_journey_summary.append("Di situasi A teammate is heavy-hearted and can't focus, yet the deadline is close., user memilih: Help break his task into small steps (T) to keep it on schedule (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_37_en_B:
-    $ user_journey_summary.append("Di situasi Your teammate is heartbroken and can't work. What do you do as team leader?, user memilih: 'Go home. We can rearrange the work later.', dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_193
+    $ user_journey_summary.append("Di situasi A teammate is heavy-hearted and can't focus, yet the deadline is close., user memilih: Let him rest first (F), we can rearrange the rest later (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_38_en:
     scene bg dapur with dissolve
-    $ narasi_asli = "You are a judge in a cooking competition. Your friend's dish is burnt. They are crying, even though they tried hard."
-    n "You are a judge in a cooking competition."
-    n "Your friend's dish is burnt."
-    n "They are crying, even though they tried hard."
+    $ narasi_asli = "You judge a cooking contest. Your friend's dish burned, despite enormous effort."
+    n "You judge a cooking contest."
+    n "Your friend's dish burned, despite enormous effort."
 
     menu:
-        "You are a judge in a cooking competition. Your friend's dish is burnt. They are crying, even though they tried hard."
+        "You judge a cooking contest. Your friend's dish burned, despite enormous effort."
 
-        "Give a score of zero. The scoring rules must be objective.":
+        "Score it honestly on taste (T), fair to all the other contestants (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Give a score of zero. The scoring rules must be objective."
+            $ user_choice_text = "Score it honestly on taste (T), fair to all the other contestants (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_b_38_en_A
 
-        "Give an extra score. Appreciate the process and effort.":
+        "Add points for effort (F), honor the hard work behind it (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Give an extra score. Appreciate the process and effort."
+            $ user_choice_text = "Add points for effort (F), honor the hard work behind it (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_b_38_en_B
 
 
 label show_question_q_b_38_en_A:
-    $ user_journey_summary.append("Di situasi You are a judge in a cooking competition. Your friend's dish is burnt. They are crying, even though they tried hard., user memilih: Give a score of zero. The scoring rules must be objective., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_194
+    $ user_journey_summary.append("Di situasi You judge a cooking contest. Your friend's dish burned, despite enormous effort., user memilih: Score it honestly on taste (T), fair to all the other contestants (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_38_en_B:
-    $ user_journey_summary.append("Di situasi You are a judge in a cooking competition. Your friend's dish is burnt. They are crying, even though they tried hard., user memilih: Give an extra score. Appreciate the process and effort., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_195
+    $ user_journey_summary.append("Di situasi You judge a cooking contest. Your friend's dish burned, despite enormous effort., user memilih: Add points for effort (F), honor the hard work behind it (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_39_en:
     scene bg stasiun with dissolve
-    $ narasi_asli = "A confused tourist entered the wrong line at the Station. Then they were fined. You are the officer there."
-    n "A confused tourist entered the wrong line at the Station."
-    n "Then they were fined."
-    n "You are the officer there."
+    $ narasi_asli = "You are a station officer. A tourist took the wrong lane, confused by the signs. Rules say there's a fine."
+    n "You are a station officer."
+    n "A tourist took the wrong lane, confused by the signs."
+    n "Rules say there's a fine."
 
     menu:
-        "A confused tourist entered the wrong line at the Station. Then they were fined. You are the officer there."
+        "You are a station officer. A tourist took the wrong lane, confused by the signs. Rules say there's a fine."
 
-        "Let them pay the fine. Rules are rules.":
+        "Apply the rule (T), the same for every passenger (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Let them pay the fine. Rules are rules."
+            $ user_choice_text = "Apply the rule (T), the same for every passenger (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_b_39_en_A
 
-        "Help them negotiate. Be understanding because they are a foreigner.":
+        "Help waive it (F), he was clearly lost, not breaking it on purpose (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Help them negotiate. Be understanding because they are a foreigner."
+            $ user_choice_text = "Help waive it (F), he was clearly lost, not breaking it on purpose (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_b_39_en_B
 
 
 label show_question_q_b_39_en_A:
-    $ user_journey_summary.append("Di situasi A confused tourist entered the wrong line at the Station. Then they were fined. You are the officer there., user memilih: Let them pay the fine. Rules are rules., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_196
+    $ user_journey_summary.append("Di situasi You are a station officer. A tourist took the wrong lane, confused by the signs. Rules say there's a fine., user memilih: Apply the rule (T), the same for every passenger (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_39_en_B:
-    $ user_journey_summary.append("Di situasi A confused tourist entered the wrong line at the Station. Then they were fined. You are the officer there., user memilih: Help them negotiate. Be understanding because they are a foreigner., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_197
+    $ user_journey_summary.append("Di situasi You are a station officer. A tourist took the wrong lane, confused by the signs. Rules say there's a fine., user memilih: Help waive it (F), he was clearly lost, not breaking it on purpose (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_b_40_en:
     scene bg kantor with dissolve
-    $ narasi_asli = "You create a new duty schedule. But one of your friends protests because the schedule clashes."
-    n "You create a new duty schedule."
-    n "But one of your friends protests because the schedule clashes."
+    $ narasi_asli = "You made a new duty roster, but a friend protests over a clash in the schedule."
+    n "You made a new duty roster, but a friend protests over a clash in the schedule."
 
     menu:
-        "You create a new duty schedule. But one of your friends protests because the schedule clashes."
+        "You made a new duty roster, but a friend protests over a clash in the schedule."
 
-        "'No way! The system is already made efficient. You must follow the existing schedule.'":
+        "Keep the system (T), it was calculated to spread the load most fairly (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "'No way! The system is already made efficient. You must follow the existing schedule.'"
+            $ user_choice_text = "Keep the system (T), it was calculated to spread the load most fairly (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_b_40_en_A
 
-        "'Okay, we can switch around. The important thing is that everyone is happy.'":
+        "Ease it, arrange a swap (P) so everyone stays comfortable (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "'Okay, we can switch around. The important thing is that everyone is happy.'"
+            $ user_choice_text = "Ease it, arrange a swap (P) so everyone stays comfortable (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_b_40_en_B
 
 
 label show_question_q_b_40_en_A:
-    $ user_journey_summary.append("Di situasi You create a new duty schedule. But one of your friends protests because the schedule clashes., user memilih: 'No way! The system is already made efficient. You must follow the existing schedule.', dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_198
+    $ user_journey_summary.append("Di situasi You made a new duty roster, but a friend protests over a clash in the schedule., user memilih: Keep the system (T), it was calculated to spread the load most fairly (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_b_40_en_B:
-    $ user_journey_summary.append("Di situasi You create a new duty schedule. But one of your friends protests because the schedule clashes., user memilih: 'Okay, we can switch around. The important thing is that everyone is happy.', dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_199
+    $ user_journey_summary.append("Di situasi You made a new duty roster, but a friend protests over a clash in the schedule., user memilih: Ease it, arrange a swap (P) so everyone stays comfortable (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_41_en:
@@ -3397,29 +3387,29 @@ label show_question_q_c_41_en:
     menu:
         "Holidays have arrived. Friends invite you to go traveling, but don't know exactly where to go yet."
 
-        "Go solo to visit a history museum to see historical artifacts.":
+        "Go solo (I) to visit a history museum to see historical artifacts (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Go solo to visit a history museum to see historical artifacts."
+            $ user_choice_text = "Go solo (I) to visit a history museum to see historical artifacts (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_c_41_en_A
 
-        "Join the group to explore a mythical forest full of mysteries.":
+        "Join the group (E) to explore a mythical forest full of mysteries (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Join the group to explore a mythical forest full of mysteries."
+            $ user_choice_text = "Join the group (E) to explore a mythical forest full of mysteries (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_c_41_en_B
 
 
 label show_question_q_c_41_en_A:
-    $ user_journey_summary.append("Di situasi Holidays have arrived. Friends invite you to go traveling, but don't know exactly where to go yet., user memilih: Go solo to visit a history museum to see historical artifacts., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_200
+    $ user_journey_summary.append("Di situasi Holidays have arrived. Friends invite you to go traveling, but don't know exactly where to go yet., user memilih: Go solo (I) to visit a history museum to see historical artifacts (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_c_41_en_B:
-    $ user_journey_summary.append("Di situasi Holidays have arrived. Friends invite you to go traveling, but don't know exactly where to go yet., user memilih: Join the group to explore a mythical forest full of mysteries., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_201
+    $ user_journey_summary.append("Di situasi Holidays have arrived. Friends invite you to go traveling, but don't know exactly where to go yet., user memilih: Join the group (E) to explore a mythical forest full of mysteries (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_c_42_en:
@@ -3431,29 +3421,29 @@ label show_question_q_c_42_en:
     menu:
         "You won a huge lottery! Winning a bag of gold coins."
 
-        "Keep it in a safe as a secure physical asset.":
+        "Keep it in a safe (I) as a secure physical asset (S).":
             $ IE -= 5
             $ SN -= 5
-            $ user_choice_text = "Keep it in a safe as a secure physical asset."
+            $ user_choice_text = "Keep it in a safe (I) as a secure physical asset (S)."
             $ last_answer = "Introvert & Sensing"
             jump show_question_q_c_42_en_A
 
-        "Treat everyone while thinking about your increasing wealth.":
+        "Treat everyone (E) while thinking about your increasing wealth (N).":
             $ IE += 5
             $ SN += 5
-            $ user_choice_text = "Treat everyone while thinking about your increasing wealth."
+            $ user_choice_text = "Treat everyone (E) while thinking about your increasing wealth (N)."
             $ last_answer = "Extrovert & Intuitive"
             jump show_question_q_c_42_en_B
 
 
 label show_question_q_c_42_en_A:
-    $ user_journey_summary.append("Di situasi You won a huge lottery! Winning a bag of gold coins., user memilih: Keep it in a safe as a secure physical asset., dengan poin MBTI: Introvert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_202
+    $ user_journey_summary.append("Di situasi You won a huge lottery! Winning a bag of gold coins., user memilih: Keep it in a safe (I) as a secure physical asset (S)., dengan poin MBTI: Introvert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_c_42_en_B:
-    $ user_journey_summary.append("Di situasi You won a huge lottery! Winning a bag of gold coins., user memilih: Treat everyone while thinking about your increasing wealth., dengan poin MBTI: Extrovert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_203
+    $ user_journey_summary.append("Di situasi You won a huge lottery! Winning a bag of gold coins., user memilih: Treat everyone (E) while thinking about your increasing wealth (N)., dengan poin MBTI: Extrovert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_c_43_en:
@@ -3464,29 +3454,29 @@ label show_question_q_c_43_en:
     menu:
         "You see an abstract painting that is 'just a few line scribbles'."
 
-        "Ask others, 'What is this picture? What does it mean?'.":
+        "Ask others (E), 'What is this picture? What does it mean?' (S).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Ask others, 'What is this picture? What does it mean?'."
+            $ user_choice_text = "Ask others (E), 'What is this picture? What does it mean?' (S)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_c_43_en_A
 
-        "Stay silent and try to feel the painter's emotion.":
+        "Stay silent (I) and try to feel the painter's emotion (N).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Stay silent and try to feel the painter's emotion."
+            $ user_choice_text = "Stay silent (I) and try to feel the painter's emotion (N)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_c_43_en_B
 
 
 label show_question_q_c_43_en_A:
-    $ user_journey_summary.append("Di situasi You see an abstract painting that is 'just a few line scribbles'., user memilih: Ask others, 'What is this picture? What does it mean?'., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_204
+    $ user_journey_summary.append("Di situasi You see an abstract painting that is 'just a few line scribbles'., user memilih: Ask others (E), 'What is this picture? What does it mean?' (S)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_c_43_en_B:
-    $ user_journey_summary.append("Di situasi You see an abstract painting that is 'just a few line scribbles'., user memilih: Stay silent and try to feel the painter's emotion., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_205
+    $ user_journey_summary.append("Di situasi You see an abstract painting that is 'just a few line scribbles'., user memilih: Stay silent (I) and try to feel the painter's emotion (N)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_c_44_en:
@@ -3497,29 +3487,29 @@ label show_question_q_c_44_en:
     menu:
         "Your friend asks you to teach them a game that you are really good at playing."
 
-        "'Here, press the forward button, then jump.' Guide them directly.":
+        "'Here, press the forward button, then jump.' (S) Guide them directly (E).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "'Here, press the forward button, then jump.' Guide them directly."
+            $ user_choice_text = "'Here, press the forward button, then jump.' (S) Guide them directly (E)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_c_44_en_A
 
-        "'Understand the concept first.' Let them learn on their own.":
+        "'Understand the concept first.' (N) Let them learn on their own (I).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "'Understand the concept first.' Let them learn on their own."
+            $ user_choice_text = "'Understand the concept first.' (N) Let them learn on their own (I)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_c_44_en_B
 
 
 label show_question_q_c_44_en_A:
-    $ user_journey_summary.append("Di situasi Your friend asks you to teach them a game that you are really good at playing., user memilih: 'Here, press the forward button, then jump.' Guide them directly., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_206
+    $ user_journey_summary.append("Di situasi Your friend asks you to teach them a game that you are really good at playing., user memilih: 'Here, press the forward button, then jump.' (S) Guide them directly (E)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_c_44_en_B:
-    $ user_journey_summary.append("Di situasi Your friend asks you to teach them a game that you are really good at playing., user memilih: 'Understand the concept first.' Let them learn on their own., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_207
+    $ user_journey_summary.append("Di situasi Your friend asks you to teach them a game that you are really good at playing., user memilih: 'Understand the concept first.' (N) Let them learn on their own (I)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_c_45_en:
@@ -3531,62 +3521,62 @@ label show_question_q_c_45_en:
     menu:
         "You have 1 hour of free time today. What do you want to do?"
 
-        "Exercise or clean up together at home.":
+        "Exercise or clean up (S) together at home (E).":
             $ IE += 5
             $ SN -= 5
-            $ user_choice_text = "Exercise or clean up together at home."
+            $ user_choice_text = "Exercise or clean up (S) together at home (E)."
             $ last_answer = "Extrovert & Sensing"
             jump show_question_q_c_45_en_A
 
-        "Do something you like, while imagining what you can do in the future.":
+        "Do something you like (I), while imagining what you can do in the future (N).":
             $ IE -= 5
             $ SN += 5
-            $ user_choice_text = "Do something you like, while imagining what you can do in the future."
+            $ user_choice_text = "Do something you like (I), while imagining what you can do in the future (N)."
             $ last_answer = "Introvert & Intuitive"
             jump show_question_q_c_45_en_B
 
 
 label show_question_q_c_45_en_A:
-    $ user_journey_summary.append("Di situasi You have 1 hour of free time today. What do you want to do?, user memilih: Exercise or clean up together at home., dengan poin MBTI: Extrovert & Sensing")
-    call ai_react_logic from _call_ai_react_logic_208
+    $ user_journey_summary.append("Di situasi You have 1 hour of free time today. What do you want to do?, user memilih: Exercise or clean up (S) together at home (E)., dengan poin MBTI: Extrovert & Sensing")
+    call ai_react_logic
     return
 
 label show_question_q_c_45_en_B:
-    $ user_journey_summary.append("Di situasi You have 1 hour of free time today. What do you want to do?, user memilih: Do something you like, while imagining what you can do in the future., dengan poin MBTI: Introvert & Intuitive")
-    call ai_react_logic from _call_ai_react_logic_209
+    $ user_journey_summary.append("Di situasi You have 1 hour of free time today. What do you want to do?, user memilih: Do something you like (I), while imagining what you can do in the future (N)., dengan poin MBTI: Introvert & Intuitive")
+    call ai_react_logic
     return
 
 label show_question_q_c_46_en:
     scene bg room with dissolve
-    $ narasi_asli = "(Sob!) Your friend is crying because they were broken up with by their partner."
-    n "(Sob!) Your friend is crying because they were broken up with by their partner."
+    $ narasi_asli = "Your friend is crying over a fresh breakup."
+    n "Your friend is crying over a fresh breakup."
 
     menu:
-        "(Sob!) Your friend is crying because they were broken up with by their partner."
+        "Your friend is crying over a fresh breakup."
 
-        "'Stop crying. Here's a tissue. If you think about it, they weren't good for you anyway.'":
+        "Help her see the facts (T) and offer concrete steps to move on (S).":
             $ SN -= 5
             $ TF -= 5
-            $ user_choice_text = "'Stop crying. Here's a tissue. If you think about it, they weren't good for you anyway.'"
+            $ user_choice_text = "Help her see the facts (T) and offer concrete steps to move on (S)."
             $ last_answer = "Sensing & Thinking"
             jump show_question_q_c_46_en_A
 
-        "Accompany them. then listen to their story.":
+        "Just be there (N) and listen to her feelings without rushing to judge (F).":
             $ SN += 5
             $ TF += 5
-            $ user_choice_text = "Accompany them. then listen to their story."
+            $ user_choice_text = "Just be there (N) and listen to her feelings without rushing to judge (F)."
             $ last_answer = "Intuitive & Feeling"
             jump show_question_q_c_46_en_B
 
 
 label show_question_q_c_46_en_A:
-    $ user_journey_summary.append("Di situasi (Sob!) Your friend is crying because they were broken up with by their partner., user memilih: 'Stop crying. Here's a tissue. If you think about it, they weren't good for you anyway.', dengan poin MBTI: Sensing & Thinking")
-    call ai_react_logic from _call_ai_react_logic_210
+    $ user_journey_summary.append("Di situasi Your friend is crying over a fresh breakup., user memilih: Help her see the facts (T) and offer concrete steps to move on (S)., dengan poin MBTI: Sensing & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_c_46_en_B:
-    $ user_journey_summary.append("Di situasi (Sob!) Your friend is crying because they were broken up with by their partner., user memilih: Accompany them. then listen to their story., dengan poin MBTI: Intuitive & Feeling")
-    call ai_react_logic from _call_ai_react_logic_211
+    $ user_journey_summary.append("Di situasi Your friend is crying over a fresh breakup., user memilih: Just be there (N) and listen to her feelings without rushing to judge (F)., dengan poin MBTI: Intuitive & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_c_47_en:
@@ -3597,29 +3587,29 @@ label show_question_q_c_47_en:
     menu:
         "The movie you watched has a vague and unclear ending!"
 
-        "'Ugh... It's terrible! Many scenes weren't logically explained!.'":
+        "'Ugh... It's terrible! (T) Many scenes weren't logically explained! (S).'":
             $ SN -= 5
             $ TF -= 5
-            $ user_choice_text = "'Ugh... It's terrible! Many scenes weren't logically explained!.'"
+            $ user_choice_text = "'Ugh... It's terrible! (T) Many scenes weren't logically explained! (S).'"
             $ last_answer = "Sensing & Thinking"
             jump show_question_q_c_47_en_A
 
-        "'Cool... The meaning is so deep, about hope that is lost.'":
+        "'Cool... (F) The meaning is so deep, about hope that is lost (N).'":
             $ SN += 5
             $ TF += 5
-            $ user_choice_text = "'Cool... The meaning is so deep, about hope that is lost.'"
+            $ user_choice_text = "'Cool... (F) The meaning is so deep, about hope that is lost (N).'"
             $ last_answer = "Intuitive & Feeling"
             jump show_question_q_c_47_en_B
 
 
 label show_question_q_c_47_en_A:
-    $ user_journey_summary.append("Di situasi The movie you watched has a vague and unclear ending!, user memilih: 'Ugh... It's terrible! Many scenes weren't logically explained!.', dengan poin MBTI: Sensing & Thinking")
-    call ai_react_logic from _call_ai_react_logic_212
+    $ user_journey_summary.append("Di situasi The movie you watched has a vague and unclear ending!, user memilih: 'Ugh... It's terrible! (T) Many scenes weren't logically explained! (S).', dengan poin MBTI: Sensing & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_c_47_en_B:
-    $ user_journey_summary.append("Di situasi The movie you watched has a vague and unclear ending!, user memilih: 'Cool... The meaning is so deep, about hope that is lost.', dengan poin MBTI: Intuitive & Feeling")
-    call ai_react_logic from _call_ai_react_logic_213
+    $ user_journey_summary.append("Di situasi The movie you watched has a vague and unclear ending!, user memilih: 'Cool... (F) The meaning is so deep, about hope that is lost (N).', dengan poin MBTI: Intuitive & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_c_48_en:
@@ -3631,29 +3621,29 @@ label show_question_q_c_48_en:
     menu:
         "There is a job offer with a large salary, but you don't know what the job is. The person looks quite promising.."
 
-        "Refuse. 'The offer is vague' and you are not sure where it will lead.":
+        "Refuse (F). 'The offer is vague' (N) and you are not sure where it will lead.":
             $ SN += 5
             $ TF += 5
-            $ user_choice_text = "Refuse. 'The offer is vague' and you are not sure where it will lead."
+            $ user_choice_text = "Refuse (F). 'The offer is vague' (N) and you are not sure where it will lead."
             $ last_answer = "Intuitive & Feeling"
             jump show_question_q_c_48_en_A
 
-        "Just accept it. Financially you need the money.":
+        "Just accept it (T). Financially (S) you need the money.":
             $ SN -= 5
             $ TF -= 5
-            $ user_choice_text = "Just accept it. Financially you need the money."
+            $ user_choice_text = "Just accept it (T). Financially (S) you need the money."
             $ last_answer = "Sensing & Thinking"
             jump show_question_q_c_48_en_B
 
 
 label show_question_q_c_48_en_A:
-    $ user_journey_summary.append("Di situasi There is a job offer with a large salary, but you don't know what the job is. The person looks quite promising.., user memilih: Refuse. 'The offer is vague' and you are not sure where it will lead., dengan poin MBTI: Intuitive & Feeling")
-    call ai_react_logic from _call_ai_react_logic_214
+    $ user_journey_summary.append("Di situasi There is a job offer with a large salary, but you don't know what the job is. The person looks quite promising.., user memilih: Refuse (F). 'The offer is vague' (N) and you are not sure where it will lead., dengan poin MBTI: Intuitive & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_c_48_en_B:
-    $ user_journey_summary.append("Di situasi There is a job offer with a large salary, but you don't know what the job is. The person looks quite promising.., user memilih: Just accept it. Financially you need the money., dengan poin MBTI: Sensing & Thinking")
-    call ai_react_logic from _call_ai_react_logic_215
+    $ user_journey_summary.append("Di situasi There is a job offer with a large salary, but you don't know what the job is. The person looks quite promising.., user memilih: Just accept it (T). Financially (S) you need the money., dengan poin MBTI: Sensing & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_c_49_en:
@@ -3664,29 +3654,29 @@ label show_question_q_c_49_en:
     menu:
         "You must choose one skill to learn for life."
 
-        "Technical skill that is useful for finding work.":
+        "Technical skill (S) that is useful for finding work (T).":
             $ SN -= 5
             $ TF -= 5
-            $ user_choice_text = "Technical skill that is useful for finding work."
+            $ user_choice_text = "Technical skill (S) that is useful for finding work (T)."
             $ last_answer = "Sensing & Thinking"
             jump show_question_q_c_49_en_A
 
-        "Art skill that can touch people's hearts.":
+        "Art skill (N) that can touch people's hearts (F).":
             $ SN += 5
             $ TF += 5
-            $ user_choice_text = "Art skill that can touch people's hearts."
+            $ user_choice_text = "Art skill (N) that can touch people's hearts (F)."
             $ last_answer = "Intuitive & Feeling"
             jump show_question_q_c_49_en_B
 
 
 label show_question_q_c_49_en_A:
-    $ user_journey_summary.append("Di situasi You must choose one skill to learn for life., user memilih: Technical skill that is useful for finding work., dengan poin MBTI: Sensing & Thinking")
-    call ai_react_logic from _call_ai_react_logic_216
+    $ user_journey_summary.append("Di situasi You must choose one skill to learn for life., user memilih: Technical skill (S) that is useful for finding work (T)., dengan poin MBTI: Sensing & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_c_49_en_B:
-    $ user_journey_summary.append("Di situasi You must choose one skill to learn for life., user memilih: Art skill that can touch people's hearts., dengan poin MBTI: Intuitive & Feeling")
-    call ai_react_logic from _call_ai_react_logic_217
+    $ user_journey_summary.append("Di situasi You must choose one skill to learn for life., user memilih: Art skill (N) that can touch people's hearts (F)., dengan poin MBTI: Intuitive & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_c_50_en:
@@ -3697,29 +3687,29 @@ label show_question_q_c_50_en:
     menu:
         "Your friend is debating a science fact but all their data is wrong."
 
-        "Correct them. Show the original data so they don't embarrass themselves.":
+        "Correct them (T). Show the original data (S) so they don't embarrass themselves.":
             $ SN -= 5
             $ TF -= 5
-            $ user_choice_text = "Correct them. Show the original data so they don't embarrass themselves."
+            $ user_choice_text = "Correct them (T). Show the original data (S) so they don't embarrass themselves."
             $ last_answer = "Sensing & Thinking"
             jump show_question_q_c_50_en_A
 
-        "Just let it be. They will realize it themselves, rather than fighting here.":
+        "Just let it be (F). They will realize it themselves (N), rather than fighting here.":
             $ SN += 5
             $ TF += 5
-            $ user_choice_text = "Just let it be. They will realize it themselves, rather than fighting here."
+            $ user_choice_text = "Just let it be (F). They will realize it themselves (N), rather than fighting here."
             $ last_answer = "Intuitive & Feeling"
             jump show_question_q_c_50_en_B
 
 
 label show_question_q_c_50_en_A:
-    $ user_journey_summary.append("Di situasi Your friend is debating a science fact but all their data is wrong., user memilih: Correct them. Show the original data so they don't embarrass themselves., dengan poin MBTI: Sensing & Thinking")
-    call ai_react_logic from _call_ai_react_logic_218
+    $ user_journey_summary.append("Di situasi Your friend is debating a science fact but all their data is wrong., user memilih: Correct them (T). Show the original data (S) so they don't embarrass themselves., dengan poin MBTI: Sensing & Thinking")
+    call ai_react_logic
     return
 
 label show_question_q_c_50_en_B:
-    $ user_journey_summary.append("Di situasi Your friend is debating a science fact but all their data is wrong., user memilih: Just let it be. They will realize it themselves, rather than fighting here., dengan poin MBTI: Intuitive & Feeling")
-    call ai_react_logic from _call_ai_react_logic_219
+    $ user_journey_summary.append("Di situasi Your friend is debating a science fact but all their data is wrong., user memilih: Just let it be (F). They will realize it themselves (N), rather than fighting here., dengan poin MBTI: Intuitive & Feeling")
+    call ai_react_logic
     return
 
 label show_question_q_c_51_en:
@@ -3731,29 +3721,29 @@ label show_question_q_c_51_en:
     menu:
         "(Lost!) Your train ticket is missing! The train leaves in 5 minutes."
 
-        "Check pockets, bags, floor sequentially. Don't panic, try to recall.":
+        "Check pockets, bags, floor sequentially (S). Don't panic, try to recall (J).":
             $ SN -= 5
             $ JP -= 5
-            $ user_choice_text = "Check pockets, bags, floor sequentially. Don't panic, try to recall."
+            $ user_choice_text = "Check pockets, bags, floor sequentially (S). Don't panic, try to recall (J)."
             $ last_answer = "Sensing & Judging"
             jump show_question_q_c_51_en_A
 
-        "Look for the ticket where it might be tucked away. It might have fallen on the street.":
+        "Look for the ticket where it might be tucked away (P). It might have fallen on the street (N).":
             $ SN += 5
             $ JP += 5
-            $ user_choice_text = "Look for the ticket where it might be tucked away. It might have fallen on the street."
+            $ user_choice_text = "Look for the ticket where it might be tucked away (P). It might have fallen on the street (N)."
             $ last_answer = "Intuitive & Perceiving"
             jump show_question_q_c_51_en_B
 
 
 label show_question_q_c_51_en_A:
-    $ user_journey_summary.append("Di situasi (Lost!) Your train ticket is missing! The train leaves in 5 minutes., user memilih: Check pockets, bags, floor sequentially. Don't panic, try to recall., dengan poin MBTI: Sensing & Judging")
-    call ai_react_logic from _call_ai_react_logic_220
+    $ user_journey_summary.append("Di situasi (Lost!) Your train ticket is missing! The train leaves in 5 minutes., user memilih: Check pockets, bags, floor sequentially (S). Don't panic, try to recall (J)., dengan poin MBTI: Sensing & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_51_en_B:
-    $ user_journey_summary.append("Di situasi (Lost!) Your train ticket is missing! The train leaves in 5 minutes., user memilih: Look for the ticket where it might be tucked away. It might have fallen on the street., dengan poin MBTI: Intuitive & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_221
+    $ user_journey_summary.append("Di situasi (Lost!) Your train ticket is missing! The train leaves in 5 minutes., user memilih: Look for the ticket where it might be tucked away (P). It might have fallen on the street (N)., dengan poin MBTI: Intuitive & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_52_en:
@@ -3764,29 +3754,29 @@ label show_question_q_c_52_en:
     menu:
         "You are hungry, but the fridge only has eggs, jam, and meat."
 
-        "Just cook a scrambled egg. It's definitely delicious and the taste is clear.":
+        "Just cook a scrambled egg (S). It's definitely delicious and the taste is clear (J).":
             $ SN -= 5
             $ JP -= 5
-            $ user_choice_text = "Just cook a scrambled egg. It's definitely delicious and the taste is clear."
+            $ user_choice_text = "Just cook a scrambled egg (S). It's definitely delicious and the taste is clear (J)."
             $ last_answer = "Sensing & Judging"
             jump show_question_q_c_52_en_A
 
-        "Mix everything! Who knows, it might become a new masterpiece.":
+        "Mix everything! (N) Who knows, it might become a new masterpiece (P).":
             $ SN += 5
             $ JP += 5
-            $ user_choice_text = "Mix everything! Who knows, it might become a new masterpiece."
+            $ user_choice_text = "Mix everything! (N) Who knows, it might become a new masterpiece (P)."
             $ last_answer = "Intuitive & Perceiving"
             jump show_question_q_c_52_en_B
 
 
 label show_question_q_c_52_en_A:
-    $ user_journey_summary.append("Di situasi You are hungry, but the fridge only has eggs, jam, and meat., user memilih: Just cook a scrambled egg. It's definitely delicious and the taste is clear., dengan poin MBTI: Sensing & Judging")
-    call ai_react_logic from _call_ai_react_logic_222
+    $ user_journey_summary.append("Di situasi You are hungry, but the fridge only has eggs, jam, and meat., user memilih: Just cook a scrambled egg (S). It's definitely delicious and the taste is clear (J)., dengan poin MBTI: Sensing & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_52_en_B:
-    $ user_journey_summary.append("Di situasi You are hungry, but the fridge only has eggs, jam, and meat., user memilih: Mix everything! Who knows, it might become a new masterpiece., dengan poin MBTI: Intuitive & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_223
+    $ user_journey_summary.append("Di situasi You are hungry, but the fridge only has eggs, jam, and meat., user memilih: Mix everything! (N) Who knows, it might become a new masterpiece (P)., dengan poin MBTI: Intuitive & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_53_en:
@@ -3797,29 +3787,29 @@ label show_question_q_c_53_en:
     menu:
         "You have an exam tomorrow, but you only remembered 1 day before the date."
 
-        "Read the summary of chapters according to what is likely to appear on the exam.":
+        "Read the summary of chapters (S) according to what is likely to appear on the exam (J).":
             $ SN -= 5
             $ JP -= 5
-            $ user_choice_text = "Read the summary of chapters according to what is likely to appear on the exam."
+            $ user_choice_text = "Read the summary of chapters (S) according to what is likely to appear on the exam (J)."
             $ last_answer = "Sensing & Judging"
             jump show_question_q_c_53_en_A
 
-        "Read only the parts you understand best, the rest can be figured out during the exam.":
+        "Read only the parts you understand best (N), the rest can be figured out during the exam (P).":
             $ SN += 5
             $ JP += 5
-            $ user_choice_text = "Read only the parts you understand best, the rest can be figured out during the exam."
+            $ user_choice_text = "Read only the parts you understand best (N), the rest can be figured out during the exam (P)."
             $ last_answer = "Intuitive & Perceiving"
             jump show_question_q_c_53_en_B
 
 
 label show_question_q_c_53_en_A:
-    $ user_journey_summary.append("Di situasi You have an exam tomorrow, but you only remembered 1 day before the date., user memilih: Read the summary of chapters according to what is likely to appear on the exam., dengan poin MBTI: Sensing & Judging")
-    call ai_react_logic from _call_ai_react_logic_224
+    $ user_journey_summary.append("Di situasi You have an exam tomorrow, but you only remembered 1 day before the date., user memilih: Read the summary of chapters (S) according to what is likely to appear on the exam (J)., dengan poin MBTI: Sensing & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_53_en_B:
-    $ user_journey_summary.append("Di situasi You have an exam tomorrow, but you only remembered 1 day before the date., user memilih: Read only the parts you understand best, the rest can be figured out during the exam., dengan poin MBTI: Intuitive & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_225
+    $ user_journey_summary.append("Di situasi You have an exam tomorrow, but you only remembered 1 day before the date., user memilih: Read only the parts you understand best (N), the rest can be figured out during the exam (P)., dengan poin MBTI: Intuitive & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_54_en:
@@ -3830,29 +3820,29 @@ label show_question_q_c_54_en:
     menu:
         "The boss asks you to work on a 'Secret' project without clear instructions."
 
-        "Gently refuse. 'I need clear details and a deadline.'":
+        "Gently refuse. 'I need clear details (S) and a deadline (J).'":
             $ SN -= 5
             $ JP -= 5
-            $ user_choice_text = "Gently refuse. 'I need clear details and a deadline.'"
+            $ user_choice_text = "Gently refuse. 'I need clear details (S) and a deadline (J).'"
             $ last_answer = "Sensing & Judging"
             jump show_question_q_c_54_en_A
 
-        "Accept! 'Ready, I will improvise as I go.'":
+        "Accept! 'Ready, I will improvise (N) as I go (P).'":
             $ SN += 5
             $ JP += 5
-            $ user_choice_text = "Accept! 'Ready, I will improvise as I go.'"
+            $ user_choice_text = "Accept! 'Ready, I will improvise (N) as I go (P).'"
             $ last_answer = "Intuitive & Perceiving"
             jump show_question_q_c_54_en_B
 
 
 label show_question_q_c_54_en_A:
-    $ user_journey_summary.append("Di situasi The boss asks you to work on a 'Secret' project without clear instructions., user memilih: Gently refuse. 'I need clear details and a deadline.', dengan poin MBTI: Sensing & Judging")
-    call ai_react_logic from _call_ai_react_logic_226
+    $ user_journey_summary.append("Di situasi The boss asks you to work on a 'Secret' project without clear instructions., user memilih: Gently refuse. 'I need clear details (S) and a deadline (J).', dengan poin MBTI: Sensing & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_54_en_B:
-    $ user_journey_summary.append("Di situasi The boss asks you to work on a 'Secret' project without clear instructions., user memilih: Accept! 'Ready, I will improvise as I go.', dengan poin MBTI: Intuitive & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_227
+    $ user_journey_summary.append("Di situasi The boss asks you to work on a 'Secret' project without clear instructions., user memilih: Accept! 'Ready, I will improvise (N) as I go (P).', dengan poin MBTI: Intuitive & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_55_en:
@@ -3863,62 +3853,63 @@ label show_question_q_c_55_en:
     menu:
         "You want to move cities, but you have too many items!"
 
-        "Sort the items. Throw away what you think is less important.":
+        "Sort the items (S). Throw away what you think is less important (J).":
             $ SN -= 5
             $ JP -= 5
-            $ user_choice_text = "Sort the items. Throw away what you think is less important."
+            $ user_choice_text = "Sort the items (S). Throw away what you think is less important (J)."
             $ last_answer = "Sensing & Judging"
             jump show_question_q_c_55_en_A
 
-        "'We don't know, we might need this item later, so bring everything!'. Everything can be arranged again there.":
+        "'We don't know, we might need this item later, so bring everything! (N)'. Everything can be arranged again there (P).":
             $ SN += 5
             $ JP += 5
-            $ user_choice_text = "'We don't know, we might need this item later, so bring everything!'. Everything can be arranged again there."
+            $ user_choice_text = "'We don't know, we might need this item later, so bring everything! (N)'. Everything can be arranged again there (P)."
             $ last_answer = "Intuitive & Perceiving"
             jump show_question_q_c_55_en_B
 
 
 label show_question_q_c_55_en_A:
-    $ user_journey_summary.append("Di situasi You want to move cities, but you have too many items!, user memilih: Sort the items. Throw away what you think is less important., dengan poin MBTI: Sensing & Judging")
-    call ai_react_logic from _call_ai_react_logic_228
+    $ user_journey_summary.append("Di situasi You want to move cities, but you have too many items!, user memilih: Sort the items (S). Throw away what you think is less important (J)., dengan poin MBTI: Sensing & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_55_en_B:
-    $ user_journey_summary.append("Di situasi You want to move cities, but you have too many items!, user memilih: 'We don't know, we might need this item later, so bring everything!'. Everything can be arranged again there., dengan poin MBTI: Intuitive & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_229
+    $ user_journey_summary.append("Di situasi You want to move cities, but you have too many items!, user memilih: 'We don't know, we might need this item later, so bring everything! (N)'. Everything can be arranged again there (P)., dengan poin MBTI: Intuitive & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_56_en:
     scene bg room with dissolve
-    $ narasi_asli = "Your little sibling broke your mother's favorite vase, they are so scared, almost crying."
-    n "Your little sibling broke your mother's favorite vase, they are so scared, almost crying."
+    $ narasi_asli = "Your little sibling accidentally broke mom's favorite vase. He is terrified."
+    n "Your little sibling accidentally broke mom's favorite vase."
+    n "He is terrified."
 
     menu:
-        "Your little sibling broke your mother's favorite vase, they are so scared, almost crying."
+        "Your little sibling accidentally broke mom's favorite vase. He is terrified."
 
-        "Tell them to confess. Wrong is wrong, they must take responsibility.":
+        "Encourage him to come clean to mom (J) and face it calmly (T).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Tell them to confess. Wrong is wrong, they must take responsibility."
+            $ user_choice_text = "Encourage him to come clean to mom (J) and face it calmly (T)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_c_56_en_A
 
-        "Help hide the pieces. It's a pity if they get scolded.":
+        "Go with him to tell mom (P), stressing it was purely an accident (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Help hide the pieces. It's a pity if they get scolded."
+            $ user_choice_text = "Go with him to tell mom (P), stressing it was purely an accident (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_c_56_en_B
 
 
 label show_question_q_c_56_en_A:
-    $ user_journey_summary.append("Di situasi Your little sibling broke your mother's favorite vase, they are so scared, almost crying., user memilih: Tell them to confess. Wrong is wrong, they must take responsibility., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_230
+    $ user_journey_summary.append("Di situasi Your little sibling accidentally broke mom's favorite vase. He is terrified., user memilih: Encourage him to come clean to mom (J) and face it calmly (T)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_56_en_B:
-    $ user_journey_summary.append("Di situasi Your little sibling broke your mother's favorite vase, they are so scared, almost crying., user memilih: Help hide the pieces. It's a pity if they get scolded., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_231
+    $ user_journey_summary.append("Di situasi Your little sibling accidentally broke mom's favorite vase. He is terrified., user memilih: Go with him to tell mom (P), stressing it was purely an accident (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_57_en:
@@ -3930,29 +3921,29 @@ label show_question_q_c_57_en:
     menu:
         "You have a strange but innovative business idea. When do you want to start making it happen?"
 
-        "Later, after the profit-loss analysis is 100%% complete.":
+        "Later, after the profit-loss analysis (T) is 100%% complete (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Later, after the profit-loss analysis is 100%% complete."
+            $ user_choice_text = "Later, after the profit-loss analysis (T) is 100%% complete (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_c_57_en_A
 
-        "Now! The important thing is that many people like the idea.":
+        "Now! (P) The important thing is that many people like the idea (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Now! The important thing is that many people like the idea."
+            $ user_choice_text = "Now! (P) The important thing is that many people like the idea (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_c_57_en_B
 
 
 label show_question_q_c_57_en_A:
-    $ user_journey_summary.append("Di situasi You have a strange but innovative business idea. When do you want to start making it happen?, user memilih: Later, after the profit-loss analysis is 100%% complete., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_232
+    $ user_journey_summary.append("Di situasi You have a strange but innovative business idea. When do you want to start making it happen?, user memilih: Later, after the profit-loss analysis (T) is 100%% complete (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_57_en_B:
-    $ user_journey_summary.append("Di situasi You have a strange but innovative business idea. When do you want to start making it happen?, user memilih: Now! The important thing is that many people like the idea., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_233
+    $ user_journey_summary.append("Di situasi You have a strange but innovative business idea. When do you want to start making it happen?, user memilih: Now! (P) The important thing is that many people like the idea (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_58_en:
@@ -3964,29 +3955,29 @@ label show_question_q_c_58_en:
     menu:
         "Your sports team keeps losing. As captain, what do you say?"
 
-        "'Add more practice! We must win, score is everything.'":
+        "Add scheduled practice (J), focus on fixing measurable things (T).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "'Add more practice! We must win, score is everything.'"
+            $ user_choice_text = "Add scheduled practice (J), focus on fixing measurable things (T)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_c_58_en_A
 
-        "'Relax guys. The important thing is that we enjoy playing together.'":
+        "Easy, guys (P), keep the spirit up so we stay solid playing together (F).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "'Relax guys. The important thing is that we enjoy playing together.'"
+            $ user_choice_text = "Easy, guys (P), keep the spirit up so we stay solid playing together (F)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_c_58_en_B
 
 
 label show_question_q_c_58_en_A:
-    $ user_journey_summary.append("Di situasi Your sports team keeps losing. As captain, what do you say?, user memilih: 'Add more practice! We must win, score is everything.', dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_234
+    $ user_journey_summary.append("Di situasi Your sports team keeps losing. As captain, what do you say?, user memilih: Add scheduled practice (J), focus on fixing measurable things (T)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_58_en_B:
-    $ user_journey_summary.append("Di situasi Your sports team keeps losing. As captain, what do you say?, user memilih: 'Relax guys. The important thing is that we enjoy playing together.', dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_235
+    $ user_journey_summary.append("Di situasi Your sports team keeps losing. As captain, what do you say?, user memilih: Easy, guys (P), keep the spirit up so we stay solid playing together (F)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_59_en:
@@ -3998,29 +3989,29 @@ label show_question_q_c_59_en:
     menu:
         "You find an Ancient Weapon during an exploration. What is your focus?"
 
-        "Its power and its intact condition.":
+        "Its power (T) and its intact condition (J).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Its power and its intact condition."
+            $ user_choice_text = "Its power (T) and its intact condition (J)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_c_59_en_A
 
-        "Its legendary story and the mystery of who its former owner was.":
+        "Its legendary story (F) and the mystery of who its former owner was (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Its legendary story and the mystery of who its former owner was."
+            $ user_choice_text = "Its legendary story (F) and the mystery of who its former owner was (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_c_59_en_B
 
 
 label show_question_q_c_59_en_A:
-    $ user_journey_summary.append("Di situasi You find an Ancient Weapon during an exploration. What is your focus?, user memilih: Its power and its intact condition., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_236
+    $ user_journey_summary.append("Di situasi You find an Ancient Weapon during an exploration. What is your focus?, user memilih: Its power (T) and its intact condition (J)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_59_en_B:
-    $ user_journey_summary.append("Di situasi You find an Ancient Weapon during an exploration. What is your focus?, user memilih: Its legendary story and the mystery of who its former owner was., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_237
+    $ user_journey_summary.append("Di situasi You find an Ancient Weapon during an exploration. What is your focus?, user memilih: Its legendary story (F) and the mystery of who its former owner was (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return
 
 label show_question_q_c_60_en:
@@ -4031,27 +4022,27 @@ label show_question_q_c_60_en:
     menu:
         "There is a new office rule that is inconvenient for employees."
 
-        "Propose an official revision. Show the points that are inefficient.":
+        "Propose an official revision (J). Show the points that are inefficient (T).":
             $ TF -= 5
             $ JP -= 5
-            $ user_choice_text = "Propose an official revision. Show the points that are inefficient."
+            $ user_choice_text = "Propose an official revision (J). Show the points that are inefficient (T)."
             $ last_answer = "Thinking & Judging"
             jump show_question_q_c_60_en_A
 
-        "Create an emotional petition. Ask for leniency on the rules.":
+        "Create an emotional petition (F). Ask for leniency on the rules (P).":
             $ TF += 5
             $ JP += 5
-            $ user_choice_text = "Create an emotional petition. Ask for leniency on the rules."
+            $ user_choice_text = "Create an emotional petition (F). Ask for leniency on the rules (P)."
             $ last_answer = "Feeling & Perceiving"
             jump show_question_q_c_60_en_B
 
 
 label show_question_q_c_60_en_A:
-    $ user_journey_summary.append("Di situasi There is a new office rule that is inconvenient for employees., user memilih: Propose an official revision. Show the points that are inefficient., dengan poin MBTI: Thinking & Judging")
-    call ai_react_logic from _call_ai_react_logic_238
+    $ user_journey_summary.append("Di situasi There is a new office rule that is inconvenient for employees., user memilih: Propose an official revision (J). Show the points that are inefficient (T)., dengan poin MBTI: Thinking & Judging")
+    call ai_react_logic
     return
 
 label show_question_q_c_60_en_B:
-    $ user_journey_summary.append("Di situasi There is a new office rule that is inconvenient for employees., user memilih: Create an emotional petition. Ask for leniency on the rules., dengan poin MBTI: Feeling & Perceiving")
-    call ai_react_logic from _call_ai_react_logic_239
+    $ user_journey_summary.append("Di situasi There is a new office rule that is inconvenient for employees., user memilih: Create an emotional petition (F). Ask for leniency on the rules (P)., dengan poin MBTI: Feeling & Perceiving")
+    call ai_react_logic
     return

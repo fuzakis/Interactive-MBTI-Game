@@ -70,6 +70,3 @@ define paket_c = [
 ]
 
 define all_packets = [paket_a, paket_b, paket_c]
-
-# Daftar judul paket soal, urutannya HARUS sama dengan all_packets
-define all_packet_titles = ["Paket A", "Paket B", "Paket C"]

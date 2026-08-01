@@ -63,11 +63,19 @@ def get_score_updates(option_text):
     if "(J)" in option_text: updates.append("$ JP -= 5"); summary.append("Judging")
     return updates, " & ".join(summary)
 
-# Fungsi Sanitasi Teks (PENTING: Mengubah % jadi %% agar tidak error)
+# Fungsi Sanitasi Teks
+# PENTING: menetralkan karakter yang membuat Ren'Py ERROR saat teks ditampilkan:
+#   {  }  -> tanda text-tag Ren'Py (mis. {b}, {size=..}) -> diganti ( )
+#   [  ]  -> tanda interpolasi variabel Ren'Py (mis. [nama]) -> diganti ( )
+#   %     -> format operator -> digandakan jadi %%
+#   "     -> escape agar tidak menutup string di file .rpy
+# Marker skor memakai ( ) yang aman, jadi penggantian di atas tidak menyentuhnya.
 def sanitize_text(text):
     if not text: return ""
     text = text.replace('"', '\\"')
     text = text.replace("%", "%%")
+    text = text.replace("[", "(").replace("]", ")")
+    text = text.replace("{", "(").replace("}", ")")
     text = text.replace("\n", " ").replace("\r", "")
     return text.strip()
 

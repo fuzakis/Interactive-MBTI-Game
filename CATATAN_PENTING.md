@@ -59,7 +59,10 @@ Prompt (script.rpy / questions_logic.rpy)
 
 ## 4. Sistem Soal & Skoring MBTI
 
-- `questions_data.rpy` dan `questions_logic_generated.rpy` adalah **file hasil generate** — jangan edit manual isi soalnya satu-satu; polanya kaku: `show_question_<id>_<lang>` → menu → set `IE/SN/TF/JP` ±5 → set `user_choice_text`, `last_answer`, append `user_journey_summary` → `call ai_react_logic`.
+- `questions_data.rpy` dan `questions_logic_generated.rpy` adalah **file hasil generate**. JANGAN edit manual. **Sumber kebenaran soal = `game/soal_mbti_id.csv` + `game/soal_mbti_en.csv`.** Edit CSV, lalu jalankan `python game/update_game_files.py` (dari folder `game/`) untuk menimpa kedua `.rpy`. Polanya: `show_question_<id>_<lang>` lalu menu, set `IE/SN/TF/JP` ±5, set `user_choice_text`, `last_answer`, append `user_journey_summary`, `call ai_react_logic`.
+- **Format CSV**: 7 kolom (kolom 0 kosong, 1=No/`Paket X`, 2=Dimensi, 3=Latar, 4=Narasi, 5=`A: ...`, 6=`B: ...`). Skor dideteksi dari marker `(E)(I)(S)(N)(T)(F)(J)(P)` di dalam teks pilihan, jadi jangan pakai kurung siku/kurawal untuk hal lain. `Latar` harus cocok dengan `bg_map_dict` di converter, kalau tidak jatuh ke `bg default`.
+- **Karakter terlarang di teks soal**: `[ ] { } < > \ |`. `[` `{` bikin Ren'Py crash saat teks ditampilkan (interpolasi/text-tag). `sanitize_text()` di converter sudah menetralkannya (`[` jadi `(`, `{` jadi `(`, dst) sebagai jaring pengaman, tapi tetap tulis soal pakai `( )` saja.
+- **Balance soal (penting untuk validitas)**: hindari framing "jahat vs baik", terutama di soal T/F, jangan buat pilihan (T) terlihat kejam/serakah. Gunakan framing "adil/logis vs empati" yang dua-duanya bisa dipilih orang baik. Lihat `CHANGELOG_SOAL_v2.md` untuk 12 contoh perbaikan.
 - Konvensi skor: `IE >= 0` = **E**, `SN >= 0` = **N**, `TF >= 0` = **F**, `JP >= 0` = **P** (lihat `scene_hasil_tes`). Nilai negatif = huruf satunya. Jangan ubah tanda ± di soal tanpa memahami ini.
 - Pengacakan paket memakai `persistent.used_packet_titles` + `persistent.last_packet_title` (anti-ulang). Judul di `all_packet_titles` **harus** urut sama dengan `all_packets`.
 - Nama label soal bergantung `persistent.cur_lang` (`id`/`en`). Menambah bahasa baru = harus generate ulang semua label soal.
