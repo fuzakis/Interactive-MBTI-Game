@@ -678,6 +678,28 @@ init python:
                 "MEMORI JANGKA PANJANG (hal yang kamu ingat tentang orang ini dari dulu — anggap benar, tapi kamu mungkin perlu sedikit diingatkan):")
         return head + "\n" + "\n".join("- " + f for f in facts)
 
+    def format_mbti_change(mem, lang="id"):
+        """
+        Rakit catatan perubahan hasil MBTI (dulu -> sekarang) untuk disisipkan
+        ke prompt. Kosong kalau belum ada hasil sebelumnya atau tidak berubah.
+        Menambah immersi: companion bisa bilang "dulu kamu X, sekarang jadi Y".
+        """
+        if not isinstance(mem, dict):
+            return ""
+        prev = str(mem.get("previous_mbti", "")).strip()
+        now = str(mem.get("last_mbti", "")).strip()
+        if not prev or prev in ("Unknown", "") or prev == now or not now or now == "Unknown":
+            return ""
+        if lang == "en":
+            return (f"MEMORY OF CHANGE: The player's previous result with you was {prev}, "
+                    f"but now it has shifted to {now}. You may naturally remark on how they have "
+                    f"changed since last time (e.g. \"you used to be {prev}, now you're {now}...\"), "
+                    f"warmly and without judgment. People grow and change.")
+        return (f"INGATAN PERUBAHAN: Hasil pemain sebelumnya bersamamu adalah {prev}, "
+                f"tapi sekarang berubah menjadi {now}. Kamu boleh mengomentari secara natural "
+                f"bagaimana dia berubah sejak terakhir kali (mis. \"dulu kamu {prev}, sekarang jadi {now}...\"), "
+                f"dengan hangat dan tanpa menghakimi. Orang tumbuh dan berubah.")
+
     def update_memory_summary(companion_personality, lang="id", max_facts=12):
         """
         Suling chat_history menjadi daftar fakta ringkas yang disimpan permanen
@@ -947,9 +969,19 @@ init python:
         if os.path.exists(filepath):
             with open(filepath, "r") as f:
                 current_ai_memory = json.load(f)
-                
-                # Jika user punya MBTI baru dari tes terakhir, update ingatannya
+
+                # Jaga kompatibilitas file lama: pastikan field previous_mbti ada
+                if "previous_mbti" not in current_ai_memory:
+                    current_ai_memory["previous_mbti"] = ""
+
+                # Jika user punya MBTI baru dari tes terakhir, update ingatannya.
+                # Sebelum menimpa, GESER hasil lama ke previous_mbti supaya companion
+                # bisa mengingat "dulu kamu X, sekarang berubah jadi Y".
                 if current_mbti != "Unknown" and current_ai_memory.get("last_mbti") != current_mbti:
+                    old_mbti = current_ai_memory.get("last_mbti", "")
+                    # Hanya simpan sebagai 'sebelumnya' kalau hasil lama valid (bukan Unknown/kosong)
+                    if old_mbti and old_mbti != "Unknown":
+                        current_ai_memory["previous_mbti"] = old_mbti
                     current_ai_memory["last_mbti"] = current_mbti
         else:
             # Jika belum pernah ngobrol, buat struktur ingatan baru
@@ -957,10 +989,11 @@ init python:
                 "player_name": player_name,
                 "companion_id": companion_id,
                 "last_mbti": current_mbti,
+                "previous_mbti": "", # Hasil MBTI satu sesi sebelumnya (untuk immersi perubahan)
                 "known_facts": [], # Tempat AI mencatat fakta penting
-                "chat_history": [] 
+                "chat_history": []
             }
-        
+
         return current_ai_memory
 
     def save_ai_memory():

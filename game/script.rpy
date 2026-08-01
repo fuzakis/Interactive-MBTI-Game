@@ -372,20 +372,24 @@ label scene_hasil_tes:
             journey_text = " ".join(user_journey_summary) 
         else:
             # DATA PALSU (Fallback) jika history kosong
-            journey_text = "User bermain dengan sangat misterius. Tidak banyak jejak yang ditinggalkan, namun hasil akhirnya menunjukkan kepribadian yang kuat." 
-        
+            journey_text = "User bermain dengan sangat misterius. Tidak banyak jejak yang ditinggalkan, namun hasil akhirnya menunjukkan kepribadian yang kuat."
+
+        # Catatan perubahan hasil MBTI (dulu -> sekarang), kosong kalau tidak ada
+        mbti_change_note = format_mbti_change(current_ai_memory, persistent.cur_lang)
+
         if persistent.cur_lang == "en":
 
             # --- PROMPT INGGRIS ---
             ctx_eval = f"""
             TASK: Final evaluation for user ({my_mbti_type} - {my_spirit}).
             DATA: {journey_text}
-            
+            {mbti_change_note}
+
             SPECIAL INSTRUCTIONS:
             Provide evaluation in 3 SEPARATE PARTS.
             YOU MUST separate each part with "###".
-            
-            Part 1: Summarize user's playstyle (max 270 chars).
+
+            Part 1: Summarize user's playstyle (max 270 chars). If a MEMORY OF CHANGE note is present above, open by warmly remarking how their result shifted from before to now.
             Part 2: Comment on personality compatibility with you (max 270 chars).
             part 3: Must Insert the [SPIRIT] tag exactly once at the beginning of the sentence. State the user's Spirit Animal, {my_spirit}, starting with "you have the spirit animal {my_spirit}", and explain why the Spirit Animal {my_spirit} fits the user, also give your opinion on that compatibility (2 sentences or max 270 chars).
             
@@ -402,12 +406,13 @@ label scene_hasil_tes:
             ctx_eval = f"""
             TUGAS: Evaluasi akhir user ({my_mbti_type} - {my_spirit}).
             DATA: {journey_text}
-            
+            {mbti_change_note}
+
             INSTRUKSI KHUSUS:
             Berikan evaluasi dalam 3 BAGIAN TERPISAH.
             Wajib pisahkan setiap bagian dengan tanda "###".
-            
-            Isi 1: Rangkum gaya bermain pemain (maksimal 270 karakter/huruf termasuk spasi).
+
+            Isi 1: Rangkum gaya bermain pemain (maksimal 270 karakter/huruf termasuk spasi). Jika ada catatan INGATAN PERUBAHAN di atas, buka dengan komentar hangat tentang bagaimana hasilnya berubah dari dulu ke sekarang.
             Isi 2: Komentar kecocokan kepribadian user denganmu, intinya per bagian maksimal 270 karakter/huruf termasuk spasi).
             Isi 3: Wajib sisipkan tag [SPIRIT] tepat satu kali di awal kalimat. Sebutkan Spirit Animal pemain, {my_spirit}, dengan dimulai kalimat "kamu memiliki spirit animal {my_spirit}", kemudian jelaskan kenapa Spirit Animal {my_spirit} cocok dengan pemain, juga berikan pendapatmu tentang kecocokan tersebut (2 kalimat atau maksimal 270 karakter/huruf termasuk spasi).
             
@@ -881,6 +886,7 @@ label sesi_chat_bebas_khusus:
             # Konteks dunia (kenal 5 companion & sadar di dalam game) + memori permanen
             world_ctx = get_world_context(persistent.cur_lang)
             mem_facts = format_known_facts(current_ai_memory, persistent.cur_lang)
+            mbti_change = format_mbti_change(current_ai_memory, persistent.cur_lang)
 
             # B. Rakit Prompt dengan Konteks JSON
             if persistent.cur_lang == "en":
@@ -888,6 +894,8 @@ label sesi_chat_bebas_khusus:
                 {world_ctx}
 
                 {mem_facts}
+
+                {mbti_change}
 
                 CONTEXT:
                 - You: {ai_name} ({companion_personality}), the player's close companion.
@@ -911,6 +919,8 @@ label sesi_chat_bebas_khusus:
                 {world_ctx}
 
                 {mem_facts}
+
+                {mbti_change}
 
                 KONTEKS:
                 - Kamu: {ai_name} ({companion_personality}), companion akrab pemain.
