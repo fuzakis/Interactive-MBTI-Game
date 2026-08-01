@@ -16,6 +16,8 @@ label show_question_q_a_01_id:
             $ SN -= 5
             $ user_choice_text = "Pulang ke rumah sendiri (I) dan makan makanan bergizi untuk memulihkan fisik (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Kumpul bareng teman dan bercerita (E) tentang ide perjalanan selanjutnya (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_a_01_id_A
 
         "Kumpul bareng teman dan bercerita (E) tentang ide perjalanan selanjutnya (N).":
@@ -23,6 +25,8 @@ label show_question_q_a_01_id:
             $ SN += 5
             $ user_choice_text = "Kumpul bareng teman dan bercerita (E) tentang ide perjalanan selanjutnya (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Pulang ke rumah sendiri (I) dan makan makanan bergizi untuk memulihkan fisik (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_a_01_id_B
 
 
@@ -51,6 +55,8 @@ label show_question_q_a_02_id:
             $ SN -= 5
             $ user_choice_text = "Perhatikan dia dari kursimu (I), sambil mengamati pergerakannya (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Langsung sapa (E), dan tanya dia hendak pergi kemana dengan pakaian seperti itu (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_a_02_id_A
 
         "Langsung sapa (E), dan tanya dia hendak pergi kemana dengan pakaian seperti itu (N).":
@@ -58,6 +64,8 @@ label show_question_q_a_02_id:
             $ SN += 5
             $ user_choice_text = "Langsung sapa (E), dan tanya dia hendak pergi kemana dengan pakaian seperti itu (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Perhatikan dia dari kursimu (I), sambil mengamati pergerakannya (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_a_02_id_B
 
 
@@ -85,6 +93,8 @@ label show_question_q_a_03_id:
             $ SN -= 5
             $ user_choice_text = "Panggil seluruh tim (E) untuk bagi tugas fisik (S) sekarang juga."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Panggil rekan kerja dekat (I) untuk coba program bantuan yang baru kamu kembangkan (N)"
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_a_03_id_A
 
         "Panggil rekan kerja dekat (I) untuk coba program bantuan yang baru kamu kembangkan (N)":
@@ -92,6 +102,8 @@ label show_question_q_a_03_id:
             $ SN += 5
             $ user_choice_text = "Panggil rekan kerja dekat (I) untuk coba program bantuan yang baru kamu kembangkan (N)"
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Panggil seluruh tim (E) untuk bagi tugas fisik (S) sekarang juga."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_a_03_id_B
 
 
@@ -118,6 +130,8 @@ label show_question_q_a_04_id:
             $ SN -= 5
             $ user_choice_text = "Hubungi dan tanya teman (E) untuk meminta bahan mentah yang kurang (S)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Tetap di dapur (I) dan coba eksperimen (N) menggantinya dengan bahan lain."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_a_04_id_A
 
         "Tetap di dapur (I) dan coba eksperimen (N) menggantinya dengan bahan lain.":
@@ -125,6 +139,8 @@ label show_question_q_a_04_id:
             $ SN += 5
             $ user_choice_text = "Tetap di dapur (I) dan coba eksperimen (N) menggantinya dengan bahan lain."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Hubungi dan tanya teman (E) untuk meminta bahan mentah yang kurang (S)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_a_04_id_B
 
 
@@ -152,6 +168,8 @@ label show_question_q_a_05_id:
             $ SN -= 5
             $ user_choice_text = "Ikut komentar dengan warga lainnya (E) dan cari bukti (S) kejadiannya."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Baca dan amati (I), coba bayangkan apa yang sebenarnya terjadi (N)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_a_05_id_A
 
         "Baca dan amati (I), coba bayangkan apa yang sebenarnya terjadi (N).":
@@ -159,6 +177,8 @@ label show_question_q_a_05_id:
             $ SN += 5
             $ user_choice_text = "Baca dan amati (I), coba bayangkan apa yang sebenarnya terjadi (N)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Ikut komentar dengan warga lainnya (E) dan cari bukti (S) kejadiannya."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_a_05_id_B
 
 
@@ -186,6 +206,8 @@ label show_question_q_a_06_id:
             $ TF -= 5
             $ user_choice_text = "Ajak bicara di depan tim (E) untuk susun langkah perbaikan yang jelas (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Tarik dia menepi berdua (I) dan tenangkan dulu perasaannya (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_a_06_id_A
 
         "Tarik dia menepi berdua (I) dan tenangkan dulu perasaannya (F).":
@@ -193,6 +215,8 @@ label show_question_q_a_06_id:
             $ TF += 5
             $ user_choice_text = "Tarik dia menepi berdua (I) dan tenangkan dulu perasaannya (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Ajak bicara di depan tim (E) untuk susun langkah perbaikan yang jelas (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_a_06_id_B
 
 
@@ -219,6 +243,8 @@ label show_question_q_a_07_id:
             $ TF -= 5
             $ user_choice_text = "Protes ke petugas (E) karena aturannya tidak masuk akal (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Diam saja (I), karena mungkin benar, hal tersebut bisa merusak suasana yang damai (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_a_07_id_A
 
         "Diam saja (I), karena mungkin benar, hal tersebut bisa merusak suasana yang damai (F).":
@@ -226,6 +252,8 @@ label show_question_q_a_07_id:
             $ TF += 5
             $ user_choice_text = "Diam saja (I), karena mungkin benar, hal tersebut bisa merusak suasana yang damai (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Protes ke petugas (E) karena aturannya tidak masuk akal (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_a_07_id_B
 
 
@@ -252,6 +280,8 @@ label show_question_q_a_08_id:
             $ TF -= 5
             $ user_choice_text = "Coba dekati dan tanya langsung (E), analisis masalahnya (T) agar ditemukan jalan keluarnya."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Kasih tisu diam-diam (I) karena kasihan melihatnya (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_a_08_id_A
 
         "Kasih tisu diam-diam (I) karena kasihan melihatnya (F).":
@@ -259,6 +289,8 @@ label show_question_q_a_08_id:
             $ TF += 5
             $ user_choice_text = "Kasih tisu diam-diam (I) karena kasihan melihatnya (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Coba dekati dan tanya langsung (E), analisis masalahnya (T) agar ditemukan jalan keluarnya."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_a_08_id_B
 
 
@@ -286,6 +318,8 @@ label show_question_q_a_09_id:
             $ TF -= 5
             $ user_choice_text = "Debat dengan Kapten (E) karena hitungannya salah (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Terima saja (I) karena mungkin kapten sedang memerlukannya (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_a_09_id_A
 
         "Terima saja (I) karena mungkin kapten sedang memerlukannya (F).":
@@ -293,6 +327,8 @@ label show_question_q_a_09_id:
             $ TF += 5
             $ user_choice_text = "Terima saja (I) karena mungkin kapten sedang memerlukannya (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Debat dengan Kapten (E) karena hitungannya salah (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_a_09_id_B
 
 
@@ -320,6 +356,8 @@ label show_question_q_a_10_id:
             $ TF -= 5
             $ user_choice_text = "Tanya kembali suara itu (E) 'kira-kira, mana pintu yang paling aman (T)?'"
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Pejamkan mata (I) dan ikuti kata hati (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_a_10_id_A
 
         "Pejamkan mata (I) dan ikuti kata hati (F).":
@@ -327,6 +365,8 @@ label show_question_q_a_10_id:
             $ TF += 5
             $ user_choice_text = "Pejamkan mata (I) dan ikuti kata hati (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Tanya kembali suara itu (E) 'kira-kira, mana pintu yang paling aman (T)?'"
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_a_10_id_B
 
 
@@ -354,6 +394,8 @@ label show_question_q_a_11_id:
             $ JP += 5
             $ user_choice_text = "Gas! (E) urusan nanti dipikir belakangan (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Tolak (I) karena harus cek jadwal (J) dulu."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_a_11_id_A
 
         "Tolak (I) karena harus cek jadwal (J) dulu.":
@@ -361,6 +403,8 @@ label show_question_q_a_11_id:
             $ JP -= 5
             $ user_choice_text = "Tolak (I) karena harus cek jadwal (J) dulu."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Gas! (E) urusan nanti dipikir belakangan (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_a_11_id_B
 
 
@@ -389,6 +433,8 @@ label show_question_q_a_12_id:
             $ JP += 5
             $ user_choice_text = "Asik! (E) kita bisa bebas menjelajahi kota! (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Waduh! (I) seharusnya aku datang lebih awal (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_a_12_id_A
 
         "Waduh! (I) seharusnya aku datang lebih awal (J).":
@@ -396,6 +442,8 @@ label show_question_q_a_12_id:
             $ JP -= 5
             $ user_choice_text = "Waduh! (I) seharusnya aku datang lebih awal (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Asik! (E) kita bisa bebas menjelajahi kota! (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_a_12_id_B
 
 
@@ -423,6 +471,8 @@ label show_question_q_a_13_id:
             $ JP += 5
             $ user_choice_text = "Ajak semua teman! (E) bebas mau bawa apa saja (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Coba pilih menu terbaik menurutmu (I) dan tentukan waktu pasti (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_a_13_id_A
 
         "Coba pilih menu terbaik menurutmu (I) dan tentukan waktu pasti (J).":
@@ -430,6 +480,8 @@ label show_question_q_a_13_id:
             $ JP -= 5
             $ user_choice_text = "Coba pilih menu terbaik menurutmu (I) dan tentukan waktu pasti (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Ajak semua teman! (E) bebas mau bawa apa saja (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_a_13_id_B
 
 
@@ -457,6 +509,8 @@ label show_question_q_a_14_id:
             $ JP += 5
             $ user_choice_text = "Ganti cat (E) dan ubah barang-barang di kamar sekarang (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Biarkan saja (I) karena posisi ini sudah efisien (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_a_14_id_A
 
         "Biarkan saja (I) karena posisi ini sudah efisien (J).":
@@ -464,6 +518,8 @@ label show_question_q_a_14_id:
             $ JP -= 5
             $ user_choice_text = "Biarkan saja (I) karena posisi ini sudah efisien (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Ganti cat (E) dan ubah barang-barang di kamar sekarang (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_a_14_id_B
 
 
@@ -491,6 +547,8 @@ label show_question_q_a_15_id:
             $ JP += 5
             $ user_choice_text = "Minta saran penjual (E) dan beli barang yang pertama kali terlihat (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Coba berkeliling (I) dan beli sesuai kebutuhan (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_a_15_id_A
 
         "Coba berkeliling (I) dan beli sesuai kebutuhan (J).":
@@ -498,6 +556,8 @@ label show_question_q_a_15_id:
             $ JP -= 5
             $ user_choice_text = "Coba berkeliling (I) dan beli sesuai kebutuhan (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Minta saran penjual (E) dan beli barang yang pertama kali terlihat (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_a_15_id_B
 
 
@@ -525,6 +585,8 @@ label show_question_q_a_16_id:
             $ JP -= 5
             $ user_choice_text = "Redam amarahnya (T) dan jelaskan buktinya dulu (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "'Kok aku dimarahin? (F) Apa mungkin aku ada salah? (P)'."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_a_16_id_A
 
         "'Kok aku dimarahin? (F) Apa mungkin aku ada salah? (P)'.":
@@ -532,6 +594,8 @@ label show_question_q_a_16_id:
             $ JP += 5
             $ user_choice_text = "'Kok aku dimarahin? (F) Apa mungkin aku ada salah? (P)'."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Redam amarahnya (T) dan jelaskan buktinya dulu (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_a_16_id_B
 
 
@@ -558,6 +622,8 @@ label show_question_q_a_17_id:
             $ JP -= 5
             $ user_choice_text = "Ulangi dari awal sesuai resep (J) supaya hasilnya pas (T)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Pakai yang sudah ada saja (P), yang penting dibuat dengan tulus (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_a_17_id_A
 
         "Pakai yang sudah ada saja (P), yang penting dibuat dengan tulus (F).":
@@ -565,6 +631,8 @@ label show_question_q_a_17_id:
             $ JP += 5
             $ user_choice_text = "Pakai yang sudah ada saja (P), yang penting dibuat dengan tulus (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Ulangi dari awal sesuai resep (J) supaya hasilnya pas (T)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_a_17_id_B
 
 
@@ -592,6 +660,8 @@ label show_question_q_a_18_id:
             $ JP -= 5
             $ user_choice_text = "Komposisi warnanya (T), tekniknya, semua sempurna dan rapi! (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Lukisan ini (F) memiliki emosi yang dalam dan juga indah (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_a_18_id_A
 
         "Lukisan ini (F) memiliki emosi yang dalam dan juga indah (P).":
@@ -599,6 +669,8 @@ label show_question_q_a_18_id:
             $ JP += 5
             $ user_choice_text = "Lukisan ini (F) memiliki emosi yang dalam dan juga indah (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Komposisi warnanya (T), tekniknya, semua sempurna dan rapi! (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_a_18_id_B
 
 
@@ -626,6 +698,8 @@ label show_question_q_a_19_id:
             $ JP -= 5
             $ user_choice_text = "Tetap tiup peluit (T), adil bagi semua yang bermain jujur (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Beri kelonggaran sekali ini (F), dia jelas tak sengaja (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_a_19_id_A
 
         "Beri kelonggaran sekali ini (F), dia jelas tak sengaja (P).":
@@ -633,6 +707,8 @@ label show_question_q_a_19_id:
             $ JP += 5
             $ user_choice_text = "Beri kelonggaran sekali ini (F), dia jelas tak sengaja (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Tetap tiup peluit (T), adil bagi semua yang bermain jujur (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_a_19_id_B
 
 
@@ -659,6 +735,8 @@ label show_question_q_a_20_id:
             $ JP -= 5
             $ user_choice_text = "Beri target jelas (T) dan tetapkan tolok ukur yang terukur (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Bangkitkan semangat (F), ajak mereka bergerak bareng demi tim (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_a_20_id_A
 
         "Bangkitkan semangat (F), ajak mereka bergerak bareng demi tim (P).":
@@ -666,6 +744,8 @@ label show_question_q_a_20_id:
             $ JP += 5
             $ user_choice_text = "Bangkitkan semangat (F), ajak mereka bergerak bareng demi tim (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Beri target jelas (T) dan tetapkan tolok ukur yang terukur (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_a_20_id_B
 
 
@@ -694,6 +774,8 @@ label show_question_q_b_21_id:
             $ SN -= 5
             $ user_choice_text = "Baca sendiri dengan tenang (I) dan ikuti instruksi takarannya secara presisi (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Panggil teman-teman (E) untuk menebak dan meracik rasa baru (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_b_21_id_A
 
         "Panggil teman-teman (E) untuk menebak dan meracik rasa baru (N).":
@@ -701,6 +783,8 @@ label show_question_q_b_21_id:
             $ SN += 5
             $ user_choice_text = "Panggil teman-teman (E) untuk menebak dan meracik rasa baru (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Baca sendiri dengan tenang (I) dan ikuti instruksi takarannya secara presisi (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_b_21_id_B
 
 
@@ -728,6 +812,8 @@ label show_question_q_b_22_id:
             $ SN -= 5
             $ user_choice_text = "Minta waktu menyendiri (I) untuk menyusun fakta dan data yang ada (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Ajak diskusi santai (E) dan sampaikan idemu tentang visi masa depan (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_b_22_id_A
 
         "Ajak diskusi santai (E) dan sampaikan idemu tentang visi masa depan (N).":
@@ -735,6 +821,8 @@ label show_question_q_b_22_id:
             $ SN += 5
             $ user_choice_text = "Ajak diskusi santai (E) dan sampaikan idemu tentang visi masa depan (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Minta waktu menyendiri (I) untuk menyusun fakta dan data yang ada (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_b_22_id_B
 
 
@@ -762,6 +850,8 @@ label show_question_q_b_23_id:
             $ SN -= 5
             $ user_choice_text = "'Ensiklopedia bergambar' (S)  yang bisa dibaca bareng teman (E)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "'Filosofi tebal' (N)  yang menarik untuk dibaca di tempat sepi (I)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_b_23_id_A
 
         "'Filosofi tebal' (N)  yang menarik untuk dibaca di tempat sepi (I).":
@@ -769,6 +859,8 @@ label show_question_q_b_23_id:
             $ SN += 5
             $ user_choice_text = "'Filosofi tebal' (N)  yang menarik untuk dibaca di tempat sepi (I)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "'Ensiklopedia bergambar' (S)  yang bisa dibaca bareng teman (E)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_b_23_id_B
 
 
@@ -796,6 +888,8 @@ label show_question_q_b_24_id:
             $ SN -= 5
             $ user_choice_text = "Ikut mereka (E) tapi cari warung langganan yang sudah pasti murah dan enak (S)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Tolak dahulu (I), mau coba cari makanan murah dan unik yang mungkin ada disekitar tempatmu (N)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_b_24_id_A
 
         "Tolak dahulu (I), mau coba cari makanan murah dan unik yang mungkin ada disekitar tempatmu (N).":
@@ -803,6 +897,8 @@ label show_question_q_b_24_id:
             $ SN += 5
             $ user_choice_text = "Tolak dahulu (I), mau coba cari makanan murah dan unik yang mungkin ada disekitar tempatmu (N)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Ikut mereka (E) tapi cari warung langganan yang sudah pasti murah dan enak (S)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_b_24_id_B
 
 
@@ -829,6 +925,8 @@ label show_question_q_b_25_id:
             $ SN -= 5
             $ user_choice_text = "Panggil petugas (E) untuk mengecek isinya secara aman (S)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Perhatikan dari jauh (I) sambil membayangkan apa isi sebenarnya dari koper tersebut (N)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_b_25_id_A
 
         "Perhatikan dari jauh (I) sambil membayangkan apa isi sebenarnya dari koper tersebut (N).":
@@ -836,6 +934,8 @@ label show_question_q_b_25_id:
             $ SN += 5
             $ user_choice_text = "Perhatikan dari jauh (I) sambil membayangkan apa isi sebenarnya dari koper tersebut (N)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Panggil petugas (E) untuk mengecek isinya secara aman (S)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_b_25_id_B
 
 
@@ -862,6 +962,8 @@ label show_question_q_b_26_id:
             $ TF -= 5
             $ user_choice_text = "Hadapi langsung! (E) dan minta dia jelaskan ada apa sebenarnya(T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Kirim dia pesan pribadi (I), lalu tanya apakah dia baik-baik saja (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_b_26_id_A
 
         "Kirim dia pesan pribadi (I), lalu tanya apakah dia baik-baik saja (F).":
@@ -869,6 +971,8 @@ label show_question_q_b_26_id:
             $ TF += 5
             $ user_choice_text = "Kirim dia pesan pribadi (I), lalu tanya apakah dia baik-baik saja (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Hadapi langsung! (E) dan minta dia jelaskan ada apa sebenarnya(T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_b_26_id_B
 
 
@@ -896,6 +1000,8 @@ label show_question_q_b_27_id:
             $ TF -= 5
             $ user_choice_text = "Bilang terus terang (E) bagian mana yang salah agar bisa diperbaiki (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Diam atau senyum saja (I), nggak tega menyakiti perasaannya (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_b_27_id_A
 
         "Diam atau senyum saja (I), nggak tega menyakiti perasaannya (F).":
@@ -903,6 +1009,8 @@ label show_question_q_b_27_id:
             $ TF += 5
             $ user_choice_text = "Diam atau senyum saja (I), nggak tega menyakiti perasaannya (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Bilang terus terang (E) bagian mana yang salah agar bisa diperbaiki (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_b_27_id_B
 
 
@@ -930,6 +1038,8 @@ label show_question_q_b_28_id:
             $ TF -= 5
             $ user_choice_text = "Tegur mereka (E), 'Tolong tenang, argumen kalian nggak logis!' (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Pindah meja (I), menjauh karena energinya negatif banget (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_b_28_id_A
 
         "Pindah meja (I), menjauh karena energinya negatif banget (F).":
@@ -937,6 +1047,8 @@ label show_question_q_b_28_id:
             $ TF += 5
             $ user_choice_text = "Pindah meja (I), menjauh karena energinya negatif banget (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Tegur mereka (E), 'Tolong tenang, argumen kalian nggak logis!' (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_b_28_id_B
 
 
@@ -963,6 +1075,8 @@ label show_question_q_b_29_id:
             $ TF -= 5
             $ user_choice_text = "Debat terbuka (E), pilih yang statistiknya paling kuat (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Renungkan dengan beberapa teman dekat (I), lalu pilih yang hatinya paling tulus (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_b_29_id_A
 
         "Renungkan dengan beberapa teman dekat (I), lalu pilih yang hatinya paling tulus (F).":
@@ -970,6 +1084,8 @@ label show_question_q_b_29_id:
             $ TF += 5
             $ user_choice_text = "Renungkan dengan beberapa teman dekat (I), lalu pilih yang hatinya paling tulus (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Debat terbuka (E), pilih yang statistiknya paling kuat (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_b_29_id_B
 
 
@@ -996,6 +1112,8 @@ label show_question_q_b_30_id:
             $ TF -= 5
             $ user_choice_text = "Kumpulkan mereka (E) untuk buat petisi protes ke pemerintah (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Duduk diam (I) di sana sebagai tanda solidaritas (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_b_30_id_A
 
         "Duduk diam (I) di sana sebagai tanda solidaritas (F).":
@@ -1003,6 +1121,8 @@ label show_question_q_b_30_id:
             $ TF += 5
             $ user_choice_text = "Duduk diam (I) di sana sebagai tanda solidaritas (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Kumpulkan mereka (E) untuk buat petisi protes ke pemerintah (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_b_30_id_B
 
 
@@ -1030,6 +1150,8 @@ label show_question_q_b_31_id:
             $ JP += 5
             $ user_choice_text = "Teriak 'Tunggu!' (E) dan lari menerobos gerbang tanpa pikir panjang (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Pasrah (I). Ini salahku karena tidak cek jadwal tadi pagi (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_b_31_id_A
 
         "Pasrah (I). Ini salahku karena tidak cek jadwal tadi pagi (J).":
@@ -1037,6 +1159,8 @@ label show_question_q_b_31_id:
             $ JP -= 5
             $ user_choice_text = "Pasrah (I). Ini salahku karena tidak cek jadwal tadi pagi (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Teriak 'Tunggu!' (E) dan lari menerobos gerbang tanpa pikir panjang (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_b_31_id_B
 
 
@@ -1064,6 +1188,8 @@ label show_question_q_b_32_id:
             $ JP += 5
             $ user_choice_text = "Tanya ke yang lain! (E), 'Mau makanan apa? Bebas deh!' (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Ambil alih (J), 'Oke, aku pesankan menu paket buat semua agar lebih cepat ya' (I)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_b_32_id_A
 
         "Ambil alih (J), 'Oke, aku pesankan menu paket buat semua agar lebih cepat ya' (I).":
@@ -1071,6 +1197,8 @@ label show_question_q_b_32_id:
             $ JP -= 5
             $ user_choice_text = "Ambil alih (J), 'Oke, aku pesankan menu paket buat semua agar lebih cepat ya' (I)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Tanya ke yang lain! (E), 'Mau makanan apa? Bebas deh!' (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_b_32_id_B
 
 
@@ -1097,6 +1225,8 @@ label show_question_q_b_33_id:
             $ JP += 5
             $ user_choice_text = "Tanya pendapat orang lain (E), kalau bagus langsung beli aja! (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Tanyakan diri sendiri (I), 'lagi tidak ada di budget. jangan dulu deh' (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_b_33_id_A
 
         "Tanyakan diri sendiri (I), 'lagi tidak ada di budget. jangan dulu deh' (J).":
@@ -1104,6 +1234,8 @@ label show_question_q_b_33_id:
             $ JP -= 5
             $ user_choice_text = "Tanyakan diri sendiri (I), 'lagi tidak ada di budget. jangan dulu deh' (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Tanya pendapat orang lain (E), kalau bagus langsung beli aja! (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_b_33_id_B
 
 
@@ -1131,6 +1263,8 @@ label show_question_q_b_34_id:
             $ JP += 5
             $ user_choice_text = "'Benar juga!' Mumpung ada teman, ajak dia (E) geser-geser furnitur sekarang juga (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Biarkan. (I) 'Aku lebih suka, karena semuanya sudah ada di tempat yang seharusnya'(J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_b_34_id_A
 
         "Biarkan. (I) 'Aku lebih suka, karena semuanya sudah ada di tempat yang seharusnya'(J).":
@@ -1138,6 +1272,8 @@ label show_question_q_b_34_id:
             $ JP -= 5
             $ user_choice_text = "Biarkan. (I) 'Aku lebih suka, karena semuanya sudah ada di tempat yang seharusnya'(J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "'Benar juga!' Mumpung ada teman, ajak dia (E) geser-geser furnitur sekarang juga (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_b_34_id_B
 
 
@@ -1165,6 +1301,8 @@ label show_question_q_b_35_id:
             $ JP += 5
             $ user_choice_text = "Maju dengan percaya diri (E), ngomong mengalir, dengan lihat situasi (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Mundur sebentar (I), minta waktu buat mencatat poin-poin penting dahulu (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_b_35_id_A
 
         "Mundur sebentar (I), minta waktu buat mencatat poin-poin penting dahulu (J).":
@@ -1172,6 +1310,8 @@ label show_question_q_b_35_id:
             $ JP -= 5
             $ user_choice_text = "Mundur sebentar (I), minta waktu buat mencatat poin-poin penting dahulu (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Maju dengan percaya diri (E), ngomong mengalir, dengan lihat situasi (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_b_35_id_B
 
 
@@ -1199,6 +1339,8 @@ label show_question_q_b_36_id:
             $ JP -= 5
             $ user_choice_text = "Tutup tepat waktu (J), lindungi mayoritas yang sudah di dalam (T)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Tahan sebentar lagi (P), beri mereka kesempatan masuk dulu (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_b_36_id_A
 
         "Tahan sebentar lagi (P), beri mereka kesempatan masuk dulu (F).":
@@ -1206,6 +1348,8 @@ label show_question_q_b_36_id:
             $ JP += 5
             $ user_choice_text = "Tahan sebentar lagi (P), beri mereka kesempatan masuk dulu (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Tutup tepat waktu (J), lindungi mayoritas yang sudah di dalam (T)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_b_36_id_B
 
 
@@ -1232,6 +1376,8 @@ label show_question_q_b_37_id:
             $ JP -= 5
             $ user_choice_text = "Bantu pecah tugasnya jadi langkah kecil (T) agar tetap jalan sesuai tenggat (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Bebaskan dia rehat dulu (F), sisanya kita atur ulang nanti (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_b_37_id_A
 
         "Bebaskan dia rehat dulu (F), sisanya kita atur ulang nanti (P).":
@@ -1239,6 +1385,8 @@ label show_question_q_b_37_id:
             $ JP += 5
             $ user_choice_text = "Bebaskan dia rehat dulu (F), sisanya kita atur ulang nanti (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Bantu pecah tugasnya jadi langkah kecil (T) agar tetap jalan sesuai tenggat (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_b_37_id_B
 
 
@@ -1266,6 +1414,8 @@ label show_question_q_b_38_id:
             $ JP -= 5
             $ user_choice_text = "Nilai apa adanya dari rasa (T), adil bagi semua peserta lain (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Selipkan poin usaha (F), hargai proses kerasnya (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_b_38_id_A
 
         "Selipkan poin usaha (F), hargai proses kerasnya (P).":
@@ -1273,6 +1423,8 @@ label show_question_q_b_38_id:
             $ JP += 5
             $ user_choice_text = "Selipkan poin usaha (F), hargai proses kerasnya (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Nilai apa adanya dari rasa (T), adil bagi semua peserta lain (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_b_38_id_B
 
 
@@ -1301,6 +1453,8 @@ label show_question_q_b_39_id:
             $ JP -= 5
             $ user_choice_text = "Jalankan aturan (T), sama untuk setiap penumpang (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Bantu keringankan (F), dia jelas tersesat, bukan sengaja melanggar (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_b_39_id_A
 
         "Bantu keringankan (F), dia jelas tersesat, bukan sengaja melanggar (P).":
@@ -1308,6 +1462,8 @@ label show_question_q_b_39_id:
             $ JP += 5
             $ user_choice_text = "Bantu keringankan (F), dia jelas tersesat, bukan sengaja melanggar (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Jalankan aturan (T), sama untuk setiap penumpang (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_b_39_id_B
 
 
@@ -1334,6 +1490,8 @@ label show_question_q_b_40_id:
             $ JP -= 5
             $ user_choice_text = "Pertahankan sistemnya (T), sudah dihitung paling adil beban kerjanya (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Longgarkan, atur tukar jadwal (P) biar semua tetap nyaman (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_b_40_id_A
 
         "Longgarkan, atur tukar jadwal (P) biar semua tetap nyaman (F).":
@@ -1341,6 +1499,8 @@ label show_question_q_b_40_id:
             $ JP += 5
             $ user_choice_text = "Longgarkan, atur tukar jadwal (P) biar semua tetap nyaman (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Pertahankan sistemnya (T), sudah dihitung paling adil beban kerjanya (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_b_40_id_B
 
 
@@ -1368,6 +1528,8 @@ label show_question_q_c_41_id:
             $ SN -= 5
             $ user_choice_text = "Pergi sendiri (I) mengunjungi museum sejarah untuk melihat artefak bersejarah (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Ikut rombongan (E) menjelajahi hutan mitos yang penuh misteri (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_c_41_id_A
 
         "Ikut rombongan (E) menjelajahi hutan mitos yang penuh misteri (N).":
@@ -1375,6 +1537,8 @@ label show_question_q_c_41_id:
             $ SN += 5
             $ user_choice_text = "Ikut rombongan (E) menjelajahi hutan mitos yang penuh misteri (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Pergi sendiri (I) mengunjungi museum sejarah untuk melihat artefak bersejarah (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_c_41_id_B
 
 
@@ -1402,6 +1566,8 @@ label show_question_q_c_42_id:
             $ SN -= 5
             $ user_choice_text = "Simpan sendiri di brankas (I) sebagai aset fisik yang aman (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Traktir semua orang (E) sambil memikirkan kekayaanmu yang semakin bertambah (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_c_42_id_A
 
         "Traktir semua orang (E) sambil memikirkan kekayaanmu yang semakin bertambah (N).":
@@ -1409,6 +1575,8 @@ label show_question_q_c_42_id:
             $ SN += 5
             $ user_choice_text = "Traktir semua orang (E) sambil memikirkan kekayaanmu yang semakin bertambah (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Simpan sendiri di brankas (I) sebagai aset fisik yang aman (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_c_42_id_B
 
 
@@ -1435,6 +1603,8 @@ label show_question_q_c_43_id:
             $ SN -= 5
             $ user_choice_text = "Tanya orang lain (E), 'Ini gambar apa sih? Maksudnya apaan?' (S)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Diam (I) dan mencoba merasakan emosi pelukisnya (N)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_c_43_id_A
 
         "Diam (I) dan mencoba merasakan emosi pelukisnya (N).":
@@ -1442,6 +1612,8 @@ label show_question_q_c_43_id:
             $ SN += 5
             $ user_choice_text = "Diam (I) dan mencoba merasakan emosi pelukisnya (N)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Tanya orang lain (E), 'Ini gambar apa sih? Maksudnya apaan?' (S)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_c_43_id_B
 
 
@@ -1468,6 +1640,8 @@ label show_question_q_c_44_id:
             $ SN -= 5
             $ user_choice_text = "'Sini, tekan tombol maju, lalu lompat.' (S) Pandu dia langsung (E)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "'Kamu pahami dulu konsepnya.' (N) Biarkan dia belajar sendiri (I)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_c_44_id_A
 
         "'Kamu pahami dulu konsepnya.' (N) Biarkan dia belajar sendiri (I).":
@@ -1475,6 +1649,8 @@ label show_question_q_c_44_id:
             $ SN += 5
             $ user_choice_text = "'Kamu pahami dulu konsepnya.' (N) Biarkan dia belajar sendiri (I)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "'Sini, tekan tombol maju, lalu lompat.' (S) Pandu dia langsung (E)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_c_44_id_B
 
 
@@ -1502,6 +1678,8 @@ label show_question_q_c_45_id:
             $ SN -= 5
             $ user_choice_text = "Olahraga atau beres-beres (S) bareng di rumah (E)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Melakukan hal yang kamu suka, (I) sambil membayangkan apa yang bisa kamu lakukan di kemudian hari (N)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_c_45_id_A
 
         "Melakukan hal yang kamu suka, (I) sambil membayangkan apa yang bisa kamu lakukan di kemudian hari (N).":
@@ -1509,6 +1687,8 @@ label show_question_q_c_45_id:
             $ SN += 5
             $ user_choice_text = "Melakukan hal yang kamu suka, (I) sambil membayangkan apa yang bisa kamu lakukan di kemudian hari (N)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Olahraga atau beres-beres (S) bareng di rumah (E)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_c_45_id_B
 
 
@@ -1535,6 +1715,8 @@ label show_question_q_c_46_id:
             $ TF -= 5
             $ user_choice_text = "Bantu lihat faktanya (T) dan tawarkan langkah konkret untuk melangkah maju (S)."
             $ last_answer = "Sensing & Thinking"
+            $ unchosen_choice_text = "Temani dulu (N) dan dengarkan perasaannya tanpa buru-buru menilai (F)."
+            $ unchosen_answer = "Intuitive & Feeling"
             jump show_question_q_c_46_id_A
 
         "Temani dulu (N) dan dengarkan perasaannya tanpa buru-buru menilai (F).":
@@ -1542,6 +1724,8 @@ label show_question_q_c_46_id:
             $ TF += 5
             $ user_choice_text = "Temani dulu (N) dan dengarkan perasaannya tanpa buru-buru menilai (F)."
             $ last_answer = "Intuitive & Feeling"
+            $ unchosen_choice_text = "Bantu lihat faktanya (T) dan tawarkan langkah konkret untuk melangkah maju (S)."
+            $ unchosen_answer = "Sensing & Thinking"
             jump show_question_q_c_46_id_B
 
 
@@ -1568,6 +1752,8 @@ label show_question_q_c_47_id:
             $ TF -= 5
             $ user_choice_text = "'Ah..Jelek banget! (T) Banyak adegan yang nggak dijelaskan kaitannya! (S).'"
             $ last_answer = "Sensing & Thinking"
+            $ unchosen_choice_text = "'Keren... (F) Maknanya dalam banget, soal harapan yang sirna (N).'"
+            $ unchosen_answer = "Intuitive & Feeling"
             jump show_question_q_c_47_id_A
 
         "'Keren... (F) Maknanya dalam banget, soal harapan yang sirna (N).'":
@@ -1575,6 +1761,8 @@ label show_question_q_c_47_id:
             $ TF += 5
             $ user_choice_text = "'Keren... (F) Maknanya dalam banget, soal harapan yang sirna (N).'"
             $ last_answer = "Intuitive & Feeling"
+            $ unchosen_choice_text = "'Ah..Jelek banget! (T) Banyak adegan yang nggak dijelaskan kaitannya! (S).'"
+            $ unchosen_answer = "Sensing & Thinking"
             jump show_question_q_c_47_id_B
 
 
@@ -1602,6 +1790,8 @@ label show_question_q_c_48_id:
             $ TF += 5
             $ user_choice_text = "Tolak (F). 'Tawarannya belum jelas' (N) tidak yakin bakal dibawa kemana."
             $ last_answer = "Intuitive & Feeling"
+            $ unchosen_choice_text = "Terima aja (T). Secara finansial (S) kita lagi butuh uangnya."
+            $ unchosen_answer = "Sensing & Thinking"
             jump show_question_q_c_48_id_A
 
         "Terima aja (T). Secara finansial (S) kita lagi butuh uangnya.":
@@ -1609,6 +1799,8 @@ label show_question_q_c_48_id:
             $ TF -= 5
             $ user_choice_text = "Terima aja (T). Secara finansial (S) kita lagi butuh uangnya."
             $ last_answer = "Sensing & Thinking"
+            $ unchosen_choice_text = "Tolak (F). 'Tawarannya belum jelas' (N) tidak yakin bakal dibawa kemana."
+            $ unchosen_answer = "Intuitive & Feeling"
             jump show_question_q_c_48_id_B
 
 
@@ -1635,6 +1827,8 @@ label show_question_q_c_49_id:
             $ TF -= 5
             $ user_choice_text = "Skill teknis (S) yang berguna buat cari kerja (T)."
             $ last_answer = "Sensing & Thinking"
+            $ unchosen_choice_text = "Skill seni (N) yang bisa menyentuh hati orang (F)."
+            $ unchosen_answer = "Intuitive & Feeling"
             jump show_question_q_c_49_id_A
 
         "Skill seni (N) yang bisa menyentuh hati orang (F).":
@@ -1642,6 +1836,8 @@ label show_question_q_c_49_id:
             $ TF += 5
             $ user_choice_text = "Skill seni (N) yang bisa menyentuh hati orang (F)."
             $ last_answer = "Intuitive & Feeling"
+            $ unchosen_choice_text = "Skill teknis (S) yang berguna buat cari kerja (T)."
+            $ unchosen_answer = "Sensing & Thinking"
             jump show_question_q_c_49_id_B
 
 
@@ -1668,6 +1864,8 @@ label show_question_q_c_50_id:
             $ TF -= 5
             $ user_choice_text = "Koreksi dia (T). Tunjukkan data asli (S) agar dia tidak membuat dirinya malu."
             $ last_answer = "Sensing & Thinking"
+            $ unchosen_choice_text = "Biarkan saja (F). Nanti dia sadar sendiri (N), daripada ribut di sini."
+            $ unchosen_answer = "Intuitive & Feeling"
             jump show_question_q_c_50_id_A
 
         "Biarkan saja (F). Nanti dia sadar sendiri (N), daripada ribut di sini.":
@@ -1675,6 +1873,8 @@ label show_question_q_c_50_id:
             $ TF += 5
             $ user_choice_text = "Biarkan saja (F). Nanti dia sadar sendiri (N), daripada ribut di sini."
             $ last_answer = "Intuitive & Feeling"
+            $ unchosen_choice_text = "Koreksi dia (T). Tunjukkan data asli (S) agar dia tidak membuat dirinya malu."
+            $ unchosen_answer = "Sensing & Thinking"
             jump show_question_q_c_50_id_B
 
 
@@ -1702,6 +1902,8 @@ label show_question_q_c_51_id:
             $ JP -= 5
             $ user_choice_text = "Cek saku, tas, lantai secara urut (S). Jangan panik, coba ingat kembali (J)."
             $ last_answer = "Sensing & Judging"
+            $ unchosen_choice_text = "Cari tiket di tempat yang mungkin terselip (P). Bisa jadi jatuh di jalan(N)."
+            $ unchosen_answer = "Intuitive & Perceiving"
             jump show_question_q_c_51_id_A
 
         "Cari tiket di tempat yang mungkin terselip (P). Bisa jadi jatuh di jalan(N).":
@@ -1709,6 +1911,8 @@ label show_question_q_c_51_id:
             $ JP += 5
             $ user_choice_text = "Cari tiket di tempat yang mungkin terselip (P). Bisa jadi jatuh di jalan(N)."
             $ last_answer = "Intuitive & Perceiving"
+            $ unchosen_choice_text = "Cek saku, tas, lantai secara urut (S). Jangan panik, coba ingat kembali (J)."
+            $ unchosen_answer = "Sensing & Judging"
             jump show_question_q_c_51_id_B
 
 
@@ -1735,6 +1939,8 @@ label show_question_q_c_52_id:
             $ JP -= 5
             $ user_choice_text = "Masak telur dadar aja (S). Pasti enak dan sudah jelas rasanya (J)."
             $ last_answer = "Sensing & Judging"
+            $ unchosen_choice_text = "Campur semuanya! (N) Siapa tahu jadi masterpiece baru (P)."
+            $ unchosen_answer = "Intuitive & Perceiving"
             jump show_question_q_c_52_id_A
 
         "Campur semuanya! (N) Siapa tahu jadi masterpiece baru (P).":
@@ -1742,6 +1948,8 @@ label show_question_q_c_52_id:
             $ JP += 5
             $ user_choice_text = "Campur semuanya! (N) Siapa tahu jadi masterpiece baru (P)."
             $ last_answer = "Intuitive & Perceiving"
+            $ unchosen_choice_text = "Masak telur dadar aja (S). Pasti enak dan sudah jelas rasanya (J)."
+            $ unchosen_answer = "Sensing & Judging"
             jump show_question_q_c_52_id_B
 
 
@@ -1768,6 +1976,8 @@ label show_question_q_c_53_id:
             $ JP -= 5
             $ user_choice_text = "Baca rangkuman bab (S) sesuai apa yang mungkin keluar di ujian (J)."
             $ last_answer = "Sensing & Judging"
+            $ unchosen_choice_text = "Baca bagian yang paling kamu pahami saja (N), sisanya bisa dipikir saat ujian (P)."
+            $ unchosen_answer = "Intuitive & Perceiving"
             jump show_question_q_c_53_id_A
 
         "Baca bagian yang paling kamu pahami saja (N), sisanya bisa dipikir saat ujian (P).":
@@ -1775,6 +1985,8 @@ label show_question_q_c_53_id:
             $ JP += 5
             $ user_choice_text = "Baca bagian yang paling kamu pahami saja (N), sisanya bisa dipikir saat ujian (P)."
             $ last_answer = "Intuitive & Perceiving"
+            $ unchosen_choice_text = "Baca rangkuman bab (S) sesuai apa yang mungkin keluar di ujian (J)."
+            $ unchosen_answer = "Sensing & Judging"
             jump show_question_q_c_53_id_B
 
 
@@ -1801,6 +2013,8 @@ label show_question_q_c_54_id:
             $ JP -= 5
             $ user_choice_text = "Tolak halus. 'Saya butuh detail (S) dan deadline yang jelas (J).'"
             $ last_answer = "Sensing & Judging"
+            $ unchosen_choice_text = "Terima! 'Siap, saya akan improvisasi (N) sambil jalan (P).'"
+            $ unchosen_answer = "Intuitive & Perceiving"
             jump show_question_q_c_54_id_A
 
         "Terima! 'Siap, saya akan improvisasi (N) sambil jalan (P).'":
@@ -1808,6 +2022,8 @@ label show_question_q_c_54_id:
             $ JP += 5
             $ user_choice_text = "Terima! 'Siap, saya akan improvisasi (N) sambil jalan (P).'"
             $ last_answer = "Intuitive & Perceiving"
+            $ unchosen_choice_text = "Tolak halus. 'Saya butuh detail (S) dan deadline yang jelas (J).'"
+            $ unchosen_answer = "Sensing & Judging"
             jump show_question_q_c_54_id_B
 
 
@@ -1834,6 +2050,8 @@ label show_question_q_c_55_id:
             $ JP -= 5
             $ user_choice_text = "Sortir barang (S). Buang yang menurutmu kurang penting (J)."
             $ last_answer = "Sensing & Judging"
+            $ unchosen_choice_text = "'Kita gak tahu, mungkin butuh barang ini di kemudian hari, jadi bawa semua! (N)'. Nanti semua bisa diatur lagi di sana (P)."
+            $ unchosen_answer = "Intuitive & Perceiving"
             jump show_question_q_c_55_id_A
 
         "'Kita gak tahu, mungkin butuh barang ini di kemudian hari, jadi bawa semua! (N)'. Nanti semua bisa diatur lagi di sana (P).":
@@ -1841,6 +2059,8 @@ label show_question_q_c_55_id:
             $ JP += 5
             $ user_choice_text = "'Kita gak tahu, mungkin butuh barang ini di kemudian hari, jadi bawa semua! (N)'. Nanti semua bisa diatur lagi di sana (P)."
             $ last_answer = "Intuitive & Perceiving"
+            $ unchosen_choice_text = "Sortir barang (S). Buang yang menurutmu kurang penting (J)."
+            $ unchosen_answer = "Sensing & Judging"
             jump show_question_q_c_55_id_B
 
 
@@ -1868,6 +2088,8 @@ label show_question_q_c_56_id:
             $ JP -= 5
             $ user_choice_text = "Dorong dia jujur bercerita ke ibu (J) dan hadapi dengan tenang (T)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Temani dia bicara ke ibu (P), tekankan bahwa itu murni kecelakaan (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_c_56_id_A
 
         "Temani dia bicara ke ibu (P), tekankan bahwa itu murni kecelakaan (F).":
@@ -1875,6 +2097,8 @@ label show_question_q_c_56_id:
             $ JP += 5
             $ user_choice_text = "Temani dia bicara ke ibu (P), tekankan bahwa itu murni kecelakaan (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Dorong dia jujur bercerita ke ibu (J) dan hadapi dengan tenang (T)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_c_56_id_B
 
 
@@ -1902,6 +2126,8 @@ label show_question_q_c_57_id:
             $ JP -= 5
             $ user_choice_text = "Nanti, setelah analisis untung-rugi (T) selesai 100%% (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Sekarang! (P) Yang penting banyak orang suka idenya (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_c_57_id_A
 
         "Sekarang! (P) Yang penting banyak orang suka idenya (F).":
@@ -1909,6 +2135,8 @@ label show_question_q_c_57_id:
             $ JP += 5
             $ user_choice_text = "Sekarang! (P) Yang penting banyak orang suka idenya (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Nanti, setelah analisis untung-rugi (T) selesai 100%% (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_c_57_id_B
 
 
@@ -1936,6 +2164,8 @@ label show_question_q_c_58_id:
             $ JP -= 5
             $ user_choice_text = "Tambah latihan terjadwal (J), fokus perbaiki hal yang terukur (T)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Santai dulu, guys (P), jaga semangat biar kita tetap solid bermain bareng (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_c_58_id_A
 
         "Santai dulu, guys (P), jaga semangat biar kita tetap solid bermain bareng (F).":
@@ -1943,6 +2173,8 @@ label show_question_q_c_58_id:
             $ JP += 5
             $ user_choice_text = "Santai dulu, guys (P), jaga semangat biar kita tetap solid bermain bareng (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Tambah latihan terjadwal (J), fokus perbaiki hal yang terukur (T)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_c_58_id_B
 
 
@@ -1970,6 +2202,8 @@ label show_question_q_c_59_id:
             $ JP -= 5
             $ user_choice_text = "Kekuatannya (T) dan kondisinya yang masih utuh (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Cerita legendanya (F) dan misteri siapa pemiliknya dulu (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_c_59_id_A
 
         "Cerita legendanya (F) dan misteri siapa pemiliknya dulu (P).":
@@ -1977,6 +2211,8 @@ label show_question_q_c_59_id:
             $ JP += 5
             $ user_choice_text = "Cerita legendanya (F) dan misteri siapa pemiliknya dulu (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Kekuatannya (T) dan kondisinya yang masih utuh (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_c_59_id_B
 
 
@@ -2003,6 +2239,8 @@ label show_question_q_c_60_id:
             $ JP -= 5
             $ user_choice_text = "Ajukan revisi resmi (J). Tunjukkan poin yang tidak efisien (T)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Bikin petisi secara emosional (F). Minta kelonggaran aturan (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_c_60_id_A
 
         "Bikin petisi secara emosional (F). Minta kelonggaran aturan (P).":
@@ -2010,6 +2248,8 @@ label show_question_q_c_60_id:
             $ JP += 5
             $ user_choice_text = "Bikin petisi secara emosional (F). Minta kelonggaran aturan (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Ajukan revisi resmi (J). Tunjukkan poin yang tidak efisien (T)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_c_60_id_B
 
 
@@ -2040,6 +2280,8 @@ label show_question_q_a_01_en:
             $ SN -= 5
             $ user_choice_text = "Go home alone (I) and eat nutritious food to recover physically (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Gather with friends and talk (E) about the idea for the next trip (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_a_01_en_A
 
         "Gather with friends and talk (E) about the idea for the next trip (N).":
@@ -2047,6 +2289,8 @@ label show_question_q_a_01_en:
             $ SN += 5
             $ user_choice_text = "Gather with friends and talk (E) about the idea for the next trip (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Go home alone (I) and eat nutritious food to recover physically (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_a_01_en_B
 
 
@@ -2075,6 +2319,8 @@ label show_question_q_a_02_en:
             $ SN -= 5
             $ user_choice_text = "Observe them from your seat (I), while monitoring their movements (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Immediately greet them (E), and ask where they are going with such an outfit (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_a_02_en_A
 
         "Immediately greet them (E), and ask where they are going with such an outfit (N).":
@@ -2082,6 +2328,8 @@ label show_question_q_a_02_en:
             $ SN += 5
             $ user_choice_text = "Immediately greet them (E), and ask where they are going with such an outfit (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Observe them from your seat (I), while monitoring their movements (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_a_02_en_B
 
 
@@ -2109,6 +2357,8 @@ label show_question_q_a_03_en:
             $ SN -= 5
             $ user_choice_text = "Call the whole team (E) to divide the physical tasks (S) right now."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Call a close colleague (I) to try out the assistance program you just developed (N)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_a_03_en_A
 
         "Call a close colleague (I) to try out the assistance program you just developed (N).":
@@ -2116,6 +2366,8 @@ label show_question_q_a_03_en:
             $ SN += 5
             $ user_choice_text = "Call a close colleague (I) to try out the assistance program you just developed (N)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Call the whole team (E) to divide the physical tasks (S) right now."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_a_03_en_B
 
 
@@ -2142,6 +2394,8 @@ label show_question_q_a_04_en:
             $ SN -= 5
             $ user_choice_text = "Contact and ask a friend (E) to ask for the missing raw ingredient (S)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Stay in the kitchen (I) and try experimenting (N) by replacing it with another ingredient."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_a_04_en_A
 
         "Stay in the kitchen (I) and try experimenting (N) by replacing it with another ingredient.":
@@ -2149,6 +2403,8 @@ label show_question_q_a_04_en:
             $ SN += 5
             $ user_choice_text = "Stay in the kitchen (I) and try experimenting (N) by replacing it with another ingredient."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Contact and ask a friend (E) to ask for the missing raw ingredient (S)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_a_04_en_B
 
 
@@ -2176,6 +2432,8 @@ label show_question_q_a_05_en:
             $ SN -= 5
             $ user_choice_text = "Join the comments with other residents (E) and look for evidence (S) of the incident."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Read and observe (I), try to imagine what really happened (N)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_a_05_en_A
 
         "Read and observe (I), try to imagine what really happened (N).":
@@ -2183,6 +2441,8 @@ label show_question_q_a_05_en:
             $ SN += 5
             $ user_choice_text = "Read and observe (I), try to imagine what really happened (N)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Join the comments with other residents (E) and look for evidence (S) of the incident."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_a_05_en_B
 
 
@@ -2210,6 +2470,8 @@ label show_question_q_a_06_en:
             $ TF -= 5
             $ user_choice_text = "Talk it out in front of the team (E) to map a clear fix (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Pull him aside privately (I) and calm his nerves first (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_a_06_en_A
 
         "Pull him aside privately (I) and calm his nerves first (F).":
@@ -2217,6 +2479,8 @@ label show_question_q_a_06_en:
             $ TF += 5
             $ user_choice_text = "Pull him aside privately (I) and calm his nerves first (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Talk it out in front of the team (E) to map a clear fix (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_a_06_en_B
 
 
@@ -2243,6 +2507,8 @@ label show_question_q_a_07_en:
             $ TF -= 5
             $ user_choice_text = "Protest to the officer (E) because the rule is illogical (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Remain silent (I), because maybe it's true, it could ruin the peaceful atmosphere (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_a_07_en_A
 
         "Remain silent (I), because maybe it's true, it could ruin the peaceful atmosphere (F).":
@@ -2250,6 +2516,8 @@ label show_question_q_a_07_en:
             $ TF += 5
             $ user_choice_text = "Remain silent (I), because maybe it's true, it could ruin the peaceful atmosphere (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Protest to the officer (E) because the rule is illogical (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_a_07_en_B
 
 
@@ -2276,6 +2544,8 @@ label show_question_q_a_08_en:
             $ TF -= 5
             $ user_choice_text = "Try to approach and ask directly (E), analyze the problem (T) to find a solution."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Quietly give them a tissue (I) because you feel sorry for them (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_a_08_en_A
 
         "Quietly give them a tissue (I) because you feel sorry for them (F).":
@@ -2283,6 +2553,8 @@ label show_question_q_a_08_en:
             $ TF += 5
             $ user_choice_text = "Quietly give them a tissue (I) because you feel sorry for them (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Try to approach and ask directly (E), analyze the problem (T) to find a solution."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_a_08_en_B
 
 
@@ -2310,6 +2582,8 @@ label show_question_q_a_09_en:
             $ TF -= 5
             $ user_choice_text = "Debate with the Captain (E) because the calculation is wrong (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Just accept it (I) because maybe the captain needs it more (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_a_09_en_A
 
         "Just accept it (I) because maybe the captain needs it more (F).":
@@ -2317,6 +2591,8 @@ label show_question_q_a_09_en:
             $ TF += 5
             $ user_choice_text = "Just accept it (I) because maybe the captain needs it more (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Debate with the Captain (E) because the calculation is wrong (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_a_09_en_B
 
 
@@ -2344,6 +2620,8 @@ label show_question_q_a_10_en:
             $ TF -= 5
             $ user_choice_text = "Ask the voice back (E) 'approximately, which door is the safest (T)?'"
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Close your eyes (I) and follow your heart (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_a_10_en_A
 
         "Close your eyes (I) and follow your heart (F).":
@@ -2351,6 +2629,8 @@ label show_question_q_a_10_en:
             $ TF += 5
             $ user_choice_text = "Close your eyes (I) and follow your heart (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Ask the voice back (E) 'approximately, which door is the safest (T)?'"
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_a_10_en_B
 
 
@@ -2378,6 +2658,8 @@ label show_question_q_a_11_en:
             $ JP += 5
             $ user_choice_text = "Go! (E) We’ll think about the consequences later (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Refuse (I) because you have to check the schedule (J) first."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_a_11_en_A
 
         "Refuse (I) because you have to check the schedule (J) first.":
@@ -2385,6 +2667,8 @@ label show_question_q_a_11_en:
             $ JP -= 5
             $ user_choice_text = "Refuse (I) because you have to check the schedule (J) first."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Go! (E) We’ll think about the consequences later (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_a_11_en_B
 
 
@@ -2413,6 +2697,8 @@ label show_question_q_a_12_en:
             $ JP += 5
             $ user_choice_text = "Awesome! (E) We are free to explore the city! (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Oh dear! (I) I should have arrived earlier (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_a_12_en_A
 
         "Oh dear! (I) I should have arrived earlier (J).":
@@ -2420,6 +2706,8 @@ label show_question_q_a_12_en:
             $ JP -= 5
             $ user_choice_text = "Oh dear! (I) I should have arrived earlier (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Awesome! (E) We are free to explore the city! (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_a_12_en_B
 
 
@@ -2447,6 +2735,8 @@ label show_question_q_a_13_en:
             $ JP += 5
             $ user_choice_text = "Invite all friends! (E) They are free to bring whatever they want (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Try to choose the best menu according to you (I) and determine the exact time (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_a_13_en_A
 
         "Try to choose the best menu according to you (I) and determine the exact time (J).":
@@ -2454,6 +2744,8 @@ label show_question_q_a_13_en:
             $ JP -= 5
             $ user_choice_text = "Try to choose the best menu according to you (I) and determine the exact time (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Invite all friends! (E) They are free to bring whatever they want (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_a_13_en_B
 
 
@@ -2481,6 +2773,8 @@ label show_question_q_a_14_en:
             $ JP += 5
             $ user_choice_text = "Change the paint (E) and reorganize the items in the room now (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Just let it be (I) because this position is already efficient (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_a_14_en_A
 
         "Just let it be (I) because this position is already efficient (J).":
@@ -2488,6 +2782,8 @@ label show_question_q_a_14_en:
             $ JP -= 5
             $ user_choice_text = "Just let it be (I) because this position is already efficient (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Change the paint (E) and reorganize the items in the room now (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_a_14_en_B
 
 
@@ -2515,6 +2811,8 @@ label show_question_q_a_15_en:
             $ JP += 5
             $ user_choice_text = "Ask the seller for advice (E) and buy the first item you see (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Try to look around (I) and buy according to your needs (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_a_15_en_A
 
         "Try to look around (I) and buy according to your needs (J).":
@@ -2522,6 +2820,8 @@ label show_question_q_a_15_en:
             $ JP -= 5
             $ user_choice_text = "Try to look around (I) and buy according to your needs (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Ask the seller for advice (E) and buy the first item you see (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_a_15_en_B
 
 
@@ -2549,6 +2849,8 @@ label show_question_q_a_16_en:
             $ JP -= 5
             $ user_choice_text = "Diffuse their anger (T) and explain the evidence first (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "'Why am I being yelled at? (F) Did I do something wrong? (P)'."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_a_16_en_A
 
         "'Why am I being yelled at? (F) Did I do something wrong? (P)'.":
@@ -2556,6 +2858,8 @@ label show_question_q_a_16_en:
             $ JP += 5
             $ user_choice_text = "'Why am I being yelled at? (F) Did I do something wrong? (P)'."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Diffuse their anger (T) and explain the evidence first (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_a_16_en_B
 
 
@@ -2582,6 +2886,8 @@ label show_question_q_a_17_en:
             $ JP -= 5
             $ user_choice_text = "Start over by the recipe (J) so it turns out right (T)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Use the one you have (P), what matters is it was made sincerely (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_a_17_en_A
 
         "Use the one you have (P), what matters is it was made sincerely (F).":
@@ -2589,6 +2895,8 @@ label show_question_q_a_17_en:
             $ JP += 5
             $ user_choice_text = "Use the one you have (P), what matters is it was made sincerely (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Start over by the recipe (J) so it turns out right (T)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_a_17_en_B
 
 
@@ -2616,6 +2924,8 @@ label show_question_q_a_18_en:
             $ JP -= 5
             $ user_choice_text = "The color composition (T), the technique, everything is perfect and neat! (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "This painting (F) has deep and beautiful emotion (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_a_18_en_A
 
         "This painting (F) has deep and beautiful emotion (P).":
@@ -2623,6 +2933,8 @@ label show_question_q_a_18_en:
             $ JP += 5
             $ user_choice_text = "This painting (F) has deep and beautiful emotion (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "The color composition (T), the technique, everything is perfect and neat! (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_a_18_en_B
 
 
@@ -2650,6 +2962,8 @@ label show_question_q_a_19_en:
             $ JP -= 5
             $ user_choice_text = "Blow the whistle anyway (T), fair to everyone who played clean (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Let it slide just this once (F), he clearly did not mean it (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_a_19_en_A
 
         "Let it slide just this once (F), he clearly did not mean it (P).":
@@ -2657,6 +2971,8 @@ label show_question_q_a_19_en:
             $ JP += 5
             $ user_choice_text = "Let it slide just this once (F), he clearly did not mean it (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Blow the whistle anyway (T), fair to everyone who played clean (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_a_19_en_B
 
 
@@ -2683,6 +2999,8 @@ label show_question_q_a_20_en:
             $ JP -= 5
             $ user_choice_text = "Set a clear target (T) and lay out measurable milestones (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Lift their spirits (F), rally them to move together for the team (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_a_20_en_A
 
         "Lift their spirits (F), rally them to move together for the team (P).":
@@ -2690,6 +3008,8 @@ label show_question_q_a_20_en:
             $ JP += 5
             $ user_choice_text = "Lift their spirits (F), rally them to move together for the team (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Set a clear target (T) and lay out measurable milestones (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_a_20_en_B
 
 
@@ -2718,6 +3038,8 @@ label show_question_q_b_21_en:
             $ SN -= 5
             $ user_choice_text = "Read it alone calmly (I) and follow the measurements precisely (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Call friends (E) to guess and create a new magical flavor (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_b_21_en_A
 
         "Call friends (E) to guess and create a new magical flavor (N).":
@@ -2725,6 +3047,8 @@ label show_question_q_b_21_en:
             $ SN += 5
             $ user_choice_text = "Call friends (E) to guess and create a new magical flavor (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Read it alone calmly (I) and follow the measurements precisely (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_b_21_en_B
 
 
@@ -2752,6 +3076,8 @@ label show_question_q_b_22_en:
             $ SN -= 5
             $ user_choice_text = "Ask for time alone (I) to compile existing facts and data (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Have a casual discussion (E) and convey your idea about the vision for the future (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_b_22_en_A
 
         "Have a casual discussion (E) and convey your idea about the vision for the future (N).":
@@ -2759,6 +3085,8 @@ label show_question_q_b_22_en:
             $ SN += 5
             $ user_choice_text = "Have a casual discussion (E) and convey your idea about the vision for the future (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Ask for time alone (I) to compile existing facts and data (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_b_22_en_B
 
 
@@ -2786,6 +3114,8 @@ label show_question_q_b_23_en:
             $ SN -= 5
             $ user_choice_text = "'Illustrated Encyclopedia' (S) which can be read with friends (E)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "'Thick Philosophy' (N) which is interesting to read in a quiet place (I)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_b_23_en_A
 
         "'Thick Philosophy' (N) which is interesting to read in a quiet place (I).":
@@ -2793,6 +3123,8 @@ label show_question_q_b_23_en:
             $ SN += 5
             $ user_choice_text = "'Thick Philosophy' (N) which is interesting to read in a quiet place (I)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "'Illustrated Encyclopedia' (S) which can be read with friends (E)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_b_23_en_B
 
 
@@ -2820,6 +3152,8 @@ label show_question_q_b_24_en:
             $ SN -= 5
             $ user_choice_text = "Join them (E) but look for a regular stall that is definitely cheap and delicious (S)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Refuse first (I), you want to try looking for cheap and unique food that might be around your place (N)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_b_24_en_A
 
         "Refuse first (I), you want to try looking for cheap and unique food that might be around your place (N).":
@@ -2827,6 +3161,8 @@ label show_question_q_b_24_en:
             $ SN += 5
             $ user_choice_text = "Refuse first (I), you want to try looking for cheap and unique food that might be around your place (N)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Join them (E) but look for a regular stall that is definitely cheap and delicious (S)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_b_24_en_B
 
 
@@ -2853,6 +3189,8 @@ label show_question_q_b_25_en:
             $ SN -= 5
             $ user_choice_text = "Call an officer (E) to safely check its contents (S)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Observe from a distance (I) while imagining what the contents of the suitcase really are (N)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_b_25_en_A
 
         "Observe from a distance (I) while imagining what the contents of the suitcase really are (N).":
@@ -2860,6 +3198,8 @@ label show_question_q_b_25_en:
             $ SN += 5
             $ user_choice_text = "Observe from a distance (I) while imagining what the contents of the suitcase really are (N)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Call an officer (E) to safely check its contents (S)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_b_25_en_B
 
 
@@ -2886,6 +3226,8 @@ label show_question_q_b_26_en:
             $ TF -= 5
             $ user_choice_text = "Confront them directly! (E) and ask them to logically explain what happened (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Send them a private message (I), then ask if they are okay (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_b_26_en_A
 
         "Send them a private message (I), then ask if they are okay (F).":
@@ -2893,6 +3235,8 @@ label show_question_q_b_26_en:
             $ TF += 5
             $ user_choice_text = "Send them a private message (I), then ask if they are okay (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Confront them directly! (E) and ask them to logically explain what happened (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_b_26_en_B
 
 
@@ -2920,6 +3264,8 @@ label show_question_q_b_27_en:
             $ TF -= 5
             $ user_choice_text = "Tell them straight (E) which part is wrong so they can fix it (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Just keep quiet or smile (I), you can't bear to hurt their feelings (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_b_27_en_A
 
         "Just keep quiet or smile (I), you can't bear to hurt their feelings (F).":
@@ -2927,6 +3273,8 @@ label show_question_q_b_27_en:
             $ TF += 5
             $ user_choice_text = "Just keep quiet or smile (I), you can't bear to hurt their feelings (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Tell them straight (E) which part is wrong so they can fix it (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_b_27_en_B
 
 
@@ -2954,6 +3302,8 @@ label show_question_q_b_28_en:
             $ TF -= 5
             $ user_choice_text = "Confront them (E), 'Please be quiet, your arguments are illogical!' (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Move tables (I), move away because the energy is too negative (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_b_28_en_A
 
         "Move tables (I), move away because the energy is too negative (F).":
@@ -2961,6 +3311,8 @@ label show_question_q_b_28_en:
             $ TF += 5
             $ user_choice_text = "Move tables (I), move away because the energy is too negative (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Confront them (E), 'Please be quiet, your arguments are illogical!' (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_b_28_en_B
 
 
@@ -2987,6 +3339,8 @@ label show_question_q_b_29_en:
             $ TF -= 5
             $ user_choice_text = "Open debate (E), choose the one with the strongest statistics (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Reflect with a few close friends (I), then choose the one with the most sincere heart (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_b_29_en_A
 
         "Reflect with a few close friends (I), then choose the one with the most sincere heart (F).":
@@ -2994,6 +3348,8 @@ label show_question_q_b_29_en:
             $ TF += 5
             $ user_choice_text = "Reflect with a few close friends (I), then choose the one with the most sincere heart (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Open debate (E), choose the one with the strongest statistics (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_b_29_en_B
 
 
@@ -3020,6 +3376,8 @@ label show_question_q_b_30_en:
             $ TF -= 5
             $ user_choice_text = "Gather them (E) to create a protest petition to the government (T)."
             $ last_answer = "Extrovert & Thinking"
+            $ unchosen_choice_text = "Sit quietly (I) there as a sign of solidarity (F)."
+            $ unchosen_answer = "Introvert & Feeling"
             jump show_question_q_b_30_en_A
 
         "Sit quietly (I) there as a sign of solidarity (F).":
@@ -3027,6 +3385,8 @@ label show_question_q_b_30_en:
             $ TF += 5
             $ user_choice_text = "Sit quietly (I) there as a sign of solidarity (F)."
             $ last_answer = "Introvert & Feeling"
+            $ unchosen_choice_text = "Gather them (E) to create a protest petition to the government (T)."
+            $ unchosen_answer = "Extrovert & Thinking"
             jump show_question_q_b_30_en_B
 
 
@@ -3054,6 +3414,8 @@ label show_question_q_b_31_en:
             $ JP += 5
             $ user_choice_text = "Shout 'Wait!' (E) and run through the gate without thinking (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Resign (I). 'This is my fault for not checking the schedule this morning' (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_b_31_en_A
 
         "Resign (I). 'This is my fault for not checking the schedule this morning' (J).":
@@ -3061,6 +3423,8 @@ label show_question_q_b_31_en:
             $ JP -= 5
             $ user_choice_text = "Resign (I). 'This is my fault for not checking the schedule this morning' (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Shout 'Wait!' (E) and run through the gate without thinking (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_b_31_en_B
 
 
@@ -3088,6 +3452,8 @@ label show_question_q_b_32_en:
             $ JP += 5
             $ user_choice_text = "Ask everyone! (E), 'What food do you want? Anything goes!' (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Take charge (J), 'Okay, I'll order the package menu for everyone to speed things up' (I)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_b_32_en_A
 
         "Take charge (J), 'Okay, I'll order the package menu for everyone to speed things up' (I).":
@@ -3095,6 +3461,8 @@ label show_question_q_b_32_en:
             $ JP -= 5
             $ user_choice_text = "Take charge (J), 'Okay, I'll order the package menu for everyone to speed things up' (I)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Ask everyone! (E), 'What food do you want? Anything goes!' (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_b_32_en_B
 
 
@@ -3121,6 +3489,8 @@ label show_question_q_b_33_en:
             $ JP += 5
             $ user_choice_text = "Ask others' opinions (E), if it's good, just buy it! (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Ask yourself (I), 'It's not in the budget. Don't do it yet' (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_b_33_en_A
 
         "Ask yourself (I), 'It's not in the budget. Don't do it yet' (J).":
@@ -3128,6 +3498,8 @@ label show_question_q_b_33_en:
             $ JP -= 5
             $ user_choice_text = "Ask yourself (I), 'It's not in the budget. Don't do it yet' (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Ask others' opinions (E), if it's good, just buy it! (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_b_33_en_B
 
 
@@ -3155,6 +3527,8 @@ label show_question_q_b_34_en:
             $ JP += 5
             $ user_choice_text = "'That's right!' Since a friend is here, ask them (E) to move the furniture around right now (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Leave it. (I) 'I prefer it, because everything is already in its proper place' (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_b_34_en_A
 
         "Leave it. (I) 'I prefer it, because everything is already in its proper place' (J).":
@@ -3162,6 +3536,8 @@ label show_question_q_b_34_en:
             $ JP -= 5
             $ user_choice_text = "Leave it. (I) 'I prefer it, because everything is already in its proper place' (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "'That's right!' Since a friend is here, ask them (E) to move the furniture around right now (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_b_34_en_B
 
 
@@ -3189,6 +3565,8 @@ label show_question_q_b_35_en:
             $ JP += 5
             $ user_choice_text = "Step forward confidently (E), speak freely, watching the situation (P)."
             $ last_answer = "Extrovert & Perceiving"
+            $ unchosen_choice_text = "Step back for a moment (I), ask for time to jot down key points first (J)."
+            $ unchosen_answer = "Introvert & Judging"
             jump show_question_q_b_35_en_A
 
         "Step back for a moment (I), ask for time to jot down key points first (J).":
@@ -3196,6 +3574,8 @@ label show_question_q_b_35_en:
             $ JP -= 5
             $ user_choice_text = "Step back for a moment (I), ask for time to jot down key points first (J)."
             $ last_answer = "Introvert & Judging"
+            $ unchosen_choice_text = "Step forward confidently (E), speak freely, watching the situation (P)."
+            $ unchosen_answer = "Extrovert & Perceiving"
             jump show_question_q_b_35_en_B
 
 
@@ -3223,6 +3603,8 @@ label show_question_q_b_36_en:
             $ JP -= 5
             $ user_choice_text = "Close it on time (J), protect the majority already inside (T)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Hold it a bit longer (P), give them a chance to get in first (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_b_36_en_A
 
         "Hold it a bit longer (P), give them a chance to get in first (F).":
@@ -3230,6 +3612,8 @@ label show_question_q_b_36_en:
             $ JP += 5
             $ user_choice_text = "Hold it a bit longer (P), give them a chance to get in first (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Close it on time (J), protect the majority already inside (T)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_b_36_en_B
 
 
@@ -3256,6 +3640,8 @@ label show_question_q_b_37_en:
             $ JP -= 5
             $ user_choice_text = "Help break his task into small steps (T) to keep it on schedule (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Let him rest first (F), we can rearrange the rest later (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_b_37_en_A
 
         "Let him rest first (F), we can rearrange the rest later (P).":
@@ -3263,6 +3649,8 @@ label show_question_q_b_37_en:
             $ JP += 5
             $ user_choice_text = "Let him rest first (F), we can rearrange the rest later (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Help break his task into small steps (T) to keep it on schedule (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_b_37_en_B
 
 
@@ -3290,6 +3678,8 @@ label show_question_q_b_38_en:
             $ JP -= 5
             $ user_choice_text = "Score it honestly on taste (T), fair to all the other contestants (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Add points for effort (F), honor the hard work behind it (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_b_38_en_A
 
         "Add points for effort (F), honor the hard work behind it (P).":
@@ -3297,6 +3687,8 @@ label show_question_q_b_38_en:
             $ JP += 5
             $ user_choice_text = "Add points for effort (F), honor the hard work behind it (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Score it honestly on taste (T), fair to all the other contestants (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_b_38_en_B
 
 
@@ -3325,6 +3717,8 @@ label show_question_q_b_39_en:
             $ JP -= 5
             $ user_choice_text = "Apply the rule (T), the same for every passenger (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Help waive it (F), he was clearly lost, not breaking it on purpose (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_b_39_en_A
 
         "Help waive it (F), he was clearly lost, not breaking it on purpose (P).":
@@ -3332,6 +3726,8 @@ label show_question_q_b_39_en:
             $ JP += 5
             $ user_choice_text = "Help waive it (F), he was clearly lost, not breaking it on purpose (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Apply the rule (T), the same for every passenger (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_b_39_en_B
 
 
@@ -3358,6 +3754,8 @@ label show_question_q_b_40_en:
             $ JP -= 5
             $ user_choice_text = "Keep the system (T), it was calculated to spread the load most fairly (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Ease it, arrange a swap (P) so everyone stays comfortable (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_b_40_en_A
 
         "Ease it, arrange a swap (P) so everyone stays comfortable (F).":
@@ -3365,6 +3763,8 @@ label show_question_q_b_40_en:
             $ JP += 5
             $ user_choice_text = "Ease it, arrange a swap (P) so everyone stays comfortable (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Keep the system (T), it was calculated to spread the load most fairly (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_b_40_en_B
 
 
@@ -3392,6 +3792,8 @@ label show_question_q_c_41_en:
             $ SN -= 5
             $ user_choice_text = "Go solo (I) to visit a history museum to see historical artifacts (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Join the group (E) to explore a mythical forest full of mysteries (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_c_41_en_A
 
         "Join the group (E) to explore a mythical forest full of mysteries (N).":
@@ -3399,6 +3801,8 @@ label show_question_q_c_41_en:
             $ SN += 5
             $ user_choice_text = "Join the group (E) to explore a mythical forest full of mysteries (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Go solo (I) to visit a history museum to see historical artifacts (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_c_41_en_B
 
 
@@ -3426,6 +3830,8 @@ label show_question_q_c_42_en:
             $ SN -= 5
             $ user_choice_text = "Keep it in a safe (I) as a secure physical asset (S)."
             $ last_answer = "Introvert & Sensing"
+            $ unchosen_choice_text = "Treat everyone (E) while thinking about your increasing wealth (N)."
+            $ unchosen_answer = "Extrovert & Intuitive"
             jump show_question_q_c_42_en_A
 
         "Treat everyone (E) while thinking about your increasing wealth (N).":
@@ -3433,6 +3839,8 @@ label show_question_q_c_42_en:
             $ SN += 5
             $ user_choice_text = "Treat everyone (E) while thinking about your increasing wealth (N)."
             $ last_answer = "Extrovert & Intuitive"
+            $ unchosen_choice_text = "Keep it in a safe (I) as a secure physical asset (S)."
+            $ unchosen_answer = "Introvert & Sensing"
             jump show_question_q_c_42_en_B
 
 
@@ -3459,6 +3867,8 @@ label show_question_q_c_43_en:
             $ SN -= 5
             $ user_choice_text = "Ask others (E), 'What is this picture? What does it mean?' (S)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Stay silent (I) and try to feel the painter's emotion (N)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_c_43_en_A
 
         "Stay silent (I) and try to feel the painter's emotion (N).":
@@ -3466,6 +3876,8 @@ label show_question_q_c_43_en:
             $ SN += 5
             $ user_choice_text = "Stay silent (I) and try to feel the painter's emotion (N)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Ask others (E), 'What is this picture? What does it mean?' (S)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_c_43_en_B
 
 
@@ -3492,6 +3904,8 @@ label show_question_q_c_44_en:
             $ SN -= 5
             $ user_choice_text = "'Here, press the forward button, then jump.' (S) Guide them directly (E)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "'Understand the concept first.' (N) Let them learn on their own (I)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_c_44_en_A
 
         "'Understand the concept first.' (N) Let them learn on their own (I).":
@@ -3499,6 +3913,8 @@ label show_question_q_c_44_en:
             $ SN += 5
             $ user_choice_text = "'Understand the concept first.' (N) Let them learn on their own (I)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "'Here, press the forward button, then jump.' (S) Guide them directly (E)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_c_44_en_B
 
 
@@ -3526,6 +3942,8 @@ label show_question_q_c_45_en:
             $ SN -= 5
             $ user_choice_text = "Exercise or clean up (S) together at home (E)."
             $ last_answer = "Extrovert & Sensing"
+            $ unchosen_choice_text = "Do something you like (I), while imagining what you can do in the future (N)."
+            $ unchosen_answer = "Introvert & Intuitive"
             jump show_question_q_c_45_en_A
 
         "Do something you like (I), while imagining what you can do in the future (N).":
@@ -3533,6 +3951,8 @@ label show_question_q_c_45_en:
             $ SN += 5
             $ user_choice_text = "Do something you like (I), while imagining what you can do in the future (N)."
             $ last_answer = "Introvert & Intuitive"
+            $ unchosen_choice_text = "Exercise or clean up (S) together at home (E)."
+            $ unchosen_answer = "Extrovert & Sensing"
             jump show_question_q_c_45_en_B
 
 
@@ -3559,6 +3979,8 @@ label show_question_q_c_46_en:
             $ TF -= 5
             $ user_choice_text = "Help her see the facts (T) and offer concrete steps to move on (S)."
             $ last_answer = "Sensing & Thinking"
+            $ unchosen_choice_text = "Just be there (N) and listen to her feelings without rushing to judge (F)."
+            $ unchosen_answer = "Intuitive & Feeling"
             jump show_question_q_c_46_en_A
 
         "Just be there (N) and listen to her feelings without rushing to judge (F).":
@@ -3566,6 +3988,8 @@ label show_question_q_c_46_en:
             $ TF += 5
             $ user_choice_text = "Just be there (N) and listen to her feelings without rushing to judge (F)."
             $ last_answer = "Intuitive & Feeling"
+            $ unchosen_choice_text = "Help her see the facts (T) and offer concrete steps to move on (S)."
+            $ unchosen_answer = "Sensing & Thinking"
             jump show_question_q_c_46_en_B
 
 
@@ -3592,6 +4016,8 @@ label show_question_q_c_47_en:
             $ TF -= 5
             $ user_choice_text = "'Ugh... It's terrible! (T) Many scenes weren't logically explained! (S).'"
             $ last_answer = "Sensing & Thinking"
+            $ unchosen_choice_text = "'Cool... (F) The meaning is so deep, about hope that is lost (N).'"
+            $ unchosen_answer = "Intuitive & Feeling"
             jump show_question_q_c_47_en_A
 
         "'Cool... (F) The meaning is so deep, about hope that is lost (N).'":
@@ -3599,6 +4025,8 @@ label show_question_q_c_47_en:
             $ TF += 5
             $ user_choice_text = "'Cool... (F) The meaning is so deep, about hope that is lost (N).'"
             $ last_answer = "Intuitive & Feeling"
+            $ unchosen_choice_text = "'Ugh... It's terrible! (T) Many scenes weren't logically explained! (S).'"
+            $ unchosen_answer = "Sensing & Thinking"
             jump show_question_q_c_47_en_B
 
 
@@ -3626,6 +4054,8 @@ label show_question_q_c_48_en:
             $ TF += 5
             $ user_choice_text = "Refuse (F). 'The offer is vague' (N) and you are not sure where it will lead."
             $ last_answer = "Intuitive & Feeling"
+            $ unchosen_choice_text = "Just accept it (T). Financially (S) you need the money."
+            $ unchosen_answer = "Sensing & Thinking"
             jump show_question_q_c_48_en_A
 
         "Just accept it (T). Financially (S) you need the money.":
@@ -3633,6 +4063,8 @@ label show_question_q_c_48_en:
             $ TF -= 5
             $ user_choice_text = "Just accept it (T). Financially (S) you need the money."
             $ last_answer = "Sensing & Thinking"
+            $ unchosen_choice_text = "Refuse (F). 'The offer is vague' (N) and you are not sure where it will lead."
+            $ unchosen_answer = "Intuitive & Feeling"
             jump show_question_q_c_48_en_B
 
 
@@ -3659,6 +4091,8 @@ label show_question_q_c_49_en:
             $ TF -= 5
             $ user_choice_text = "Technical skill (S) that is useful for finding work (T)."
             $ last_answer = "Sensing & Thinking"
+            $ unchosen_choice_text = "Art skill (N) that can touch people's hearts (F)."
+            $ unchosen_answer = "Intuitive & Feeling"
             jump show_question_q_c_49_en_A
 
         "Art skill (N) that can touch people's hearts (F).":
@@ -3666,6 +4100,8 @@ label show_question_q_c_49_en:
             $ TF += 5
             $ user_choice_text = "Art skill (N) that can touch people's hearts (F)."
             $ last_answer = "Intuitive & Feeling"
+            $ unchosen_choice_text = "Technical skill (S) that is useful for finding work (T)."
+            $ unchosen_answer = "Sensing & Thinking"
             jump show_question_q_c_49_en_B
 
 
@@ -3692,6 +4128,8 @@ label show_question_q_c_50_en:
             $ TF -= 5
             $ user_choice_text = "Correct them (T). Show the original data (S) so they don't embarrass themselves."
             $ last_answer = "Sensing & Thinking"
+            $ unchosen_choice_text = "Just let it be (F). They will realize it themselves (N), rather than fighting here."
+            $ unchosen_answer = "Intuitive & Feeling"
             jump show_question_q_c_50_en_A
 
         "Just let it be (F). They will realize it themselves (N), rather than fighting here.":
@@ -3699,6 +4137,8 @@ label show_question_q_c_50_en:
             $ TF += 5
             $ user_choice_text = "Just let it be (F). They will realize it themselves (N), rather than fighting here."
             $ last_answer = "Intuitive & Feeling"
+            $ unchosen_choice_text = "Correct them (T). Show the original data (S) so they don't embarrass themselves."
+            $ unchosen_answer = "Sensing & Thinking"
             jump show_question_q_c_50_en_B
 
 
@@ -3726,6 +4166,8 @@ label show_question_q_c_51_en:
             $ JP -= 5
             $ user_choice_text = "Check pockets, bags, floor sequentially (S). Don't panic, try to recall (J)."
             $ last_answer = "Sensing & Judging"
+            $ unchosen_choice_text = "Look for the ticket where it might be tucked away (P). It might have fallen on the street (N)."
+            $ unchosen_answer = "Intuitive & Perceiving"
             jump show_question_q_c_51_en_A
 
         "Look for the ticket where it might be tucked away (P). It might have fallen on the street (N).":
@@ -3733,6 +4175,8 @@ label show_question_q_c_51_en:
             $ JP += 5
             $ user_choice_text = "Look for the ticket where it might be tucked away (P). It might have fallen on the street (N)."
             $ last_answer = "Intuitive & Perceiving"
+            $ unchosen_choice_text = "Check pockets, bags, floor sequentially (S). Don't panic, try to recall (J)."
+            $ unchosen_answer = "Sensing & Judging"
             jump show_question_q_c_51_en_B
 
 
@@ -3759,6 +4203,8 @@ label show_question_q_c_52_en:
             $ JP -= 5
             $ user_choice_text = "Just cook a scrambled egg (S). It's definitely delicious and the taste is clear (J)."
             $ last_answer = "Sensing & Judging"
+            $ unchosen_choice_text = "Mix everything! (N) Who knows, it might become a new masterpiece (P)."
+            $ unchosen_answer = "Intuitive & Perceiving"
             jump show_question_q_c_52_en_A
 
         "Mix everything! (N) Who knows, it might become a new masterpiece (P).":
@@ -3766,6 +4212,8 @@ label show_question_q_c_52_en:
             $ JP += 5
             $ user_choice_text = "Mix everything! (N) Who knows, it might become a new masterpiece (P)."
             $ last_answer = "Intuitive & Perceiving"
+            $ unchosen_choice_text = "Just cook a scrambled egg (S). It's definitely delicious and the taste is clear (J)."
+            $ unchosen_answer = "Sensing & Judging"
             jump show_question_q_c_52_en_B
 
 
@@ -3792,6 +4240,8 @@ label show_question_q_c_53_en:
             $ JP -= 5
             $ user_choice_text = "Read the summary of chapters (S) according to what is likely to appear on the exam (J)."
             $ last_answer = "Sensing & Judging"
+            $ unchosen_choice_text = "Read only the parts you understand best (N), the rest can be figured out during the exam (P)."
+            $ unchosen_answer = "Intuitive & Perceiving"
             jump show_question_q_c_53_en_A
 
         "Read only the parts you understand best (N), the rest can be figured out during the exam (P).":
@@ -3799,6 +4249,8 @@ label show_question_q_c_53_en:
             $ JP += 5
             $ user_choice_text = "Read only the parts you understand best (N), the rest can be figured out during the exam (P)."
             $ last_answer = "Intuitive & Perceiving"
+            $ unchosen_choice_text = "Read the summary of chapters (S) according to what is likely to appear on the exam (J)."
+            $ unchosen_answer = "Sensing & Judging"
             jump show_question_q_c_53_en_B
 
 
@@ -3825,6 +4277,8 @@ label show_question_q_c_54_en:
             $ JP -= 5
             $ user_choice_text = "Gently refuse. 'I need clear details (S) and a deadline (J).'"
             $ last_answer = "Sensing & Judging"
+            $ unchosen_choice_text = "Accept! 'Ready, I will improvise (N) as I go (P).'"
+            $ unchosen_answer = "Intuitive & Perceiving"
             jump show_question_q_c_54_en_A
 
         "Accept! 'Ready, I will improvise (N) as I go (P).'":
@@ -3832,6 +4286,8 @@ label show_question_q_c_54_en:
             $ JP += 5
             $ user_choice_text = "Accept! 'Ready, I will improvise (N) as I go (P).'"
             $ last_answer = "Intuitive & Perceiving"
+            $ unchosen_choice_text = "Gently refuse. 'I need clear details (S) and a deadline (J).'"
+            $ unchosen_answer = "Sensing & Judging"
             jump show_question_q_c_54_en_B
 
 
@@ -3858,6 +4314,8 @@ label show_question_q_c_55_en:
             $ JP -= 5
             $ user_choice_text = "Sort the items (S). Throw away what you think is less important (J)."
             $ last_answer = "Sensing & Judging"
+            $ unchosen_choice_text = "'We don't know, we might need this item later, so bring everything! (N)'. Everything can be arranged again there (P)."
+            $ unchosen_answer = "Intuitive & Perceiving"
             jump show_question_q_c_55_en_A
 
         "'We don't know, we might need this item later, so bring everything! (N)'. Everything can be arranged again there (P).":
@@ -3865,6 +4323,8 @@ label show_question_q_c_55_en:
             $ JP += 5
             $ user_choice_text = "'We don't know, we might need this item later, so bring everything! (N)'. Everything can be arranged again there (P)."
             $ last_answer = "Intuitive & Perceiving"
+            $ unchosen_choice_text = "Sort the items (S). Throw away what you think is less important (J)."
+            $ unchosen_answer = "Sensing & Judging"
             jump show_question_q_c_55_en_B
 
 
@@ -3892,6 +4352,8 @@ label show_question_q_c_56_en:
             $ JP -= 5
             $ user_choice_text = "Encourage him to come clean to mom (J) and face it calmly (T)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Go with him to tell mom (P), stressing it was purely an accident (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_c_56_en_A
 
         "Go with him to tell mom (P), stressing it was purely an accident (F).":
@@ -3899,6 +4361,8 @@ label show_question_q_c_56_en:
             $ JP += 5
             $ user_choice_text = "Go with him to tell mom (P), stressing it was purely an accident (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Encourage him to come clean to mom (J) and face it calmly (T)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_c_56_en_B
 
 
@@ -3926,6 +4390,8 @@ label show_question_q_c_57_en:
             $ JP -= 5
             $ user_choice_text = "Later, after the profit-loss analysis (T) is 100%% complete (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Now! (P) The important thing is that many people like the idea (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_c_57_en_A
 
         "Now! (P) The important thing is that many people like the idea (F).":
@@ -3933,6 +4399,8 @@ label show_question_q_c_57_en:
             $ JP += 5
             $ user_choice_text = "Now! (P) The important thing is that many people like the idea (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Later, after the profit-loss analysis (T) is 100%% complete (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_c_57_en_B
 
 
@@ -3960,6 +4428,8 @@ label show_question_q_c_58_en:
             $ JP -= 5
             $ user_choice_text = "Add scheduled practice (J), focus on fixing measurable things (T)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Easy, guys (P), keep the spirit up so we stay solid playing together (F)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_c_58_en_A
 
         "Easy, guys (P), keep the spirit up so we stay solid playing together (F).":
@@ -3967,6 +4437,8 @@ label show_question_q_c_58_en:
             $ JP += 5
             $ user_choice_text = "Easy, guys (P), keep the spirit up so we stay solid playing together (F)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Add scheduled practice (J), focus on fixing measurable things (T)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_c_58_en_B
 
 
@@ -3994,6 +4466,8 @@ label show_question_q_c_59_en:
             $ JP -= 5
             $ user_choice_text = "Its power (T) and its intact condition (J)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Its legendary story (F) and the mystery of who its former owner was (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_c_59_en_A
 
         "Its legendary story (F) and the mystery of who its former owner was (P).":
@@ -4001,6 +4475,8 @@ label show_question_q_c_59_en:
             $ JP += 5
             $ user_choice_text = "Its legendary story (F) and the mystery of who its former owner was (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Its power (T) and its intact condition (J)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_c_59_en_B
 
 
@@ -4027,6 +4503,8 @@ label show_question_q_c_60_en:
             $ JP -= 5
             $ user_choice_text = "Propose an official revision (J). Show the points that are inefficient (T)."
             $ last_answer = "Thinking & Judging"
+            $ unchosen_choice_text = "Create an emotional petition (F). Ask for leniency on the rules (P)."
+            $ unchosen_answer = "Feeling & Perceiving"
             jump show_question_q_c_60_en_A
 
         "Create an emotional petition (F). Ask for leniency on the rules (P).":
@@ -4034,6 +4512,8 @@ label show_question_q_c_60_en:
             $ JP += 5
             $ user_choice_text = "Create an emotional petition (F). Ask for leniency on the rules (P)."
             $ last_answer = "Feeling & Perceiving"
+            $ unchosen_choice_text = "Propose an official revision (J). Show the points that are inefficient (T)."
+            $ unchosen_answer = "Thinking & Judging"
             jump show_question_q_c_60_en_B
 
 

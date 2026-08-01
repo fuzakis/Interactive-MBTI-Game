@@ -47,8 +47,10 @@ default JP = 0
 
 # 2. Variabel Logika Tes
 default current_question_list = []
-default narasi_asli = "Tidak ada narasi." 
+default narasi_asli = "Tidak ada narasi."
 default last_answer = "Tidak ada jawaban."
+default unchosen_choice_text = "" # Teks pilihan yang TIDAK diambil pemain (bahan banding AI)
+default unchosen_answer = ""       # Analisis MBTI dari pilihan yang tidak diambil
 default companion_personality = "" # Menyimpan jenis personality yang dipilih (misal: "neuroticism")
 default ai_feedback = "" # Menyimpan balasan dari AI
 

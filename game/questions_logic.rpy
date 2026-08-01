@@ -235,12 +235,16 @@ label ai_react_logic:
             PLAYER ACTION:
             Player chose option: "{user_choice_text}"
             (MBTI Analysis of this choice: {last_answer})
+            The player did NOT choose this other option: "{unchosen_choice_text}"
+            (MBTI Analysis of the rejected option: {unchosen_answer})
 
-            INSTRUCTION: 
-            Give your reaction to the PLAYER ACTION above. 
-            Does the action "{user_choice_text}" make sense according to your personality ({companion_personality})? 
+            INSTRUCTION:
+            Give your reaction to the PLAYER ACTION above.
+            Does the action "{user_choice_text}" make sense according to your personality ({companion_personality})?
+            You may briefly weigh it against the option they rejected: from YOUR OWN character's instincts and values, which one would you have leaned toward, and why?
+            Neither option is objectively right or wrong (both are valid), so judge only by your persona's taste, never as morality or a correct answer. Keep it light, do not lecture.
             Do not focus too much on the MBTI label, but comment on the content of the action itself.
-            Try to keep the continuation of the conversation from the previous situation, 
+            Try to keep the continuation of the conversation from the previous situation,
             so it feels like a natural conversation flow, and not just separate questions and answers.
 
             RULES:
@@ -261,10 +265,14 @@ label ai_react_logic:
             TINDAKAN PEMAIN:
             Pemain memilih opsi: "{user_choice_text}"
             (Analisis MBTI dari pilihan ini: {last_answer})
+            Pemain TIDAK memilih opsi yang satunya: "{unchosen_choice_text}"
+            (Analisis MBTI dari opsi yang ditolak: {unchosen_answer})
 
-            INSTRUKSI: 
-            Berikan reaksimu terhadap TINDAKAN PEMAIN di atas. 
-            Apakah tindakan "{user_choice_text}" itu masuk akal menurut kepribadianmu ({companion_personality})? 
+            INSTRUKSI:
+            Berikan reaksimu terhadap TINDAKAN PEMAIN di atas.
+            Apakah tindakan "{user_choice_text}" itu masuk akal menurut kepribadianmu ({companion_personality})?
+            Kamu boleh membandingkannya sedikit dengan opsi yang ditolak: menurut naluri dan nilai KARAKTERMU sendiri, mana yang lebih kamu condongi, dan kenapa?
+            Tidak ada opsi yang benar atau salah secara objektif (keduanya sah), jadi nilai hanya dari selera personamu, bukan sebagai moralitas atau jawaban yang benar. Santai saja, jangan menggurui.
             Jangan terlalu terpaku pada label MBTI-nya, tapi komentari isi tindakannya.
             Cobalah untuk menjaga kelanjutan percakapan dari situasi sebelumnya, sehingga terasa seperti alur percakapan yang alami, dan bukan hanya soal dan jawaban yang terpisah.
 

@@ -175,20 +175,24 @@ def generate_all_files():
             logic_lines.append("\n    menu:\n")
             logic_lines.append(f"        \"{narasi}\"\n\n")
 
-            # Opsi A
+            # Opsi A (pilihan lawan = B, disimpan sebagai bahan banding AI)
             updates_a, sum_a = get_score_updates(opt_a_text)
+            updates_b, sum_b = get_score_updates(opt_b_text)
             logic_lines.append(f"        \"{opt_a_text}\":\n")
             for up in updates_a: logic_lines.append(f"            {up}\n")
             logic_lines.append(f"            $ user_choice_text = \"{opt_a_text}\"\n")
             logic_lines.append(f"            $ last_answer = \"{sum_a}\"\n")
+            logic_lines.append(f"            $ unchosen_choice_text = \"{opt_b_text}\"\n")
+            logic_lines.append(f"            $ unchosen_answer = \"{sum_b}\"\n")
             logic_lines.append(f"            jump {label_name}_A\n") # Jump ke label outcome bahasa yg sama
 
-            # Opsi B
-            updates_b, sum_b = get_score_updates(opt_b_text)
+            # Opsi B (pilihan lawan = A)
             logic_lines.append(f"\n        \"{opt_b_text}\":\n")
             for up in updates_b: logic_lines.append(f"            {up}\n")
             logic_lines.append(f"            $ user_choice_text = \"{opt_b_text}\"\n")
             logic_lines.append(f"            $ last_answer = \"{sum_b}\"\n")
+            logic_lines.append(f"            $ unchosen_choice_text = \"{opt_a_text}\"\n")
+            logic_lines.append(f"            $ unchosen_answer = \"{sum_a}\"\n")
             logic_lines.append(f"            jump {label_name}_B\n")
             
             logic_lines.append("\n")
