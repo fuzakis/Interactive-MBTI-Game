@@ -51,6 +51,23 @@ default narasi_asli = "Tidak ada narasi."
 default last_answer = "Tidak ada jawaban."
 default unchosen_choice_text = "" # Teks pilihan yang TIDAK diambil pemain (bahan banding AI)
 default unchosen_answer = ""       # Analisis MBTI dari pilihan yang tidak diambil
+
+# Variabel hasil test (dipakai screen diagram; bisa diisi tes live ATAU buka ulang riwayat)
+default my_mbti_type = "????"
+default my_spirit = ""
+default detailed_mbti_explanation = ""
+default res_ie = "E"
+default res_sn = "N"
+default res_tf = "F"
+default res_jp = "P"
+default txt_ie = "Extrovert"
+default txt_sn = "Intuitive"
+default txt_tf = "Feeling"
+default txt_jp = "Perceiving"
+default val_ie = 50
+default val_sn = 50
+default val_tf = 50
+default val_jp = 50
 default companion_personality = "" # Menyimpan jenis personality yang dipilih (misal: "neuroticism")
 default ai_feedback = "" # Menyimpan balasan dari AI
 
@@ -1016,6 +1033,9 @@ init python:
                 # Jaga kompatibilitas file lama: pastikan field previous_mbti ada
                 if "previous_mbti" not in current_ai_memory:
                     current_ai_memory["previous_mbti"] = ""
+                # test_results = riwayat hasil test lengkap (untuk buka ulang & dev jump)
+                if "test_results" not in current_ai_memory:
+                    current_ai_memory["test_results"] = []
 
                 # Jika user punya MBTI baru dari tes terakhir, update ingatannya.
                 # Sebelum menimpa, GESER hasil lama ke previous_mbti supaya companion
@@ -1034,10 +1054,100 @@ init python:
                 "last_mbti": current_mbti,
                 "previous_mbti": "", # Hasil MBTI satu sesi sebelumnya (untuk immersi perubahan)
                 "known_facts": [], # Tempat AI mencatat fakta penting
-                "chat_history": []
+                "chat_history": [],
+                "test_results": [] # Riwayat hasil test lengkap (skor, mbti, evaluasi)
             }
 
         return current_ai_memory
+
+    def save_test_result(mbti, spirit, scores, eval_parts, detailed):
+        """
+        Simpan satu hasil test LENGKAP ke current_ai_memory['test_results'].
+        Dipanggil saat test selesai (scene_hasil_tes) setelah teks AI dibuat,
+        supaya hasil bisa dibuka ulang kapan pun TANPA panggil AI lagi
+        (dipakai fitur riwayat test pemain & dev jump).
+        """
+        global current_ai_memory
+        import time
+        if not current_ai_memory:
+            return
+        rec = {
+            "time": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "companion_id": current_ai_memory.get("companion_id", ""),
+            "mbti": mbti,
+            "spirit": spirit,
+            "scores": scores,          # {"IE":.., "SN":.., "TF":.., "JP":..}
+            "eval_parts": eval_parts,  # list 3 bagian evaluasi companion
+            "detailed": detailed,      # penjelasan detail (psikolog)
+        }
+        current_ai_memory.setdefault("test_results", []).append(rec)
+        # Batasi agar file tidak membengkak: simpan 20 hasil terakhir
+        current_ai_memory["test_results"] = current_ai_memory["test_results"][-20:]
+        save_ai_memory()
+
+    def get_all_test_results():
+        """
+        Pindai semua file profil, kumpulkan seluruh hasil test dari semua pemain.
+        Return list rekord (paling baru dulu), tiap rekord diperkaya player_name
+        & companion_id untuk ditampilkan di UI riwayat / dipakai dev jump.
+        """
+        import time
+        results = []
+        try:
+            for filename in os.listdir(renpy.config.savedir):
+                if not filename.endswith(".json"):
+                    continue
+                filepath = os.path.join(renpy.config.savedir, filename)
+                try:
+                    with open(filepath, "r") as f:
+                        data = json.load(f)
+                except:
+                    continue
+                pname = data.get("player_name", "?")
+                cid = data.get("companion_id", "")
+                for rec in data.get("test_results", []):
+                    r = dict(rec)
+                    r["player_name"] = pname
+                    r.setdefault("companion_id", cid)
+                    results.append(r)
+        except:
+            pass
+        # Urutkan terbaru dulu (berdasarkan string waktu yang sortable)
+        results.sort(key=lambda x: x.get("time", ""), reverse=True)
+        return results
+
+    def apply_result_record(rec):
+        """
+        Muat satu rekord hasil test ke variabel store agar screen
+        mbti_result_diagram & mbti_detail_popup bisa menampilkannya ulang.
+        Tidak memanggil AI. Skor disimpan mentah, display dihitung ulang.
+        """
+        s = rec.get("scores", {}) or {}
+        store.IE = s.get("IE", 0)
+        store.SN = s.get("SN", 0)
+        store.TF = s.get("TF", 0)
+        store.JP = s.get("JP", 0)
+        store.my_mbti_type = rec.get("mbti", "????")
+        store.my_spirit = rec.get("spirit", "")
+        store.detailed_mbti_explanation = rec.get("detailed", "")
+        store.companion_personality = rec.get("companion_id", store.companion_personality)
+        _recompute_mbti_display()
+
+    def _recompute_mbti_display():
+        """Hitung ulang label & persentase diagram dari skor mentah di store."""
+        IE = store.IE; SN = store.SN; TF = store.TF; JP = store.JP
+        if IE >= 0: store.res_ie = "E"; store.txt_ie = "Extrovert"
+        else:       store.res_ie = "I"; store.txt_ie = "Introvert"
+        if SN >= 0: store.res_sn = "N"; store.txt_sn = "Intuitive"
+        else:       store.res_sn = "S"; store.txt_sn = "Sensing"
+        if TF >= 0: store.res_tf = "F"; store.txt_tf = "Feeling"
+        else:       store.res_tf = "T"; store.txt_tf = "Thinking"
+        if JP >= 0: store.res_jp = "P"; store.txt_jp = "Perceiving"
+        else:       store.res_jp = "J"; store.txt_jp = "Judging"
+        store.val_ie = calc_dominance(IE)
+        store.val_sn = calc_dominance(SN)
+        store.val_tf = calc_dominance(TF)
+        store.val_jp = calc_dominance(JP)
 
     def save_ai_memory():
         """Menyimpan ingatan aktif kembali ke file JSON lokal."""

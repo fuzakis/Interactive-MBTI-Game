@@ -613,11 +613,20 @@ label scene_hasil_tes:
 
         # Cetak ke konsol untuk dicatat di laporan
         debug_log("API LATENCY", f"Karakter: {companion_personality} | Waktu Respon: {latency_duration:.2f} detik")
-    
+
+        # --- SIMPAN HASIL TEST LENGKAP (untuk buka ulang & dev jump, tanpa AI) ---
+        save_test_result(
+            my_mbti_type,
+            my_spirit,
+            {"IE": IE, "SN": SN, "TF": TF, "JP": JP},
+            eval_parts,
+            detailed_mbti_explanation,
+        )
+
     # --- 3. DIAGRAM & MENU ---
     hide screen ai_loading with dissolve
     window hide
-    
+
     call screen mbti_result_diagram
     window show
     if persistent.cur_lang == "en":
