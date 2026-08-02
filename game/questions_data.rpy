@@ -70,3 +70,4 @@ define paket_c = [
 ]
 
 define all_packets = [paket_a, paket_b, paket_c]
+define all_packet_titles = ["Paket A", "Paket B", "Paket C"]

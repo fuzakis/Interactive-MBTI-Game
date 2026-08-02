@@ -222,19 +222,28 @@ def generate_all_files():
         with open(data_path, 'w', encoding='utf-8') as f:
             f.write("# FILE INI DIGENERATE OTOMATIS\n\n")
             packet_var_names = []
-            
+            packet_titles = []  # Judul paket (konektor anti-ulang di questions_logic.rpy)
+
             for pkt in ['a', 'b', 'c']:
                 if pkt in master_packets_data:
                     var_name = f"paket_{pkt}"
                     packet_var_names.append(var_name)
+                    # PENTING: judul harus PERSIS "Paket A/B/C" agar cocok dengan
+                    # persistent.used_packet_titles milik pemain lama (anti-ulang).
+                    packet_titles.append(f"Paket {pkt.upper()}")
                     f.write(f"define {var_name} = [\n")
                     for q in master_packets_data[pkt]:
                         # q[0] adalah qid_base (q_a_01), tanpa suffix bahasa
                         f.write(f"    (\"{q[0]}\", \"{q[1]}\"),\n")
                     f.write("]\n\n")
-            
+
             all_pkts_str = ", ".join(packet_var_names)
             f.write(f"define all_packets = [{all_pkts_str}]\n")
+
+            # WAJIB: konektor judul paket. Urutannya HARUS sama dengan all_packets.
+            # questions_logic.rpy memakainya untuk memilih paket yang belum dikerjakan.
+            titles_str = ", ".join(f'"{t}"' for t in packet_titles)
+            f.write(f"define all_packet_titles = [{titles_str}]\n")
             
         print(f"\nSUKSES! Total soal unik (ID) diproses: {total_soal_terproses}")
         print(f"File terupdate:\n1. {output_logic_file}\n2. {output_data_file}")
