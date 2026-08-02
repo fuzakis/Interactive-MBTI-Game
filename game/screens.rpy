@@ -495,7 +495,21 @@ screen extras_menu():
                         at pulse_badge
                         align (0.95, 0.05)
                         zoom 1.0
-                        
+
+            # --- 4. KARTU RIWAYAT TES ---
+            button:
+                action ShowMenu("test_history_screen")
+                xysize (350, 450)
+                background Frame("gui/button/button_idle_background.png", 20, 20)
+                hover_background Frame("gui/button/button_hover_background.png", 20, 20)
+
+                vbox:
+                    align (0.5, 0.5)
+                    spacing 20
+                    text "📜" size 90 xalign 0.5
+                    text _("Test History" if persistent.cur_lang == "en" else "Riwayat Tes"):
+                        size 30 color "#484270" bold True xalign 0.5 text_align 0.5
+
 style navigation_button is gui_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
@@ -978,6 +992,23 @@ screen preferences():
                         textbutton _("Mute All" if persistent.cur_lang == "en" else "Senyapkan Semua"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
+
+            ## --- PANEL DEVELOPER (hanya muncul saat dev mode aktif) ---
+            if persistent.dev_mode:
+                null height (2 * gui.pref_spacing)
+                vbox:
+                    style_prefix "check"
+                    xsize 500
+                    label "DEVELOPER MODE"
+                    textbutton "Jump to Latest Result (no AI)":
+                        xsize 500
+                        action Function(dev_jump_to_result)
+                    textbutton "Open Test History":
+                        xsize 500
+                        action ShowMenu("test_history_screen")
+                    textbutton "Turn Off Dev Mode":
+                        xsize 500
+                        action SetField(persistent, "dev_mode", False)
 
 
 style pref_label is gui_label

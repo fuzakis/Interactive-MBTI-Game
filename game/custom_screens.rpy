@@ -147,7 +147,7 @@ screen mbti_result_diagram():
                 bar value val_jp range 100 xsize 300 ysize 30 yalign 0.5 left_bar "#9C27B0" right_bar "#555"
                 text "{:.0f}%".format(val_jp) min_width 50 yalign 0.5 size 20 color "#ccc"
             
-            null height 25
+            null height 15
             
             textbutton ("🔍 Lihat Lebih Detil" if persistent.cur_lang == "id" else "🔍 View Details"):
                 action Show("mbti_detail_popup") # Show tidak akan menutup layar utama
@@ -725,6 +725,57 @@ screen mbti_detail_popup():
                 xalign 0.5
                 text_size 30
                 text_bold True
+
+# ==========================================
+# RIWAYAT TEST: buka ulang hasil MBTI kapan pun (tanpa AI)
+# ==========================================
+screen test_history_screen():
+    tag menu
+    # get_all_test_results memindai disk; default = dihitung sekali saat dibuka
+    default hist = get_all_test_results()
+
+    use game_menu(_("Test History" if persistent.cur_lang == "en" else "Riwayat Tes")):
+        if not hist:
+            text ("No saved test results yet. Finish a test to see it here." if persistent.cur_lang == "en" else "Belum ada hasil tes tersimpan. Selesaikan sebuah tes untuk melihatnya di sini."):
+                xalign 0.5 yalign 0.5 size 28 color "#888"
+        else:
+            viewport:
+                scrollbars "vertical"
+                mousewheel True
+                draggable True
+                xsize 1100 ysize 620
+                xalign 0.5
+
+                vbox:
+                    spacing 15
+                    xsize 1050
+                    xalign 0.5
+
+                    for rec in hist:
+                        button:
+                            xfill True
+                            ysize 120
+                            padding (30, 15)
+                            background Frame("gui/button/choice_idle_background.png", 25, 25)
+                            hover_background Frame("gui/button/choice_hover_background.png", 25, 25)
+                            # Buka ulang di context baru agar aman dari menu mana pun
+                            action Function(renpy.call_in_new_context, "view_saved_result", rec)
+
+                            hbox:
+                                xfill True
+                                yalign 0.5
+                                spacing 20
+
+                                vbox:
+                                    yalign 0.5
+                                    spacing 4
+                                    text safe_display_text(rec.get("player_name", "?")) size 30 bold True color "#484270"
+                                    text ("%s  ·  %s" % (companion_names.get(rec.get("companion_id", ""), rec.get("companion_id", "")), rec.get("time", ""))) size 18 color "#777"
+
+                                vbox:
+                                    xalign 1.0 yalign 0.5
+                                    text ("Spirit: %s" % rec.get("spirit", "-")) size 16 color "#888" xalign 1.0
+                                    text rec.get("mbti", "?") size 40 bold True color "#a4ff9c" xalign 1.0 outlines [(1, "#484270", 0, 0)]
 
 # Efek membesar saat kursor ditaruh di atas slot
 transform slot_hover_effect:

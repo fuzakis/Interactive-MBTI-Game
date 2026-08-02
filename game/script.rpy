@@ -315,6 +315,14 @@ init python:
     def calc_dominance(score):
         return 50 + (abs(score) / 2.0)
 
+# Buka ulang satu hasil test tersimpan (diagram + detail), TANPA panggil AI.
+# Dipanggil via renpy.call_in_new_context agar bisa dari menu mana pun
+# (riwayat test pemain maupun dev jump).
+label view_saved_result(rec):
+    $ apply_result_record(rec)
+    call screen mbti_result_diagram
+    return
+
 label scene_hasil_tes:
     python:
         end_time = time.time()

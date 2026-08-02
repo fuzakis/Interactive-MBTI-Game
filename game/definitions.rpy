@@ -1116,6 +1116,14 @@ init python:
         results.sort(key=lambda x: x.get("time", ""), reverse=True)
         return results
 
+    def dev_jump_to_result():
+        """DEV: buka ulang hasil test paling baru dari profil mana pun (tanpa AI)."""
+        results = get_all_test_results()
+        if not results:
+            renpy.notify("Belum ada hasil test tersimpan")
+            return
+        renpy.call_in_new_context("view_saved_result", results[0])
+
     def apply_result_record(rec):
         """
         Muat satu rekord hasil test ke variabel store agar screen
