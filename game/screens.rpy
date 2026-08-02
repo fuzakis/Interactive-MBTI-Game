@@ -544,8 +544,16 @@ screen main_menu():
             text "[config.name!t]":
                 color ("#484270") style "main_menu_title"
 
-            text "[config.version]":
-                color ("#484270") style "main_menu_version"
+            ## Teks versi = gerbang rahasia dev mode (klik 5x dalam 3 detik).
+            button:
+                background None
+                xpadding 0 ypadding 0
+                action Function(dev_gate_tap)
+                text "[config.version]":
+                    color ("#484270") style "main_menu_version"
+            if persistent.dev_mode:
+                text "DEV MODE":
+                    color "#a4ff9c" size 18 bold True
 
 
 style main_menu_frame is empty

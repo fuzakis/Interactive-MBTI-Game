@@ -66,6 +66,49 @@ default ai_emotion = "neutral"
 # 4. Persistent Data (Untuk Main Menu yang berubah)
 default persistent.last_companion_chosen = None
 
+# Developer mode (diaktifkan lewat gerbang rahasia di menu utama).
+# ON: marker MBTI (T)(E)dll ditampilkan di pilihan + tombol dev muncul.
+# OFF (default pemain): marker disembunyikan.
+default persistent.dev_mode = False
+
+init python:
+    import re as _re_dev
+
+    # --- FILTER MARKER MBTI DI TOMBOL PILIHAN ---
+    # Menyembunyikan marker skor (T)(F)(E)(I)(S)(N)(J)(P) dari teks pilihan yang
+    # dilihat pemain. Marker TETAP ada di file soal (dibutuhkan converter untuk
+    # baca skor), tapi disaring saat ditampilkan. Kebal regenerasi converter.
+    # Dev mode ON: marker ditampilkan apa adanya (untuk debugging).
+    _MBTI_MARKER_RE = _re_dev.compile(r"\s*\(\s*[TFEISNJP]\s*\)")
+
+    def mbti_menu_filter(text):
+        if persistent.dev_mode:
+            return text
+        cleaned, n = _MBTI_MARKER_RE.subn("", text)
+        if n == 0:
+            return text  # bukan teks pilihan soal (mis. menu konfirmasi), biarkan
+        cleaned = _re_dev.sub(r"\s{2,}", " ", cleaned)
+        cleaned = _re_dev.sub(r"\s+([.,!?;:])", r"\1", cleaned)
+        return cleaned.strip()
+
+    config.say_menu_text_filter = mbti_menu_filter
+
+    # --- GERBANG RAHASIA DEV MODE ---
+    # Klik teks versi di menu utama 5x dalam 3 detik untuk toggle dev mode.
+    _dev_tap_times = []
+
+    def dev_gate_tap():
+        import time
+        now = time.time()
+        _dev_tap_times.append(now)
+        while _dev_tap_times and now - _dev_tap_times[0] > 3.0:
+            _dev_tap_times.pop(0)
+        if len(_dev_tap_times) >= 5:
+            del _dev_tap_times[:]
+            persistent.dev_mode = not persistent.dev_mode
+            renpy.notify("Developer mode: ON" if persistent.dev_mode else "Developer mode: OFF")
+            renpy.restart_interaction()
+
 # 5. Menyimpan jumlah soal yang sudah dijawab
 default question_progress = 0
 
